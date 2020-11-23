@@ -44,11 +44,11 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![Open Data hub in Synapse Analytics Studio](./media/data-hub.png)
 
-7. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the primary data lake storage account, and then select the `wwi` file system **(3)**.
+7. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the `asaworkspace{uniqueid}` **(3)** primary data lake storage account, and then select the `wwi` file system **(4)**.
 
-   ![The ADLS Gen2 storage account is selected.](media/storage-factsale-parquet.png "ADLS Gen2 storage account")
+   ![The ADLS Gen2 storage account is selected.](media/storage-factsale-parquet-1.png "ADLS Gen2 storage account")
 
-8. Inside the selected file system, double-click to navigate to `factsale-parquet` -> `2012` -> `Q1` -> `InvoiceDateKey=2012-01-01` **(4)**.
+8. Inside the selected file system, double-click to navigate to `factsale-parquet` -> `2012` -> `Q1` -> `InvoiceDateKey=2012-01-01` **(5)**.
 
 9. Once you are in `InvoiceDateKey=2012-01-01` right-click the Parquet file and select `New SQL script - Select TOP 100 rows`.
 
