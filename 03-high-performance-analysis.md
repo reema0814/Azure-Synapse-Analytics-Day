@@ -8,7 +8,7 @@ The SQL Analytics pool in Azure Synapse Analytics is the new incarnation of the 
 
 The tasks you will perform in this exercise are:
 
-- Exercise 4 - High Performance Analysis with SQL Analytics pool
+- Exercise 3 - High Performance Analysis with SQL Analytics pool
   - Task 1 - Use a SQL Analytics pool query to understand a dataset
   - Task 2 - Investigate query performance and table design
     - Bonus Challenge
