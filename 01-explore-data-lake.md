@@ -60,7 +60,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Run SQL script on data lake file](./media/ex01-sql-on-demand-02.png "Execute SQL script")
 
-    > SQL on demand is now named as **Built-in**
+    > Note: SQL on demand is now named as **Built-in**
 
 11. Let us change the initial script to load multiple Parquet files at once.
 
