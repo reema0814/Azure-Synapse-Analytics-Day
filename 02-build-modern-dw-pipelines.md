@@ -169,14 +169,16 @@ To observe the data being written into the table:
 
    > If you do not see the table, select the Actions ellipsis next to Tables, and then select **Refresh** from the fly-out menu.
 
-3. Replace the `SELECT` query in the editor with the query below:
+3. Replace the `SELECT` query in the editor with the query below. Make sure to replace the uniqueId with the value you were assigned for this workshop.
 
    ```sql
-   SELECT COUNT(*) FROM [wwi_staging].[Sale_CSharp]
+   SELECT COUNT(*) FROM [wwi_staging].[Sale_CSharp_uniqueId]
    ```
-
+ 
 4. Select **Run** on the toolbar.
-
+   
+   ![CSharp for Spark](./media/ex02-csharp-for-spark-01.png)
+   
    > Re-run the query every 5-10 seconds to watch the count of records in the table, and how it changes as new records are being added by the notebook. The script in the notebook limits the number of rows to 1500, so if you see a count of 1500, the notebook has completed processing.
 
 5. **Important**: Close the notebook by selecting the **X** in the top right of the tab and then select **Discard Changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
