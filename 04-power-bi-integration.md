@@ -8,7 +8,7 @@ The tasks you will perform in this exercise are:
 
 - Exercise 4 - Power BI integration
   - Task 1 - Create a Power BI dataset in Synapse
-  - Task 2 - Create a Power BI report in Synapse
+  - Task 2 - Open a Power BI report in Synapse
 
 ---
 
@@ -86,7 +86,7 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
     ![Viewing the dataset listing](media/ex03-view-new-dataset.png "Browse datasets")
 
-## Task 2 - Create a Power BI report in Synapse
+## Task 2 - Open a Power BI report in Synapse
 
 In this task, you will learn how to use a collaborative approach to create a new Power BI report within Synapse Analytics Studio. To do this, you will use a dataset that was not created by you.
 
