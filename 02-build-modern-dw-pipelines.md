@@ -293,7 +293,7 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
     ![The Visual expression builder is displayed.](media/ex02-orchestrate-data-flow-expression-builder.png "Visual expression builder")
 
-20. The filter currently applied ensures all zip codes are between 00001 and 98000. Observe the different expression elements and values in the area below the expression box that help you create and modify filters and other expressions.
+20. The filter currently applied ensures all zip codes are between 90000 and 98000. Observe the different expression elements and values in the area below the expression box that help you create and modify filters and other expressions.
 
 21. Select **Cancel** to close the visual expression builder.
 
