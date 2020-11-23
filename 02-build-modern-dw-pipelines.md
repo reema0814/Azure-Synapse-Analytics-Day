@@ -177,7 +177,7 @@ To observe the data being written into the table:
  
 4. Select **Run** on the toolbar.
    
-   ![CSharp for Spark](./media/ex02-csharp-for-spark-01.png)
+   ![CSharp for Spark](./media/ex02-csharp-for-spark-extra.png)
    
    > Re-run the query every 5-10 seconds to watch the count of records in the table, and how it changes as new records are being added by the notebook. The script in the notebook limits the number of rows to 1500, so if you see a count of 1500, the notebook has completed processing.
 
