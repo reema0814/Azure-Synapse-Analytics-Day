@@ -52,15 +52,7 @@ Once data is properly understood and interpreted, moving it to the various desti
 
 Azure Synapse Analytics provides two significant categories of features - data flows and data orchestrations (implemented as pipelines). They cover the whole range of needs, from design and development to triggering, execution, and monitoring.
 
-## Exercise 3 - Power BI integration
-
-In this exercise, you will build a Power BI report in Azure Synapse Analytics.
-
-The visual approach in data exploration, analysis, and interpretation is one of the essential tools for both technical users (data engineers, data scientists) and business users. Having a highly flexible and performant data presentation layer is a must for any modern data platform.
-
-Azure Synapse Analytics integrates natively with Power BI, a proven and highly successful data presentation and exploration platform. The Power BI experience is available inside Synapse Studio.
-
-## Exercise 4 - High Performance Analysis with Azure Synapse SQL Pools
+## Exercise 3 - High Performance Analysis with Azure Synapse SQL Pools
 
 In this exercise, you will try to understand customer details using a query and chart visualizations. You will also explore the performance of various queries.
 
@@ -68,3 +60,10 @@ SQL data warehouses have been for a long time the center of gravity in data plat
 
 The Azure Synapse SQL Pools in Azure Synapse Analytics is the new incarnation of the former Azure SQL Data Warehouse. It provides all the modern SQL data warehousing features while benefiting from the advanced integration with all the other Synapse services.
 
+## Exercise 4 - Power BI integration
+
+In this exercise, you will build a Power BI report in Azure Synapse Analytics.
+
+The visual approach in data exploration, analysis, and interpretation is one of the essential tools for both technical users (data engineers, data scientists) and business users. Having a highly flexible and performant data presentation layer is a must for any modern data platform.
+
+Azure Synapse Analytics integrates natively with Power BI, a proven and highly successful data presentation and exploration platform. The Power BI experience is available inside Synapse Studio.
