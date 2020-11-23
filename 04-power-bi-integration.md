@@ -74,15 +74,19 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
     ![Selecting the correct Power BI workspace](media/ex03-select-workspace.png "Select workspace")
 
-13. Wait until the publishing dialog shows a status of **Success**, then click **Got it** to close the dialog.
+13. Wait until the publishing dialog shows a status of **Success**, then click **Open wwifactsales.pbix** to open the report.
 
     ![The publishing succeeded.](media/ex03-publishing-succeeded.png "Publishing to Power BI")
+    
+14. Select `Workspaces` from the left menu and select the `PowerBIWorkspace` as shown in the screenshot.
 
-14. Return to your browser where you have Azure Synapse Studio open. Select **Close and refresh** in the New Power BI dataset dialog that should still be open.
+    ![Selecting the right workspace to work on](media/ex03-selecting-workspace.png "Selecting the right workspace to work on")
+
+15. Return to your browser where you have Azure Synapse Studio open. Select **Close and refresh** in the New Power BI dataset dialog that should still be open.
 
     ![Closing the wizard dialog](media/ex03-close-and-refresh-pbids.png "Close the wizard")
 
-15. You should see your new Power BI dataset appear in the listing on the Power BI datasets panel. If not, select **Refresh**.
+16. You should see your new Power BI dataset appear in the listing on the Power BI datasets panel. If not, select **Refresh**.
 
     ![Viewing the dataset listing](media/ex03-view-new-dataset.png "Browse datasets")
 
