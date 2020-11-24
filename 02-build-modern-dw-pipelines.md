@@ -56,6 +56,8 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
     Select the **Run cell** button to execute the new cell:
 
     ![The new cell is displayed.](media/ex02-notebook-cell1.png "Run cell")
+    
+    **Note**:There should be no space before **%%spark** if there is space then cell run will fail
 
     > This cell imports required libraries and sets the `adlsPath` variable, which defines the path used to connect to an Azure Data Lake Storage (ADLS) Gen2 account. Connecting to ADLS Gen2 from a notebook in Azure Synapse Analytics uses the power of Azure Active Directory (AAD) pass-through between compute and storage. The `%%spark` "magic" sets the cell language to Scala, which is required to use the `SparkSession` library.
 
