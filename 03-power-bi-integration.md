@@ -18,7 +18,7 @@ In the tasks below, you will be asked to enter a unique identifier in several pl
 
 Please locate this value and note it for the further steps.
 
-#### Please perform this steps to set Microsoft Edge as default browser
+**Please perform this steps to set Microsoft Edge as default browser**
 
 1. From the LabVM, in the search bar serach for and select **Default apps**.
 
