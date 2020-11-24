@@ -225,7 +225,7 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
     > Since we are using PolyBase with dynamic file properties, owing to the UniqueId values, we need to [enable staging](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-data-warehouse#staged-copy-by-using-polybase). In cases of large file movement activities, configuring a staging path for the copy activity can improve performance.
 
-8. Switch to the **Data Flow** activity by selecting the `Enrich Customer Data` Mapping Data Flow activity on the pipeline design canvas, then select the **Settings** tab.
+8. Switch to the **Data Flow** activity by selecting the `Enrich Customer Data` Data Flow activity on the pipeline design canvas, then select the **Settings** tab.
 
     ![The data flow activity settings are displayed.](media/pipeline-data-flow-settings.png "Settings")
 
@@ -277,7 +277,7 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
 16. Before looking at the `PostalCodeFilter`, quickly select the `+` button to the right of the `PostalCodes` data source to display a list of available transformations.
 
-    > Take a moment to browse the list of transformations available in Data Flows. From this list, you get an idea of the types of transformations that are possible using data flows. Transformations are broken down into three categories, **multiple inputs/outputs**, **schema modifiers**, and **row modifiers**. You can learn about each transformation in the docs by reading the [Mapping data flow transformation overview](https://docs.microsoft.com/azure/data-factory/data-flow-transformation-overview) article.
+    > Take a moment to browse the list of transformations available in Data Flows. From this list, you get an idea of the types of transformations that are possible using data flows. Transformations are broken down into three categories, **multiple inputs/outputs**, **schema modifiers**, and **row modifiers**. You can learn about each transformation in the docs by reading the [Data flow transformation overview](https://docs.microsoft.com/azure/data-factory/data-flow-transformation-overview) article.
 
     ![The + button next to PostalCodes is highlighted, and the menu of available transformations is displayed.](media/ex02-orchestrate-data-flow-available-transformations.png "Data flow canvas")
 
