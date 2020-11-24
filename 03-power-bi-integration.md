@@ -18,6 +18,13 @@ In the tasks below, you will be asked to enter a unique identifier in several pl
 
 Please locate this value and note it for the steps below.
 
+1. From the LabVM, in the search bar serach for and select **Default apps**.
+
+ ![Default-Browser.](media/Default-Browser.png "Default-Browser")
+
+2. Now in the Default apps page scroll down, under Web browser click on **Internet Explorer**. On the Choose an app blade select **Microsoft Edge**. Once done click on **Close**.
+
+ ![Default-Browser.](media/Default-Browser-01.png "Default-Browser")
 ---
 
 ## Task 1 - Create a Power BI dataset in Synapse
