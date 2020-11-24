@@ -145,4 +145,4 @@ In this task, you will browse your data lake using SQL On-demand.
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
 
-11. **Important**: If you are continuing on to Exercise 2 now, _leave this notebook open for the first task_ of the next exercise. This way, you can continue to use this notebook and the running Spark session, saving you time.
+11. **Important**: Close the notebook by selecting the X in the top right of the tab and then select Close + discard changes. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
