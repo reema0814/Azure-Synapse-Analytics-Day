@@ -25,7 +25,7 @@ Please locate this value and note it for the steps below.
 
 In this task, you see how easy it is to write into a SQL Pool table with Spark thanks to the SQL Analytics Connector. Notebooks are used to write the code required to write to SQL Pool tables using Spark.
 
-1. **Note:** If you still have your notebook open from the end of Exercise 1, **skip ahead** to step 3 below. Otherwise, in Synapse Analytics Studio, select **Develop** from the left-hand menu.
+1. In Synapse Analytics Studio, select **Develop** from the left-hand menu.
 
    ![Develop is selected and highlighted in the Synapse Analytics menu.](media/develop-hub.png "Develop hub")
 
