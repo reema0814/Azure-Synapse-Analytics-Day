@@ -245,7 +245,7 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
 10. Take a minute to look at the options available on the various tabs in the configuration panel. You will notice the properties here define how the data flow operates within the pipeline.
 
-11. Now, let us take a look at the definition of the data flow the Mapping Data Flow activity references. Double-click the **Mapping Data Flow** activity on the pipeline canvas to open the underlying Data Flow in a new tab.
+11. Now, let us take a look at the definition of the data flow the Mapping Data Flow activity references. Double-click the `Enrich Customer Data` Mapping Data Flow activity on the pipeline canvas to open the underlying Data Flow in a new tab.
 
     > **Important**: Typically, when working with Data Flows, you would want to enable **Data flow debug**. [Debug mode](https://docs.microsoft.com/azure/data-factory/concepts-data-flow-debug-mode) creates a Spark cluster to use for interactively testing each step of the data flow and allows you to validate the output prior to saving and running the data flow. Enabling a debugging session can take up to 10 minutes, so you will not enable this for the purposes of this workshop. Screenshots will be used to provide details that would otherwise require a debug session to view.
 
