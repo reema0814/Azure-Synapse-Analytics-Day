@@ -16,7 +16,9 @@ The tasks you will perform in this exercise are:
 
 In the tasks below, you will be asked to enter a unique identifier in several places. You can find your unique identifier by looking at the username you were provided for logging into the Azure portal. Your username is in the format `odl_user_UNIQUEID@msazurelabs.onmicrosoft.com`, where the _UNIQUEID_ component looks like `206184`, `206137`, or `205349`, as examples.
 
-Please locate this value and note it for the steps below.
+Please locate this value and note it for the further steps.
+
+#### Please perform this steps to set Microsoft Edge as default browser
 
 1. From the LabVM, in the search bar serach for and select **Default apps**.
 
