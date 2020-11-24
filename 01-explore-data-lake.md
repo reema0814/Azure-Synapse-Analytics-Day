@@ -48,7 +48,7 @@ In this task, you will browse your data lake using SQL On-demand.
    
      ![Open Data hub in Synapse Analytics Studio](./media/data-hub-1.png)
 
-7. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the `asaworkspace{uniqueid}` primary data lake storage account **(3)**, and then select the `wwi` file system **(4)**.
+7. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the `asaworkspace`<inject key="UniqueId"></inject> primary data lake storage account **(3)**, and then select the `wwi` file system **(4)**.
 
    ![The ADLS Gen2 storage account is selected.](media/storage-factsale-parquet-1.png "ADLS Gen2 storage account")
 
