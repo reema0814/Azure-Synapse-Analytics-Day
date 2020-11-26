@@ -43,8 +43,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 4. Paste the following into the new cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook if you are using the same one from Exercise 1.
 
-    ```scala
-    %%spark
+    ```
 
     // Set the path to read the WWI Sales files
     import org.apache.spark.sql.SparkSession
@@ -65,9 +64,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 6. Paste the following and run the new cell:
 
-    ```scala
-    %%spark
-
+    ```
     // Read the sales into a dataframe
     val sales = spark.read.format("csv").option("header", "true").option("inferSchema", "true").option("sep", "|").load(s"$adlsPath/factsale-csv/2012/Q4")
     sales.show(5)
@@ -88,9 +85,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 9. Paste the following and run the new cell:
 
-    ```scala
-    %%spark
-
+    ```
     // Import libraries for the SQL Analytics connector
     import com.microsoft.spark.sqlanalytics.utils.Constants
     import org.apache.spark.sql.SqlAnalyticsConnector._
