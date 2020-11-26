@@ -40,15 +40,17 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![The Launch Synapse Studio button is highlighted on the Synapse workspace toolbar.](media/ex01-open-synapse-studio.png "Launch Synapse Studio")
 
-6. In Synapse Analytics Studio, navigate to the `Data` hub.
+6. In Synapse Analytics Studio, from the left panel click on the expand icon and navigate to the `Data` hub.
+
+   ![Open Data hub in Synapse Analytics Studio](./media/data-hub-1.png)
 
    ![Open Data hub in Synapse Analytics Studio](./media/data-hub.png)
 
-7. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the primary data lake storage account, and then select the `wwi` file system **(3)**.
+7. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the `asaworkspace<UniqueId>` primary data lake storage account **(3)**, and then select the `wwi` file system **(4)**.
 
-   ![The ADLS Gen2 storage account is selected.](media/storage-factsale-parquet.png "ADLS Gen2 storage account")
+   ![The ADLS Gen2 storage account is selected.](media/storage-factsale-parquet-1.png "ADLS Gen2 storage account")
 
-8. Inside the selected file system, double-click to navigate to `factsale-parquet` -> `2012` -> `Q1` -> `InvoiceDateKey=2012-01-01` **(4)**.
+8. Inside the selected file system, double-click to navigate to `factsale-parquet` -> `2012` -> `Q1` -> `InvoiceDateKey=2012-01-01` **(5)**.
 
 9. Once you are in `InvoiceDateKey=2012-01-01` right-click the Parquet file and select `New SQL script - Select TOP 100 rows`.
 
@@ -60,7 +62,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Run SQL script on data lake file](./media/ex01-sql-on-demand-02.png "Execute SQL script")
 
-    > SQL on demand is now named as **Built-in**
+    > Note: SQL on demand is now named as **Built-in**
 
 11. Let us change the initial script to load multiple Parquet files at once.
 
@@ -117,30 +119,38 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![Improve dataset formatting in Spark notebook](./media/ex01-spark-notebookrun-04.png "Execute notebook")
 
-7. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey`.
+7. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on Apply button.
 
     ![View charts on data in Spark notebook](./media/ex01-spark-notebook-05.png "Review charted data")
+    
+8. Collapse the output using the illustrated button as shown below.
 
-8. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
+    ![Collapse Output](./media/collapseoutput.png "Collapse Output")
 
-   ![The add code button is highlighted.](media/add-cell.png "Add code")
+9. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell. **{} Add code** won't be visible untill you Hover the area in front of arrow.
 
-9. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook above.
+   ![The add code button is highlighted.](media/addcode.png "Add code")
 
-   ```python
-   data_path = spark.read.load(
-      'abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net/factsale-csv/2012/Q1/*/*',
-      format='csv',
-      sep="|",
-      header=True)
+10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook above.
 
-   display(data_path.limit(100))
-   ```
+     ```python
+     data_path = spark.read.load(
+        'abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net/factsale-csv/2012/Q1/*/*',
+        format='csv',
+        sep="|",
+        header=True)
 
-10. Select the **Run cell** button to execute the new cell.
+     display(data_path.limit(100))
+     ```
 
-    ![The new cell is displayed and the run cell button is highlighted.](media/notebook-new-csv-cell.png "New cell to explore CSV files")
+11. Select the **Run cell** button to execute the new cell and then select the **Table** view in output section.
+
+    ![The new cell is displayed and the run cell button is highlighted.](media/notebook-new-csv-cell1.png "New cell to explore CSV files")
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
 
-11. **Important**: If you are continuing on to Exercise 2 now, _leave this notebook open for the first task_ of the next exercise. This way, you can continue to use this notebook and the running Spark session, saving you time.
+12. **Important**: Close the notebook by selecting the X in the top right of the tab and then select Close + discard changes. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+
+     ![The new cell is displayed and the run cell button is highlighted.](media/close-notebook.png "Close Notebook")
+     
+     ![The Close + discard changes button is highlighted.](media/notebook-close-discard-changes.png "Discard changes?")
