@@ -33,9 +33,9 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
    ![The new notebook menu item is highlighted.](media/new-notebook.png "New notebook")
 
-3. If not already attached, attach your Spark Compute by selecting it from the **Attach to** drop-down list, then select **{} Add code** to create a new cell.
+3. If not already attached, attach your Spark Compute **SparkPool01** by selecting it from the **Attach to** drop-down list and attach **Spark (Scala)** by selecting it from **Language** drop down list, then select **{} Add code** to create a new cell.
 
-   ![The Spark pool is selected in the Attach to drop-down.](media/new-notebook-add-code.png "Add code")
+   ![The Spark pool is selected in the Attach to drop-down.](media/new-notebook-add-code1.png "Add code")
 
    **Note:** If you are using your notebook from the end of Exercise 1, hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
 
@@ -106,13 +106,13 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     ![The Spark job status pane is displayed below the cell, with the progress of each Spark job visible.](media/ex02-notebook-ingest-cell-3-spark-job.png "Spark Job status")
 
-11. After approximately 1-2 minutes, the execution of Cell 3 will complete. Once it has completed, select **Data** from the left-hand menu.
-
-    ![Data is selected and highlighted in the Synapse Analytics menu.](media/data-hub.png "Data hub")
-
-12. **Important**: Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+11. After approximately 1-2 minutes, the execution of Cell 3 will complete. Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
 
     ![The Close + discard changes button is highlighted.](media/notebook-close-discard-changes.png "Discard changes?")
+
+12. Now, select **Data** from the left-hand menu.
+
+    ![Data is selected and highlighted in the Synapse Analytics menu.](media/data-hub.png "Data hub")
 
 13. Under **Workspace** tab expand **Databases** and then expand the **SQLPool01** database.
 
