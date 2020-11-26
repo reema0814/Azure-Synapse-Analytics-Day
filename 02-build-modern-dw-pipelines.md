@@ -100,13 +100,15 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     This code writes the data retrieved from Blob Storage into a staging table in Azure Synapse Analytics using the SQL Analytics connector. Using the connector simplifies connecting to Azure Synapse Analytics because it uses AAD pass-through. There is no need to create a password, identity, external table, or format sources, as it is all managed by the connector.
 
-10. As the cell runs, select the arrow icon below the cell to expand the details for the Spark job.
+10. As the cell runs, select the arrow icon below the cell to expand the details for the Spark job. After approximately 1-2 minutes, the execution of Cell 3 will complete. Once it completes move on the next step.
 
     > This pane allows you to monitor the underlying Spark jobs, and observe the status of each. As you can see, the cell is split into two Spark jobs, and the progress of each can be observed. We will take a more in-depth look at monitoring Spark applications in Task 4 below.
 
     ![The Spark job status pane is displayed below the cell, with the progress of each Spark job visible.](media/ex02-notebook-ingest-cell-3-spark-job1.png "Spark Job status")
 
-11. After approximately 1-2 minutes, the execution of Cell 3 will complete. Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+11. Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+     
+    ![The Close + discard changes button is highlighted.](media/closenotebook.png "closenotebook")
 
     ![The Close + discard changes button is highlighted.](media/notebook-close-discard-changes.png "Discard changes?")
 
