@@ -54,7 +54,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     Select the **Run cell** button to execute the new cell:
 
-    ![The new cell is displayed.](media/ex02-notebook-cell1.png "Run cell")
+    ![The new cell is displayed.](media/ex02-notebook-cell11.png "Run cell")
 
     > This cell imports required libraries and sets the `adlsPath` variable, which defines the path used to connect to an Azure Data Lake Storage (ADLS) Gen2 account. Connecting to ADLS Gen2 from a notebook in Azure Synapse Analytics uses the power of Azure Active Directory (AAD) pass-through between compute and storage. The `%%spark` "magic" sets the cell language to Scala, which is required to use the `SparkSession` library.
 
@@ -104,7 +104,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     > This pane allows you to monitor the underlying Spark jobs, and observe the status of each. As you can see, the cell is split into two Spark jobs, and the progress of each can be observed. We will take a more in-depth look at monitoring Spark applications in Task 4 below.
 
-    ![The Spark job status pane is displayed below the cell, with the progress of each Spark job visible.](media/ex02-notebook-ingest-cell-3-spark-job.png "Spark Job status")
+    ![The Spark job status pane is displayed below the cell, with the progress of each Spark job visible.](media/ex02-notebook-ingest-cell-3-spark-job1.png "Spark Job status")
 
 11. After approximately 1-2 minutes, the execution of Cell 3 will complete. Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
 
