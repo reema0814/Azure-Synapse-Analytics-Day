@@ -123,7 +123,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![View charts on data in Spark notebook](./media/ex01-spark-notebook-05.png "Review charted data")
     
-8. Collapse the output using the illustrated button as shown below.
+8. Collapse the output as illustrated below using the collapse button.
 
     ![Collapse Output](./media/collapseoutput.png "Collapse Output")
 
