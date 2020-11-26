@@ -119,15 +119,19 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![Improve dataset formatting in Spark notebook](./media/ex01-spark-notebookrun-04.png "Execute notebook")
 
-7. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey`.
+7. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on Apply button.
 
     ![View charts on data in Spark notebook](./media/ex01-spark-notebook-05.png "Review charted data")
+    
+8. Collapse the output using the illustrated button as shown below.
 
-8. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
+    ![Collapse Output](./media/collapseoutput.png "Collapse Output")
 
-   ![The add code button is highlighted.](media/add-cell.png "Add code")
+9. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
 
-9. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook above.
+   ![The add code button is highlighted.](media/addcode.png "Add code")
+
+10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook above.
 
    ```python
    data_path = spark.read.load(
@@ -139,7 +143,7 @@ In this task, you will browse your data lake using SQL On-demand.
    display(data_path.limit(100))
    ```
 
-10. Select the **Run cell** button to execute the new cell.
+11. Select the **Run cell** button to execute the new cell.
 
     ![The new cell is displayed and the run cell button is highlighted.](media/notebook-new-csv-cell.png "New cell to explore CSV files")
 
