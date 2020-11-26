@@ -127,7 +127,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Collapse Output](./media/collapseoutput.png "Collapse Output")
 
-9. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
+9. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell. **{} Add code** won't be visible untill you Hover the area in front of arrow.
 
    ![The add code button is highlighted.](media/addcode.png "Add code")
 
@@ -149,7 +149,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
 
-11. **Important**: Close the notebook by selecting the X in the top right of the tab and then select Close + discard changes. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+12. **Important**: Close the notebook by selecting the X in the top right of the tab and then select Close + discard changes. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
 
      ![The new cell is displayed and the run cell button is highlighted.](media/close-notebook.png "Close Notebook")
      
