@@ -143,9 +143,9 @@ In this task, you will browse your data lake using SQL On-demand.
      display(data_path.limit(100))
      ```
 
-11. Select the **Run cell** button to execute the new cell.
+11. Select the **Run cell** button to execute the new cell and then select the **Table** view in output section.
 
-    ![The new cell is displayed and the run cell button is highlighted.](media/notebook-new-csv-cell.png "New cell to explore CSV files")
+    ![The new cell is displayed and the run cell button is highlighted.](media/notebook-new-csv-cell1.png "New cell to explore CSV files")
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
 
