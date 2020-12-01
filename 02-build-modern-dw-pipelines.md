@@ -173,7 +173,7 @@ To observe the data being written into the table:
 
    > If you do not see the table, select the Actions ellipsis next to Tables, and then select **Refresh** from the fly-out menu.
 
-3. Replace the `SELECT` query in the editor with the query below. Make sure to replace the UniqueId with the UniqueId value provided in the environment details section on Lab Environment tab on the right.
+3. Replace the existing query in the editor with the query below. Make sure to replace the UniqueId with the UniqueId value provided in the environment details section on Lab Environment tab on the right.
 
    ```sql
    SELECT COUNT(*) FROM [wwi_staging].[Sale_CSharp_UniqueId]
