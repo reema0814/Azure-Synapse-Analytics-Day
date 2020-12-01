@@ -79,11 +79,14 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     ![The output from the execution the cell is displayed, with the result of the show(5) command shown first, followed by the output from the printSchema() command.](media/ex02-notebook-ingest-cell-2-output.png "Cell output")
 
-8. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
+8. Collapse the output as illustrated below using the collapse button.
+
+    ![Collapse Output](./media/collapseoutput1.png "Collapse Output")
+9. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
 
     ![The add code button is highlighted.](media/add-cell.png "Add code")
 
-9. Paste the following and run the new cell:
+10. Paste the following and run the new cell:
 
     ```
     // Import libraries for the SQL Analytics connector
@@ -100,45 +103,45 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     This code writes the data retrieved from Blob Storage into a staging table in Azure Synapse Analytics using the SQL Analytics connector. Using the connector simplifies connecting to Azure Synapse Analytics because it uses AAD pass-through. There is no need to create a password, identity, external table, or format sources, as it is all managed by the connector.
 
-10. As the cell runs, select the arrow icon below the cell to expand the details for the Spark job. After approximately 1-2 minutes, the execution of Cell 3 will complete. Once it completes move on the next step.
+11. As the cell runs, select the arrow icon below the cell to expand the details for the Spark job. After approximately 1-2 minutes, the execution of Cell 3 will complete. Once it completes move on the next step.
 
     > This pane allows you to monitor the underlying Spark jobs, and observe the status of each. As you can see, the cell is split into two Spark jobs, and the progress of each can be observed. We will take a more in-depth look at monitoring Spark applications in Task 4 below.
 
     ![The Spark job status pane is displayed below the cell, with the progress of each Spark job visible.](media/ex02-notebook-ingest-cell-3-spark-job1.png "Spark Job status")
 
-11. Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+12. Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
      
     ![The Close + discard changes button is highlighted.](media/closenotebook.png "closenotebook")
 
     ![The Close + discard changes button is highlighted.](media/notebook-close-discard-changes.png "Discard changes?")
 
-12. Now, select **Data** from the left-hand menu.
+13. Now, select **Data** from the left-hand menu.
 
     ![Data is selected and highlighted in the Synapse Analytics menu.](media/data-hub.png "Data hub")
 
-13. Under **Workspace** tab expand **Databases** and then expand the **SQLPool01** database.
+14. Under **Workspace** tab expand **Databases** and then expand the **SQLPool01** database.
 
     ![The Databases folder is expanded, showing a list of databases within the Azure Synapse Analytics workspace. SQLPool01 is expanded and highlighted.](media/ex02-databasesqlpool.png "Synapse Analytics Databases")
 
-14. Expand **Tables** and locate the table named `wwi_staging.Sale`.
+15. Expand **Tables** and locate the table named `wwi_staging.Sale`.
 
     > If you do not see the table, select the Actions ellipsis next to Tables and then select **Refresh** from the fly-out menu.
 
     ![The new wwi_staging.Sale table is displayed.](media/data-staging-sales.png "New Sale table")
 
-15. To the right of the `wwi_staging.Sale` table, select the Actions ellipsis.
+16. To the right of the `wwi_staging.Sale` table, select the Actions ellipsis.
 
     ![The Actions ellipsis button is highlighted next to the wwi_staging.Sale_UNIQUEID table.](media/ex02-data-sqlpool01-tables-staging-wwi-sales-data-actions.png "Synapse Analytics Databases")
 
-16. In the Actions menu, select **New SQL script > Select TOP 100 rows**.
+17. In the Actions menu, select **New SQL script > Select TOP 100 rows**.
 
     ![In the Actions menu for the wwi_staging.Sale table, New SQL script > Select TOP 100 rows is highlighted.](media/ex02-data-sqlpool01-tables-staging-wwi-sales-data-actions-select.png "Synapse Analytics Databases")
 
-17. Observe the results in the output pane, and see how easy it was to use Spark notebooks to write data from Blob Storage into Azure Synapse Analytics.
+18. Observe the results in the output pane, and see how easy it was to use Spark notebooks to write data from Blob Storage into Azure Synapse Analytics.
 
     ![The output of the SQL statement is displayed.](media/staging-sale-output.png "Sale script output")
 
-18. Close the SQL script generated by `wwi_staging.Sale`.
+19. Close the SQL script generated by `wwi_staging.Sale`.
 
 ### Bonus exercise
 
@@ -370,9 +373,9 @@ After you finish building and debugging your data flow and its associated pipeli
 
    ![Monitor is selected and highlighted in the Synapse Analytics menu.](media/monitor-hub.png "Synapse Analytics menu")
 
-2. Under Orchestration, select **Pipeline runs**.
+2. Under Integration, select **Pipeline runs**.
 
-   ![Pipeline runs is selected and highlighted under the Orchestration section of the monitor resource list.](media/ex02-monitor-pipeline-runs.png "Synapse Analytics Monitor")
+   ![Pipeline runs is selected and highlighted under the Orchestration section of the monitor resource list.](media/ex02-monitor-pipeline-runs1.png "Synapse Analytics Monitor")
 
 3. Select the `Exercise 2 - Enrich Data_A03` pipeline the list. This will have a status of `In progress`.
 
@@ -450,9 +453,9 @@ In this task, you examine the Apache Spark application monitoring capabilities b
 
    ![Apache Spark applications is selected and highlighted under the Activities section of the monitor resource list.](media/ex02-monitor-activities-spark.png "Synapse Analytics Monitor")
 
-3. On the Apache Spark applications page, select the **Submit time** value and observe the available options for limiting the time range for Spark applications that are displayed in the list. In this case, you are looking at the current run, so ensure **Last 24 hours** is selected and then select **OK**.
+3. On the Apache Spark applications page, select the **Local time** value and observe the available options for limiting the time range for Spark applications that are displayed in the list. In this case, you are looking at the current run, so ensure **Last 24 hours** is selected and then select **OK**.
 
-   ![Last 24 hours is selected and highlighted in the Time range list.](media/ex02-monitor-activities-spark-time-range.png "Synapse Analytics Monitor")
+   ![Last 24 hours is selected and highlighted in the Time range list.](media/ex02-monitor-activities-spark-time-range1.png "Synapse Analytics Monitor")
 
 4. From the list of Spark applications, select the first job, which should have a status of `In progress` or `Succeeded`.
 
