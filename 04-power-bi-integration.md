@@ -83,87 +83,94 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
     ![Selecting the correct Power BI workspace](media/ex03-select-workspace.png "Select workspace")
 
-13. Wait until the publishing dialog shows a status of **Success**, then click **Got it** to close the dialog..
+13. Wait until the publishing dialog shows a status of **Success**, then click **Open 'wwifactsales.pbix in Power BI** link to open this Power BI report in Edge browser..
 
     ![The publishing succeeded.](media/ex03-publishing-succeeded.png "Publishing to Power BI")
 
-14. Return to your browser where you have Azure Synapse Studio open. Select **Close and refresh** in the New Power BI dataset dialog that should still be open.
-
-    ![Closing the wizard dialog](media/ex03-close-and-refresh-pbids.png "Close the wizard")
-
-15. You should see your new Power BI dataset appear in the listing on the Power BI datasets panel. If not, select **Refresh**.
-
-    ![Viewing the dataset listing](media/ex03-view-new-dataset.png "Browse datasets")
-
-## Task 2 - Open a Power BI report in Synapse
-
-In this task, you will learn how to use a collaborative approach to create a new Power BI report within Synapse Analytics Studio. To do this, you will use a dataset that was not created by you.
-
-1. Select the `wwifactsales` dataset within the panel that appears. When you hover over the dataset, a button for creating a new Power BI report will appear. Select that button.
-
-   ![Selecting new Power BI report from dataset](media/ex03-select-new-power-bi-report.png "Select dataset")
-
-2. This will launch a new tabbed document with the Power BI report designer. Also note, that your new report appears under the Power BI reports folder in the `Develop` hub.
-
-   ![Viewing the new Power BI report](media/ex03-new-report-document.png "View report")
-
 ---
-
 **Important**:
+The next few steps are important to correct the authentication type which is required for Power BI to connect properly to Synapse SQL.
 
-If you do not see a list of data fields under Fields, follow the steps below for a fix.
+14. Navigate to [www.powerbi.com](www.powerbi.com) on a new browser tab. Select **Sign In** and use the credential provided to you.
 
-1. Navigate to [www.powerbi.com](www.powerbi.com) on a new browser tab. Select **Sign In** and use the credential provided to you.
-
-2. Select `Workspaces` from the left menu and select the `PowerBIWorkspace` as shown in the screenshot.
+15. Select `Workspaces` from the left menu and select the `PowerBIWorkspace` as shown in the screenshot.
 
    ![Selecting the right workspace to work on](media/ex03-selecting-workspace.png "Selecting the right workspace to work on")
 
-3. Navigate to **Settings**, then select **Settings** from the menu.
+16. Navigate to **Settings**, then select **Settings** from the menu.
 
    ![The Settings menu is displayed.](media/pbi-settings.png "Settings")
 
-4. Select the **Datasets** tab. From the list of datasets select `wwifactsales`, then select **Edit credentials** underneath the **Data Source credentials** section.
+17. Select the **Datasets** tab. From the list of datasets select `wwifactsales`, then select **Edit credentials** underneath the **Data Source credentials** section.
 
    ![Changing settings for the wwifactsales dataset](media/ex03-setting-dataset-credentials.png "Changing settings for the wwifactsales dataset")
 
-5. Under **Authentication Method** select `OAuth2` and select **Sign In**.
+18. Under **Authentication Method** select `OAuth2` and select **Sign In**.
 
    ![Selecting the right workspace to work on](media/ex03-enter-dataset-credentials.png "Selecting the right workspace to work on")
 
-6. Navigate back to your Synapse workspace in the previous tab and select the **refresh** button above the Fields list in the Power BI report. After a few seconds, you should see the list of fields below. Alternatively, you may refresh your browser window.
+**Important**:
+The above few steps fix the authentication method i.e. OAUTH2 required for Power BI to connect properly to Synapse and for the steps within the next task to work properly
 
-   ![The refresh button above the fields list is highlighted.](media/ex03-pbi-refresh.png "Refresh")
+---
 
-7. Within the Power BI designer, select **Line and clustered column chart** under Visualizations.
+19. Now, return to the browser tab where you have Azure Synapse Studio open. Select **Close and refresh** in the New Power BI dataset dialog that should still be open.
+
+    ![Closing the wizard dialog](media/ex03-close-and-refresh-pbids.png "Close the wizard")
+
+
+## Task 2 - Open a Power BI report in Synapse
+
+In this task, you will see how to collaboratively design Power BI reports within Synapse Analytics Studio. To do this, you will  open the Power BI report that was saved earlier.
+
+
+1. After the last step in the previous task, you should see your new Power BI dataset appear in the listing on the Power BI datasets panel. If not, select **Refresh**.
+
+    ![Viewing the dataset listing](media/ex03-view-new-dataset.png "Browse datasets")
+
+2. Select the `wwifactsales` dataset within the panel that appears. When you hover over the dataset, a button for creating a new Power BI report will appear. This button allows the creation of new Power BI reports based on this dataset. We will, however, **Open** the report saved previously.
+
+   ![Selecting new Power BI report from dataset](media/ex03-select-new-power-bi-report.png "Select dataset")
+
+3. Navigate to the Power BI report 'wwwifactsales' - within Power BI reports and open it
+
+    ![Viewing the dataset listing](media/ex03-view-open-report.png "Browse datasets")
+
+4. This will launch the report in the Power BI report designer. Within the report you should see the list of fields on the right most panel. 
+
+   ![Viewing the new Power BI report](media/ex03-open-report-document.png "View report")
+
+
+
+
+
+5. Under Visualizations, select **Line and clustered column chart** .
 
    ![The visualization is highlighted.](media/ex03-pbi-line-clustered-column-chart-vis.png "Line and clustered column chart")
 
-8. Drag the **SalespersonKey** field into **Shared axis** for the visualization. Then drag the **TotalExcludingTax** field into **Column values**. Finally, drag the **Profit** field into **Line values**.
+6. Drag the **SalespersonKey** field into **Shared axis** for the visualization. Then drag the **TotalExcludingTax** field into **Column values**. Finally, drag the **Profit** field into **Line values**.
 
    ![The field values are displayed as described above.](media/ex03-visualization-fields.png "Visualization fields")
 
-9. Resize the line and clustered column chart visualization to fit the report area. Your visualization should look like the following:
+7. Resize the line and clustered column chart visualization to fit the report area. Your visualization should look like the following:
 
    ![The visualization is highlighted on the report canvas.](media/ex03-pbi-visualization-no-filter.png "Completed visualization")
 
-10. Under the **Filters** pane, expand the **Profit** filter. Select **is greater than** under `Show items when the value:`, then enter **50000000** for the value. Select **Apply filter**.
+8. Under the **Filters** pane, expand the **Profit** filter. Select **is greater than** under `Show items when the value:`, then enter **50000000** for the value. Select **Apply filter**.
 
     ![The filter is configured as described above.](media/ex03-pbi-apply-filter.png "Profit filter")
 
-11. After a few seconds, you should see the visualization change, based on the filter. In this case, we narrow down the results to only those where the total profit amount is greater than $50 million. Since we are using Direct Query, Power BI pushed down the filter to the dedicated SQL pool (SQLPool01) to execute a new query based on the filter parameters. The pool sent back the results to Power BI to re-render the chart. Since we are dealing with a very large number of records (over 12 million), harnessing the power of the dedicated SQL pool to aggregate and filter the data rather than importing them and using the Power BI engine to do the work is much more efficient.
+9. After a few seconds, you should see the visualization change, based on the filter. In this case, we narrow down the results to only those where the total profit amount is greater than $50 million. Since we are using Direct Query, Power BI pushed down the filter to the dedicated SQL pool (SQLPool01) to execute a new query based on the filter parameters. The pool sent back the results to Power BI to re-render the chart. Since we are dealing with a very large number of records (over 12 million), harnessing the power of the dedicated SQL pool to aggregate and filter the data rather than importing them and using the Power BI engine to do the work is much more efficient.
 
     ![The filtered visualization is displayed.](media/ex03-pbi-filtered-visualization.png "Filtered visualization")
 
-12. From the file menu within the designer, select **Save As**.
+10. From the file menu within the designer, select **Save**.
 
-    ![Selecting Save As from the File menu](media/ex03-file-save-as.png "Save As")
+    ![Selecting Save As from the File menu](media/ex03-file-save-pbi.png "Save As")
 
-13. In the dialog that appears, enter **Key Sales by Person** for the name, then select **Save**.
 
-    ![The save dialog is displayed.](media/ex03-pbi-save-report.png "Save your report")
 
-14. This report is now available to all authorized users within Synapse Analytics Studio and the Power BI workspace.
+
 
 ## Task 3 - View the SQL query
 

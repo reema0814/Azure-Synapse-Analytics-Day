@@ -79,17 +79,21 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Run SQL on-demand script loading multiple Parquet data lake files](./media/ex01-sql-on-demand-03.png)
 
-13. In Azure Synapse Analytics Studio, navigate to the `Develop` hub.
+13. Close the script by selecting the X in the top right of the tab and then select Close + discard changes. 
+
+14. In Azure Synapse Analytics Studio, navigate to the `Develop` hub.
 
     ![Develop hub.](media/develop-hub.png "Develop hub")
 
-14. Select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script..
+15. Select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script..
 
     ![Run SQL on-demand script loading multiple CSV data lake files](./media/ex01-sql-on-demand-04.png)
 
     > This query demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path). Parquet files are compressed and store data in columnar format for efficient querying, as compared to CSV files which are raw representations of data, but easily processed by a large number of systems. Oftentimes, you can encounter many file types stored in a data lake and must know how to access and explore those files. When you access CSV files, for instance, you need to specify the format, field terminator, and other properties to let the query engine understand how to parse the data. In this case, we specify a value of `2` for FIRSTROW. This indicates that the first row of the file must be skipped because it contains the column header, for instance.
     >
     > Here we use WITH to define the columns in the files. You must use WITH when using a bulk rowset (OPENROWSET) in the FROM clause. Also, defining the columns enables you to select and filter the values within.
+16. Close the script by selecting the X in the top right of the tab and then select Close + discard changes.
+
 
 ## Task 2 - Explore the data lake with Azure Synapse Spark
 
@@ -133,15 +137,15 @@ In this task, you will browse your data lake using SQL On-demand.
 
 10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook above.
 
-     ```python
-     data_path = spark.read.load(
+    ```python
+    data_path = spark.read.load(
         'abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net/factsale-csv/2012/Q1/*/*',
         format='csv',
         sep="|",
         header=True)
 
-     display(data_path.limit(100))
-     ```
+    display(data_path.limit(100))
+    ```
 
 11. Select the **Run cell** button to execute the new cell and then select the **Table** view in output section.
 
