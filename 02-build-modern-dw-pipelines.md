@@ -43,7 +43,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 4. Paste the following into the new cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook if you are using the same one from Exercise 1.
 
-    ```
+   ```
     %%spark
     
     // Set the path to read the WWI Sales files
@@ -51,7 +51,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     // Set the path to the ADLS Gen2 account
     val adlsPath = "abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net"
-    ```
+   ```
 
     Select the **Run cell** button to execute the new cell:
 
@@ -65,14 +65,14 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 6. Paste the following and run the new cell:
 
-    ```
+   ```
     %%spark
     
     // Read the sales into a dataframe
     val sales = spark.read.format("csv").option("header", "true").option("inferSchema", "true").option("sep", "|").load(s"$adlsPath/factsale-csv/2012/Q4")
     sales.show(5)
     sales.printSchema()
-    ```
+   ```
 
     This code loads data from CSV files in the data lake into a DataSet. Note the `option` parameters in the `read` command. These options specify the settings to use when reading the CSV files. The options tell Spark that the first row of each file containers the column headers, the separator in the files in the `|` character, and that we want Spark to infer the schema of the files based on an analysis of the contents of each column. Finally, we display the first five records of the data retrieved and print the inferred schema to the screen.
 
@@ -88,7 +88,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 9. Paste the following and run the new cell:
 
-    ```
+   ```
     %%spark
     
     // Import libraries for the SQL Analytics connector
@@ -101,7 +101,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     // Write the retrieved sales data into a staging table in Azure Synapse Analytics.
     sales.limit(10000).write.mode(SaveMode.Append).sqlanalytics(tableName, Constants.INTERNAL)
-    ```
+   ```
 
     This code writes the data retrieved from Blob Storage into a staging table in Azure Synapse Analytics using the SQL Analytics connector. Using the connector simplifies connecting to Azure Synapse Analytics because it uses AAD pass-through. There is no need to create a password, identity, external table, or format sources, as it is all managed by the connector.
 
