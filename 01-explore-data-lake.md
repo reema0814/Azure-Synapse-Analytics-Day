@@ -133,15 +133,15 @@ In this task, you will browse your data lake using SQL On-demand.
 
 10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook above.
 
-     ```python
-     data_path = spark.read.load(
-        'abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net/factsale-csv/2012/Q1/*/*',
-        format='csv',
-        sep="|",
-        header=True)
+    ```python
+    data_path = spark.read.load(
+       'abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net/factsale-csv/2012/Q1/*/*',
+       format='csv',
+       sep="|",
+       header=True)
 
-     display(data_path.limit(100))
-     ```
+    display(data_path.limit(100))
+    ```
 
 11. Select the **Run cell** button to execute the new cell and then select the **Table** view in output section.
 
