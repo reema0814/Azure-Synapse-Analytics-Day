@@ -24,11 +24,13 @@ If you are using a hosted lab environment, please follow the steps below to get 
 
 1. Select the **Lab Environment** tab above the lab guide to copy the Azure credentials used for the lab. Make note of the `UniqueId` value. This value may be referenced at different points during the lab.
 
-    ![The lab environment details are displayed.](media/lab-environment.png "Lab Environment")
+    ![The lab environment details are displayed.](media/cloudlabsv2.png "Lab Environment")
 
-2. Select **Lab Resources** under Lab Environment to start the Virtual Machine (VM) provided for this lab. However, you do not need to use the VM to complete the lab. It is there for your convenience to make it easier to sign into Azure if you have an existing account and do not want to log out of it.
+2. Select **Virtual Machine** by clicking on ellipses first to start the Virtual Machine (VM) provided for this lab. However, you do not need to use the VM to complete the lab. It is there for your convenience to make it easier to sign into Azure if you have an existing account and do not want to log out of it.
 
-    ![The Virtual Machines are displayed and the Play button is highlighted.](media/lab-resources.png "Lab Resources")
+    ![Select the Virtual Machines tab](media/vmtab.png "Virtual Machines Tab")
+    
+    ![The Virtual Machines are displayed and the Play button is highlighted.](media/startvm.png "Start Virtual Machine")
 
 ## Solution architecture
 
