@@ -161,9 +161,7 @@ Now, take some time to review the **Exercise 2 - Bonus Notebook with CSharp** no
 
     You can run each cell in this notebook and observe the output. Be aware, however, that writing data into a staging table in Azure Synapse Analytics with this notebook takes several minutes, so you don't need to wait on the notebook to finish before attempting to query the `wwi_staging.Sale_CSharp` table to observe the data being written or to move on to the next task.
 
-3. Enter the UniqueID value in cell 1 line 5 of the **Exercise 2 - Bonus Notebook with CSharp** notebook and then select **Run** the notebook cells one by one.
-
-   ![Update Unique ID](./media/bonusexcell1.png)
+3. Run the notebook
 
 To observe the data being written into the table:
 
