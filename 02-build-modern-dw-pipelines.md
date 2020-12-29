@@ -174,7 +174,7 @@ To observe the data being written into the table:
 3. Replace the existing query in the editor with the query below. Make sure to replace the UniqueId with the UniqueId value provided in the environment details section on Lab Environment tab on the right.
 
    ```sql
-   SELECT COUNT(*) FROM [wwi_staging].[Sale_CSharp_UniqueId]
+   SELECT COUNT(*) FROM [wwi_staging].[Sale_CSharp]
    ```
  
 4. Select **Run** on the toolbar.
