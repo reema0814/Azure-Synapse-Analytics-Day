@@ -4,7 +4,7 @@
 &nbsp;
 
 
-# Exercise 5 - Develop a Power BI Model
+# Exercise 6 - Develop a Power BI Model
 
 
 In this exercise, you are working in the role of a **BI developer**.
@@ -672,7 +672,7 @@ In this task, you will design a simple report to test query performance.
  
    ![ws name.](media/6.77.png)
 
-   *Performance is likely to be slow, as the model hasn’t yet been optimized. You’ll be optimizing the model with aggregations in **Exercise 6**.*
+   *Performance is likely to be slow, as the model hasn’t yet been optimized. You’ll be optimizing the model with aggregations in **Exercise 07**.*
  
 8. In the **Visualizations** pane, in the **Values** well, to remove the fields, click **X** next to each field.
 
@@ -734,7 +734,7 @@ In this task, you will use Performance Analyzer to measure query performance.
 
     *The lab is now complete. Leave your Power BI Desktop solution open ready to start the next lab (when instructed to do so)*.
 
-    *In **Exercise 06**, you’ll improve query performance by creating an aggregation table*.
+    *In **Exercise 07**, you’ll improve query performance by creating an aggregation table*.
 
 ### Summary
 
