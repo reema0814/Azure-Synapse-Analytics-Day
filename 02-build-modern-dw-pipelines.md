@@ -25,7 +25,7 @@ Please locate this value and note it for the steps below.
 
 In this task, you see how easy it is to write into a SQL Pool table with Spark thanks to the SQL Analytics Connector. Notebooks are used to write the code required to write to SQL Pool tables using Spark.
 
-1. **Note:** If you still have your notebook open from the end of Exercise 1, **skip ahead** to step 3 below. Otherwise, in Synapse Analytics Studio, select **Develop** from the left-hand menu.
+1. In Synapse Analytics Studio, select **Develop** from the left-hand menu.
 
    ![Develop is selected and highlighted in the Synapse Analytics menu.](media/develop-hub.png "Develop hub")
 
@@ -33,9 +33,9 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
    ![The new notebook menu item is highlighted.](media/new-notebook.png "New notebook")
 
-3. If not already attached, attach your Spark Compute by selecting it from the **Attach to** drop-down list, then select **{} Add code** to create a new cell.
+3. If not already attached, attach your Spark Compute **SparkPool01** by selecting it from the **Attach to** drop-down list and attach **Spark (Scala)** by selecting it from **Language** drop down list, then select **{} Add code** to create a new cell.
 
-   ![The Spark pool is selected in the Attach to drop-down.](media/new-notebook-add-code.png "Add code")
+   ![The Spark pool is selected in the Attach to drop-down.](media/new-notebook-add-code1.png "Add code")
 
    **Note:** If you are using your notebook from the end of Exercise 1, hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
 
@@ -43,21 +43,19 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 4. Paste the following into the new cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook if you are using the same one from Exercise 1.
 
-    ```scala
-    %%spark
+   ```
+   %%spark
+    
+   // Set the path to read the WWI Sales files
+   import org.apache.spark.sql.SparkSession
 
-    // Set the path to read the WWI Sales files
-    import org.apache.spark.sql.SparkSession
-
-    // Set the path to the ADLS Gen2 account
-    val adlsPath = "abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net"
-    ```
+   // Set the path to the ADLS Gen2 account
+   val adlsPath = "abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net"
+   ```
 
     Select the **Run cell** button to execute the new cell:
 
     ![The new cell is displayed.](media/ex02-notebook-cell1.png "Run cell")
-    
-    **Note**:There should be no space before **%%spark** if there is space then cell run will fail
 
     > This cell imports required libraries and sets the `adlsPath` variable, which defines the path used to connect to an Azure Data Lake Storage (ADLS) Gen2 account. Connecting to ADLS Gen2 from a notebook in Azure Synapse Analytics uses the power of Azure Active Directory (AAD) pass-through between compute and storage. The `%%spark` "magic" sets the cell language to Scala, which is required to use the `SparkSession` library.
 
@@ -67,14 +65,14 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 6. Paste the following and run the new cell:
 
-    ```scala
-    %%spark
-
-    // Read the sales into a dataframe
-    val sales = spark.read.format("csv").option("header", "true").option("inferSchema", "true").option("sep", "|").load(s"$adlsPath/factsale-csv/2012/Q4")
-    sales.show(5)
-    sales.printSchema()
-    ```
+   ```
+   %%spark
+    
+   // Read the sales into a dataframe
+   val sales = spark.read.format("csv").option("header", "true").option("inferSchema", "true").option("sep", "|").load(s"$adlsPath/factsale-csv/2012/Q4")
+   sales.show(5)
+   sales.printSchema()
+   ```
 
     This code loads data from CSV files in the data lake into a DataSet. Note the `option` parameters in the `read` command. These options specify the settings to use when reading the CSV files. The options tell Spark that the first row of each file containers the column headers, the separator in the files in the `|` character, and that we want Spark to infer the schema of the files based on an analysis of the contents of each column. Finally, we display the first five records of the data retrieved and print the inferred schema to the screen.
 
@@ -90,36 +88,38 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 9. Paste the following and run the new cell:
 
-    ```scala
-    %%spark
+   ```
+   %%spark
+    
+   // Import libraries for the SQL Analytics connector
+   import com.microsoft.spark.sqlanalytics.utils.Constants
+   import org.apache.spark.sql.SqlAnalyticsConnector._
+   import org.apache.spark.sql.SaveMode
 
-    // Import libraries for the SQL Analytics connector
-    import com.microsoft.spark.sqlanalytics.utils.Constants
-    import org.apache.spark.sql.SqlAnalyticsConnector._
-    import org.apache.spark.sql.SaveMode
+   // Set target table name
+   var tableName = s"SQLPool01.wwi_staging.Sale"
 
-    // Set target table name
-    var tableName = s"SQLPool01.wwi_staging.Sale"
-
-    // Write the retrieved sales data into a staging table in Azure Synapse Analytics.
-    sales.limit(10000).write.mode(SaveMode.Append).sqlanalytics(tableName, Constants.INTERNAL)
-    ```
+   // Write the retrieved sales data into a staging table in Azure Synapse Analytics.
+   sales.limit(10000).write.mode(SaveMode.Append).sqlanalytics(tableName, Constants.INTERNAL)
+   ```
 
     This code writes the data retrieved from Blob Storage into a staging table in Azure Synapse Analytics using the SQL Analytics connector. Using the connector simplifies connecting to Azure Synapse Analytics because it uses AAD pass-through. There is no need to create a password, identity, external table, or format sources, as it is all managed by the connector.
 
-10. As the cell runs, select the arrow icon below the cell to expand the details for the Spark job.
+10. As the cell runs, select the arrow icon below the cell to expand the details for the Spark job. After approximately 1-2 minutes, the execution of Cell 3 will complete. Once it completes move on the next step.
 
     > This pane allows you to monitor the underlying Spark jobs, and observe the status of each. As you can see, the cell is split into two Spark jobs, and the progress of each can be observed. We will take a more in-depth look at monitoring Spark applications in Task 4 below.
 
     ![The Spark job status pane is displayed below the cell, with the progress of each Spark job visible.](media/ex02-notebook-ingest-cell-3-spark-job.png "Spark Job status")
 
-11. After approximately 1-2 minutes, the execution of Cell 3 will complete. Once it has completed, select **Data** from the left-hand menu.
-
-    ![Data is selected and highlighted in the Synapse Analytics menu.](media/data-hub.png "Data hub")
-
-12. **Important**: Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+11. Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+     
+    ![The Close + discard changes button is highlighted.](media/closenotebook.png "closenotebook")
 
     ![The Close + discard changes button is highlighted.](media/notebook-close-discard-changes.png "Discard changes?")
+
+12. Now, select **Data** from the left-hand menu.
+
+    ![Data is selected and highlighted in the Synapse Analytics menu.](media/data-hub.png "Data hub")
 
 13. Under **Workspace** tab expand **Databases** and then expand the **SQLPool01** database.
 
@@ -161,7 +161,7 @@ Now, take some time to review the **Exercise 2 - Bonus Notebook with CSharp** no
 
     You can run each cell in this notebook and observe the output. Be aware, however, that writing data into a staging table in Azure Synapse Analytics with this notebook takes several minutes, so you don't need to wait on the notebook to finish before attempting to query the `wwi_staging.Sale_CSharp` table to observe the data being written or to move on to the next task.
 
-3. **Run** the notebook.
+3. Run the notebook
 
 To observe the data being written into the table:
 
@@ -171,14 +171,16 @@ To observe the data being written into the table:
 
    > If you do not see the table, select the Actions ellipsis next to Tables, and then select **Refresh** from the fly-out menu.
 
-3. Replace the `SELECT` query in the editor with the query below:
+3. Replace the existing query in the editor with the query below. 
 
    ```sql
    SELECT COUNT(*) FROM [wwi_staging].[Sale_CSharp]
    ```
-
+ 
 4. Select **Run** on the toolbar.
-
+   
+   ![CSharp for Spark](./media/ex02-csharp-for-spark-extra.png)
+   
    > Re-run the query every 5-10 seconds to watch the count of records in the table, and how it changes as new records are being added by the notebook. The script in the notebook limits the number of rows to 1500, so if you see a count of 1500, the notebook has completed processing.
 
 5. **Important**: Close the notebook by selecting the **X** in the top right of the tab and then select **Discard Changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
@@ -195,7 +197,7 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
    ![The Enrich Data pipeline is selected.](media/enrich-data-pipeline.png "Pipelines")
 
-   > Selecting a pipeline opens the pipeline canvas, where you can review and edit the pipeline using a code-free, graphical interface. This view shows the various activities within the pipeline and the links and relationships between those activities. The `Exercise 2 - Enrich Data` pipeline contains two activities, a copy data activity named `Import Customer dimension` and a mapping data flow activity named `Enrich Customer Data`.
+   > Selecting a pipeline opens the pipeline canvas, where you can review and edit the pipeline using a code-free, graphical interface. This view shows the various activities within the pipeline and the links and relationships between those activities. The `Exercise 2 - Enrich Data` pipeline contains two activities, a copy data activity named `Import Customer dimension` and a data flow activity named `Enrich Customer Data`.
 
 3. Now, take a closer look at each of the activities within the pipeline. On the canvas graph, select the **Copy data** activity named `Import Customer dimension`.
 
@@ -213,7 +215,7 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
     ![The Sink tab for the Copy data activity is selected and highlighted.](media/ex02-orchestrate-copy-data-sink.png "Pipeline canvas property tabs")
 
-    > Reviewing the fields on this tab, you will notice that it is possible to define the copy method, table options, and to provide pre-copy scripts to execute. Also, take special note of the sink dataset, `wwi_staging_dimcustomer_asa`. The dataset requires a parameter named `UniqueId`, which is populated using a substring of the Pipeline Run Id. This dataset points to the `wwi_staging.DimCustomer_UniqueId` table in Synapse Analytics, which is one of the data sources for the Mapping Data Flow. We will need to ensure that the copy activity successfully populates this table before running the data flow.
+    > Reviewing the fields on this tab, you will notice that it is possible to define the copy method, table options, and to provide pre-copy scripts to execute. Also, take special note of the sink dataset, `wwi_staging_dimcustomer_asa`. The dataset requires a parameter named `UniqueId`, which is populated using a substring of the Pipeline Run Id. This dataset points to the `wwi_staging.DimCustomer_UniqueId` table in Synapse Analytics, which is one of the data sources for the Data Flow. We will need to ensure that the copy activity successfully populates this table before running the data flow.
 
 6. Select the **Mapping** tab. On this tab, you can review and set the column mappings. As you can see on this tab, the spaces are being removed from the column names in the sink.
 
@@ -225,13 +227,13 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
     > Since we are using PolyBase with dynamic file properties, owing to the UniqueId values, we need to [enable staging](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-data-warehouse#staged-copy-by-using-polybase). In cases of large file movement activities, configuring a staging path for the copy activity can improve performance.
 
-8. Switch to the **Mapping Data Flow** activity by selecting the `Enrich Customer Data` Mapping Data Flow activity on the pipeline design canvas, then select the **Settings** tab.
+8. Switch to the **Data Flow** activity by selecting the `Enrich Customer Data` Data Flow activity on the pipeline design canvas, then select the **Settings** tab.
 
     ![The data flow activity settings are displayed.](media/pipeline-data-flow-settings.png "Settings")
 
     > Observe the settings configurable on this tab. They include parameters to pass into the data flow, the Integration Runtime, and compute resource type and size to use. If you wish to use staging, you can also specify that here.
 
-9. Next, select the **Parameters** tab in the configuration panel of the Mapping Data Flow activity.
+9. Next, select the **Parameters** tab in the configuration panel of the Data Flow activity.
 
     ![The Parameters table on the configuration panel of the Mapping Data Flow activity is selected and highlighted.](media/ex02-orchestrate-data-flow-parameters.png "Mapping Data Flow activity")
 
@@ -245,7 +247,7 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
 10. Take a minute to look at the options available on the various tabs in the configuration panel. You will notice the properties here define how the data flow operates within the pipeline.
 
-11. Now, let us take a look at the definition of the data flow the Mapping Data Flow activity references. Double-click the **Mapping Data Flow** activity on the pipeline canvas to open the underlying Data Flow in a new tab.
+11. Now, let us take a look at the definition of the data flow the Data Flow activity references. Double-click the `Enrich Customer Data` Data Flow activity on the pipeline canvas to open the underlying Data Flow in a new tab.
 
     > **Important**: Typically, when working with Data Flows, you would want to enable **Data flow debug**. [Debug mode](https://docs.microsoft.com/azure/data-factory/concepts-data-flow-debug-mode) creates a Spark cluster to use for interactively testing each step of the data flow and allows you to validate the output prior to saving and running the data flow. Enabling a debugging session can take up to 10 minutes, so you will not enable this for the purposes of this workshop. Screenshots will be used to provide details that would otherwise require a debug session to view.
 
@@ -277,7 +279,7 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
 16. Before looking at the `PostalCodeFilter`, quickly select the `+` button to the right of the `PostalCodes` data source to display a list of available transformations.
 
-    > Take a moment to browse the list of transformations available in Mapping Data Flows. From this list, you get an idea of the types of transformations that are possible using data flows. Transformations are broken down into three categories, **multiple inputs/outputs**, **schema modifiers**, and **row modifiers**. You can learn about each transformation in the docs by reading the [Mapping data flow transformation overview](https://docs.microsoft.com/azure/data-factory/data-flow-transformation-overview) article.
+    > Take a moment to browse the list of transformations available in Data Flows. From this list, you get an idea of the types of transformations that are possible using data flows. Transformations are broken down into three categories, **multiple inputs/outputs**, **schema modifiers**, and **row modifiers**. You can learn about each transformation in the docs by reading the [Data flow transformation overview](https://docs.microsoft.com/azure/data-factory/data-flow-transformation-overview) article.
 
     ![The + button next to PostalCodes is highlighted, and the menu of available transformations is displayed.](media/ex02-orchestrate-data-flow-available-transformations.png "Data flow canvas")
 
@@ -291,17 +293,17 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
 19. This will open the Visual expression builder.
 
-    > In mapping data flows, many transformation properties are entered as expressions. These expressions are composed of column values, parameters, functions, operators, and literals that evaluate to a Spark data type at run time. To learn more, visit the [Build expressions in mapping data flow](https://docs.microsoft.com/azure/data-factory/concepts-data-flow-expression-builder) page in the documentation.
+    > In data flows, many transformation properties are entered as expressions. These expressions are composed of column values, parameters, functions, operators, and literals that evaluate to a Spark data type at run time. To learn more, visit the [Build expressions in data flow](https://docs.microsoft.com/azure/data-factory/concepts-data-flow-expression-builder) page in the documentation.
 
     ![The Visual expression builder is displayed.](media/ex02-orchestrate-data-flow-expression-builder.png "Visual expression builder")
 
-20. The filter currently applied ensures all zip codes are between 00001 and 98000. Observe the different expression elements and values in the area below the expression box that help you create and modify filters and other expressions.
+20. The filter currently applied ensures all zip codes are between 90000 and 98000. Observe the different expression elements and values in the area below the expression box that help you create and modify filters and other expressions.
 
 21. Select **Cancel** to close the visual expression builder.
 
 22. Select the `DimCustomer` data source on the data flow canvas graph.
 
-    > Take a few minutes to review the various tabs in the configuration panel for this data source to get a better understanding of how it is configured, as you did above. Note that this data source relies on the `wwi_staging.DimCustomer_UniqueId` table from Azure Synapse Analytics for its data. `UniqueId` is supplied by a parameter to the data flow, which contains a substring of the Pipeline Run Id. Before running the pipeline, you will add a dependency to the Mapping Data Flow activity to ensure the Copy activity has populated the `wwi_staging.DimCustomer_UniqueId` in Azure Synapse Analytics before allowing the data flow to execute.
+    > Take a few minutes to review the various tabs in the configuration panel for this data source to get a better understanding of how it is configured, as you did above. Note that this data source relies on the `wwi_staging.DimCustomer_UniqueId` table from Azure Synapse Analytics for its data. `UniqueId` is supplied by a parameter to the data flow, which contains a substring of the Pipeline Run Id. Before running the pipeline, you will add a dependency to the Data Flow activity to ensure the Copy activity has populated the `wwi_staging.DimCustomer_UniqueId` in Azure Synapse Analytics before allowing the data flow to execute.
 
     ![The DimCustomer data source is highlighted on the data flow canvas graph.](media/ex02-orchestrate-data-flow-sources-dim-customer.png "Data flow canvas")
 
@@ -333,11 +335,11 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
 28. Before running the pipeline there is one more change we need to make. As mentioned above, the data flow depends on the data written by the copy activity, so you will add a dependency between the two activities.
 
-29. In the data flow canvas graph, select the green box on the right-hand side of the **Copy data** activity and drag the resulting arrow up onto the **Mapping Data Flow** activity.
+29. In the data flow canvas graph, select the green box on the right-hand side of the `Import Customer dimension` Copy data activity and drag the resulting arrow up onto the `Enrich Customer Data` Data Flow activity.
 
     ![The green box on the right-hand side of the Copy data activity is highlighted, and the arrow has been dragged onto the Mapping Data Flow.](media/ex02-orchestrate-pipelines-create-dependency.png "Data pipeline canvas")
 
-30. This creates a requirement that the **Copy data** activity completes successfully before the **Mapping Data Flow** can execute, and enforces our requirement of the Synapse Analytics table being populated before running the data flow.
+30. This creates a requirement that the **Copy data** activity completes successfully before the **Data Flow** can execute, and enforces our requirement of the Synapse Analytics table being populated before running the data flow.
 
     ![The dependency arrow going from the Copy data activity to the Mapping Data Flow is displayed.](media/ex02-orchestrate-pipelines-create-dependency-complete.png "Data pipeline canvas")
 
@@ -371,9 +373,9 @@ After you finish building and debugging your data flow and its associated pipeli
 
    ![Monitor is selected and highlighted in the Synapse Analytics menu.](media/monitor-hub.png "Synapse Analytics menu")
 
-2. Under Orchestration, select **Pipeline runs**.
+2. Under Integration, select **Pipeline runs**.
 
-   ![Pipeline runs is selected and highlighted under the Orchestration section of the monitor resource list.](media/ex02-monitor-pipeline-runs.png "Synapse Analytics Monitor")
+   ![Pipeline runs is selected and highlighted under the Orchestration section of the monitor resource list.](media/ex02-monitor-pipeline-runs1.png "Synapse Analytics Monitor")
 
 3. Select the `Exercise 2 - Enrich Data_A03` pipeline the list. This will have a status of `In progress`.
 
@@ -451,9 +453,9 @@ In this task, you examine the Apache Spark application monitoring capabilities b
 
    ![Apache Spark applications is selected and highlighted under the Activities section of the monitor resource list.](media/ex02-monitor-activities-spark.png "Synapse Analytics Monitor")
 
-3. On the Apache Spark applications page, select the **Submit time** value and observe the available options for limiting the time range for Spark applications that are displayed in the list. In this case, you are looking at the current run, so ensure **Last 24 hours** is selected and then select **OK**.
+3. On the Apache Spark applications page, select the **Local time** value and observe the available options for limiting the time range for Spark applications that are displayed in the list. In this case, you are looking at the current run, so ensure **Last 24 hours** is selected and then select **OK**.
 
-   ![Last 24 hours is selected and highlighted in the Time range list.](media/ex02-monitor-activities-spark-time-range.png "Synapse Analytics Monitor")
+   ![Last 24 hours is selected and highlighted in the Time range list.](media/ex02-monitor-activities-spark-time-range1.png "Synapse Analytics Monitor")
 
 4. From the list of Spark applications, select the first job, which should have a status of `In progress` or `Succeeded`.
 

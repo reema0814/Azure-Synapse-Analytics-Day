@@ -1,14 +1,14 @@
-# Exercise 7: Publish a Power BI Report
+# Exercise 8: Publish a Power BI Report
 
 In this lab, you are working in the role of a **data analyst**.
 
-You will use Power BI Desktop to connect to the **Sale Analysis** dataset published in **Exercise 5** . You will then develop a multi-page report, which will include synced slicers, a custom visual, page drill through, a report-level measure, bookmarks, and buttons. You will finalize the lab by publishing the report to the Power BI service, and then exploring it in the service.
+You will use Power BI Desktop to connect to the **Sale Analysis** dataset published in **Exercise 6** . You will then develop a multi-page report, which will include synced slicers, a custom visual, page drill through, a report-level measure, bookmarks, and buttons. You will finalize the lab by publishing the report to the Power BI service, and then exploring it in the service.
 
 ---
 
 **Important**
 
-Important: You must successfully complete Exercise 6 before commencing this lab.
+Important: You must successfully complete Exercise 7 before commencing this lab.
 
 ---
 
@@ -567,4 +567,4 @@ In this task, you will explore the report to determine root cause for low-profit
 
 ### Summary
 
-In this exercise, you used Power BI Desktop to connect to the **Sale Analysis** dataset published in **Exercise 05**. You then developed a multi-page report, which included synced slicers, a custom visual, page drill through, a report-level measure, bookmarks, and buttons. You then finalized the exercise by publishing the report to the Power BI service, and exploring it in the service.
+In this exercise, you used Power BI Desktop to connect to the **Sale Analysis** dataset published in **Exercise 06**. You then developed a multi-page report, which included synced slicers, a custom visual, page drill through, a report-level measure, bookmarks, and buttons. You then finalized the exercise by publishing the report to the Power BI service, and exploring it in the service.
