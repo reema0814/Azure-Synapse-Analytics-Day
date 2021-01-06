@@ -73,7 +73,7 @@ In this task, you will browse your data lake using SQL On-demand.
     https://<yourdatalake storage account name>.dfs.core.windows.net/wwi/factsale-parquet/2012/Q1/*/*
     ```
 
-    > Note: Replace 'yourdatalakestorageaccountname' with the **Storage Account Name** provided in the environment details section on Lab Environment tab on the right.
+    > Note: Replace 'yourdatalakestorageaccountname' with the **Storage Account Name** provided in the Environment Details tab on the right.
 
 12. Select `Run` to re-run the script. You should see a result of `2991716`, which is the number of records contained in all the Parquet files within the `factsale-parquet/2012/Q1` directory.
 
@@ -131,7 +131,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![The add code button is highlighted.](media/addcode.png "Add code")
 
-10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook above.
+10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the Environment Details tab on the right. You can also copy it from the first cell of the notebook above.
 
     ```python
     data_path = spark.read.load(
