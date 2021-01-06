@@ -112,9 +112,9 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
    ![Selecting the right workspace to work on](media/ex03-selecting-workspace.png "Selecting the right workspace to work on")
 
-3. Navigate to **Settings**, then select **Settings** from the menu.
+3. Navigate to the **Settings** the ellipse symbol at the top right, then select **Settings** from the menu.
 
-   ![The Settings menu is displayed.](media/pbi-settings.png "Settings")
+   ![The Settings menu is displayed.](media/pbiws-settings.png "Settings")
 
 4. Select the **Datasets** tab. From the list of datasets select `wwifactsales`, then select **Edit credentials** underneath the **Data Source credentials** section.
 
