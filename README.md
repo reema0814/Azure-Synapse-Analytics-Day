@@ -26,9 +26,9 @@ If you are using a hosted lab environment, please follow the steps below to get 
 
     ![The lab environment details are displayed.](media/lab-environment.png "Lab Environment")
 
-2. Select **Lab Resources** under Lab Environment to start the Virtual Machine (VM) provided for this lab. However, you do not need to use the VM to complete the lab. It is there for your convenience to make it easier to sign into Azure if you have an existing account and do not want to log out of it.
+2. Select the **Virtual machine** under the **Virtual Machines** to start the Virtual Machine (VM) provided for this lab. However, you do not need to use the VM to complete the lab. It is there for your convenience to make it easier to sign into Azure if you have an existing account and do not want to log out of it.
 
-    ![The Virtual Machines are displayed and the Play button is highlighted.](media/lab-resources.png "Lab Resources")
+    ![The Virtual Machines are displayed and the Play button is highlighted.](media/vm-v2.png "Lab Resources")
 
 ## Solution architecture
 
