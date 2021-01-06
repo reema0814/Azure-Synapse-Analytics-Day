@@ -54,6 +54,8 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
 7. Open the downloaded .pbids file. This will launch Power BI desktop.
 
+   >PowerBI desktop will already be installed on the labvm provided.
+
 8. When Power BI Desktop loads, select **Microsoft account**, then select **Sign in**. Follow the login prompts to login with the credential provided to you. When you return to the SQL Server database dialog, select **Connect**.
 
    ![Signing in with a Microsoft account](media/ex03-login-pbi.png "Sign in")
