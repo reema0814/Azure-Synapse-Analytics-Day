@@ -182,6 +182,8 @@ To observe the data being written into the table:
    ![CSharp for Spark](./media/ex02-csharp-for-spark-extra.png)
    
    > Re-run the query every 5-10 seconds to watch the count of records in the table, and how it changes as new records are being added by the notebook. The script in the notebook limits the number of rows to 1500, so if you see a count of 1500, the notebook has completed processing.
+   
+   **Important**: Close the SQLscript by selecting the **X** in the top right of the tab and then select **Discard Changes**.
 
 5. **Important**: Close the notebook by selecting the **X** in the top right of the tab and then select **Discard Changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
 
@@ -410,6 +412,8 @@ After you finish building and debugging your data flow and its associated pipeli
 11. When the pipeline execution completes, all activity runs will reflect a status of Succeeded.
 
     ![A screenshot of the activity runs for the Exercise 2 - Enrich Data pipeline is displayed with all activities showing a status of Succeeded.](media/ex02-monitor-ex2-enrich-data-activity-runs-succeeded.png "Pipeline run monitoring")
+    
+    >It takes around 5 minutes for the pipeline to have a status of Succeeded.
 
 12. When the **Enrich Customer Data** activity has a status of **Complete**, hover your mouse cursor over the **Enrich Customer Data** activity and select the **Details** icon that appears.
 
@@ -437,7 +441,7 @@ After you finish building and debugging your data flow and its associated pipeli
 
     ![The X (close) button is highlighted on the data flow Details dialog toolbar.](media/ex02-monitor-data-flow-close.png "Data flow details")
 
-17. Back on Exercise 2 - Enrich Data pipeline run screen, switch to the Gantt view. This view provides a graphical representation of the run times of the various activities within the pipeline.
+17. Back on Exercise 2 - Enrich Data pipeline run screen, switch to the **Gantt** view. This view provides a graphical representation of the run times of the various activities within the pipeline.
 
     ![The Gantt view option is selected and highlighted on the pipeline run dialog.](media/ex02-monitoring-ex2-enrich-data-activity-runs-gantt.png "Pipeline run Gantt view")
 
