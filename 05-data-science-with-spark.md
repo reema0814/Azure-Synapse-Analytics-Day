@@ -1,4 +1,4 @@
-# Exercise 5 - Data Science with Azure Synapse Spark [Read-Only]
+# Exercise 5 - Data Science with Azure Synapse Spark [Read-Only/optional]
 
 > **Note**: The following Exercise 5 is for future functionality only outside of the AIAD program and therefore provided as **educational reading only**. This repo documentation will be updated once exercise 5 is available for use.
 
