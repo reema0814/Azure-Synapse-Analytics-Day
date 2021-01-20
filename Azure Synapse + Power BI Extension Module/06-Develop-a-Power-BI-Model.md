@@ -78,7 +78,7 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
 In this task, you will create six Power Query queries that will each load as a table to your model.
 
-   *Power Query is a Microsoft technology used to connect to connect to data stores, profile data, and transform data. You’ll define query for each table your model.*
+   *Power Query is a Microsoft technology used to connect to data stores, profile data, and transform data. You’ll define query for each table your model.*
 
 1. In Power BI Desktop, in the **Navigator** window, select (don’t check) the **wwi.DimCity** table.
 
