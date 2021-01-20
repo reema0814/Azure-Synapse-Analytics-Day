@@ -38,12 +38,6 @@ In this task, you will prepare your environment.
 
 6.	If you are not signed in automatically, click **Sign In**, and then sign in using the lab Azure credentials.
 
-7.	At the top-right corner, ensure the new look is **On**.
-
-
-    ![ws name.](media/6.5.png)
-
-
 ### **Subtask 2: Download a Dataset File**
 
 In this task, you will download a Power BI data source file from Synapse Studio.
