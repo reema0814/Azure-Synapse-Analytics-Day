@@ -266,6 +266,8 @@ In this task, you will create six Power Query queries that will each load as a t
 
 36. Remove the **CalendarMonthNumber** and **CalendarYear** columns.
 
+*Tip: You can remove the columns using one of three techniques. First, you can open the Choose Columns window, and then uncheck those columns. Second, you can multi-select the columns and use the ribbon Remove Columns commands. Or, third, you can multi-select the columns, right-click the selection, and then select the context menu to Remove Columns options.
+
 37. Review the native query, and notice the SQL expression used to compute the **MonthKey** column.
 
     *This design isn’t optimal. In a real world solution, query performance would be better if the **MonthKey** column values are stored in the **wwi.DimDate** table (or a materialized view).*
