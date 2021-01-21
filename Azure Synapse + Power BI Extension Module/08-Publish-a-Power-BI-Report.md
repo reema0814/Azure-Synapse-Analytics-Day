@@ -1,8 +1,8 @@
-# Exercise 8: Publish a Power BI Report
+# Exercise 8: Create a Model Using DQ to Power BI
 
 In this lab, you are working in the role of a **data analyst**.
 
-You will use Power BI Desktop to connect to the **Sale Analysis** dataset published in **Exercise 6** . You will then develop a multi-page report, which will include synced slicers, a custom visual, page drill through, a report-level measure, bookmarks, and buttons. You will finalize the lab by publishing the report to the Power BI service, and then exploring it in the service.
+You will use Power BI Desktop to connect to the **Sale Analysis** dataset published in **Exercise 7**. You will then convert the live connection to a DirectQuery model, allowing you to extend the remote model with a calculated column and a new table of imported data sourced from a web page.
 
 ---
 
@@ -12,559 +12,401 @@ Important: You must successfully complete Exercise 7 before commencing this lab.
 
 ---
 
-## **Task 1: Create a Report**
+## **Task 1: Getting Started**
 
-In this task, you will create a live connection report to the **Sale Analysis** dataset.
+In this task, you will get started by enabling a preview feature and creating a live connection to the Sale Analysis dataset.
 
 
-### **Subtask 1: Get Started**
+### **Subtask 1: Enable Preview Feature**
 
-In this task, you will create a Power BI Desktop solution.
+In this task, you will enable a preview feature to work with DirectQuery models with Power BI datasets.
 
 1.	Open Power BI Desktop.
 
 2.	If the getting started window opens, at the top-right of the window, click **X**.
 
-   ![ws name.](media/8.1.png)
- 
-3.	To save the Power BI Desktop solution, on the **File** tab (backstage view), select **Save**.
+   	![ws name.](media/A1.png)
 
-4.	Save the file as **Sale Report** to an easy-to-remember location in your file system.
+3.	To enable the preview feature, on the File tab (backstage view), select Options and Settings, and then select Options.
+
+		![ws name.](media/A2.png)
+
+4.	In the Options window, at the left, select Preview Features.
+	
+		![ws name.](media/A3.png)
+
+5.	Ensure the DirectQuery for Power BI Datasets and Analysis Services feature is checked.
+	
+		![ws name.](media/A4.png)
+
+6.	Click OK.
+
+		![ws name.](media/A5.png)
+
+7.	When notified that a restart of Power BI Desktop is required, click OK.
+
+8.	Close Power BI Desktop.
+
+9.	Open Power BI Desktop again, and close the getting started window.
+ 
+10.	To save the Power BI Desktop solution, on the **File** tab (backstage view), select **Save**.
+
+11.	Save the file as **Sale Report** to an easy-to-remember location in your file system.
 
 
 ### **Subtask 2: Create a Live Connection**
 
 In this task, you will create a live connection to the **Sale Analysis** dataset.
 
-1. On the **Home** ribbon, from inside the **Data** group, click **Get Data**, and then select Power **BI Datasets**.
+1. On the **Home** ribbon, from inside the **Data** group, click **Get Data**, and then select **Power BI Datasets**.
 
-   ![ws name.](media/8.2.png)
+   	![ws name.](media/A6.png)
  
 2. In the **Select a Dataset** window, notice that the **Sale Analysis** dataset is endorsed as a promoted dataset.
+	
+	*It was endorsed by the BI developer who published the dataset in Exercise 07.*
 
 3.	Select the **Sale Analysis** dataset.
 
-   ![ws name.](media/8.3.png)
+   	![ws name.](media/A7.png)
  
 4.	Click **Create**.
    
-   ![ws name.](media/8.4.png)
+   	![ws name.](media/A8.png)
    
 5.	In the status bar, at the right, notice the live connection status.
 
-   ![ws name.](media/8.5.png)
- 
-6.	Save the Power BI Desktop solution.
-
-
-## **Task 2: Develop the Report Layout**
-
-In this task, you will develop a two-page report.
-
-### **Subtask 1: Develop Page 1**
-
-In this task, you will develop the first report page.
-
-
-The completed report page will look like the following:
-
-   ![ws name.](media/8.6.png)
- 
-1.	To rename the report page, at the bottom-left, double-click **Page 1**.
-
-2.	Replace the text with **Profit Analysis**, and then press **Enter**.
- 
-   ![ws name.](media/8.7.png)
- 
-3.	To format the page, in the **Visualizations** pane, select the **Format** pane (paint roller icon).
-
-   ![ws name.](media/8.8.png)
- 
-   *You’ll format many report elements in this lab to produce a professional report layout. To format an element, you’ll select it, and then access formatting options in this pane. Formatting options are organized into sections*.
+   	![ws name.](media/A9.png)
    
-4.	Expand the **Page Background** section.
-
-   ![ws name.](media/8.9.png)
- 
-5.	Open the **Color** palette, click **Custom Color**, and set the custom color **C5C5C5**.
-
-6.	Set the **Transparency** property to **0%**.
-
-7.	Add a slicer to the page.
-
-   ![ws name.](media/8.10.png)
- 
-8.	Position and size the slicer at the top-left of the report page.
-
-   ![ws name.](media/8.11.png)
- 
-9.	In the **Fields** pane, expand the **Date** table, and then drag the **Year** field (not the **Year** level of the hierarchy) into the slicer.
-
-   ![ws name.](media/8.12.png)
- 
-10. Ensure that the slicer is selected, and then open the **Format** pane.
-
-11. Turn the **Shadow** property on.
-
-    ![ws name.](media/8.13.png)
- 
-    *For a consistent style, you’ll be instructed to add shadow to all elements you add to the report*.
- 
-12. In the slicer, select **CY2012**.
-
-    ![ws name.](media/8.14.png)
- 
-13. To create a new visual, first select an empty area of the report canvas.
-
-14. To add a table visual to the report canvas, in the **Visualizations** pane, click the table visual icon.
-
-    ![ws name.](media/8.15.png)
- 
-15. Position the table visual at the right of the slicer, and resize it to fill the remaining page space.
-
-    ![ws name.](media/8.16.png)
- 
-16. Add the following fields to the table visual:
-
--	**Geography** table **State-Province** field
--	**Sale** table **Profit Amount** field
--	**Product** table **Profit % All Geography**
-
-17. Apply the following table visual formats:
-
--	In the **Style** section, set the **Style** to **Bold Header**.
--	In the **Grid** section, increase the **Text Size** property to **16** pt.
--	Turn **Shadow** on.
-
-18. To sort the table visual rows, click the **Profit % All Geography** column header to sort by descending profitability.
-
-    ![ws name.](media/8.17.png)
- 
-19. Save the Power BI Desktop solution.
- 
-## **Subtask 2: Develop Page 2**
-
-In this task, you will develop the second report page.
-
-The completed report page will look like the following:
-
-   ![ws name.](media/8.18.png)
- 
-1.	To duplicate the report page, at the bottom-left, right-click the **Profit Analysis** page, and then select **Duplicate Page**.
-
-   ![ws name.](media/8.19.png)
- 
-   *Tip: Duplicating the page copies the formatting options. It can be quicker to duplicate than to reapply formats. And, it’s likely to result in more design consistency.*
-
-2.	Rename the new page as **Sale Chord**.
-
-   ![ws name.](media/8.20.png)
- 
-3.	To delete the table visual, select the visual, and then press the **Delete key**.
- 
-4.	To sync the slicers, on the **View** ribbon tab, from inside the **Show Panes** group, select **Sync Slicers**.
- 
-   ![ws name.](media/8.21.png)
+   *Live connections are ideal when creating a report that uses an existing Power BI dataset.*
    
-5.	In the report page, select the **Year** slicer.
+6.	Switch to Model view.
 
-6.	In the **Sync Slicers** pane (located at the left), check both pages to sync.
+7.	To upgrade to the new model view, in the banner across the top of the diagram, click Upgrade Now.
 
-   ![ws name.](media/8.22.png)
+		![ws name.](media/A10.png)
+	
+	*While the model is hosted remotely as a Power BI dataset, it’s still possible to review the model design in the diagram.*
+	
+8.	In the model diagram, select any table, and then in the Properties pane, notice that all properties are read-only.
+
+	*A live connection to a Power BI dataset is read-only, unless you convert it to a DirectQuery model. You will convert it to a DirectQuery model in the next section. It will allow you to extend the design of the remote model that the BI developer published in Exercise 07.*
  
-   *When a report user changes either **Year** slicer, the filter will propagate between these pages. Both slicers will remain in sync.*
-   
-7.	In the **Sync Slicers** pane, at the top-left, click **X**.
+9.	Save the Power BI Desktop solution.
 
-   ![ws name.](media/8.23.png)
- 
-8.	To import a custom visual, in the **Visualizations** pane, click the ellipsis (…), and then select **Get More Visuals**.
+## **Task 2: Develop a Model Using DQ to Power BI**
 
-   ![ws name.](media/8.24.png)
- 
-9.	In the **Power BI Visuals** window, in the **Search** box, enter **Chord**, and then press **Enter**.
+In this task, you will develop a new model that uses a DirectQuery connection to a remote Power BI dataset and extends it with new calculations and data. You will then publish the new model to the Power BI service.
 
-   ![ws name.](media/8.25.png)
- 
-10. When the **Chord** search result appears, click **Add**.
+### **Subtask 1: Edit the Model**
 
-    ![ws name.](media/8.26.png)
- 
-11. When the custom visual imports, click **OK**.
+In this task, you will edit the model.
 
-12. In the **Visualizations** pane, notice that the chord custom visual sits in an area beneath the core Power BI visuals.
+1.	On the Home ribbon tab, from inside the Modeling group, click Make Changes to This Model.
+	
+		![ws name.](media/A11.png)
 
-    ![ws name.](media/8.27.png)
- 
-13. Add a chord visual to the report page.
+2.	To understand the transformation that is about to happen, read the text in the dialog window.
+
+3.	Click Add a Local Model.
+
+		![ws name.](media/A12.png)
+
+	*The model is now a DirectQuery model. It’s now possible to enhance the model by modifying certain table or column properties, or adding calculated columns. It’s even possible to extend the model with new tables of data that are sourced from other data sources.*
+	
+	
+4.	In Report view, in the status bar, at the right, notice that the model is using DirectQuery storage mode.
+
+		![ws name.](media/A13.png)
+		
+	*Your local model is in fact a DirectQuery connection to the Power BI dataset.*
+	
+5.	Switch to Model view.
+
+6.	In the diagram, select any table, and then notice it is now possible to modify the properties—but do not modify any properties at this time.
+
+
+### **Subtask 2: Create a Calculated Column**
+
+In this task, you will create a calculated column to enable a new way of analyzing US state sale amounts.
+
+1.	Switch to Report view.
+
+2.	In the Fields pane (located at the right), right-click the Geography table, and then select New Column.
+
+		![ws name.](media/A14.png)
+		
+3.	In the formula bar (located beneath the ribbon tab), enter the following calculated column definition.
+
+	*Tip: To enter a carriage return, press Shift+Enter. To enter a tab, press Shift +Tab.*
+	
+	DAX
+	State-Province Type =
+	SWITCH(
+		TRUE(),
+		Geography[State-Province] = "Puerto Rico (US Territory)", "Territory",
+		Geography[State-Province] IN {"Alaska", "Hawaii"}, "Non-contiguous",
+		Geography[Country] = "United States", "Contiguous",
+		"N/A"
+	)
+	
+	*The calculated column is named **State-Province Type**. The expression uses the DAX SWITCH function to return a classification for each table row (which represents a city) based on these rules (the first rule match wins):
+•	If the state name of the city is Puerto Rico (US Territory), it is classified as **Territory**.
+•	Otherwise, if the state name of the city is Alaska or Hawaii, it is classified as **Non-contiguous**.
+•	Otherwise, if the country of the city is United States, it is classified as **Contiguous**.
+•	Otherwise, it is classified as **N/A**.
+
+4.	In the Fields pane, in the Geography table, notice the addition of the calculated column (if necessary, widen the pane).
+
+		![ws name.](media/A15.png)
+		
+5.	To filter the report, ensure the Filters pane is open.
+
+		![ws name.](media/A16.png)
+		
+6.	In the Fields pane, in the Geography table, right-click the Country field, and then select Add to Filters | Report-level Filters.
+
+		![ws name.](media/A17.png)
+		
+7.	In the Filters pane, in the Country filter tile, check the United States item.
+
+		![ws name.](media/A18.png)
+	
+	*All report pages now filter by the country United States.*
+	
+8.	To add a matrix visual to the page, in the Visualizations pane, click the Matrix icon.
+
+		![ws name.](media/A19.png)
+		
+9.	Position and resize the visual to fill the report page, but be sure to leave about a 0.5 inches (1 cm) of space along the top of the page.
+
+10.	In the **Fields** pane, from the **Geography** table, drag the **State-Province Type** field and drop it into the matrix visual.
+
+11.	In the matrix visual, verify that you see three rows—one for each state-province classification.
+	
+		![ws name.](media/A20.png)
+		
+12.	To add a new level to the matrix visual rows, from the **Geography** table, drag the **State-Province** field into the Rows well (located beneath the **Visualizations** pane), directly beneath the **State-Province Type** field.
+
+		![ws name.](media/A21.png)
+		
+		![ws name.](media/A22.png)
+		
+13.	To add a value to the matrix visual, in the Fields pane, from inside the Sale table, drag the Sale Amount field into the matrix visual.		
+		
+		![ws name.](media/A23.png)
+		
+14.	Notice that it is now possible to analyze sale amounts using the classifications generated by the calculated column added to the Geography table.
+
+15.	To expand all levels on the matrix visual rows, at the top-right of the matrix visual, click the Expand All Down One Level In the Hierarchy icon (fork-like icon).
+
+		![ws name.](media/A24.png)
+		
+### **Subtask 3: Create a New Table**
+
+In this task, you will create a new table sourced from a web page to support per capita analysis.
+
+1.	On the **Home** ribbon tab, from inside the **Data** group, click **Get Data**, and then select **Web**.
+
+		![ws name.](media/A25.png)
+		
+2.	In the **From Web window**, in the **URL** box, enter: **https://aka.ms/USPopulationSynapsePBI**
+The URL is for a web page that contains US census population data. You will preview the web page in the following steps.
+
+3.	Click **OK**.
+
+		![ws name.](media/A26.png)
+
+4.	In the **Access Web Content** window, notice that anonymous authentication is selected, and then click **Connect**.
+		
+		![ws name.](media/A27.png)
+		
+5.	In the **Navigator** window, in the right pane, select **Web View**.
+		
+		![ws name.](media/A28.png)
+		
+6.	Review the web page design.
+
+	*The page comprises a table listing US states together with their 2009 census population value and a ranking.*
+
+7.	Switch back to **Table** view.
+		
+		![ws name.](media/A29.png)
+		
+8.	To preview HTML table data, in the left pane, select (do not check) **Table 2**.
+		
+		![ws name.](media/A30.png)
+	*This table of data contains the data that’s required by your model to calculate sale per capita. Three transformations, however, will need to be applied: The row for **United States** must be removed, the **Rank** column must be removed, and the **Number** column must be renamed to **Population**.*
+	
+9.	To create a query based on the Table 2 HTML table, check the Table 2 checkbox.	
+		
+		![ws name.](media/A31.png)
+		
+10.	Click **Transform Data**.
+		
+		![ws name.](media/A32.png)
+		
+11.	In the Power Query Editor window, in the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **US State Population**, and then press **Enter**.
+		
+		
+		![ws name.](media/A33.png)
+		
+12.	To remove the United States row, in the State column header, click the down-arrow, and then uncheck the United States item (scroll to the bottom of the list).
+		
+		![ws name.](media/A34.png)
+		
+13.	Click **OK**.
+
+14.	To remove the **Rank** column, right-click the **Rank** column header, and then select **Remove**.
+		
+		![ws name.](media/A35.png)
+
+15.	To rename the Number column, double-click the Number column header, replace the text with Population, and then press Enter.
  
-14. Position the chord visual at the right of the slicer, and resize it to fill the remaining page space.
+16.	Verify that the query has two columns and 51 rows.
 
-    ![ws name.](media/8.28.png)
- 
-15. Configure the following visual field wells:
+*Tip: The query column and row counts are displayed at the left of the status bar.*	
+		
+		![ws name.](media/A36.png)
+		
+17.	To apply the query, on the **Home** ribbon tab, from inside the **Close** group, click the **Close & Apply** icon.
+		
+		![ws name.](media/A37.png)
+		
+18.	When prompted about a potential security risk, read the notification, and then click OK.
 
--	**From: Geography** table **Sales Territory** field
--	**To: Customer** table **Buying Group** field
--	**Values: Sale** table **Sale Amount** field
+*The warning is irrelevant in your model design because Power Query isn’t merging queries that connect to different data sources.*
 
-   ![ws name.](media/8.29.png)
- 
-16. Format the chord visual to add shadow.
+		
+		
+		![ws name.](media/A38.png)
+		
+*The query is applied to create a model table. Because the data connection to the web page does not support DirectQuery storage mode, the table rows have been imported into the model.*
 
-17. Change the **Year** slicer values, and notice how the chord visual animates.
+19.	In Report view, in the status bar, at the right, notice that the model is now using mixed storage mode.
+		
 
-18. Hover the cursor over the outer segments and the internal chords to reveal tooltips describing inter-relationships between sales territories and buying groups.
+		![ws name.](media/A39.png)
+		
+20.	Switch to Model view.
 
-19. Set the **Year** slicer back to **CY2012**.
+21.	Notice the addition of the **US State Population** table.
 
-20. Save the Power BI Desktop solution.
+22.	Hover the cursor over the table header, and review the tooltip.
 
+	*The tooltip describes that the table data is imported.*
 
-## **Task 3: Develop a Drill Through Page**
-
-In this exercise, you will develop a drill through page.
-
-### **Subtask 1: Develop a Drill Through Page**
-
-In this task, you will develop a drill through page allowing report users to see detail data for a state-province.
-
-The completed report page will look like the following:
-
-   ![ws name.](media/8.30.png)
- 
-1.	Create a new report page by duplicating the **Sale Chord** page.
-
-2.	Rename the new page as **State-Province Details**.
-
-   ![ws name.](media/8.31.png)
- 
-3.	Remove the slicer and chord visual.
+23.	Move the **US State Population** table so it sits beside the **Geography** table.
  
-4.	From the **Fields** pane, in the **Geography** table, drag the **State-Province** field to the **Drill Through** section (beneath the **Visualizations** pane), into the well.
+24.	To create a model relationship, from the **Geography** table, drag the **State-Province** column and drop it on the **State** column of the **US State Population** table.
+		
 
-   ![ws name.](media/8.32.png)
- 
-5.	Apply a filter to the first state, **Alabama**.
+		![ws name.](media/A40.png)
+		
+25.	In the **Create Relationship window**, in the **Cross Filter Direction** dropdown list, select **Both**.
+		
+		![ws name.](media/A41.png)
+		
+*The rows of **Geography** table store cities, so the values found in the **State-Province** column contain duplicate values (for example, there are many cities in the state of California). When you create the relationship, Power BI Desktop automatically determines column cardinalities and discovered that it’s a many-to-one relationship. To ensure filters propagate from the **Geography** table to the **US State Population** table, the relationship must cross filter in both directions.*
 
-   ![ws name.](media/8.33.png)
- 
-   *The filter will be applied when the report user drills through. You applied this filter now to help design the page for a single state.*
-   
-6.	At the top-left of the report page, notice the back arrow button.
+26.	Click **OK**.
 
-   *The button was added automatically when you added a drill through filter. It allows report users to navigate back to where they drilled.*
-   
-7.	Select the button, and the in the **Visualizations** pane, turn the **Background** off.
+		![ws name.](media/A42.png)
+27.	To hide the new table, in the header of the **US State Population** table, click the visibility icon.
 
-   ![ws name.](media/8.34.png)
- 
-8.	Add a multi-row card visual to the report page.
+		![ws name.](media/A43.png)
+		
+*The table is hidden because it will only be used by a measure calculation that you will create in the next task.*
 
-   ![ws name.](media/8.35.png)
- 
-9.	Position and size the multi-row card visual at the top-left of the report page.
+### **Subtask 4: Create a Measure**
 
-   ![ws name.](media/8.36.png)
- 
-10. Add the following five fields to the multi-row card visual:
+In this task, you will create a measure to calculate sale per capita.
 
--	**Geography** table **State-Province** field
--	**Sale** table **Quantity** field
--	**Sale** table **Sale Amount** field
--	**Sale** table **Profit Amount** field
--	**Product** table **Profit % All Geography** field
+1.	Switch to Report view.
 
-11. Apply the following formats:
+2.	In the **Fields** pane, right-click the **Sale** table, and then select **New Measure**.
 
--	In the **Data Labels** section, set the **Text Size** to **16** pt.
--	In the **Card Title** section, set the **Text Size** property to **20** pt.
--	Turn **Shadow** on.
+		
+		![ws name.](media/A44.png)
 
-   ![ws name.](media/8.37.png)
- 
-12. Add a line and clustered column chart visual to the report page.
+3.	In the formula bar, enter the following measure definition.
+	
+	DAX
+	Sale per Capita =
+	DIVIDE(
+		SUM('Sale'[Sale Amount]),
+		SUM('US State Population'[Population])
+	)
+	
+*The measure is named **Sale per Capita**. The expression uses the DAX DIVIDE function to divide the sum of the **Sale Amount** column by the sum of the **Population** column.*
 
-    ![ws name.](media/8.38.png)
- 
-13. Position the line and clustered column visual at the right of the slicer, and resize it to fill the remaining page space.
+4.	On the **Measure Tools** contextual ribbon tab, from inside the **Formatting** group, in the **Format** dropdown list, select **Currency**.
 
-    ![ws name.](media/8.39.png)
- 
-14. Configure the following field mappings:
-
--	**Shared Axis: Date** table **Month** field
--	**Column Values: Sale** table **Sale Amount** field
-
-    ![ws name.](media/8.40.png)
- 
-15. To add a report-level measure, in the **Fields** pane, right-click the **Sale** table, and then select **New Measure**.
-
-    ![ws name.](media/8.41.png)
- 
-    *A report-level measure can be added by the report author. It allows them to define complex summarization logic that’s not already defined in the model.*
-    
-16. In the formula bar, enter the following measure definition:
-    ```
-      DAX
-        Profitability =
-          DIVIDE(
-	     SUM(Sale[Profit Amount]),
-	   SUM(Sale[Sale Amount])
-       )
-       ```
+5.	In the decimal places box, enter **2**.
 
 
-    *The formula divides the sum of the **Profit Amount** column by the sum of the **Sale Amount** column.*
+		![ws name.](media/A45.png)
+		
+6.	To add the measure to the matrix visual, in the **Fields** pane, from inside the **Sale** table, drag the **Sale per Capita** field into the matrix visual.
+
+*The measure evaluates the result by combining data sourced from a remote model in the Power BI service with imported table local to your new model.*
+
+### **Subtask 5: Repair a Data Issue**
+
+In this task, you will modify data in the **US State Population** table to address a data issue in the data warehouse.
+
+1.	In the matrix visual, notice there is no measure value for the state of Massachusetts.
+
+		![ws name.](media/A46.png)
+	*It’s because the state name, as stored in the Azure Synapse Analytics data warehouse, is misspelled (with trailing characters [E]). One approach to fix the spelling is to ask the data warehouse team to update their data, but that’s likely to take some time to achieve, if ever. The other approach is to modify the data loaded into the **US State Population** table, which you will do now.*	
+	
+2.	On the Home ribbon tab, from inside the **Queries** group, click the **Transform Data** icon.	
+		
+		![ws name.](media/A47.png)
+		
+
+3.	In the Power Query Editor window, right-click the **State** column, and then select **Replace Values.**		
+		
+		![ws name.](media/A48.png)
+		
+		
+4.	In the **Replace Values** window, in the **Value to Find** box, enter the correctly spelled state name: **Massachusetts**
+
+5.	In the **Replace With** box, enter the misspelled state name: **Massachusetts[E]**
+
+		
+		![ws name.](media/A49.png)
+		
+6.	Click **OK**.		
+		
+		![ws name.](media/A50.png)
+		
+7.	To apply the query, on the **Home** ribbon tab, from inside the **Close** group, click the **Close & Apply** icon.
+		
+		![ws name.](media/A51.png)
+		
+8.	When the query applies (and data is reimported into the model), in the matrix visual, notice that there is now a sale per capita value for the state of Massachusetts.
+		
+		![ws name.](media/A52.png)
+		
+	*The development and testing of the data model is now complete. You will now remove the visual in preparation for authoring a new report design in **Exercise 09**.*
+	
+9.	Select the matrix visual.
+
+10.	To remove the visual, press the **Delete** key.
  
-17. On the **Measure Tools** contextual ribbon tab, set the format to percentage.
+11.	In the **Filters** pane, remove the **Country** filter.
+	
+		
+		![ws name.](media/A53.png)
+		
+12.	Save the Power BI Desktop solution.
 
-    ![ws name.](media/8.43.png)
- 
-18. Add the **Profitability** measure to the **Line Values** well of the line and clustered column visual.
+13.	Leave the solution open for the next exercise.
 
-    ![ws name.](media/8.44.png)
- 
-19. Format the line and clustered column visual to add shadow.
+*The lab is now complete. As a data analyst, you will author a multi-page report design in **Exercise 09**.*
 
-    *The design of the drill through page is now complete.*
 
-20. Right-click the **State-Province Details** page tab, and then select **Hide Page**.
+# Summary
 
-    ![ws name.](media/8.45.png)
- 
-    *Report users won’t see the page tab, but they’ll be able to drill through to the page. You’ll now test the drill through experience.*
- 
-### **Subtask 2: Explore Drill Through**
-
-In this task, you will explore the drill through experience.
-
-1.	Select the **Profit Analysis** page.
-
-2.	Ensure the **Year** slicer is set to **CY2012**.
-
-3.	In the table visual, right-click any state, and then select **Drill Through > State-Province Details**.
-
-   ![ws name.](media/8.46.png)
- 
-   *Drill through is available from any report visual that groups by the State-Province field.*
-   
-4.	In the drill through page, notice the state you drilled from is the title of the multi-row card visual.
-
-   ![ws name.](media/8.47.png)
- 
-5.	Hover the cursor over the top-left corner of the line and clustered column chart visual, and then hover over the filter (funnel) icon.
-
-   ![ws name.](media/8.48.png)
- 
-   *The tooltip reveals all applied filters.*
-
-6.	Notice that the **Year** slicer value was passed to the drill through page, too.
-
-7.	To return back to where you drilled from, at the top-left corner, while pressing the **Ctrl** key, click the back button.
-
-   *When editing a report, you must press the **Ctrl** key when clicking buttons. If you don’t press the **Ctrl** key, the designer understands you’re selecting it so it can be configured.*
-   
-8.	Save the Power BI Desktop solution.
-
-## **Task 4: Work with Bookmarks**
-
-In this exercise, you will superimpose visuals on the drill through page. You’ll then create bookmarks and assign them to buttons. This design will allow the report user to determine which visual to display.
-
-### **Subtask 1: Create a New Visual**
-
-In this task, you will add a new visual to the drill through page.
-
-1.	Select the **State-Province Details** page.
-
-2.	Select the line and clustered column chart visual.
-
-3.	To clone the visual, press **Ctrl+C**, and then press **Ctrl+V**.
-
-4.	Position the cloned visual precisely over the top of the original visual.
-
-5.	Modify the top visual field **Shared Axis** field mappings by removing the **Month** field, and then replacing it with the **Salesperson** table **Salesperson** field.
-
-   ![ws name.](media/8.49.png)
- 
-6.	Format the visual data color by setting the **Default Color** to purple.
-
-   ![ws name.](media/8.50.png)
- 
-### **Subtask 2: Create Bookmarks**
-
-In this task, you will create two bookmarks to show or hide the superimposed visuals.
-
-1.	On the **View** ribbon tab, from inside the **Show Panes** group, select **Bookmarks** and **Selection**.
-
-   ![ws name.](media/8.51.png)
- 
-2.	In the **Selection** pane, notice there are two similarly named report elements.
-
-   ![ws name.](media/8.52.png)
- 
-3.	Hover the cursor over each to reveal a tooltip describing their full title.
-
-4.	Notice that one ends in “by Month”, and the other ends in “by Salesperson”.
-
-5.	Determine which of the visuals groups by salesperson, and then click the **Hide** icon.
-
-   ![ws name.](media/8.53.png)
- 
-6.	Verify that the “by Month” visual is now visible.
-
-7.	In the **Bookmarks** pane, click **Add**.
-
-   ![ws name.](media/8.54.png)
- 
-8.	To rename the bookmark, double-click **Bookmark 1**.
-
-9.	Rename the bookmark as **By Month**, and then press **Enter**.
-
-10. Click the ellipsis at the right of the bookmark, and then select **Data**.
-
-    ![ws name.](media/8.55.png)
- 
-    *By selecting Data, you’re disabling the bookmark from capturing any applied filters. It means that when the bookmark is applied, it’ll use the filters applied by the report user.*
-    
-11. Click the ellipsis again, and then select **Update**.
-
-    ![ws name.](media/8.56.png)
- 
-12. In the **Selection** pane, unhide the visual, and then hide the visual that groups by month.
-
-13. Create a second bookmark, and then name it **By Salesperson**.
-
-14. Configure the bookmark to not override filters (turn off **Data**), and then update the bookmark.
-
-15. Verify there are two bookmarks.
-
-    ![ws name.](media/8.57.png)
- 
-16. Close the **Selection** pane.
-
-    ![ws name.](media/8.58.png)
- 
-17. Close the **Bookmarks** pane.
-
-    ![ws name.](media/8.59.png)
- 
- 
-### **Subtask 3: Add Buttons**
-
-In this task, you will add two buttons to the report page, and then configure each to select a bookmark.
-
-1.	On the **Insert** ribbon tab, from inside the **Elements** group, click **Buttons**, and then select **Blank**.
-
-   ![ws name.](media/8.60.png)
- 
-2.	Position and size the button as follows:
-
-3.	Position and size the button so that it is directly beneath the multi-row card visual and it is the same width.
-
-   ![ws name.](media/8.61.png)
- 
-4.	In the **Visualizations** pane, apply the following button formats:
-
--	Set the **Button Text** section to **On**.
--	Expand the **Button Text** section, and then set the **Button Text** to **By Month**.
--	Set the button text **Font Color** to **Black**.
--	Set the button text **Text Size** to **16** pt.
--	Set the **Fill** section to **On**.
--	Set the fill **Fill Color** to **Blue**.
--	Set the **Shadow** section to **On**.
--	Set the **Action** section to **On**.
--	Set the action **Type** to **Bookmark**.
--	Set the action **Bookmark** to **By Month**.
-
-5.	Clone the button, and then position it directly beneath the first button.
-
-   ![ws name.](media/8.62.png)
- 
-6.	Modify the button formats, as follows:
-
--	Set the **Button Text** to **By Salesperson**.
--	Set the fill **Fill Color** to **Purple**.
--	Set the action **Bookmark** to **By Salesperson**.
- 
-7.	Verify that the buttons looks like the following:
- 
-   ![ws name.](media/8.63.png)
- 
-8.	Test each button by pressing the **Ctrl** key and clicking a button.
-
- 
-   
-## **Task 5: Publish the Report**
-
-In this exercise, you will prepare the report for publication, and then publish it to Power BI.
-
-
-### **Subtask 1: Prepare the Report**
-
-In this task, you will prepare the report for publication.
-
-1.	On the **State-Province Details** page, ensure the **By Month** visual is displayed.
-
-2.	Select the **Profit Analysis** page.
-
-3.	Ensure the **Year** slicer is set to **CY2012**.
-
-   *It’s important to select the initial page and reset filters just before publishing the report. It will become the report state when report users first open the report.*
-
-4.	Save the Power BI Desktop solution as **Sale Report**.
-
-
-### **Subtask 2: Publish the Report**
-
-In this task, you will publish the report to Power BI.
-
-1.	On the **Home** ribbon tab, from inside the **Share** group, click **Publish**.
-
-   ![ws name.](media/8.64.png)
-
- 
-2.	If prompted to save changes, click **Yes**.
-
-3.	In the **Publish to Power BI** window, select the lab workspace (do not use **My Workspace**).
-
-4.	Click **Select**.
-
-   ![ws name.](media/8.65.png)
- 
-5.	When publication has completed, click **Got It**.
-
-6.	Close Power BI Desktop.
- 
-
-### **Subtask 3: Explore the Report**
-
-In this task, you will explore the report to determine root cause for low-profit earning state.
-
-1.	Switch to the Power BI web session.
-
-2.	Switch to the workspace where you published the report.
-
-3.	Open the **Sale Report**.
-
-4.	At the left, notice there are only two pages.
-
-   ![ws name.](media/8.66.png)
- 
-   *The drill through page was hidden.*
-   
-5.	Set the **Year** slicer to **CY2014**.
-
-6.	Understand that the page refreshed quickly because Power BI is querying the aggregation.
-
-7.	To see low-profit states, modify the table sort to **Profit % All Geography** ascending.
-
-8.	To understand **Hawaii** sales in more detail, right-click **Hawaii**, and then drill through to the details page.
-
-9.	Review the monthly sales.
-
-10. Click the **By Salesperson** button, and then review the result by salespeople.
-
-### Summary
-
-In this exercise, you used Power BI Desktop to connect to the **Sale Analysis** dataset published in **Exercise 06**. You then developed a multi-page report, which included synced slicers, a custom visual, page drill through, a report-level measure, bookmarks, and buttons. You then finalized the exercise by publishing the report to the Power BI service, and exploring it in the service.
+In this exercise, you used Power BI Desktop to live connect to the **Sale Analysis** dataset published in **Exercise 07** by the BI developer. You then converted the live connection to a DirectQuery model, allowing you to extend the remote model with a calculated column and a new table of imported data sourced from a web page.
