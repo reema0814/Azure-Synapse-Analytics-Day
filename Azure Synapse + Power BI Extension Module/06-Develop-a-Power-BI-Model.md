@@ -75,14 +75,16 @@ In this task, you will create six Power Query queries that will each load as a t
    *Power Query is a Microsoft technology used to connect to data stores, profile data, and transform data. You’ll define query for each table your model.*
 
 1.	In Power BI Desktop, in the SQL Server Database window, at the left, select Microsoft Account.
-(Insert Image)
+
+![ws name.](media/3.1.png)
 
 2.	Click Sign In.
 
 3.	Sign in using the lab Azure credentials.
 
 4.	Click Connect.
-(insert image)
+
+![ws name.](media/3.4.png)
 
 1. In Power BI Desktop, in the **Navigator** window, select (don’t check) the **wwi.DimCity** table.
 
@@ -365,7 +367,8 @@ In this task, you will create six Power Query queries that will each load as a t
     *Each query is applied to create a model table. Because the data connection is using DirectQuery storage mode, only the model structure is created. No data is imported. The model now consists of one table for each query.*
     
 64.	In Power BI Desktop, when the queries have been applied, at the bottom-left corner in thes status bar, notice that the model storage mode is DirectQuery. 
-(Insert image)
+
+   ![ws name.](media/3.60.png)
 
 60. In Power BI Desktop, at the left, switch to Model view.
  
@@ -374,7 +377,7 @@ In this task, you will create six Power Query queries that will each load as a t
      *Model view allows you to see all tables in the model diagram. It also allows you to configure many model properties. You’ll configure model properties in the next exercise.*
 
 66.	To upgrade to the new model view, in the banner across the top of the diagram, click Upgrade Now.
-(Insert image)
+      ![ws name.](media/3.62.png)
 
 61. In the model diagram, notice that there are six tables (some may be out of view—scroll horizontally to see them all).
 
@@ -404,14 +407,14 @@ In this task, you will create relationships between all model tables. Each relat
 -	Position the **Sale** table at the center of the diagram, and then surround it with the five dimension tables
 -	Ensure that the **Date** and **Geography** tables are next to each other
 
-   ![ws name.](media/6.47.png)
+   ![ws name.](media/4.1.png)
 
 
 2. To create the first relationship, from the **Sale** table, drag the **CityKey** column, and then drop it on the **Geography** table **CityKey** column.
 
    *Sometimes this technique doesn’t work properly. In this case, deselect the column you want to drag by selecting a different column, and then start the drag operation again.*
 
-   ![ws name.](media/6.48.png)
+   ![ws name.](media/4.2.png)
 
 3. In the **Create Relationship** window, at the bottom-left, check the **Assume Referential Integrity** checkbox.
 
@@ -426,7 +429,7 @@ In this task, you will create relationships between all model tables. Each relat
 
 5. In the diagram, notice the relationship is a connector between tables..
 
-   ![ws name.](media/6.51.png)
+   ![ws name.](media/4.3.png)
 
    *Model relationships propagate filters between tables. So, for example, if a report filters by **State-Province** column by **California**, a filter propagates to the **Sale** table to ensure rows for that state are queried.*
 
@@ -443,7 +446,7 @@ In this task, you will create relationships between all model tables. Each relat
  
 8. Verify that all tables are now related.
 
-   ![ws name.](media/6.52.png)
+   ![ws name.](media/4.4.png)
 
 
 9. Verify that the one-side of each relationship is on the dimension table side.
@@ -459,7 +462,7 @@ In this task, you will add two hierarchies to the **Geography** table and config
 
 1. In the model diagram, in the **Geography** table, right-click the **Region** column, and then select **Create Hierarchy**.
 
-   ![ws name.](media/aiad1.png)
+   ![ws name.](media/4.5.png)
 
    *Hierarchies provide ease of navigation across the model data, allowing drill down and drill up operations. Always create a hierarchy using the column that’s to become the first (top) level of the hierarchy.*
 
@@ -668,7 +671,8 @@ In this task, you will design a simple report to test query performance.
 2.	In the Fields pane, from the Date table, drag the Calendar hierarchy to the slicer.
 
 3.	In the Visualizations pane, in the Field well, to remove the Date hierarchy level, click X.
-(Insert Image)
+
+   ![ws name.](media/4.6.png)
 
 3. Filter the slicer by **CY2012**.
 
