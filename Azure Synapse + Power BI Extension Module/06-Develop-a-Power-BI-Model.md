@@ -7,8 +7,8 @@
 # Exercise 6 - Develop a Power BI Model
 
 
-In this exercise, you are working in the role of a **BI developer**.
-You will use Power BI Desktop to develop a data model over your Azure Synapse Wide World Importers (WWI) data warehouse. It will comprise six tables.
+In this exercise, you are working in the role of a **data architect** or **BI developer**.
+You will use Power BI Desktop to develop a data model over your Azure Synapse Wide World Importers (WWI) data warehouse. The data model will allow you to publish a semantic layer over the data warehouse. Comprising six tables, it will define relationships, hierarchies, calculations, and friendly and consistent names. The data model will become an intuitive and high performance source for Power BI reports.
 
 ---
 
@@ -73,6 +73,16 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 In this task, you will create six Power Query queries that will each load as a table to your model.
 
    *Power Query is a Microsoft technology used to connect to data stores, profile data, and transform data. You’ll define query for each table your model.*
+
+1.	In Power BI Desktop, in the SQL Server Database window, at the left, select Microsoft Account.
+(Insert Image)
+
+2.	Click Sign In.
+
+3.	Sign in using the lab Azure credentials.
+
+4.	Click Connect.
+(insert image)
 
 1. In Power BI Desktop, in the **Navigator** window, select (don’t check) the **wwi.DimCity** table.
 
@@ -351,21 +361,30 @@ In this task, you will create six Power Query queries that will each load as a t
     ![ws name.](media/6.45.png)
  
     *Each query is applied to create a model table. Because the data connection is using DirectQuery storage mode, only the model structure is created. No data is imported. The model now consists of one table for each query.*
+    
+64.	In Power BI Desktop, when the queries have been applied, at the bottom-left corner in thes status bar, notice that the model storage mode is DirectQuery. 
+(Insert image)
 
 60. In Power BI Desktop, at the left, switch to Model view.
  
     ![ws name.](media/6.46.png)
  
      *Model view allows you to see all tables in the model diagram. It also allows you to configure many model properties. You’ll configure model properties in the next exercise.*
-   
+
+66.	To upgrade to the new model view, in the banner across the top of the diagram, click Upgrade Now.
+(Insert image)
+
 61. In the model diagram, notice that there are six tables (some may be out of view—scroll horizontally to see them all).
+
+68.	Hover the cursor over any table header to reveal a tooltip, and then review the information presented.
+
 62. To save the Power BI Desktop solution, on the **File** tab (backstage view), select **Save**.
 
 63. Save the file as **Sale Analysis** to an easy-to-remember location in your file system.
 
 64. Open File Explorer, and navigate to the file system location.
 
-65. Notice the file size that is very small (~25 KB).
+65. Notice the file size that is very small (~24 KB).
 
     *The Power Query queries have been loaded to create model tables. In the next exercise, you’ll complete the design of the model by creating relationships and applying model configurations.*
 
@@ -528,6 +547,8 @@ In this task, you will configure the **Sale** table columns.
 
    ![ws name.](media/6.61.png)
 
+5.	In the Decimal Places box, enter 2.
+
 5. Select the **Unit Price** column (you might need to first de-select the multi-selection of columns, and then select this single column).
 
 6. In the **Properties** pane, in the **Advanced** section, in the **Summarize by** dropdown list, select **Average**.
@@ -642,7 +663,10 @@ In this task, you will design a simple report to test query performance.
  
    ![ws name.](media/6.74.png)
 
-2. In the **Fields** pane, from the **Date** table, drag the **Year** field (not the year level of the **Calendar** hierarchy) to the slicer.
+2.	In the Fields pane, from the Date table, drag the Calendar hierarchy to the slicer.
+
+3.	In the Visualizations pane, in the Field well, to remove the Date hierarchy level, click X.
+(Insert Image)
 
 3. Filter the slicer by **CY2012**.
 
@@ -732,4 +756,4 @@ In this task, you will use Performance Analyzer to measure query performance.
 
 ### Summary
 
-In this exercise, you used Power BI Desktop to develop a data model over your Azure Synapse Wide World Importers (WWI) data warehouse. It comprises six tables.
+In this exercise, you used Power BI Desktop to develop a data model over your Azure Synapse Wide World Importers (WWI) data warehouse. The data model allowed you to publish a semantic layer over the data warehouse. Comprising six tables, it defines relationships, hierarchies, calculations, and friendly and consistent names. The data model is an intuitive and high performance source for Power BI reports.
