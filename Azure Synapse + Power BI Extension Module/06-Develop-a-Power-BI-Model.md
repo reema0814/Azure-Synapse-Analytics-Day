@@ -76,7 +76,7 @@ In this task, you will create six Power Query queries that will each load as a t
 
 1.	In Power BI Desktop, in the SQL Server Database window, at the left, select Microsoft Account.
 
-![ws name.](media/3.1.png)
+      ![ws name.](media/3.1.png)
 
 2.	Click Sign In.
 
@@ -84,7 +84,7 @@ In this task, you will create six Power Query queries that will each load as a t
 
 4.	Click Connect.
 
-![ws name.](media/3.4.png)
+      ![ws name.](media/3.4.png)
 
 1. In Power BI Desktop, in the **Navigator** window, select (don’t check) the **wwi.DimCity** table.
 
@@ -377,6 +377,7 @@ In this task, you will create six Power Query queries that will each load as a t
      *Model view allows you to see all tables in the model diagram. It also allows you to configure many model properties. You’ll configure model properties in the next exercise.*
 
 66.	To upgrade to the new model view, in the banner across the top of the diagram, click Upgrade Now.
+
       ![ws name.](media/3.62.png)
 
 61. In the model diagram, notice that there are six tables (some may be out of view—scroll horizontally to see them all).
@@ -407,14 +408,14 @@ In this task, you will create relationships between all model tables. Each relat
 -	Position the **Sale** table at the center of the diagram, and then surround it with the five dimension tables
 -	Ensure that the **Date** and **Geography** tables are next to each other
 
-   ![ws name.](media/4.1.png)
+      ![ws name.](media/4.1.png)
 
 
 2. To create the first relationship, from the **Sale** table, drag the **CityKey** column, and then drop it on the **Geography** table **CityKey** column.
 
    *Sometimes this technique doesn’t work properly. In this case, deselect the column you want to drag by selecting a different column, and then start the drag operation again.*
 
-   ![ws name.](media/4.2.png)
+      ![ws name.](media/4.2.png)
 
 3. In the **Create Relationship** window, at the bottom-left, check the **Assume Referential Integrity** checkbox.
 
@@ -429,7 +430,7 @@ In this task, you will create relationships between all model tables. Each relat
 
 5. In the diagram, notice the relationship is a connector between tables..
 
-   ![ws name.](media/4.3.png)
+      ![ws name.](media/4.3.png)
 
    *Model relationships propagate filters between tables. So, for example, if a report filters by **State-Province** column by **California**, a filter propagates to the **Sale** table to ensure rows for that state are queried.*
 
@@ -618,7 +619,7 @@ In this task, you will create two measures. Measures are expressions that summar
 
 1. In the **Fields** pane, right-click the **Sale** table, and then select **New Measure**.
  
- ![ws name.](media/6.68.png)
+   ![ws name.](media/6.68.png)
  
  
 2. In the formula bar (located directly beneath the ribbon), replace the text with the following measure definition, and then press **Enter**.
@@ -672,7 +673,7 @@ In this task, you will design a simple report to test query performance.
 
 3.	In the Visualizations pane, in the Field well, to remove the Date hierarchy level, click X.
 
-   ![ws name.](media/4.6.png)
+      ![ws name.](media/4.6.png)
 
 3. Filter the slicer by **CY2012**.
 
