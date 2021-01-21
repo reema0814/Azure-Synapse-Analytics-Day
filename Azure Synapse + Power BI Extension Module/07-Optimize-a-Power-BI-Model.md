@@ -34,17 +34,19 @@ In this task, you will configure dual storage for all dimension tables.
 
 4. In the **Properties** pane, from within the **Advanced** section, in the **Storage Mode** dropdown list, select **Dual**.
 
-   ![ws name.](media/7.1.png)
+   ![ws name.](media/Dual.png)
  
    *It’s common to set dimension tables to use dual storage mode. This way, when used by report slicers, they deliver fast performance. If these dimension tables will be queried at the same time as other imported tables, it can avoid the need for Power BI to query the data source.*.
    
    
 5. When prompted to set the storage mode, click **OK**.
 
-   ![ws name.](media/7.2.png)
+   ![ws name.](media/7.002.png)
    
   
 6.	When the refresh completes, notice that the dual storage tables are indicated by a dashed header line.
+
+   ![ws name.](media/7.001.png)
 
 7.	Save the Power BI Desktop solution.
 
@@ -56,7 +58,7 @@ In this task, you will configure dual storage for all dimension tables.
    
 8. In Report view, in the status bar, at the bottom-right, notice that the storage mode is now mixed.
 
-   ![ws name.](media/7.3.png)
+   ![ws name.](media/7.003.png)
    
    
 9.	In the **Performance Analyzer** pane, start recording, and then refresh visuals.
@@ -72,16 +74,16 @@ In this task, you will create an aggregation table to accelerate Power BI report
 
 1. To open the Power Query Editor window, on the **Home** ribbon tab, from inside the **Queries** group, click the **Transform Data** icon.
  
-   ![ws name.](media/7.4.png)
+   ![ws name.](media/Transform.Data.png)
    
  
 2. In the Power Query Editor window, from inside the **Queries** pane, right-click the **Sale** query, and then select **Duplicate**.
 
-   ![ws name.](media/7.5.png)
+   ![ws name.](media/Duplicate.png)
  
 3. In the **Queries** pane, notice the addition of a new query.
 
-   ![ws name.](media/7.6.png)
+   ![ws name.](media/Queries.png)
  
    *You’ll apply a transformation to group by the **CityKey** and **InvoiceDateKey** columns, and aggregate the sum of **Profit Amount** column*.
    
@@ -148,11 +150,11 @@ In this task, you will switch the aggregation table to import data. You will the
    
 4.	If prompted to proceed, click OK.
 
-   (Insert image)
+   ![ws name.](media/7.002.png)
 
 5.	When the refresh completes, notice that the import storage table does not include a blue mark across the top (solid or dashed).
 
-   (Insert image)
+   ![ws name.](media/7.004.png)
  
  
 4.	Create two model relationships:
@@ -160,7 +162,7 @@ In this task, you will switch the aggregation table to import data. You will the
 -	Relate the **Sale Agg** table CityKey column to the **Geography** table **CityKey** column
 -	Relate the **Sale Agg** table **InvoiceDateKey** column to the **Date** table **Date** column
 
-   ![ws name.](media/7.15.png)
+   ![ws name.](media/7.005.png)
    
  
 5.	Right-click the **Sale Agg** table, and then select **Manage Aggregations**.
@@ -188,7 +190,7 @@ In this task, you will switch the aggregation table to import data. You will the
  
 9. In the model diagram, notice that the **Sale Agg** table is now hidden.
 
-   ![ws name.](media/7.19.png)
+   ![ws name.](media/7.006.png)
  
  
 10. In the model diagram, select the **Sale Agg** table.
@@ -214,7 +216,7 @@ In this task, you will publish the model.
 
 1.	In Power BI Desktop, on the **Home** ribbon tab, from inside the **Share** group, click **Publish**.
 
-   ![ws name.](media/7.20.png)
+   ![ws name.](media/7.007.png)
    
  
 2.	If prompted to save changes, click **Yes**.
@@ -272,7 +274,7 @@ In this task, you will complete some post-publication tasks.
  
 7.	Expand the **Data Source Credentials** section.
    You’ll see an error, and it’s expected. You will address the error in the next step.
-   ![ws name.](media/7.27.png)
+   ![ws name.](media/7.000.png)
  
  
 8.	To assign credentials, click the **Edit Credentials** link.
