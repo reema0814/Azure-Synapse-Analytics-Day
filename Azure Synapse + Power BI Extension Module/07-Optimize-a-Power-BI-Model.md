@@ -46,8 +46,6 @@ In this task, you will configure dual storage for all dimension tables.
   
 6.	When the refresh completes, notice that the dual storage tables are indicated by a dashed header line.
 
-   ![ws name.](media/7.0.png)
-
 7.	Save the Power BI Desktop solution.
 
    *The data model is now in mixed mode. It’s a composite model consisting of DirectQuery storage mode tables and import storage mode tables.*
@@ -149,12 +147,13 @@ In this task, you will switch the aggregation table to import data. You will the
    ![ws name.](media/7.14.png)
    
 4.	If prompted to proceed, click OK.
-   ![ws name.](media/7.1.png)
-   
-5.	When the refresh completes, notice that the import storage table does not include a blue mark across the top (solid or dashed).
-   
-   ![ws name.](media/7.2.png)
 
+   (Insert image)
+
+5.	When the refresh completes, notice that the import storage table does not include a blue mark across the top (solid or dashed).
+
+   (Insert image)
+ 
  
 4.	Create two model relationships:
 
@@ -193,8 +192,6 @@ In this task, you will switch the aggregation table to import data. You will the
  
  
 10. In the model diagram, select the **Sale Agg** table.
-
-   ![ws name.](media/7.4.png)
     
 11. Switch to Report view.
 
@@ -217,7 +214,7 @@ In this task, you will publish the model.
 
 1.	In Power BI Desktop, on the **Home** ribbon tab, from inside the **Share** group, click **Publish**.
 
-   ![ws name.](media/7.5.png)
+   ![ws name.](media/7.20.png)
    
  
 2.	If prompted to save changes, click **Yes**.
@@ -233,7 +230,7 @@ In this task, you will publish the model.
 
 6.	Close Power BI Desktop.
 
-   *You will open a new instance of Power BI Desktop in **Exercise 8** when you create a new composite model.*.
+   *You will open a new instance of Power BI Desktop in **Exercise 8** when you create a new composite model.*
    
  
 ## **Subtask 2: Complete Post-Publication Tasks**
@@ -275,7 +272,7 @@ In this task, you will complete some post-publication tasks.
  
 7.	Expand the **Data Source Credentials** section.
    You’ll see an error, and it’s expected. You will address the error in the next step.
-   ![ws name.](media/7.6.png)
+   ![ws name.](media/7.27.png)
  
  
 8.	To assign credentials, click the **Edit Credentials** link.
