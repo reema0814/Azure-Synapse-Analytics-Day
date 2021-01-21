@@ -1,6 +1,6 @@
 # Exercise 7: Optimize a Power BI Model
 
-In this Exercise, you are continuing to work in the role of a BI developer.
+In this Exercise, you are continuing to work in the role of a **Data architect** or **BI developer**.
 
 You will use Power BI Desktop to configure dimension table storage as dual. You will then add an aggregation table to accelerate query performance. The model storage will be switched to mixed mode: Some tables will cache data to further boost query performance. You will finalize the lab by deploying the model to the Power BI service, so it is ready for reporting in Exercise 8.
 
@@ -36,7 +36,7 @@ In this task, you will configure dual storage for all dimension tables.
 
    ![ws name.](media/7.1.png)
  
-   *It’s common to set dimension tables to use dual storage mode. This way, when used by report slicers, they deliver fast performance*.
+   *It’s common to set dimension tables to use dual storage mode. This way, when used by report slicers, they deliver fast performance. If these dimension tables will be queried at the same time as other imported tables, it can avoid the need for Power BI to query the data source.*.
    
    
 5. When prompted to set the storage mode, click **OK**.
@@ -44,9 +44,13 @@ In this task, you will configure dual storage for all dimension tables.
    ![ws name.](media/7.2.png)
    
   
-6. When the refresh completes, save the Power BI Desktop solution.
+6.	When the refresh completes, notice that the dual storage tables are indicated by a dashed header line.
 
-   *The data model is now in mixed mode. It’s a composite model consisting of DirectQuery storage mode tables and import storage mode tables*.
+   ![ws name.](media/7.0.png)
+
+7.	Save the Power BI Desktop solution.
+
+   *The data model is now in mixed mode. It’s a composite model consisting of DirectQuery storage mode tables and import storage mode tables.*
    
 7. In File Explorer, notice the file size has grown as a result of the imported data for the dimension tables.
 
@@ -143,7 +147,14 @@ In this task, you will switch the aggregation table to import data. You will the
 3.	Set the storage mode for the **Sale Agg** table as **Import**.
 
    ![ws name.](media/7.14.png)
- 
+   
+4.	If prompted to proceed, click OK.
+   ![ws name.](media/7.1.png)
+   
+5.	When the refresh completes, notice that the import storage table does not include a blue mark across the top (solid or dashed).
+   
+   ![ws name.](media/7.2.png)
+
  
 4.	Create two model relationships:
 
@@ -182,6 +193,8 @@ In this task, you will switch the aggregation table to import data. You will the
  
  
 10. In the model diagram, select the **Sale Agg** table.
+
+   ![ws name.](media/7.4.png)
     
 11. Switch to Report view.
 
@@ -204,7 +217,7 @@ In this task, you will publish the model.
 
 1.	In Power BI Desktop, on the **Home** ribbon tab, from inside the **Share** group, click **Publish**.
 
-   ![ws name.](media/7.20.png)
+   ![ws name.](media/7.5.png)
    
  
 2.	If prompted to save changes, click **Yes**.
@@ -220,7 +233,7 @@ In this task, you will publish the model.
 
 6.	Close Power BI Desktop.
 
-   *You will open a new instance of Power BI Desktop in **Exercise 8** when you create a report*.
+   *You will open a new instance of Power BI Desktop in **Exercise 8** when you create a new composite model.*.
    
  
 ## **Subtask 2: Complete Post-Publication Tasks**
@@ -262,7 +275,7 @@ In this task, you will complete some post-publication tasks.
  
 7.	Expand the **Data Source Credentials** section.
    You’ll see an error, and it’s expected. You will address the error in the next step.
-   ![ws name.](media/7.27.png)
+   ![ws name.](media/7.6.png)
  
  
 8.	To assign credentials, click the **Edit Credentials** link.
@@ -297,7 +310,7 @@ In this task, you will complete some post-publication tasks.
     
 16. In the **Description** box, enter: **Lab dataset**
 
-17. Click **Apply**.
+17. Click **Apply**(you may need to scroll down).
 
     ![ws name.](media/7.31.png)
     
