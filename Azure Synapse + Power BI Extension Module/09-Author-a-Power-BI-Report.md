@@ -100,16 +100,16 @@ The completed report page will look like the following:
  
 20. Add the following fields to the table visual:
 
--	**Geography** table **State-Province** field
--	**Sale** table **Sale Amount** field
--	**Sale** table **Sale per capita** field
--	**Sale** table **Profit Amount** field
+	-	**Geography** table **State-Province** field
+	-	**Sale** table **Sale Amount** field
+	-	**Sale** table **Sale per capita** field
+	-	**Sale** table **Profit Amount** field
 
 21. Apply the following table visual formats:
 
--	In the **Style** section, set the **Style** to **Bold Header**.
--	In the **Grid** section, increase the **Text Size** property to **16** pt.
--	Turn **Shadow** on.
+	-	In the **Style** section, set the **Style** to **Bold Header**.
+	-	In the **Grid** section, increase the **Text Size** property to **16** pt.
+	-	Turn **Shadow** on.
 
 22. To sort the table visual rows, click the **Sale per Capita** column header to sort by descending profitability.
 
@@ -179,9 +179,9 @@ The completed report page will look like the following:
  
 15. Configure the following visual field wells:
 
--	**From: Geography** table **Sales Territory** field
--	**To: Customer** table **Buying Group** field
--	**Values: Sale** table **Sale Amount** field
+	-	**From: Geography** table **Sales Territory** field
+	-	**To: Customer** table **Buying Group** field
+	-	**Values: Sale** table **Sale Amount** field
 
    ![ws name.](media/8.29.png)
  
@@ -206,7 +206,7 @@ In this task, you will develop a drill through page allowing report users to see
 
 The completed report page will look like the following:
 
-   ![ws name.](media/Q12.png)
+![ws name.](media/Q12.png)
  
 1.	Create a new report page by duplicating the **Sale Chord** page.
 
@@ -244,18 +244,18 @@ The completed report page will look like the following:
  
 10. Add the following five fields to the multi-row card visual:
 
--	**Geography** table **State-Province** field
--	**Sale** table **Quantity** field
--	**Sale** table **Sale per capita** field
--	**Sale** table **Sale Amount** field
--	**Sale** table **Profit Amount** field
--	**Product** table **Profit % All Geography** field
+	-	**Geography** table **State-Province** field
+	-	**Sale** table **Quantity** field
+	-	**Sale** table **Sale per capita** field
+	-	**Sale** table **Sale Amount** field
+	-	**Sale** table **Profit Amount** field
+	-	**Product** table **Profit % All Geography** field
 
 11. Apply the following formats:
 
--	In the **Data Labels** section, set the **Text Size** to **16** pt.
--	In the **Card Title** section, set the **Text Size** property to **20** pt.
--	Turn **Shadow** on.
+	-	In the **Data Labels** section, set the **Text Size** to **16** pt.
+	-	In the **Card Title** section, set the **Text Size** property to **20** pt.
+	-	Turn **Shadow** on.
 
    ![ws name.](media/Q13.png)
    
@@ -271,8 +271,8 @@ The completed report page will look like the following:
  
 14. Configure the following field mappings:
 
--	**Shared Axis: Date** table **Month** field
--	**Column Values: Sale** table **Sale Amount** field
+	-	**Shared Axis: Date** table **Month** field
+	-	**Column Values: Sale** table **Sale Amount** field
 
     ![ws name.](media/8.40.png)
  
@@ -283,6 +283,7 @@ The completed report page will look like the following:
     *A report-level measure can be added by the report author. It allows them to define complex summarization logic that’s not already defined in the model.*
     
 16. In the formula bar, enter the following measure definition:
+
     ```
       DAX
         Profit Margin =
@@ -291,8 +292,6 @@ The completed report page will look like the following:
 	   	SUM(Sale[Sale Amount])
        )
        ```
-
-
     *The measure is named **Profit Margin**. The formula divides the sum of the **Profit Amount** column by the sum of the **Sale Amount** column.*
  
 17. On the **Measure Tools** contextual ribbon tab, set the format to percentage.
@@ -444,16 +443,16 @@ In this task, you will add two buttons to the report page, and then configure ea
  
 3.	In the **Visualizations** pane, apply the following button formats:
 
--	Set the **Button Text** section to **On**.
--	Expand the **Button Text** section, and then set the **Button Text** to **By Month**.
--	Set the button text **Font Color** to **Black**.
--	Set the button text **Text Size** to **16** pt.
--	Set the **Fill** section to **On**.
--	Set the fill **Fill Color** to **Blue**.
--	Set the **Shadow** section to **On**.
--	Set the **Action** section to **On**.
--	Set the action **Type** to **Bookmark**.
--	Set the action **Bookmark** to **By Month**.
+	-	Set the **Button Text** section to **On**.
+	-	Expand the **Button Text** section, and then set the **Button Text** to **By Month**.
+	-	Set the button text **Font Color** to **Black**.
+	-	Set the button text **Text Size** to **16** pt.
+	-	Set the **Fill** section to **On**.
+	-	Set the fill **Fill Color** to **Blue**.
+	-	Set the **Shadow** section to **On**.
+	-	Set the **Action** section to **On**.
+	-	Set the action **Type** to **Bookmark**.
+	-	Set the action **Bookmark** to **By Month**.
 
 4.	Clone(Copy and paste) the button, and then position it directly beneath the first button.
 
@@ -461,9 +460,9 @@ In this task, you will add two buttons to the report page, and then configure ea
  
 5.	Modify the button formats, as follows:
 
--	Set the **Button Text** to **By Salesperson**.
--	Set the fill **Fill Color** to **Purple**.
--	Set the action **Bookmark** to **By Salesperson**.
+	-	Set the **Button Text** to **By Salesperson**.
+	-	Set the fill **Fill Color** to **Purple**.
+	-	Set the action **Bookmark** to **By Salesperson**.
  
 6.	Verify that the buttons looks like the following:
  
@@ -471,8 +470,6 @@ In this task, you will add two buttons to the report page, and then configure ea
  
 7.	Test each button by pressing the **Ctrl** key and clicking a button.
 
- 
-   
 ## **Task 4: Publish the Report**
 
 In this exercise, you will prepare the report for publication, and then publish it to Power BI.
@@ -501,7 +498,6 @@ In this task, you will publish the report to Power BI.
 
    ![ws name.](media/8.64.png)
 
- 
 2.	If prompted to save changes, click **Yes**.
 
 3.	In the **Publish to Power BI** window, select the lab workspace (do not use **My Workspace**).
@@ -513,7 +509,6 @@ In this task, you will publish the report to Power BI.
 5.	When publication has completed, click **Got It**.
 
 6.	Close Power BI Desktop.
-
 
 ### **Subtask 3: Review the Published Dataset**
 
@@ -556,8 +551,6 @@ In this task, you will install the Power BI gateway in personal mode.
 
 1.	In the Power BI web browser session, at the top-right, click the download icon (down-pointing arrow), and then select **Data Gateway**.
 
-	
-	
 	![ws name.](media/Q19.png)
 	
 	*A new web browser tab opens to the Power BI gateway page.*
@@ -606,14 +599,12 @@ In this task, you will configure the **US Sale Analysis** dataset settings.
 
 	![ws name.](media/Q25.png)
 	
-	
 4.	In the window, in the **Privacy Level Settings** dropdown list, select **Public**.
 
 	*Privacy levels allows Power Query to determine the most efficient, yet secure way, to refresh data when combining data from multiple data sources. In your model, Power Query is not used to combine data.*
 	
 5.	Click **Sign In**.
 
-		
 	![ws name.](media/Q26.png)
 	
 	*It’s now possible to perform and schedule data refresh for your model. You won’t do that in this lab.*
