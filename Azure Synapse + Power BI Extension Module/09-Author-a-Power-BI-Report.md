@@ -58,7 +58,7 @@ The completed report page will look like the following:
    
 8.	Expand the **Page Background** section.
 
-   ![ws name.](media/8.9.png)
+	![ws name.](media/8.9.png)
  
 9.	Open the **Color** palette, click **Custom Color**, and set the custom color **C5C5C5**.
 
@@ -66,15 +66,15 @@ The completed report page will look like the following:
 
 11.	Add a slicer to the page.
 
-   ![ws name.](media/8.10.png)
+	![ws name.](media/8.10.png)
  
 12.	Position and size the slicer at the top-left of the report page.
 
-   ![ws name.](media/8.11.png)
+	![ws name.](media/8.11.png)
  
 13.	In the **Fields** pane, expand the **Date** table, and then drag the **Calender** field  into the slicer.
 
-   ![ws name.](media/Q7.png)
+	![ws name.](media/Q7.png)
  
 14. Ensure that the slicer is selected, and then open the **Format** pane.
 
@@ -123,7 +123,7 @@ In this task, you will develop the second report page.
 
 The completed report page will look like the following:
 
-   ![ws name.](media/Q10.png)
+![ws name.](media/Q10.png)
  
 1.	To duplicate the report page, at the bottom-left, right-click the **Sale Analysis** page, and then select **Duplicate Page**.
 
@@ -133,33 +133,33 @@ The completed report page will look like the following:
 
 2.	Rename the new page as **Sale Chord**.
 
-   ![ws name.](media/8.20.png)
+	![ws name.](media/8.20.png)
  
 3.	To delete the table visual, select the visual, and then press the **Delete key**.
  
 4.	To sync the slicers, on the **View** ribbon tab, from inside the **Show Panes** group, select **Sync Slicers**.
  
-   ![ws name.](media/8.21.png)
+	![ws name.](media/8.21.png)
    
 5.	In the report page, select the **Year** slicer.
 
 6.	In the **Sync Slicers** pane (located at the left), check both pages to sync.
 
-   ![ws name.](media/8.22.png)
+	![ws name.](media/8.22.png)
  
    *When a report user changes either **Year** slicer, the filter will propagate between these pages. Both slicers will remain in sync.*
    
 7.	In the **Sync Slicers** pane, at the top-left, click **X**.
 
-   ![ws name.](media/8.23.png)
+	![ws name.](media/8.23.png)
  
 8.	To import a custom visual, in the **Visualizations** pane, click the ellipsis (…), and then select **Get More Visuals**.
 
-   ![ws name.](media/Q11.png)
+	![ws name.](media/Q11.png)
  
 9.	In the **Power BI Visuals** window, in the **Search** box, enter **Chord**, and then press **Enter**.
 
-   ![ws name.](media/8.25.png)
+	![ws name.](media/8.25.png)
  
 10. When the **Chord** search result appears, click **Add**.
 
@@ -218,11 +218,11 @@ The completed report page will look like the following:
  
 4.	From the **Fields** pane, in the **Geography** table, drag the **State-Province** field to the **Drill Through** section (beneath the **Visualizations** pane), into the well.
 
-   ![ws name.](media/8.32.png)
+	![ws name.](media/8.32.png)
  
 5.	Apply a filter to the first state, **Alabama**.
 
-   ![ws name.](media/8.33.png)
+	![ws name.](media/8.33.png)
  
    *The filter will be applied when the report user drills through. You applied this filter now to help design the page for a single state.*
    
@@ -232,15 +232,15 @@ The completed report page will look like the following:
    
 7.	Select the button, and the in the **Visualizations** pane, turn the **Background** off.
 
-   ![ws name.](media/8.34.png)
+	![ws name.](media/8.34.png)
  
 8.	Add a multi-row card visual to the report page.
 
-   ![ws name.](media/8.35.png)
+	![ws name.](media/8.35.png)
  
 9.	Position and size the multi-row card visual at the top-left of the report page.
 
-   ![ws name.](media/8.36.png)
+	![ws name.](media/8.36.png)
  
 10. Add the following five fields to the multi-row card visual:
 
@@ -257,7 +257,7 @@ The completed report page will look like the following:
 	-	In the **Card Title** section, set the **Text Size** property to **20** pt.
 	-	Turn **Shadow** on.
 
-   ![ws name.](media/Q13.png)
+	![ws name.](media/Q13.png)
    
    *If the card values form more than one column, reduce the width of the multi-row card visual*
  
@@ -322,17 +322,17 @@ In this task, you will explore the drill through experience.
 
 3.	In the table visual, right-click any state, and then select **Drill Through > State-Province Details**.
 
-   ![ws name.](media/8.46.png)
+	![ws name.](media/8.46.png)
  
    *Drill through is available from any report visual that groups by the State-Province field.*
    
 4.	In the drill through page, notice the state you drilled from is the title of the multi-row card visual.
 
-   ![ws name.](media/8.47.png)
+	![ws name.](media/8.47.png)
  
 5.	Hover the cursor over the top-left corner of the line and clustered column chart visual, and then hover over the filter (funnel) icon.
 
-   ![ws name.](media/8.48.png)
+	![ws name.](media/8.48.png)
  
    *The tooltip reveals all applied filters.*
 
@@ -364,11 +364,11 @@ In this task, you will add a new visual to the drill through page.
 
 5.	Modify the top visual field **Shared Axis** field mappings by removing the **Month** field, and then replacing it with the **Salesperson** table **Salesperson** field.
 
-   ![ws name.](media/8.49.png)
+	![ws name.](media/8.49.png)
  
 6.	Format the visual data color by setting the **Default Color** to purple.
 
-   ![ws name.](media/8.50.png)
+	![ws name.](media/8.50.png)
  
 ### **Subtask 2: Create Bookmarks**
 
@@ -376,11 +376,11 @@ In this task, you will create two bookmarks to show or hide the superimposed vis
 
 1.	On the **View** ribbon tab, from inside the **Show Panes** group, select **Bookmarks** and **Selection**.
 
-   ![ws name.](media/8.51.png)
+	![ws name.](media/8.51.png)
  
 2.	In the **Selection** pane, notice there are two similarly named report elements.
 
-   ![ws name.](media/8.52.png)
+	![ws name.](media/8.52.png)
  
 3.	Hover the cursor over each to reveal a tooltip describing their full title.
 
@@ -388,13 +388,13 @@ In this task, you will create two bookmarks to show or hide the superimposed vis
 
 5.	Determine which of the visuals groups by salesperson, and then click the **Hide** icon.
 
-   ![ws name.](media/8.53.png)
+	![ws name.](media/8.53.png)
  
 6.	Verify that the “by Month” visual is now visible.
 
 7.	In the **Bookmarks** pane, click **Add**.
 
-   ![ws name.](media/8.54.png)
+	![ws name.](media/8.54.png)
  
 8.	To rename the bookmark, double-click **Bookmark 1**.
 
@@ -435,11 +435,11 @@ In this task, you will add two buttons to the report page, and then configure ea
 
 1.	On the **Insert** ribbon tab, from inside the **Elements** group, click **Buttons**, and then select **Blank**.
 
-   ![ws name.](media/8.60.png)
+	![ws name.](media/8.60.png)
 
 2.	Position and size the button so that it is directly beneath the multi-row card visual and it is the same width.
 
-   ![ws name.](media/8.61.png)
+	![ws name.](media/8.61.png)
  
 3.	In the **Visualizations** pane, apply the following button formats:
 
@@ -456,7 +456,7 @@ In this task, you will add two buttons to the report page, and then configure ea
 
 4.	Clone(Copy and paste) the button, and then position it directly beneath the first button.
 
-   ![ws name.](media/8.62.png)
+	![ws name.](media/8.62.png)
  
 5.	Modify the button formats, as follows:
 
@@ -466,7 +466,7 @@ In this task, you will add two buttons to the report page, and then configure ea
  
 6.	Verify that the buttons looks like the following:
  
-   ![ws name.](media/8.63.png)
+	![ws name.](media/8.63.png)
  
 7.	Test each button by pressing the **Ctrl** key and clicking a button.
 
@@ -496,7 +496,7 @@ In this task, you will publish the report to Power BI.
 
 1.	On the **Home** ribbon tab, from inside the **Share** group, click **Publish**.
 
-   ![ws name.](media/8.64.png)
+	![ws name.](media/8.64.png)
 
 2.	If prompted to save changes, click **Yes**.
 
@@ -504,7 +504,7 @@ In this task, you will publish the report to Power BI.
 
 4.	Click **Select**.
 
-   ![ws name.](media/8.65.png)
+	![ws name.](media/8.65.png)
  
 5.	When publication has completed, click **Got It**.
 
