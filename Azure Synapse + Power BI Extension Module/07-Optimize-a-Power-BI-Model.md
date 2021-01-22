@@ -41,31 +41,31 @@ In this task, you will configure dual storage for all dimension tables.
    
 5. When prompted to set the storage mode, click **OK**.
 
-   ![ws name.](media/7.002.png)
+      ![ws name.](media/7.002.png)
    
   
 6.	When the refresh completes, notice that the dual storage tables are indicated by a dashed header line.
 
-   ![ws name.](media/7.001.png)
+      ![ws name.](media/7.001.png)
 
 7.	Save the Power BI Desktop solution.
 
    *The data model is now in mixed mode. It’s a composite model consisting of DirectQuery storage mode tables and import storage mode tables.*
    
-7. In File Explorer, notice the file size has grown as a result of the imported data for the dimension tables.
+8. In File Explorer, notice the file size has grown as a result of the imported data for the dimension tables.
 
    *When the model stores data, you need to ensure the cached data current. The model must be refreshed on a frequent basis to ensure import data is in sync with the source data*.
    
-8. In Report view, in the status bar, at the bottom-right, notice that the storage mode is now mixed.
+9. In Report view, in the status bar, at the bottom-right, notice that the storage mode is now mixed.
 
-   ![ws name.](media/7.003.png)
+      ![ws name.](media/7.003.png)
    
    
-9.	In the **Performance Analyzer** pane, start recording, and then refresh visuals.
+10.	In the **Performance Analyzer** pane, start recording, and then refresh visuals.
 
-10. Notice that the query result for the slicer is now sub-second.
+11. Notice that the query result for the slicer is now sub-second.
 
-11. In the **Performance Analyzer** pane, stop recording.
+12. In the **Performance Analyzer** pane, stop recording.
 
 
 ### **Subtask 2: Create an Aggregation Table**
@@ -150,27 +150,27 @@ In this task, you will switch the aggregation table to import data. You will the
    
 4.	If prompted to proceed, click OK.
 
-   ![ws name.](media/7.002.png)
+      ![ws name.](media/7.002.png)
 
 5.	When the refresh completes, notice that the import storage table does not include a blue mark across the top (solid or dashed).
 
-   ![ws name.](media/7.004.png)
+      ![ws name.](media/7.004.png)
  
  
-4.	Create two model relationships:
+6.	Create two model relationships:
 
 -	Relate the **Sale Agg** table CityKey column to the **Geography** table **CityKey** column
 -	Relate the **Sale Agg** table **InvoiceDateKey** column to the **Date** table **Date** column
 
-   ![ws name.](media/7.005.png)
+      ![ws name.](media/7.005.png)
    
  
-5.	Right-click the **Sale Agg** table, and then select **Manage Aggregations**.
+7.	Right-click the **Sale Agg** table, and then select **Manage Aggregations**.
 
    ![ws name.](media/7.16.png)
  
  
-6.	In the **Manage Aggregations** window, for the **Profit Amount** aggregation column, set the following properties:
+8.	In the **Manage Aggregations** window, for the **Profit Amount** aggregation column, set the following properties:
 
 -	Summarization: **Sum**
 -	Detail table: **Sale**
@@ -179,31 +179,31 @@ In this task, you will switch the aggregation table to import data. You will the
    ![ws name.](media/7.17.png)
    
  
-7.	Notice the warning that describes the table will be hidden.
+9.	Notice the warning that describes the table will be hidden.
 
    *The table will be hidden in a different way to other hidden model objects (like the key columns you hid in **Exercise 6**). Aggregation tables are always hidden, and they can’t even be referenced in model calculations*.
    
-8.	Click **Apply All**.
+10.	Click **Apply All**.
 
    ![ws name.](media/7.18.png)
    
  
-9. In the model diagram, notice that the **Sale Agg** table is now hidden.
+11. In the model diagram, notice that the **Sale Agg** table is now hidden.
 
-   ![ws name.](media/7.006.png)
+      ![ws name.](media/7.006.png)
  
  
-10. In the model diagram, select the **Sale Agg** table.
+12. In the model diagram, select the **Sale Agg** table.
     
-11. Switch to Report view.
+13. Switch to Report view.
 
-12. In the **Performance Analyzer** pane, start recording, and then refresh visuals.
+14. In the **Performance Analyzer** pane, start recording, and then refresh visuals.
 
-13. Notice that the query results for the table visual is now sub-second.
+15. Notice that the query results for the table visual is now sub-second.
 
    *Because the **Geography** and **Date** tables use dual storage mode, when a report visual queries them at the same time as the aggregation table, Power BI will query the model cache. There’s no need to use DirectQuery to query the data*.
 
-14. In the **Performance Analyzer** pane, stop recording.
+16. In the **Performance Analyzer** pane, stop recording.
 
 
 ## **Task 2: Publish the Model**
@@ -216,7 +216,7 @@ In this task, you will publish the model.
 
 1.	In Power BI Desktop, on the **Home** ribbon tab, from inside the **Share** group, click **Publish**.
 
-   ![ws name.](media/7.007.png)
+      ![ws name.](media/7.007.png)
    
  
 2.	If prompted to save changes, click **Yes**.
@@ -249,7 +249,7 @@ In this task, you will complete some post-publication tasks.
  
 2.	In the **Navigation** pane, open the workspace, and then verify that the **Sale Analysis** dataset exists.
 
-   ![ws name.](media/aiad2.png)
+      ![ws name.](media/aiad2.png)
    
  
 3.	Notice there is also the **Sale Analysis** report.
@@ -274,7 +274,8 @@ In this task, you will complete some post-publication tasks.
  
 7.	Expand the **Data Source Credentials** section.
    You’ll see an error, and it’s expected. You will address the error in the next step.
-   ![ws name.](media/7.000.png)
+   
+      ![ws name.](media/7.000.png)
  
  
 8.	To assign credentials, click the **Edit Credentials** link.
