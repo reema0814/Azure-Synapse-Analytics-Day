@@ -89,7 +89,7 @@ In this task, you will create an aggregation table to accelerate Power BI report
    
 5.	On the **Transform** ribbon tab, from inside the **Table** group, click **Group By**.
 
-    ![ws name.](media/7.8.png)
+   ![ws name.](media/7.8.png)
     
 6.	In the **Group By** window, select the **Advanced** option.
 
@@ -154,7 +154,7 @@ In this task, you will switch the aggregation table to import data. You will the
    
 7.	Right-click the **Sale Agg** table, and then select **Manage Aggregations**.
 
-    ![ws name.](media/7.16.png)
+   ![ws name.](media/7.16.png)
  
 8.  In the **Manage Aggregations** window, for the **Profit Amount** aggregation column, set the following properties:
 
@@ -162,7 +162,7 @@ In this task, you will switch the aggregation table to import data. You will the
     -	Detail table: **Sale**
     -	Detail column: **Profit Amount**
 
-    ![ws name.](media/7.17.png)
+   ![ws name.](media/7.17.png)
    
 9.	Notice the warning that describes the table will be hidden.
 
