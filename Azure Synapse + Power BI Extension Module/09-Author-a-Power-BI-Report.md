@@ -315,7 +315,7 @@ The completed report page will look like the following:
 
 In this task, you will explore the drill through experience.
 
-1. Select the **Profit Analysis** page.
+1. Select the **Sale Analysis** page.
 
 2. Ensure the **Year** slicer is set to **CY2012**.
 
@@ -479,7 +479,7 @@ In this task, you will prepare the report for publication.
 
 1. On the **State-Province Details** page, ensure the **By Month** visual is displayed.
 
-2. Select the **Profit Analysis** page.
+2. Select the **Sale Analysis** page.
 
 3. Ensure the **Year** slicer is set to **CY2012**.
 
