@@ -139,7 +139,7 @@ In this task, you will create a calculated column to enable a new way of analyzi
 3.	In the formula bar (located beneath the ribbon tab), enter the following calculated column definition.
 
 	*Tip: To enter a carriage return, press Shift+Enter. To enter a tab, press Shift +Tab.*
-	
+	```
 	DAX
 	State-Province Type =
 	SWITCH(
@@ -149,6 +149,12 @@ In this task, you will create a calculated column to enable a new way of analyzi
 		Geography[Country] = "United States", "Contiguous",
 		"N/A"
 	)
+	```
+	
+	
+	
+	
+	
 	
 	*The calculated column is named **State-Province Type**. The expression uses the DAX SWITCH function to return a classification for each table row (which represents a city) based on these rules (the first rule match wins):
 •	If the state name of the city is Puerto Rico (US Territory), it is classified as **Territory**.
@@ -329,13 +335,15 @@ In this task, you will create a measure to calculate sale per capita.
 	![ws name.](media/A44.png)
 
 3.	In the formula bar, enter the following measure definition.
-	
+
+	```
 	DAX
 	Sale per Capita =
 	DIVIDE(
 		SUM('Sale'[Sale Amount]),
 		SUM('US State Population'[Population])
 	)
+	```
 	
 *The measure is named **Sale per Capita**. The expression uses the DAX DIVIDE function to divide the sum of the **Sale Amount** column by the sum of the **Population** column.*
 
