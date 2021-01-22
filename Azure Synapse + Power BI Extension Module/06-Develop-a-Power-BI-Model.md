@@ -58,9 +58,9 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
 5.	Click **Start**.
 
-6.	Select your SQL pool, and then click Continue.
+6.	Select your SQL pool, and then click **Continue**.
 
-7.	Click the link to download the .pbids file.
+7.	Click the link to **download** the .pbids file.
 
     *A .pbids file contains a connection to your SQL pool. It’s a convenient way to start your project. When opened, it’ll create a new Power BI Desktop solution that already stores the connection details to your SQL pool*.
 
@@ -74,23 +74,23 @@ In this task, you will create six Power Query queries that will each load as a t
 
    *Power Query is a Microsoft technology used to connect to data stores, profile data, and transform data. You’ll define query for each table your model.*
 
-1.	In Power BI Desktop, in the SQL Server Database window, at the left, select Microsoft Account.
+1.	In Power BI Desktop, in the **SQL Server Database** window, at the left, select **Microsoft Account**.
 
       ![ws name.](media/3.1.png)
 
-2.	Click Sign In.
+2.	Click **Sign In**.
 
 3.	Sign in using the lab Azure credentials.
 
-4.	Click Connect.
+4.	Click **Connect**.
 
       ![ws name.](media/3.4.png)
 
-1. In Power BI Desktop, in the **Navigator** window, select (don’t check) the **wwi.DimCity** table.
+5. In Power BI Desktop, in the **Navigator** window, select (don’t check) the **wwi.DimCity** table.
 
-2. In the right pane, notice the preview result, which shows a subset of the table rows.
+6. In the right pane, notice the preview result, which shows a subset of the table rows.
 
-3. To create queries (which will become model tables), check the following six tables:
+7. To create queries (which will become model tables), check the following six tables:
 
 - wwi.DimCity
 - wwi.DimCustomer
@@ -102,49 +102,49 @@ In this task, you will create six Power Query queries that will each load as a t
    ![ws name.](media/6.12.png)
 
 
-4. To apply transformations to the queries, at the bottom-right, click **Transform Data**.
+8. To apply transformations to the queries, at the bottom-right, click **Transform Data**.
 
    ![ws name.](media/6.13.png)
 
 
    *Transforming the data allows you to define what data will be available in your model.*
 
-5. In the **Connection Settings** window, select the **DirectQuery** option.
+9. In the **Connection Settings** window, select the **DirectQuery** option.
 
    ![ws name.](media/6.14.png)
 
 
    *This decision is important. DirectQuery is a storage mode. A model table that uses DirectQuery storage mode doesn’t store data. So, when a Power BI report visual queries a DirectQuery table, Power BI sends a native query to the data source. This storage mode is often used for large data stores like Azure Synapse Analytics (because it’s impractical or uneconomic to import large data volumes) or when near real-time results are required.*
 
-6. Click **OK**.
+10. Click **OK**.
 
    ![ws name.](media/6.15.png)
 
 
-7. In the **Power Query Editor** window, in the **Queries** pane (located at the left), notice there is one query for each table you requested.
+11. In the **Power Query Editor** window, in the **Queries** pane (located at the left), notice there is one query for each table you requested.
 
    ![ws name.](media/6.16.png)
 
    *You’ll now revise the definition of each query. Each query will become a model table when they are applied to the model. So, you’ll now rename them so they’re described in more friendly and concise ways, and apply transformations to deliver the columns required by reports.*
 
-8. Select the **wwi DimCity** query.
+12. Select the **wwi DimCity** query.
 
    ![ws name.](media/6.17.png)   
 
-9. In the **Query Settings** pane (located at the right), to rename the query, in the **Name** box, replace the text with **Geography**, and then press **Enter**.
+13. In the **Query Settings** pane (located at the right), to rename the query, in the **Name** box, replace the text with **Geography**, and then press **Enter**.
 
    ![ws name.](media/6.18.png)
 
-10. On the **Home** ribbon tab, from inside the **Manage Columns** group, click the **Choose Columns** icon.
+14. On the **Home** ribbon tab, from inside the **Manage Columns** group, click the **Choose Columns** icon.
 
     ![ws name.](media/6.19.png)
 
 
-11. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
+15. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
 
     ![ws name.](media/6.20.png)
 
-12. Check the following seven columns.
+16. Check the following seven columns.
 
 - CityKey
 - City
@@ -158,29 +158,29 @@ In this task, you will create six Power Query queries that will each load as a t
 
    *This selection of columns determine what will be available in your model.*
 
-13. Click **OK**.
+17. Click **OK**.
 
     ![ws name.](media/6.22.png)
 
-14. In the **Query Settings** pane, in the **Applied Steps** list, notice that a step was added to remove other columns.
+18. In the **Query Settings** pane, in the **Applied Steps** list, notice that a step was added to remove other columns.
 
     ![ws name.](media/6.23.png)
 
     *Power Query defines steps to achieve the desired structure and data. Each transformation is a step in the query logic.*
 
-15. To rename the **StateProvince** column, double-click the **StateProvince** column header.
+19. To rename the **StateProvince** column, double-click the **StateProvince** column header.
 
-16. Insert a hyphen character (-) between the word **State** and the word **Province**, and then press **Enter**.
+20. Insert a hyphen character (-) between the word **State** and the word **Province**, and then press **Enter**.
 
     ![ws name.](media/6.24.png)
 
-17. Notice that a new applied step is added to the query.
+21. Notice that a new applied step is added to the query.
 
     ![ws name.](media/6.25.png)
 
-18. Rename the **SalesTerritory** column as **Sales Territory** (insert a space between the two words).
+22. Rename the **SalesTerritory** column as **Sales Territory** (insert a space between the two words).
 
-19. To validate the query design, in the status bar (located along the bottom of the window), verify that the query has seven columns.
+23. To validate the query design, in the status bar (located along the bottom of the window), verify that the query has seven columns.
 
     ![ws name.](media/6.26.png)
 
@@ -189,26 +189,26 @@ In this task, you will create six Power Query queries that will each load as a t
     *The design of the **Geography** query is now complete.*
 
 
-20. In the **Applied Steps** pane, right-click the last step, and then select **View Native Query**.
+24. In the **Applied Steps** pane, right-click the last step, and then select **View Native Query**.
 
     ![ws name.](media/6.27.png)
 
 
-21. In the **Native Query** window, review the SELECT statement that reflects the query design.
+25. In the **Native Query** window, review the SELECT statement that reflects the query design.
 
     *This concept is important. A native query is what Power BI uses to query the data source. To ensure best performance, the database developer should ensure this query is optimized by creating appropriate indexes, etc.*
 
-22. To close the **Native Query** window, click **OK**.
+26. To close the **Native Query** window, click **OK**.
 
     ![ws name.](media/6.28.png)
 
-23. Select the **wwi DimCustomer** query.
+27. Select the **wwi DimCustomer** query.
 
     ![ws name.](media/6.29.png)
 
-24. Rename the query as **Customer**.
+28. Rename the query as **Customer**.
 
-25. Remove all columns, except:
+29. Remove all columns, except:
 
 - CustomerKey
 - Customer
@@ -218,19 +218,19 @@ In this task, you will create six Power Query queries that will each load as a t
    ![ws name.](media/6.30.png)
 
 
-26. Rename the **BuyingGroup** column as **Buying Group** (insert a space between the two words).
+30. Rename the **BuyingGroup** column as **Buying Group** (insert a space between the two words).
 
-27. Verify that the query has four columns.
+31. Verify that the query has four columns.
 
    *The design of the **Customer** query is now complete.*
  
-28. Select the **wwi DimDate** query.
+32. Select the **wwi DimDate** query.
 
     ![ws name.](media/6.31.png)
 
-29. Rename the query as **Date**.
+33. Rename the query as **Date**.
  
-30. Remove all columns, except:
+34. Remove all columns, except:
 
 - Date
 - CalendarMonthNumber
@@ -240,20 +240,20 @@ In this task, you will create six Power Query queries that will each load as a t
 
    ![ws name.](media/6.32.png)
 
-31. Rename the following columns:
+35. Rename the following columns:
 
 - **CalendarMonthLabel** as **Month**
 - **CalendarYearLabel** as **Year**
  
-32. To add a computed column, on the **Add Column** ribbon tab, from inside the **General** group, click **Custom Column**.
+36. To add a computed column, on the **Add Column** ribbon tab, from inside the **General** group, click **Custom Column**.
 
     ![ws name.](media/6.33.png)
 
-33. In the **Custom Column** window, in the **New Column Name** box, replace the text with **MonthKey**.
+37. In the **Custom Column** window, in the **New Column Name** box, replace the text with **MonthKey**.
 
     ![ws name.](media/6.34.png)
 
-34. In the Custom Column Formula box, enter the following formula:
+38. In the Custom Column Formula box, enter the following formula:
 
     ![ws name.](media/6.35.png)
 
@@ -261,36 +261,36 @@ In this task, you will create six Power Query queries that will each load as a t
     
     The formula produces a unique key value for each month of a calendar year. It’s required to ensure that the calendar month labels sort in chronologic order. You’ll use this column in the next exercise when you configure the **Month** column sort order.*
 
-35. Click **OK**.
+39. Click **OK**.
 
     ![ws name.](media/6.36.png)
 
 
-36. Remove the **CalendarMonthNumber** and **CalendarYear** columns.
+40. Remove the **CalendarMonthNumber** and **CalendarYear** columns.
 
 *Tip: You can remove the columns using one of three techniques. First, you can open the Choose Columns window, and then uncheck those columns. Second, you can multi-select the columns and use the ribbon Remove Columns commands. Or, third, you can multi-select the columns, right-click the selection, and then select the context menu to Remove Columns options.*
 
-37. Review the native query, and notice the SQL expression used to compute the **MonthKey** column.
+41. Review the native query, and notice the SQL expression used to compute the **MonthKey** column.
 
     *This design isn’t optimal. In a real world solution, query performance would be better if the **MonthKey** column values are stored in the **wwi.DimDate** table (or a materialized view).*
 
-38. Verify that the query has four columns.
+42. Verify that the query has four columns.
 
     *The design of the **Date** query is now complete.*
 
-39. Select the **wwi DimEmployee** query.
+43. Select the **wwi DimEmployee** query.
 
     ![ws name.](media/6.37.png)
 
-40. Rename the query as **Salesperson**.
+44. Rename the query as **Salesperson**.
 
-41. To filter the table rows, in the **IsSalesperson** column header, click the down arrow, and then uncheck the **FALSE** item.
+45. To filter the table rows, in the **IsSalesperson** column header, click the down arrow, and then uncheck the **FALSE** item.
 
     ![ws name.](media/6.38.png)
 
-42. Click **OK**.
+46. Click **OK**.
  
-43. Remove all columns, except:
+47. Remove all columns, except:
 
 - EmployeeKey
 - Employee
@@ -298,39 +298,39 @@ In this task, you will create six Power Query queries that will each load as a t
    ![ws name.](media/6.39.png)
 
 
-44. Rename the **Employee** column as **Salesperson**.
+48. Rename the **Employee** column as **Salesperson**.
 
-45. Review the native query, and notice the WHERE clause that filters the table.
+49. Review the native query, and notice the WHERE clause that filters the table.
 
-46. Verify that the query has two columns.
+50. Verify that the query has two columns.
 
     *The design of the **Salesperson** query is now complete*.
 
-47. Select the **wwi DimStockItem** query.
+51. Select the **wwi DimStockItem** query.
 
     ![ws name.](media/6.40.png)
 
-48. Rename the query as **Product**.
+52. Rename the query as **Product**.
  
-49. Remove all columns, except:
+53. Remove all columns, except:
 
 - StockItemKey
 - Stock Item
 - Color
 
-50. Rename the **Stock Item** column as **Product**.
+54. Rename the **Stock Item** column as **Product**.
 
-51. Verify that the query has three columns.
+55. Verify that the query has three columns.
 
     *The design of the **Product** query is now complete.*
 
-52. Select the **wwi FactSale** query.
+56. Select the **wwi FactSale** query.
 
     ![ws name.](media/6.41.png)
 
-53. Rename the query as **Sale**.
+57. Rename the query as **Sale**.
 
-54. Remove all columns, except:
+58. Remove all columns, except:
 
 - CityKey
 - CustomerKey
@@ -343,24 +343,24 @@ In this task, you will create six Power Query queries that will each load as a t
 
    ![ws name.](media/6.42.png)
 
-55. Rename the following columns:
+59. Rename the following columns:
 
 - **UnitPrice** as **Unit Price**
 - **Profit** as **Profit Amount**
 
-56. Add a computed column using the following formula to create the **Sale Amount** column.
+60. Add a computed column using the following formula to create the **Sale Amount** column.
 
     ![ws name.](media/6.43.png)
 
-57. To modify the **Sale Amount** column data type, in the column header, click the **ABC123** icon, and then select **Decimal Number**.
+61. To modify the **Sale Amount** column data type, in the column header, click the **ABC123** icon, and then select **Decimal Number**.
 
     ![ws name.](media/6.44.png)
 
-58. Verify that the query has nine columns.
+62. Verify that the query has nine columns.
 
     *The design of the **Sale** query is now complete.*
 
-59. To apply the queries, on the **Home** ribbon tab, from inside the **Close** group, click the **Close & Apply** icon.
+63. To apply the queries, on the **Home** ribbon tab, from inside the **Close** group, click the **Close & Apply** icon.
 
     ![ws name.](media/6.45.png)
  
@@ -370,7 +370,7 @@ In this task, you will create six Power Query queries that will each load as a t
 
    ![ws name.](media/3.60.png)
 
-60. In Power BI Desktop, at the left, switch to Model view.
+65. In Power BI Desktop, at the left, switch to Model view.
  
     ![ws name.](media/6.46.png)
  
@@ -380,17 +380,17 @@ In this task, you will create six Power Query queries that will each load as a t
 
       ![ws name.](media/3.62.png)
 
-61. In the model diagram, notice that there are six tables (some may be out of view—scroll horizontally to see them all).
+67. In the model diagram, notice that there are six tables (some may be out of view—scroll horizontally to see them all).
 
 68.	Hover the cursor over any table header to reveal a tooltip, and then review the information presented.
 
-62. To save the Power BI Desktop solution, on the **File** tab (backstage view), select **Save**.
+69. To save the Power BI Desktop solution, on the **File** tab (backstage view), select **Save**.
 
-63. Save the file as **Sale Analysis** to an easy-to-remember location in your file system.
+70. Save the file as **Sale Analysis** to an easy-to-remember location in your file system.
 
-64. Open File Explorer, and navigate to the file system location.
+71. Open File Explorer, and navigate to the file system location.
 
-65. Notice the file size that is very small (~24 KB).
+72. Notice the file size that is very small (~24 KB).
 
     *The Power Query queries have been loaded to create model tables. In the next exercise, you’ll complete the design of the model by creating relationships and applying model configurations.*
 
