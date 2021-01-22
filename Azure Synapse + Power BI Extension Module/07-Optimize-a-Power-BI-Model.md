@@ -32,24 +32,24 @@ In this task, you will configure dual storage for all dimension tables.
    -	Product
    -	Salesperson
 
-4. In the **Properties** pane, from within the **Advanced** section, in the **Storage Mode** dropdown list, select **Dual**.
+4.  In the **Properties** pane, from within the **Advanced** section, in the **Storage Mode** dropdown list, select **Dual**.
 
-   ![ws name.](media/Dual.png)
+    ![ws name.](media/Dual.png)
  
-   *It’s common to set dimension tables to use dual storage mode. This way, when used by report slicers, they deliver fast performance. If these dimension tables will be queried at the same time as other imported tables, it can avoid the need for Power BI to query the data source.*.
+    *It’s common to set dimension tables to use dual storage mode. This way, when used by report slicers, they deliver fast performance. If these dimension tables will be queried at the same time as other imported tables, it can avoid the need for Power BI to query the data source.*.
    
    
-5. When prompted to set the storage mode, click **OK**.
+5.  When prompted to set the storage mode, click **OK**.
    
-   ![ws name.](media/7.002.png)
+    ![ws name.](media/7.002.png)
   
-6.	When the refresh completes, notice that the dual storage tables are indicated by a dashed header line.
+6.  When the refresh completes, notice that the dual storage tables are indicated by a dashed header line.
 
-   ![ws name.](media/7.001.png)
+    ![ws name.](media/7.001.png)
 
-7.	Save the Power BI Desktop solution.
+7.  Save the Power BI Desktop solution.
 
-   *The data model is now in mixed mode. It’s a composite model consisting of DirectQuery storage mode tables and import storage mode tables.*
+    *The data model is now in mixed mode. It’s a composite model consisting of DirectQuery storage mode tables and import storage mode tables.*
    
 8. In File Explorer, notice the file size has grown as a result of the imported data for the dimension tables.
 
@@ -85,11 +85,11 @@ In this task, you will create an aggregation table to accelerate Power BI report
    
 4.	Rename the query as **Sale Agg**.
 
-   ![ws name.](media/7.7.png)
+    ![ws name.](media/7.7.png)
    
 5.	On the **Transform** ribbon tab, from inside the **Table** group, click **Group By**.
 
-   ![ws name.](media/7.8.png)
+    ![ws name.](media/7.8.png)
     
 6.	In the **Group By** window, select the **Advanced** option.
 
@@ -154,15 +154,15 @@ In this task, you will switch the aggregation table to import data. You will the
    
 7.	Right-click the **Sale Agg** table, and then select **Manage Aggregations**.
 
-   ![ws name.](media/7.16.png)
+    ![ws name.](media/7.16.png)
  
-8.	In the **Manage Aggregations** window, for the **Profit Amount** aggregation column, set the following properties:
+8.  In the **Manage Aggregations** window, for the **Profit Amount** aggregation column, set the following properties:
 
-   -	Summarization: **Sum**
-   -	Detail table: **Sale**
-   -	Detail column: **Profit Amount**
+    -	Summarization: **Sum**
+    -	Detail table: **Sale**
+    -	Detail column: **Profit Amount**
 
-   ![ws name.](media/7.17.png)
+    ![ws name.](media/7.17.png)
    
 9.	Notice the warning that describes the table will be hidden.
 
@@ -184,7 +184,7 @@ In this task, you will switch the aggregation table to import data. You will the
 
 15. Notice that the query results for the table visual is now sub-second.
 
-   *Because the **Geography** and **Date** tables use dual storage mode, when a report visual queries them at the same time as the aggregation table, Power BI will query the model cache. There’s no need to use DirectQuery to query the data*.
+    *Because the **Geography** and **Date** tables use dual storage mode, when a report visual queries them at the same time as the aggregation table, Power BI will query the model cache. There’s no need to use DirectQuery to query the data*.
 
 16. In the **Performance Analyzer** pane, stop recording.
 
@@ -198,7 +198,7 @@ In this task, you will publish the model.
 
 1.	In Power BI Desktop, on the **Home** ribbon tab, from inside the **Share** group, click **Publish**.
 
-   ![ws name.](media/7.007.png)
+    ![ws name.](media/7.007.png)
     
 2.	If prompted to save changes, click **Yes**.
 
@@ -206,13 +206,13 @@ In this task, you will publish the model.
 
 4.	Click **Select**.
 
-   ![ws name.](media/7.21.png)
+    ![ws name.](media/7.21.png)
    
 5.	When publication has completed, click **Got It**.
 
 6.	Close Power BI Desktop.
 
-   *You will open a new instance of Power BI Desktop in **Exercise 8** when you create a new composite model.*
+    *You will open a new instance of Power BI Desktop in **Exercise 8** when you create a new composite model.*
    
 ## **Subtask 2: Complete Post-Publication Tasks**
 
@@ -222,36 +222,36 @@ In this task, you will complete some post-publication tasks.
 
 1.	In Power BI web browser session, open your lab workspace.
 
-   ![ws name.](media/7.22.png)
+    ![ws name.](media/7.22.png)
    
 2.	In the **Navigation** pane, open the workspace, and then verify that the **Sale Analysis** dataset exists.
 
-   ![ws name.](media/aiad2.png)
+    ![ws name.](media/aiad2.png)
    
 3.	Notice there is also the **Sale Analysis** report.
 
-   *It wasn’t our intention to publish a report, it was published alongside the model. You’ll develop a report in **Exercise 8**. So, we’ll delete this report*.
+    *It wasn’t our intention to publish a report, it was published alongside the model. You’ll develop a report in **Exercise 8**. So, we’ll delete this report*.
    
 4.	In the **Navigation** pane, hover the cursor over the **Sale Analysis** report, click the vertical ellipsis (…), and then select **Remove**.
 
-   ![ws name.](media/7.24.png)
+    ![ws name.](media/7.24.png)
    
 5.	When prompted to delete the report, click **Delete**.
 
-   ![ws name.](media/7.25.png)
+    ![ws name.](media/7.25.png)
  
 6.	To apply data source credentials, in the **Navigation** pane, hover the cursor over the **Sale Analysis** dataset, click the vertical ellipsis, and then select **Settings**.
  
-   ![ws name.](media/7.26.png)
+    ![ws name.](media/7.26.png)
    
 7.	Expand the **Data Source Credentials** section.
    You’ll see an error, and it’s expected. You will address the error in the next step.
    
-   ![ws name.](media/7.000.png)
+    ![ws name.](media/7.000.png)
   
-8.	To assign credentials, click the **Edit Credentials** link.
+8.  To assign credentials, click the **Edit Credentials** link.
 
-9. In the window, in the **Authentication Method** dropdown list, ensure **OAuth2** is selected.
+9.  In the window, in the **Authentication Method** dropdown list, ensure **OAuth2** is selected.
 
 10. In the **Privacy Level** dropdown list, select **Organizational**.
 
