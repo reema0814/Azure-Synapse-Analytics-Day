@@ -83,12 +83,12 @@ In this task, you will create an aggregation table to accelerate Power BI report
  
    *You’ll apply a transformation to group by the **CityKey** and **InvoiceDateKey** columns, and aggregate the sum of **Profit Amount** column*.
    
-4.	Rename the query as **Sale Agg**.
-
+4. Rename the query as **Sale Agg**.
+   
    ![ws name.](media/7.7.png)
    
-5.	On the **Transform** ribbon tab, from inside the **Table** group, click **Group By**.
-
+5. On the **Transform** ribbon tab, from inside the **Table** group, click **Group By**.
+   
    ![ws name.](media/7.8.png)
     
 6. In the **Group By** window, select the **Advanced** option.
@@ -97,8 +97,8 @@ In this task, you will create an aggregation table to accelerate Power BI report
     
    *The advanced option allows grouping by more than one column.*
    
-7.	In the grouping dropdown list, ensure that **CityKey** is selected.
-
+7. In the grouping dropdown list, ensure that **CityKey** is selected.
+   
    ![ws name.](media/7.10.png)
     
 8.	Click **Add Grouping**.
@@ -134,15 +134,15 @@ In this task, you will switch the aggregation table to import data. You will the
 2.	Position the **Sale Agg** table so that it is near the Geography and **Date** tables.
 
 3.	Set the storage mode for the **Sale Agg** table as **Import**.
-
+   
    ![ws name.](media/7.14.png)
    
 4.	If prompted to proceed, click OK.
-
+   
    ![ws name.](media/7.002.png)
 
 5.	When the refresh completes, notice that the import storage table does not include a blue mark across the top (solid or dashed).
-
+   
    ![ws name.](media/7.004.png)
  
 6.	Create two model relationships:
@@ -153,16 +153,16 @@ In this task, you will switch the aggregation table to import data. You will the
    ![ws name.](media/7.005.png)
    
 7.	Right-click the **Sale Agg** table, and then select **Manage Aggregations**.
-
+   
    ![ws name.](media/7.16.png)
  
-8.  In the **Manage Aggregations** window, for the **Profit Amount** aggregation column, set the following properties:
+8. In the **Manage Aggregations** window, for the **Profit Amount** aggregation column, set the following properties:
 
     -	Summarization: **Sum**
     -	Detail table: **Sale**
     -	Detail column: **Profit Amount**
 
-    ![ws name.](media/7.17.png)
+   ![ws name.](media/7.17.png)
    
 9.	Notice the warning that describes the table will be hidden.
 
