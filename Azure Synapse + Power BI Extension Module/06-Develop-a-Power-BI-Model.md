@@ -149,9 +149,9 @@ In this task, you will create six Power Query queries that will each load as a t
 	- Region
 	- Subregion
 
-   ![ws name.](media/6.21.png)
+	![ws name.](media/6.21.png)
 
-   *This selection of columns determine what will be available in your model.*
+	*This selection of columns determine what will be available in your model.*
 
 17. Click **OK**.
 
@@ -208,7 +208,7 @@ In this task, you will create six Power Query queries that will each load as a t
 	- Category
 	- BuyingGroup
    
-   ![ws name.](media/6.30.png)
+	![ws name.](media/6.30.png)
 
 30. Rename the **BuyingGroup** column as **Buying Group** (insert a space between the two words).
 
@@ -230,7 +230,7 @@ In this task, you will create six Power Query queries that will each load as a t
 	- CalendarYear
 	- CalendarYearLabel
 
-   ![ws name.](media/6.32.png)
+	![ws name.](media/6.32.png)
 
 35. Rename the following columns:
 
