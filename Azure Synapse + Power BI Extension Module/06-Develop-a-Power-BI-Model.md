@@ -26,17 +26,17 @@ In this exercise, you will create a DirectQuery model to support Power BI analys
 
 In this task, you will prepare your environment.
 
-1.	Open Power BI Desktop.
+1. Open Power BI Desktop.
 
-2.	At the top-right corner, verify that you are signed in using the lab Azure credentials.
+2. At the top-right corner, verify that you are signed in using the lab Azure credentials.
 
-3.	If you are not signed in using the lab Azure credentials, you must now sign in with those credentials.
+3. If you are not signed in using the lab Azure credentials, you must now sign in with those credentials.
 
-4.	Close Power BI Desktop.
+4. Close Power BI Desktop.
 
-5.	Open a new web browser session, and then navigate to *https://powerbi.com*.
+5. Open a new web browser session, and then navigate to *https://powerbi.com*.
 
-6.	If you are not signed in automatically, click **Sign In**, and then sign in using the lab Azure credentials.
+6. If you are not signed in automatically, click **Sign In**, and then sign in using the lab Azure credentials.
 
 ### **Subtask 2: Download a Dataset File**
 
@@ -56,15 +56,15 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
    ![ws name.](media/6.8.png)
 
-5.	Click **Start**.
+5. Click **Start**.
 
-6.	Select your SQL pool, and then click **Continue**.
+6. Select your SQL pool, and then click **Continue**.
 
-7.	Click the link to **download** the .pbids file.
+7. Click the link to **download** the .pbids file.
 
     *A .pbids file contains a connection to your SQL pool. It’s a convenient way to start your project. When opened, it’ll create a new Power BI Desktop solution that already stores the connection details to your SQL pool*.
 
-8.	When the .pbids file has downloaded, open it.
+8. When the .pbids file has downloaded, open it.
 
     *When the file opens, it’ll prompt you to create queries using the connection. You’ll define those queries in the next task*.
 
@@ -74,17 +74,17 @@ In this task, you will create six Power Query queries that will each load as a t
 
    *Power Query is a Microsoft technology used to connect to data stores, profile data, and transform data. You’ll define query for each table your model.*
 
-1.	In Power BI Desktop, in the **SQL Server Database** window, at the left, select **Microsoft Account**.
+1. In Power BI Desktop, in the **SQL Server Database** window, at the left, select **Microsoft Account**.
 
-	![ws name.](media/3.1.png)
+   ![ws name.](media/3.1.png)
 
-2.	Click **Sign In**.
+2. Click **Sign In**.
 
-3.	Sign in using the lab Azure credentials.
+3. Sign in using the lab Azure credentials.
 
-4.	Click **Connect**.
+4. Click **Connect**.
 
-	![ws name.](media/3.4.png)
+   ![ws name.](media/3.4.png)
 
 5. In Power BI Desktop, in the **Navigator** window, select (don’t check) the **wwi.DimCity** table.
 
@@ -286,7 +286,7 @@ In this task, you will create six Power Query queries that will each load as a t
 	- EmployeeKey
 	- Employee
 
-   ![ws name.](media/6.39.png)
+    ![ws name.](media/6.39.png)
 
 48. Rename the **Employee** column as **Salesperson**.
 
@@ -649,15 +649,15 @@ In this exercise, you will create a test report. You will then use Performance A
 
 In this task, you will design a simple report to test query performance.
 
-1.  In Power BI Desktop, in Report view, to add a slicer to the report canvas, in the **Visualizations** pane, click the slicer icon.
+1. In Power BI Desktop, in Report view, to add a slicer to the report canvas, in the **Visualizations** pane, click the slicer icon.
  
-	![ws name.](media/6.74.png)
+   ![ws name.](media/6.74.png)
 
-2.  In the Fields pane, from the Date table, drag the Calendar hierarchy to the slicer.
+2. In the Fields pane, from the Date table, drag the Calendar hierarchy to the slicer.
 
-3.	In the Visualizations pane, in the Field well, to remove the Date hierarchy level, click X.
+3. In the Visualizations pane, in the Field well, to remove the Date hierarchy level, click X.
 
-	![ws name.](media/4.6.png)
+   ![ws name.](media/4.6.png)
 
 3. Filter the slicer by **CY2012**.
 
@@ -710,7 +710,7 @@ In this task, you will use Performance Analyzer to measure query performance.
  
    *When recording, Performance Analyzer captures statistics when visual query data.*
 
-3.	In the **Performance Analyzer** pane, click **Refresh Visuals**.
+3. In the **Performance Analyzer** pane, click **Refresh Visuals**.
 
    ![ws name.](media/6.82.png)
  
