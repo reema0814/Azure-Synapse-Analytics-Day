@@ -505,7 +505,7 @@ In this task, you will add two hierarchies to the **Geography** table and config
 10. Set the following additional column data categorizations:
 
 - Categorize the **State-Province** column as **State or Province**
-- Categorize the **City**column as **City**
+- Categorize the **City** column as **City**
 
    *Configuration of the **Geography** table is now complete.*
    
@@ -728,7 +728,7 @@ In this task, you will use Performance Analyzer to measure query performance.
 
 3.	In the **Performance Analyzer** pane, click **Refresh Visuals**.
 
-   ![ws name.](media/6.82.png)
+      ![ws name.](media/6.82.png)
  
 4. In the list, notice the duration statistics, which are recorded in milliseconds.
 
