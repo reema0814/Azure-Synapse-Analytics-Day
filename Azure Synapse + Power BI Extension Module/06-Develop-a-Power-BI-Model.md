@@ -141,13 +141,13 @@ In this task, you will create six Power Query queries that will each load as a t
 
 16. Check the following seven columns.
 
-   - CityKey
-   - City
-   - StateProvince
-   - Country
-   - SalesTerritory
-   - Region
-   - Subregion
+	- CityKey
+	- City
+	- StateProvince
+	- Country
+	- SalesTerritory
+	- Region
+	- Subregion
 
    ![ws name.](media/6.21.png)
 
@@ -203,10 +203,10 @@ In this task, you will create six Power Query queries that will each load as a t
 
 29. Remove all columns, except:
 
-   - CustomerKey
-   - Customer
-   - Category
-   - BuyingGroup
+	- CustomerKey
+	- Customer
+	- Category
+	- BuyingGroup
    
    ![ws name.](media/6.30.png)
 
@@ -224,11 +224,11 @@ In this task, you will create six Power Query queries that will each load as a t
  
 34. Remove all columns, except:
 
-   - Date
-   - CalendarMonthNumber
-   - CalendarMonthLabel
-   - CalendarYear
-   - CalendarYearLabel
+	- Date
+	- CalendarMonthNumber
+	- CalendarMonthLabel
+	- CalendarYear
+	- CalendarYearLabel
 
    ![ws name.](media/6.32.png)
 
@@ -259,11 +259,11 @@ In this task, you will create six Power Query queries that will each load as a t
 
 40. Remove the **CalendarMonthNumber** and **CalendarYear** columns.
 
-   *Tip: You can remove the columns using one of three techniques. First, you can open the Choose Columns window, and then uncheck those columns. Second, you can multi-select the columns and use the ribbon Remove Columns commands. Or, third, you can multi-select the columns, right-click the selection, and then select the context menu to Remove Columns options.*
+	*Tip: You can remove the columns using one of three techniques. First, you can open the Choose Columns window, and then uncheck those columns. Second, you can multi-select the columns and use the ribbon Remove Columns commands. Or, third, you can multi-select the columns, right-click the selection, and then select the context menu to Remove Columns options.*
 
 41. Review the native query, and notice the SQL expression used to compute the **MonthKey** column.
    
-   *This design isn’t optimal. In a real world solution, query performance would be better if the **MonthKey** column values are stored in the **wwi.DimDate** table (or a materialized view).*
+	*This design isn’t optimal. In a real world solution, query performance would be better if the **MonthKey** column values are stored in the **wwi.DimDate** table (or a materialized view).*
 
 42. Verify that the query has four columns.
 
@@ -283,8 +283,8 @@ In this task, you will create six Power Query queries that will each load as a t
  
 47. Remove all columns, except:
 
-   - EmployeeKey
-   - Employee
+	- EmployeeKey
+	- Employee
 
    ![ws name.](media/6.39.png)
 
@@ -335,8 +335,8 @@ In this task, you will create six Power Query queries that will each load as a t
 
 59. Rename the following columns:
 
-   - **UnitPrice** as **Unit Price**
-   - **Profit** as **Profit Amount**
+	- **UnitPrice** as **Unit Price**
+	- **Profit** as **Profit Amount**
 
 60. Add a computed column using the following formula to create the **Sale Amount** column.
 
@@ -348,7 +348,7 @@ In this task, you will create six Power Query queries that will each load as a t
 
 62. Verify that the query has nine columns.
 
-    *The design of the **Sale** query is now complete.*
+	*The design of the **Sale** query is now complete.*
 
 63. To apply the queries, on the **Home** ribbon tab, from inside the **Close** group, click the **Close & Apply** icon.
 
