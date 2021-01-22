@@ -30,92 +30,92 @@ The completed report page will look like the following:
 
 	![ws name.](media/Q2.png)
 
-1.	In the **Filters** pane, in the **Country** filter tile, check the **United States** item.
+2.	In the **Filters** pane, in the **Country** filter tile, check the **United States** item.
 
 	![ws name.](media/Q3.png)
  
-1.	To hide the filter, in the Filters pane, hover the cursor over the Country filter tile, and then click the visibility icon.
+3.	To hide the filter, in the Filters pane, hover the cursor over the Country filter tile, and then click the visibility icon.
 
 	![ws name.](media/Q4.png)
 	
 	*Hiding the filter ensures that report users cannot modify the filter.*
 
-1.	In the **Filters** pane, at the top-left, click the arrow to collapse the pane.
+4.	In the **Filters** pane, at the top-left, click the arrow to collapse the pane.
 
 	![ws name.](media/Q5.png)
  
-1.	To rename the report page, at the bottom-left, double-click **Page 1**.
+5.	To rename the report page, at the bottom-left, double-click **Page 1**.
 
-1.	Replace the text with **Sale Analysis**, and then press **Enter**.
- 
+6.	Replace the text with **Sale Analysis**, and then press **Enter**.
+
    ![ws name.](media/Q6.png)
  
-1.	To format the page, in the **Visualizations** pane, select the **Format** pane (paint roller icon).
+7.	To format the page, in the **Visualizations** pane, select the **Format** pane (paint roller icon).
 
    ![ws name.](media/8.8.png)
  
    *You’ll format many report elements in this lab to produce a professional report layout. To format an element, you’ll select it, and then access formatting options in this pane. Formatting options are organized into sections*.
    
-1.	Expand the **Page Background** section.
+8.	Expand the **Page Background** section.
 
    ![ws name.](media/8.9.png)
  
-1.	Open the **Color** palette, click **Custom Color**, and set the custom color **C5C5C5**.
+9.	Open the **Color** palette, click **Custom Color**, and set the custom color **C5C5C5**.
 
-1.	Set the **Transparency** property to **0%**.
+10.	Set the **Transparency** property to **0%**.
 
-1.	Add a slicer to the page.
+11.	Add a slicer to the page.
 
    ![ws name.](media/8.10.png)
  
-1.	Position and size the slicer at the top-left of the report page.
+12.	Position and size the slicer at the top-left of the report page.
 
    ![ws name.](media/8.11.png)
  
-1.	In the **Fields** pane, expand the **Date** table, and then drag the **Calender** field  into the slicer.
+13.	In the **Fields** pane, expand the **Date** table, and then drag the **Calender** field  into the slicer.
 
    ![ws name.](media/Q7.png)
  
-1. Ensure that the slicer is selected, and then open the **Format** pane.
+14. Ensure that the slicer is selected, and then open the **Format** pane.
 
-1. Turn the **Shadow** property on.
+15. Turn the **Shadow** property on.
 
     ![ws name.](media/8.13.png)
  
     *For a consistent style, you’ll be instructed to add shadow to all elements you add to the report*.
  
-1. In the slicer, select **CY2012**.
+16. In the slicer, select **CY2012**.
 
     ![ws name.](media/Q8.png)
  
-1. To create a new visual, first select an empty area of the report canvas.
+17. To create a new visual, first select an empty area of the report canvas.
 
-1. To add a table visual to the report canvas, in the **Visualizations** pane, click the table visual icon.
+18. To add a table visual to the report canvas, in the **Visualizations** pane, click the table visual icon.
 
     ![ws name.](media/8.15.png)
  
-1. Position the table visual at the right of the slicer, and resize it to fill the remaining page space.
+19. Position the table visual at the right of the slicer, and resize it to fill the remaining page space.
 
     ![ws name.](media/8.16.png)
  
-1. Add the following fields to the table visual:
+20. Add the following fields to the table visual:
 
 -	**Geography** table **State-Province** field
 -	**Sale** table **Sale Amount** field
 -	**Sale** table **Sale per capita** field
 -	**Sale** table **Profit Amount** field
 
-1. Apply the following table visual formats:
+21. Apply the following table visual formats:
 
 -	In the **Style** section, set the **Style** to **Bold Header**.
 -	In the **Grid** section, increase the **Text Size** property to **16** pt.
 -	Turn **Shadow** on.
 
-1. To sort the table visual rows, click the **Sale per Capita** column header to sort by descending profitability.
+22. To sort the table visual rows, click the **Sale per Capita** column header to sort by descending profitability.
 
     ![ws name.](media/Q9.png)
  
-1. Save the Power BI Desktop solution.
+23. Save the Power BI Desktop solution.
  
 ## **Task 2: Develop Page 2**
 
@@ -131,53 +131,53 @@ The completed report page will look like the following:
  
    *Tip: Duplicating the page copies the formatting options. It can be quicker to duplicate than to reapply formats. And, it’s likely to result in more design consistency.*
 
-1.	Rename the new page as **Sale Chord**.
+2.	Rename the new page as **Sale Chord**.
 
    ![ws name.](media/8.20.png)
  
-1.	To delete the table visual, select the visual, and then press the **Delete key**.
+3.	To delete the table visual, select the visual, and then press the **Delete key**.
  
-1.	To sync the slicers, on the **View** ribbon tab, from inside the **Show Panes** group, select **Sync Slicers**.
+4.	To sync the slicers, on the **View** ribbon tab, from inside the **Show Panes** group, select **Sync Slicers**.
  
    ![ws name.](media/8.21.png)
    
-1.	In the report page, select the **Year** slicer.
+5.	In the report page, select the **Year** slicer.
 
-1.	In the **Sync Slicers** pane (located at the left), check both pages to sync.
+6.	In the **Sync Slicers** pane (located at the left), check both pages to sync.
 
    ![ws name.](media/8.22.png)
  
    *When a report user changes either **Year** slicer, the filter will propagate between these pages. Both slicers will remain in sync.*
    
-1.	In the **Sync Slicers** pane, at the top-left, click **X**.
+7.	In the **Sync Slicers** pane, at the top-left, click **X**.
 
    ![ws name.](media/8.23.png)
  
-1.	To import a custom visual, in the **Visualizations** pane, click the ellipsis (…), and then select **Get More Visuals**.
+8.	To import a custom visual, in the **Visualizations** pane, click the ellipsis (…), and then select **Get More Visuals**.
 
    ![ws name.](media/Q11.png)
  
-1.	In the **Power BI Visuals** window, in the **Search** box, enter **Chord**, and then press **Enter**.
+9.	In the **Power BI Visuals** window, in the **Search** box, enter **Chord**, and then press **Enter**.
 
    ![ws name.](media/8.25.png)
  
-1. When the **Chord** search result appears, click **Add**.
+10. When the **Chord** search result appears, click **Add**.
 
     ![ws name.](media/8.26.png)
  
-1. When the custom visual imports, click **OK**.
+11. When the custom visual imports, click **OK**.
 
-1. In the **Visualizations** pane, notice that the chord custom visual sits in an area beneath the core Power BI visuals.
+12. In the **Visualizations** pane, notice that the chord custom visual sits in an area beneath the core Power BI visuals.
 
     ![ws name.](media/8.27.png)
  
-1. Add a chord visual to the report page.
+13. Add a chord visual to the report page.
  
-1. Position the chord visual at the right of the slicer, and resize it to fill the remaining page space.
+14. Position the chord visual at the right of the slicer, and resize it to fill the remaining page space.
 
     ![ws name.](media/8.28.png)
  
-1. Configure the following visual field wells:
+15. Configure the following visual field wells:
 
 -	**From: Geography** table **Sales Territory** field
 -	**To: Customer** table **Buying Group** field
@@ -185,15 +185,15 @@ The completed report page will look like the following:
 
    ![ws name.](media/8.29.png)
  
-1. Format the chord visual to add shadow.
+16. Format the chord visual to add shadow.
 
-1. Change the **Year** slicer values, and notice how the chord visual animates.
+17. Change the **Year** slicer values, and notice how the chord visual animates.
 
-1. Hover the cursor over the outer segments and the internal chords to reveal tooltips describing inter-relationships between sales territories and buying groups.
+18. Hover the cursor over the outer segments and the internal chords to reveal tooltips describing inter-relationships between sales territories and buying groups.
 
-1. Set the **Year** slicer back to **CY2012**.
+19. Set the **Year** slicer back to **CY2012**.
 
-1. Save the Power BI Desktop solution.
+20. Save the Power BI Desktop solution.
 
 
 ## **Task 2: Develop a Drill Through Page**
@@ -210,39 +210,39 @@ The completed report page will look like the following:
  
 1.	Create a new report page by duplicating the **Sale Chord** page.
 
-1.	Rename the new page as **State-Province Details**.
+2.	Rename the new page as **State-Province Details**.
 
    ![ws name.](media/8.31.png)
  
-1.	Remove the slicer and chord visual.
+3.	Remove the slicer and chord visual.
  
-1.	From the **Fields** pane, in the **Geography** table, drag the **State-Province** field to the **Drill Through** section (beneath the **Visualizations** pane), into the well.
+4.	From the **Fields** pane, in the **Geography** table, drag the **State-Province** field to the **Drill Through** section (beneath the **Visualizations** pane), into the well.
 
    ![ws name.](media/8.32.png)
  
-1.	Apply a filter to the first state, **Alabama**.
+5.	Apply a filter to the first state, **Alabama**.
 
    ![ws name.](media/8.33.png)
  
    *The filter will be applied when the report user drills through. You applied this filter now to help design the page for a single state.*
    
-1.	At the top-left of the report page, notice the back arrow button.
+6.	At the top-left of the report page, notice the back arrow button.
 
    *The button was added automatically when you added a drill through filter. It allows report users to navigate back to where they drilled.*
    
-1.	Select the button, and the in the **Visualizations** pane, turn the **Background** off.
+7.	Select the button, and the in the **Visualizations** pane, turn the **Background** off.
 
    ![ws name.](media/8.34.png)
  
-1.	Add a multi-row card visual to the report page.
+8.	Add a multi-row card visual to the report page.
 
    ![ws name.](media/8.35.png)
  
-1.	Position and size the multi-row card visual at the top-left of the report page.
+9.	Position and size the multi-row card visual at the top-left of the report page.
 
    ![ws name.](media/8.36.png)
  
-1. Add the following five fields to the multi-row card visual:
+10. Add the following five fields to the multi-row card visual:
 
 -	**Geography** table **State-Province** field
 -	**Sale** table **Quantity** field
@@ -251,7 +251,7 @@ The completed report page will look like the following:
 -	**Sale** table **Profit Amount** field
 -	**Product** table **Profit % All Geography** field
 
-1. Apply the following formats:
+11. Apply the following formats:
 
 -	In the **Data Labels** section, set the **Text Size** to **16** pt.
 -	In the **Card Title** section, set the **Text Size** property to **20** pt.
@@ -261,28 +261,28 @@ The completed report page will look like the following:
    
    *If the card values form more than one column, reduce the width of the multi-row card visual*
  
-1. Add a line and clustered column chart visual to the report page.
+12. Add a line and clustered column chart visual to the report page.
 
     ![ws name.](media/8.38.png)
  
-1. Position the line and clustered column visual at the right of the slicer, and resize it to fill the remaining page space.
+13. Position the line and clustered column visual at the right of the slicer, and resize it to fill the remaining page space.
 
     ![ws name.](media/8.39.png)
  
-1. Configure the following field mappings:
+14. Configure the following field mappings:
 
 -	**Shared Axis: Date** table **Month** field
 -	**Column Values: Sale** table **Sale Amount** field
 
     ![ws name.](media/8.40.png)
  
-1. To add a report-level measure, in the **Fields** pane, right-click the **Sale** table, and then select **New Measure**.
+15. To add a report-level measure, in the **Fields** pane, right-click the **Sale** table, and then select **New Measure**.
 
     ![ws name.](media/8.41.png)
  
     *A report-level measure can be added by the report author. It allows them to define complex summarization logic that’s not already defined in the model.*
     
-1. In the formula bar, enter the following measure definition:
+16. In the formula bar, enter the following measure definition:
     ```
       DAX
         Profit Margin =
@@ -295,19 +295,19 @@ The completed report page will look like the following:
 
     *The measure is named **Profit Margin**. The formula divides the sum of the **Profit Amount** column by the sum of the **Sale Amount** column.*
  
-1. On the **Measure Tools** contextual ribbon tab, set the format to percentage.
+17. On the **Measure Tools** contextual ribbon tab, set the format to percentage.
 
     ![ws name.](media/8.43.png)
  
-1. Add the **Profit Margin** measure to the **Line Values** well of the line and clustered column visual.
+18. Add the **Profit Margin** measure to the **Line Values** well of the line and clustered column visual.
 
     ![ws name.](media/Q14.png)
  
-1. Format the line and clustered column visual to add shadow.
+19. Format the line and clustered column visual to add shadow.
 
     *The design of the drill through page is now complete.*
 
-1. Right-click the **State-Province Details** page tab, and then select **Hide Page**.
+20. Right-click the **State-Province Details** page tab, and then select **Hide Page**.
 
     ![ws name.](media/8.45.png)
  
@@ -319,31 +319,31 @@ In this task, you will explore the drill through experience.
 
 1.	Select the **Profit Analysis** page.
 
-1.	Ensure the **Year** slicer is set to **CY2012**.
+2.	Ensure the **Year** slicer is set to **CY2012**.
 
-1.	In the table visual, right-click any state, and then select **Drill Through > State-Province Details**.
+3.	In the table visual, right-click any state, and then select **Drill Through > State-Province Details**.
 
    ![ws name.](media/8.46.png)
  
    *Drill through is available from any report visual that groups by the State-Province field.*
    
-1.	In the drill through page, notice the state you drilled from is the title of the multi-row card visual.
+4.	In the drill through page, notice the state you drilled from is the title of the multi-row card visual.
 
    ![ws name.](media/8.47.png)
  
-1.	Hover the cursor over the top-left corner of the line and clustered column chart visual, and then hover over the filter (funnel) icon.
+5.	Hover the cursor over the top-left corner of the line and clustered column chart visual, and then hover over the filter (funnel) icon.
 
    ![ws name.](media/8.48.png)
  
    *The tooltip reveals all applied filters.*
 
-1.	Notice that the **Year** slicer value was passed to the drill through page, too.
+6.	Notice that the **Year** slicer value was passed to the drill through page, too.
 
-1.	To return back to where you drilled from, at the top-left corner, while pressing the **Ctrl** key, click the back button.
+7.	To return back to where you drilled from, at the top-left corner, while pressing the **Ctrl** key, click the back button.
 	
 	*When editing a report, you must press the **Ctrl** key when clicking buttons. If you don’t press the **Ctrl** key, the designer understands you’re selecting it so it can be configured.*
    
-1.	Save the Power BI Desktop solution.
+8.	Save the Power BI Desktop solution.
 
 ## **Task 3: Work with Bookmarks**
 
@@ -355,19 +355,19 @@ In this task, you will add a new visual to the drill through page.
 
 1.	Select the **State-Province Details** page.
 
-1.	Select the line and clustered column chart visual.
+2.	Select the line and clustered column chart visual.
 
-1.	To clone the visual, press **Ctrl+C**, and then press **Ctrl+V**.
+3.	To clone the visual, press **Ctrl+C**, and then press **Ctrl+V**.
 
 	*Tip: Copy and paste commands are also available on the **Home** ribbon tab.*
 
-1.	Position the cloned visual precisely over the top of the original visual.
+4.	Position the cloned visual precisely over the top of the original visual.
 
-1.	Modify the top visual field **Shared Axis** field mappings by removing the **Month** field, and then replacing it with the **Salesperson** table **Salesperson** field.
+5.	Modify the top visual field **Shared Axis** field mappings by removing the **Month** field, and then replacing it with the **Salesperson** table **Salesperson** field.
 
    ![ws name.](media/8.49.png)
  
-1.	Format the visual data color by setting the **Default Color** to purple.
+6.	Format the visual data color by setting the **Default Color** to purple.
 
    ![ws name.](media/8.50.png)
  
@@ -379,53 +379,53 @@ In this task, you will create two bookmarks to show or hide the superimposed vis
 
    ![ws name.](media/8.51.png)
  
-1.	In the **Selection** pane, notice there are two similarly named report elements.
+2.	In the **Selection** pane, notice there are two similarly named report elements.
 
    ![ws name.](media/8.52.png)
  
-1.	Hover the cursor over each to reveal a tooltip describing their full title.
+3.	Hover the cursor over each to reveal a tooltip describing their full title.
 
-1.	Notice that one ends in “by Month”, and the other ends in “by Salesperson”.
+4.	Notice that one ends in “by Month”, and the other ends in “by Salesperson”.
 
-1.	Determine which of the visuals groups by salesperson, and then click the **Hide** icon.
+5.	Determine which of the visuals groups by salesperson, and then click the **Hide** icon.
 
    ![ws name.](media/8.53.png)
  
-1.	Verify that the “by Month” visual is now visible.
+6.	Verify that the “by Month” visual is now visible.
 
-1.	In the **Bookmarks** pane, click **Add**.
+7.	In the **Bookmarks** pane, click **Add**.
 
    ![ws name.](media/8.54.png)
  
-1.	To rename the bookmark, double-click **Bookmark 1**.
+8.	To rename the bookmark, double-click **Bookmark 1**.
 
-1.	Rename the bookmark as **By Month**, and then press **Enter**.
+9.	Rename the bookmark as **By Month**, and then press **Enter**.
 
-1. Click the ellipsis at the right of the bookmark, and then select **Data**.
+10. Click the ellipsis at the right of the bookmark, and then select **Data**.
 
     ![ws name.](media/8.55.png)
  
     *By selecting Data, you’re disabling the bookmark from capturing any applied filters. It means that when the bookmark is applied, it’ll use the filters applied by the report user.*
     
-1. Click the ellipsis again, and then select **Update**.
+11. Click the ellipsis again, and then select **Update**.
 
     ![ws name.](media/8.56.png)
  
-1. In the **Selection** pane, unhide the "by salesperson" visual, and then hide the “by month” visual.
+12. In the **Selection** pane, unhide the "by salesperson" visual, and then hide the “by month” visual.
 
-1. Create a second bookmark, and then name it **By Salesperson**.
+13. Create a second bookmark, and then name it **By Salesperson**.
 
-1. Configure the bookmark to not override filters (turn off **Data**), and then update the bookmark.
+14. Configure the bookmark to not override filters (turn off **Data**), and then update the bookmark.
 
-1. Verify there are two bookmarks.
+15. Verify there are two bookmarks.
 
     ![ws name.](media/8.57.png)
  
-1. Close the **Selection** pane.
+16. Close the **Selection** pane.
 
     ![ws name.](media/8.58.png)
  
-1. Close the **Bookmarks** pane.
+17. Close the **Bookmarks** pane.
 
     ![ws name.](media/8.59.png)
  
@@ -438,11 +438,11 @@ In this task, you will add two buttons to the report page, and then configure ea
 
    ![ws name.](media/8.60.png)
 
-1.	Position and size the button so that it is directly beneath the multi-row card visual and it is the same width.
+2.	Position and size the button so that it is directly beneath the multi-row card visual and it is the same width.
 
    ![ws name.](media/8.61.png)
  
-1.	In the **Visualizations** pane, apply the following button formats:
+3.	In the **Visualizations** pane, apply the following button formats:
 
 -	Set the **Button Text** section to **On**.
 -	Expand the **Button Text** section, and then set the **Button Text** to **By Month**.
@@ -455,21 +455,21 @@ In this task, you will add two buttons to the report page, and then configure ea
 -	Set the action **Type** to **Bookmark**.
 -	Set the action **Bookmark** to **By Month**.
 
-1.	Clone(Copy and paste) the button, and then position it directly beneath the first button.
+4.	Clone(Copy and paste) the button, and then position it directly beneath the first button.
 
    ![ws name.](media/8.62.png)
  
-1.	Modify the button formats, as follows:
+5.	Modify the button formats, as follows:
 
 -	Set the **Button Text** to **By Salesperson**.
 -	Set the fill **Fill Color** to **Purple**.
 -	Set the action **Bookmark** to **By Salesperson**.
  
-1.	Verify that the buttons looks like the following:
+6.	Verify that the buttons looks like the following:
  
    ![ws name.](media/8.63.png)
  
-1.	Test each button by pressing the **Ctrl** key and clicking a button.
+7.	Test each button by pressing the **Ctrl** key and clicking a button.
 
  
    
@@ -484,13 +484,13 @@ In this task, you will prepare the report for publication.
 
 1.	On the **State-Province Details** page, ensure the **By Month** visual is displayed.
 
-1.	Select the **Profit Analysis** page.
+2.	Select the **Profit Analysis** page.
 
-1.	Ensure the **Year** slicer is set to **CY2012**.
+3.	Ensure the **Year** slicer is set to **CY2012**.
 
    *It’s important to select the initial page and reset filters just before publishing the report. It will become the report state when report users first open the report.*
 
-1.	Save the Power BI Desktop solution as **Sale Report**.
+4.	Save the Power BI Desktop solution as **Sale Report**.
 
 
 ### **Subtask 2: Publish the Report**
@@ -502,17 +502,17 @@ In this task, you will publish the report to Power BI.
    ![ws name.](media/8.64.png)
 
  
-1.	If prompted to save changes, click **Yes**.
+2.	If prompted to save changes, click **Yes**.
 
-1.	In the **Publish to Power BI** window, select the lab workspace (do not use **My Workspace**).
+3.	In the **Publish to Power BI** window, select the lab workspace (do not use **My Workspace**).
 
-1.	Click **Select**.
+4.	Click **Select**.
 
    ![ws name.](media/8.65.png)
  
-1.	When publication has completed, click **Got It**.
+5.	When publication has completed, click **Got It**.
 
-1.	Close Power BI Desktop.
+6.	Close Power BI Desktop.
 
 
 ### **Subtask 3: Review the Published Dataset**
@@ -521,23 +521,23 @@ In this task, you will review the published dataset.
 
 1.	In the Power BI web browser session, open your lab workspace.
 
-1.	In the **Navigation** pane, notice the addition of the **US Sale Analysis** dataset.
+2.	In the **Navigation** pane, notice the addition of the **US Sale Analysis** dataset.
 
 	![ws name.](media/Q15.png)
 	
-1.	In the **Navigation** pane, hover the cursor over the **US Sale Analysis** dataset, and when the ellipsis appears click it, select **View Lineage**.	
+3.	In the **Navigation** pane, hover the cursor over the **US Sale Analysis** dataset, and when the ellipsis appears click it, select **View Lineage**.	
 	
 	![ws name.](media/Q16.png)
 	
-1.	In the lineage view diagram, notice the two sources which contribute to the **US Sale Analysis** dataset.
+4.	In the lineage view diagram, notice the two sources which contribute to the **US Sale Analysis** dataset.
 		
 	![ws name.](media/Q17.png)	
 	
 	*Your new **US Sale Analysis** dataset comprises two data connections: Web and Analysis Services. Note that the Analysis Services connection is used by Power BI to connect to the Power BI dataset*
 
-1.	To open the report, in the **Navigation** pane, click the **US Sale Analysis** report.
+5.	To open the report, in the **Navigation** pane, click the **US Sale Analysis** report.
 
-1.	In the report viewer, beneath the menu bar, notice the error message that describes that the web data source is missing credentials.
+6.	In the report viewer, beneath the menu bar, notice the error message that describes that the web data source is missing credentials.
 
 	![ws name.](media/Q18.png)	
 	
@@ -562,31 +562,31 @@ In this task, you will install the Power BI gateway in personal mode.
 	
 	*A new web browser tab opens to the Power BI gateway page.*
 	
-1.	In the Power BI gateway web page, click **Download Personal Mode**.	
+2.	In the Power BI gateway web page, click **Download Personal Mode**.	
 	
 	![ws name.](media/Q20.png)
 	
 	*There are two types of gateway: The standard gateway and gateway in personal mode. For the data analyst, it can be appropriate to install the gateway in personal mode. Note that if you configured scheduled data refresh, you would need to ensure your machine is running and connected to the Internet for the refresh to succeed.*
 	
-1.	When the installer software downloads, open it.
+3.	When the installer software downloads, open it.
 		
 	![ws name.](media/Q21.png)	
 	
-1.	In the gateway setup window, check the acceptance checkbox, and then click **Install**.
+4.	In the gateway setup window, check the acceptance checkbox, and then click **Install**.
 
 	![ws name.](media/Q22.png)	
 
-1.	When prompted to enter an email address, enter your lab Azure account.
+5.	When prompted to enter an email address, enter your lab Azure account.
 
-1.	Click Sign In.
+6.	Click Sign In.
 
 	![ws name.](media/Q23.png)	
 
-1.	Complete the sign in process by entering your password.
+7.	Complete the sign in process by entering your password.
 
-1.	When the gateway installation and setup has completed, click **Close**.
+8.	When the gateway installation and setup has completed, click **Close**.
 
-1.	Close the Power BI gateway web page.
+9.	Close the Power BI gateway web page.
 
 	*The gateway is now setup and running. In the next task, you will assign the gateway to the **US Sale Analysis** dataset and configure data source credentials.*
 	
@@ -598,29 +598,29 @@ In this task, you will configure the **US Sale Analysis** dataset settings.
 	
 	![ws name.](media/Q24.png)	
 	
-1.	In the **Data Source Credentials** section, read the messages.
+2.	In the **Data Source Credentials** section, read the messages.
 
 	*Credentials must be set for only the Web connection. There is no need to set credentials for the connection to the **Sale Analysis** dataset.*
 	
-1.	For the **Web** connection, click **Edit Credentials**.
+3.	For the **Web** connection, click **Edit Credentials**.
 
 	![ws name.](media/Q25.png)
 	
 	
-1.	In the window, in the **Privacy Level Settings** dropdown list, select **Public**.
+4.	In the window, in the **Privacy Level Settings** dropdown list, select **Public**.
 
 	*Privacy levels allows Power Query to determine the most efficient, yet secure way, to refresh data when combining data from multiple data sources. In your model, Power Query is not used to combine data.*
 	
-1.	Click **Sign In**.
+5.	Click **Sign In**.
 
 		
 	![ws name.](media/Q26.png)
 	
 	*It’s now possible to perform and schedule data refresh for your model. You won’t do that in this lab.*
 	
-1.	To test the dataset, in the **Navigation** pane, click the **US Sale Analysis** report.
+6.	To test the dataset, in the **Navigation** pane, click the **US Sale Analysis** report.
 
-1.	Notice that it is now possible to see the report data and interact with the report.
+7.	Notice that it is now possible to see the report data and interact with the report.
 
 ### **Subtask 3: Explore the Report**
 
@@ -628,23 +628,23 @@ In this task, you will explore the report to determine root cause for low-profit
 
 1.	In the **Navigation** pane, click the **US Sale Analysis**.
 
-1.	At the left, notice there are only two pages.
+2.	At the left, notice there are only two pages.
 
    ![ws name.](media/8.66.png)
  
    *Recall that the drill through page was hidden.*
    
-1.	Set the **Year** slicer to **CY2014**.
+3.	Set the **Year** slicer to **CY2014**.
 
 	*Understand that the page refreshed quickly because Power BI is querying an aggregation that you created in **Exercise 07**.*
 	
-1.	To see low-sale per capita states, modify the table sort to **Sale per Capita** ascending.
+4.	To see low-sale per capita states, modify the table sort to **Sale per Capita** ascending.
 
-1.	To understand **Tennessee** sales in more detail, right-click **Tennessee**, and then drill through to the details page.
+5.	To understand **Tennessee** sales in more detail, right-click **Tennessee**, and then drill through to the details page.
 
-1.	Review the monthly sales.
+6.	Review the monthly sales.
 
-1. Click the **By Salesperson** button, and then review the result by salespeople.
+7. Click the **By Salesperson** button, and then review the result by salespeople.
 
 *The lab is now complete.*
 
