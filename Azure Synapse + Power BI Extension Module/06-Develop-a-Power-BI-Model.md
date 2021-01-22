@@ -570,7 +570,7 @@ In this task, you will hide columns that are not appropriate for reporting.
  
 2. In the **Properties** pane, set the **Is Hidden** property to **Yes**.
 
-   ![ws name.](media/6.63.png)
+	![ws name.](media/6.63.png)
 
 
 ### **Subtask 6: Mark the Date Table**
