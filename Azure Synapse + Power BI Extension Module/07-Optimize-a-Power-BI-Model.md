@@ -26,11 +26,11 @@ In this task, you will configure dual storage for all dimension tables.
 
 3.	While pressing the **Ctrl** key, multi-select each of the five dimension tables:
 
--	Customer
--	Date
--	Geography
--	Product
--	Salesperson
+   -	Customer
+   -	Date
+   -	Geography
+   -	Product
+   -	Salesperson
 
 4. In the **Properties** pane, from within the **Advanced** section, in the **Storage Mode** dropdown list, select **Dual**.
 
@@ -40,12 +40,12 @@ In this task, you will configure dual storage for all dimension tables.
    
    
 5. When prompted to set the storage mode, click **OK**.
-
-      ![ws name.](media/7.002.png)
    
+   ![ws name.](media/7.002.png)
   
 6.	When the refresh completes, notice that the dual storage tables are indicated by a dashed header line.
-      ![ws name.](media/7.001.png)
+
+   ![ws name.](media/7.001.png)
 
 7.	Save the Power BI Desktop solution.
 
@@ -57,15 +57,13 @@ In this task, you will configure dual storage for all dimension tables.
    
 9. In Report view, in the status bar, at the bottom-right, notice that the storage mode is now mixed.
 
-      ![ws name.](media/7.003.png)
+   ![ws name.](media/7.003.png)
    
-   
-10.	In the **Performance Analyzer** pane, start recording, and then refresh visuals.
+10. In the **Performance Analyzer** pane, start recording, and then refresh visuals.
 
 11. Notice that the query result for the slicer is now sub-second.
 
 12. In the **Performance Analyzer** pane, stop recording.
-
 
 ### **Subtask 2: Create an Aggregation Table**
 
@@ -75,7 +73,6 @@ In this task, you will create an aggregation table to accelerate Power BI report
  
    ![ws name.](media/Transform.Data.png)
    
- 
 2. In the Power Query Editor window, from inside the **Queries** pane, right-click the **Sale** query, and then select **Duplicate**.
 
    ![ws name.](media/Duplicate.png)
@@ -90,23 +87,20 @@ In this task, you will create an aggregation table to accelerate Power BI report
 
    ![ws name.](media/7.7.png)
    
- 
 5.	On the **Transform** ribbon tab, from inside the **Table** group, click **Group By**.
 
    ![ws name.](media/7.8.png)
-   
- 
+    
 6.	In the **Group By** window, select the **Advanced** option.
 
-      ![ws name.](media/7.9.png)
+   ![ws name.](media/7.9.png)
     
    *The advanced option allows grouping by more than one column.*
    
 7.	In the grouping dropdown list, ensure that **CityKey** is selected.
 
-      ![ws name.](media/7.10.png)
-   
- 
+   ![ws name.](media/7.10.png)
+    
 8.	Click **Add Grouping**.
 
 9.	In the second grouping dropdown list, select **InvoiceDateKey**.
@@ -119,12 +113,10 @@ In this task, you will create an aggregation table to accelerate Power BI report
 
     ![ws name.](media/7.11.png)
  
- 
 13. Click **OK**.
 
     ![ws name.](media/7.12.png)
-    
- 
+     
 14. On the **Home** ribbon tab, from inside the **Close** group, click the **Close & Apply** icon.
 
     ![ws name.](media/7.13.png)
@@ -132,8 +124,6 @@ In this task, you will create an aggregation table to accelerate Power BI report
     *A new table is added to the model*.
     
 15. Save the Power BI Desktop solution.
-
-
 
 ### **Subtask 3: Configure Aggregations**
 
@@ -145,52 +135,46 @@ In this task, you will switch the aggregation table to import data. You will the
 
 3.	Set the storage mode for the **Sale Agg** table as **Import**.
 
-      ![ws name.](media/7.14.png)
+   ![ws name.](media/7.14.png)
    
 4.	If prompted to proceed, click OK.
 
-      ![ws name.](media/7.002.png)
+   ![ws name.](media/7.002.png)
 
 5.	When the refresh completes, notice that the import storage table does not include a blue mark across the top (solid or dashed).
 
-      ![ws name.](media/7.004.png)
- 
+   ![ws name.](media/7.004.png)
  
 6.	Create two model relationships:
 
--	Relate the **Sale Agg** table CityKey column to the **Geography** table **CityKey** column
--	Relate the **Sale Agg** table **InvoiceDateKey** column to the **Date** table **Date** column
+   -	Relate the **Sale Agg** table CityKey column to the **Geography** table **CityKey** column
+   -	Relate the **Sale Agg** table **InvoiceDateKey** column to the **Date** table **Date** column
 
-      ![ws name.](media/7.005.png)
+   ![ws name.](media/7.005.png)
    
- 
 7.	Right-click the **Sale Agg** table, and then select **Manage Aggregations**.
 
-      ![ws name.](media/7.16.png)
- 
+   ![ws name.](media/7.16.png)
  
 8.	In the **Manage Aggregations** window, for the **Profit Amount** aggregation column, set the following properties:
 
--	Summarization: **Sum**
--	Detail table: **Sale**
--	Detail column: **Profit Amount**
+   -	Summarization: **Sum**
+   -	Detail table: **Sale**
+   -	Detail column: **Profit Amount**
 
    ![ws name.](media/7.17.png)
    
- 
 9.	Notice the warning that describes the table will be hidden.
 
    *The table will be hidden in a different way to other hidden model objects (like the key columns you hid in **Exercise 6**). Aggregation tables are always hidden, and they can’t even be referenced in model calculations*.
    
-10.	Click **Apply All**.
+10. Click **Apply All**.
 
-      ![ws name.](media/7.18.png)
+    ![ws name.](media/7.18.png)
    
- 
 11. In the model diagram, notice that the **Sale Agg** table is now hidden.
 
-      ![ws name.](media/7.006.png)
- 
+    ![ws name.](media/7.006.png)
  
 12. In the model diagram, select the **Sale Agg** table.
     
@@ -204,7 +188,6 @@ In this task, you will switch the aggregation table to import data. You will the
 
 16. In the **Performance Analyzer** pane, stop recording.
 
-
 ## **Task 2: Publish the Model**
 
 In this task, you will publish the model and complete some post-publication tasks.
@@ -215,9 +198,8 @@ In this task, you will publish the model.
 
 1.	In Power BI Desktop, on the **Home** ribbon tab, from inside the **Share** group, click **Publish**.
 
-      ![ws name.](media/7.007.png)
-   
- 
+   ![ws name.](media/7.007.png)
+    
 2.	If prompted to save changes, click **Yes**.
 
 3.	In the **Publish to Power BI** window, select the lab workspace (do not use **My Workspace**).
@@ -226,16 +208,13 @@ In this task, you will publish the model.
 
    ![ws name.](media/7.21.png)
    
- 
 5.	When publication has completed, click **Got It**.
 
 6.	Close Power BI Desktop.
 
    *You will open a new instance of Power BI Desktop in **Exercise 8** when you create a new composite model.*
    
- 
 ## **Subtask 2: Complete Post-Publication Tasks**
-
 
 In this task, you will complete some post-publication tasks.
 
@@ -245,37 +224,31 @@ In this task, you will complete some post-publication tasks.
 
    ![ws name.](media/7.22.png)
    
- 
 2.	In the **Navigation** pane, open the workspace, and then verify that the **Sale Analysis** dataset exists.
 
-      ![ws name.](media/aiad2.png)
+   ![ws name.](media/aiad2.png)
    
- 
 3.	Notice there is also the **Sale Analysis** report.
 
    *It wasn’t our intention to publish a report, it was published alongside the model. You’ll develop a report in **Exercise 8**. So, we’ll delete this report*.
    
- 
 4.	In the **Navigation** pane, hover the cursor over the **Sale Analysis** report, click the vertical ellipsis (…), and then select **Remove**.
 
    ![ws name.](media/7.24.png)
    
- 
 5.	When prompted to delete the report, click **Delete**.
 
-      ![ws name.](media/7.25.png)
- 
+   ![ws name.](media/7.25.png)
  
 6.	To apply data source credentials, in the **Navigation** pane, hover the cursor over the **Sale Analysis** dataset, click the vertical ellipsis, and then select **Settings**.
  
-      ![ws name.](media/7.26.png)
+   ![ws name.](media/7.26.png)
    
- 
 7.	Expand the **Data Source Credentials** section.
    You’ll see an error, and it’s expected. You will address the error in the next step.
+   
    ![ws name.](media/7.000.png)
- 
- 
+  
 8.	To assign credentials, click the **Edit Credentials** link.
 
 9. In the window, in the **Authentication Method** dropdown list, ensure **OAuth2** is selected.
@@ -288,7 +261,6 @@ In this task, you will complete some post-publication tasks.
 
     ![ws name.](media/7.28.png)
     
- 
 12. Use the lab Azure credentials to **sign in**.
  
 13. Expand the **Scheduled Refresh** section.
@@ -300,8 +272,7 @@ In this task, you will complete some post-publication tasks.
 14. Expand the **Endorsement** section.
 
     ![ws name.](media/7.30.png)
-    
- 
+     
 15. Select the **Promoted** option.
 
     *The promoted endorsement communicates that the model is production-ready. In this lab, ideally, you’d select the **Certified** option. A certified dataset is one that’s truly reliable and authoritative, designed for use across the organization. (It’s not available for your trial account.)*
@@ -312,7 +283,6 @@ In this task, you will complete some post-publication tasks.
 
     ![ws name.](media/7.31.png)
     
- 
 18. Switch to the Azure Synapse web browser session.
 
 19. In the **Develop** hub, select **Power BI Datasets**.
