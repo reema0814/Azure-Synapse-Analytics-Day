@@ -45,7 +45,6 @@ In this task, you will configure dual storage for all dimension tables.
    
   
 6.	When the refresh completes, notice that the dual storage tables are indicated by a dashed header line.
-
       ![ws name.](media/7.001.png)
 
 7.	Save the Power BI Desktop solution.
@@ -99,13 +98,13 @@ In this task, you will create an aggregation table to accelerate Power BI report
  
 6.	In the **Group By** window, select the **Advanced** option.
 
-   ![ws name.](media/7.9.png)
+      ![ws name.](media/7.9.png)
     
    *The advanced option allows grouping by more than one column.*
    
 7.	In the grouping dropdown list, ensure that **CityKey** is selected.
 
-   ![ws name.](media/7.10.png)
+      ![ws name.](media/7.10.png)
    
  
 8.	Click **Add Grouping**.
@@ -146,7 +145,7 @@ In this task, you will switch the aggregation table to import data. You will the
 
 3.	Set the storage mode for the **Sale Agg** table as **Import**.
 
-   ![ws name.](media/7.14.png)
+      ![ws name.](media/7.14.png)
    
 4.	If prompted to proceed, click OK.
 
@@ -167,7 +166,7 @@ In this task, you will switch the aggregation table to import data. You will the
  
 7.	Right-click the **Sale Agg** table, and then select **Manage Aggregations**.
 
-   ![ws name.](media/7.16.png)
+      ![ws name.](media/7.16.png)
  
  
 8.	In the **Manage Aggregations** window, for the **Profit Amount** aggregation column, set the following properties:
@@ -185,7 +184,7 @@ In this task, you will switch the aggregation table to import data. You will the
    
 10.	Click **Apply All**.
 
-   ![ws name.](media/7.18.png)
+      ![ws name.](media/7.18.png)
    
  
 11. In the model diagram, notice that the **Sale Agg** table is now hidden.
@@ -264,18 +263,17 @@ In this task, you will complete some post-publication tasks.
  
 5.	When prompted to delete the report, click **Delete**.
 
-   ![ws name.](media/7.25.png)
+      ![ws name.](media/7.25.png)
  
  
 6.	To apply data source credentials, in the **Navigation** pane, hover the cursor over the **Sale Analysis** dataset, click the vertical ellipsis, and then select **Settings**.
  
-   ![ws name.](media/7.26.png)
+      ![ws name.](media/7.26.png)
    
  
 7.	Expand the **Data Source Credentials** section.
    You’ll see an error, and it’s expected. You will address the error in the next step.
-   
-      ![ws name.](media/7.000.png)
+   ![ws name.](media/7.000.png)
  
  
 8.	To assign credentials, click the **Edit Credentials** link.
