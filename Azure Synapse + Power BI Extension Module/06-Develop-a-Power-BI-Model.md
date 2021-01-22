@@ -76,7 +76,7 @@ In this task, you will create six Power Query queries that will each load as a t
 
 1.	In Power BI Desktop, in the **SQL Server Database** window, at the left, select **Microsoft Account**.
 
-   ![ws name.](media/3.1.png)
+	![ws name.](media/3.1.png)
 
 2.	Click **Sign In**.
 
@@ -84,7 +84,7 @@ In this task, you will create six Power Query queries that will each load as a t
 
 4.	Click **Connect**.
 
-   ![ws name.](media/3.4.png)
+	![ws name.](media/3.4.png)
 
 5. In Power BI Desktop, in the **Navigator** window, select (don’t check) the **wwi.DimCity** table.
 
@@ -234,8 +234,8 @@ In this task, you will create six Power Query queries that will each load as a t
 
 35. Rename the following columns:
 
-   - **CalendarMonthLabel** as **Month**
-   - **CalendarYearLabel** as **Year**
+	- **CalendarMonthLabel** as **Month**
+	- **CalendarYearLabel** as **Year**
  
 36. To add a computed column, on the **Add Column** ribbon tab, from inside the **General** group, click **Custom Column**.
 
@@ -267,7 +267,7 @@ In this task, you will create six Power Query queries that will each load as a t
 
 42. Verify that the query has four columns.
 
-    *The design of the **Date** query is now complete.*
+	*The design of the **Date** query is now complete.*
 
 43. Select the **wwi DimEmployee** query.
 
@@ -304,9 +304,9 @@ In this task, you will create six Power Query queries that will each load as a t
  
 53. Remove all columns, except:
 
-   - StockItemKey
-   - Stock Item
-   - Color
+	- StockItemKey
+	- Stock Item
+	- Color
    
 54. Rename the **Stock Item** column as **Product**.
 
@@ -316,22 +316,22 @@ In this task, you will create six Power Query queries that will each load as a t
 
 56. Select the **wwi FactSale** query.
 
-    ![ws name.](media/6.41.png)
+	![ws name.](media/6.41.png)
 
 57. Rename the query as **Sale**.
 
 58. Remove all columns, except:
 
-   - CityKey
-   - CustomerKey
-   - StockItemKey
-   - InvoiceDateKey
-   - SalespersonKey
-   - Quantity
-   - UnitPrice
-   - Profit
+	- CityKey
+	- CustomerKey
+	- StockItemKey
+	- InvoiceDateKey
+	- SalespersonKey
+	- Quantity
+	- UnitPrice
+	- Profit
 
-   ![ws name.](media/6.42.png)
+	![ws name.](media/6.42.png)
 
 59. Rename the following columns:
 
@@ -340,11 +340,11 @@ In this task, you will create six Power Query queries that will each load as a t
 
 60. Add a computed column using the following formula to create the **Sale Amount** column.
 
-    ![ws name.](media/6.43.png)
+	![ws name.](media/6.43.png)
 
 61. To modify the **Sale Amount** column data type, in the column header, click the **ABC123** icon, and then select **Decimal Number**.
 
-    ![ws name.](media/6.44.png)
+	![ws name.](media/6.44.png)
 
 62. Verify that the query has nine columns.
 
@@ -416,7 +416,6 @@ In this task, you will create relationships between all model tables. Each relat
 
    ![ws name.](media/6.50.png)
 
-
 5. In the diagram, notice the relationship is a connector between tables..
 
    ![ws name.](media/4.3.png)
@@ -425,7 +424,7 @@ In this task, you will create relationships between all model tables. Each relat
 
 6. Notice there is a one-side (1) and many-side (*) to the relationship.
 
-   *Dimension tables, like **Geography**, are always the one-side of the relationship. These tables include a unique column (dimension key column). Filters always propagate from the one-side to the many-side. In more advanced scenarios, filters can propagate in both directions. In this lab, you won’t configure bi-directional relationships. For more information about relationships*, [***see Model relationships in Power BI Desktop.***](https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand)
+	*Dimension tables, like **Geography**, are always the one-side of the relationship. These tables include a unique column (dimension key column). Filters always propagate from the one-side to the many-side. In more advanced scenarios, filters can propagate in both directions. In this lab, you won’t configure bi-directional relationships. For more information about relationships*, [***see Model relationships in Power BI Desktop.***](https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand)
 
 7. Create four additional relationships and configure each to assume referential integrity:
 
@@ -466,6 +465,7 @@ In this task, you will add two hierarchies to the **Geography** table and config
    ![ws name.](media/6.55.png)
 
 5. Add the following three additional columns to the hierarchy, in this order:
+
    - Sales Territory
    - State-Province
    - City
@@ -497,7 +497,6 @@ In this task, you will add two hierarchies to the **Geography** table and config
 
    *Configuration of the **Geography** table is now complete.*
    
-
 ### **Subtask 3: Configure the Date Table**
 
 In this task, you will add a hierarchy to the Date table and configure the Month column sort order.
@@ -518,7 +517,6 @@ In this task, you will add a hierarchy to the Date table and configure the Month
    
    *Configuration of the **Date** table is now complete.*
    
-
 ### **Subtask 4: Configure the Sale Table**
 
 In this task, you will configure the **Sale** table columns.
@@ -541,7 +539,7 @@ In this task, you will configure the **Sale** table columns.
 
    ![ws name.](media/6.61.png)
 
-5.	In the Decimal Places box, enter 2.
+5. In the Decimal Places box, enter 2.
 
 5. Select the **Unit Price** column (you might need to first de-select the multi-selection of columns, and then select this single column).
 
@@ -549,7 +547,7 @@ In this task, you will configure the **Sale** table columns.
 
    *By default, numeric column will be aggregated by using the sum function. In this case, it doesn’t make sense to sum unit price values together. The default summarization for this column now averages unit prices.*
  
-   ![ws name.](media/6.62.png)
+	![ws name.](media/6.62.png)
 
    *Configuration of the **Sale** table is now complete.*
 
@@ -651,15 +649,15 @@ In this exercise, you will create a test report. You will then use Performance A
 
 In this task, you will design a simple report to test query performance.
 
-1. In Power BI Desktop, in Report view, to add a slicer to the report canvas, in the **Visualizations** pane, click the slicer icon.
+1.  In Power BI Desktop, in Report view, to add a slicer to the report canvas, in the **Visualizations** pane, click the slicer icon.
  
-   ![ws name.](media/6.74.png)
+	![ws name.](media/6.74.png)
 
-2.	In the Fields pane, from the Date table, drag the Calendar hierarchy to the slicer.
+2.  In the Fields pane, from the Date table, drag the Calendar hierarchy to the slicer.
 
 3.	In the Visualizations pane, in the Field well, to remove the Date hierarchy level, click X.
 
-   ![ws name.](media/4.6.png)
+	![ws name.](media/4.6.png)
 
 3. Filter the slicer by **CY2012**.
 
