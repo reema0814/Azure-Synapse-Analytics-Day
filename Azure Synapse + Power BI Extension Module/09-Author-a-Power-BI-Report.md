@@ -52,7 +52,7 @@ The completed report page will look like the following:
  
 7.	To format the page, in the **Visualizations** pane, select the **Format** pane (paint roller icon).
 
-   ![ws name.](media/8.8.png)
+	![ws name.](media/8.8.png)
  
    *You’ll format many report elements in this lab to produce a professional report layout. To format an element, you’ll select it, and then access formatting options in this pane. Formatting options are organized into sections*.
    
@@ -183,7 +183,7 @@ The completed report page will look like the following:
 	-	**To: Customer** table **Buying Group** field
 	-	**Values: Sale** table **Sale Amount** field
 
-   ![ws name.](media/8.29.png)
+	![ws name.](media/8.29.png)
  
 16. Format the chord visual to add shadow.
 
@@ -212,7 +212,7 @@ The completed report page will look like the following:
 
 2.	Rename the new page as **State-Province Details**.
 
-   ![ws name.](media/8.31.png)
+	![ws name.](media/8.31.png)
  
 3.	Remove the slicer and chord visual.
  
