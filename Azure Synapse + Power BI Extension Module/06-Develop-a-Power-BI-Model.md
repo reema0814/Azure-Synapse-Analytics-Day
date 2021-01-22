@@ -242,13 +242,16 @@ In this task, you will create six Power Query queries that will each load as a t
     ![ws name.](media/6.33.png)
 
 37. In the **Custom Column** window, in the **New Column Name** box, replace the text with **MonthKey**.
-
+    
     ![ws name.](media/6.34.png)
 
 38. In the Custom Column Formula box, enter the following formula:
 
-    ![ws name.](media/6.35.png)
-
+    ```
+    ([CalendarYear] * 100) +[CalendarMonthNumber]
+    
+    ```
+    
     *Tip: To add the column references to the formula, in the **Available Columns** list, simply double-click a column.
     
     *The formula produces a unique key value for each month of a calendar year. It’s required to ensure that the calendar month labels sort in chronologic order. You’ll use this column in the next exercise when you configure the **Month** column sort order.*
