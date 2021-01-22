@@ -361,7 +361,7 @@ In this task, you will add a new visual to the drill through page.
 
 4. Position the cloned visual precisely over the top of the original visual.
 
-5. Modify the top visual field **Shared Axis** field mappings by removing the **Month** field, and then replacing it with the **Salesperson** table **Salesperson** field.
+5. Modify the top visual field **Shared Axis** field mappings by removing the **Month** field, and then replacing it with the **Salesperson** table **Employee** field.
 
    ![ws name.](media/8.49.png)
  
