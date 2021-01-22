@@ -118,22 +118,22 @@ In this task, you will create six Power Query queries that will each load as a t
 
 10. Click **OK**.
 
-   ![ws name.](media/6.15.png)
+      ![ws name.](media/6.15.png)
 
 
 11. In the **Power Query Editor** window, in the **Queries** pane (located at the left), notice there is one query for each table you requested.
 
-   ![ws name.](media/6.16.png)
+      ![ws name.](media/6.16.png)
 
    *You’ll now revise the definition of each query. Each query will become a model table when they are applied to the model. So, you’ll now rename them so they’re described in more friendly and concise ways, and apply transformations to deliver the columns required by reports.*
 
 12. Select the **wwi DimCity** query.
 
-   ![ws name.](media/6.17.png)   
+      ![ws name.](media/6.17.png)   
 
 13. In the **Query Settings** pane (located at the right), to rename the query, in the **Name** box, replace the text with **Geography**, and then press **Enter**.
 
-   ![ws name.](media/6.18.png)
+      ![ws name.](media/6.18.png)
 
 14. On the **Home** ribbon tab, from inside the **Manage Columns** group, click the **Choose Columns** icon.
 
@@ -368,7 +368,7 @@ In this task, you will create six Power Query queries that will each load as a t
     
 64.	In Power BI Desktop, when the queries have been applied, at the bottom-left corner in thes status bar, notice that the model storage mode is DirectQuery. 
 
-   ![ws name.](media/3.60.png)
+      ![ws name.](media/3.60.png)
 
 65. In Power BI Desktop, at the left, switch to Model view.
  
