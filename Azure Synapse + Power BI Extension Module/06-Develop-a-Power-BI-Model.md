@@ -343,7 +343,9 @@ In this task, you will create six Power Query queries that will each load as a t
 
 60. Add a computed column using the following formula to create the **Sale Amount** column.
 
-	![ws name.](media/6.43.png)
+	```
+	[Quantity] * [Unit Price]
+	```
 
 61. To modify the **Sale Amount** column data type, in the column header, click the **ABC123** icon, and then select **Decimal Number**.
 
@@ -633,6 +635,17 @@ In this task, you will create two measures. Measures are expressions that summar
 6. Add a second measure to the Sale table using the following formula:
 
    ![ws name.](media/6.72.png)
+   
+   ```
+   Profit % All Geography =
+   DIVIDE(
+    SUM(Sale[Profit Amount]),
+    CALCULATE(
+        SUM(Sale[Profit Amount]),
+        REMOVEFILTERS(geography)
+    )
+   )
+   ```
 
    *This formula divides the sum of the **Sale** table **Profit Amount** column by the same expression, but by using a different filter context. The denominator removes any filters applied to the **Geography** table.*
 
