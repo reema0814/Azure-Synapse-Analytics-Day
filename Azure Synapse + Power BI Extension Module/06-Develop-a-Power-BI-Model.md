@@ -720,7 +720,7 @@ In this task, you will use Performance Analyzer to measure query performance.
 
    ![ws name.](media/6.80.png)
  
-2. In the **Performance Analyzer** pane, click **Start Recording.
+2. In the **Performance Analyzer** pane, click **Start Recording**.
 
    ![ws name.](media/6.81.png)
  
@@ -738,7 +738,7 @@ In this task, you will use Performance Analyzer to measure query performance.
 
     *Report users demand fast responses. Usually, they’re very happy when visuals refresh in less than one second, but are still happy when it takes no more than about five seconds.*
 
-7. To copy the SQL query to the clipboard, click the **Copy Query.
+7. To copy the SQL query to the clipboard, click the **Copy Query**.
 
    ![ws name.](media/6.83.png)
  
