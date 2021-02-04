@@ -164,9 +164,9 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
    ![Monitor hub.](media/monitor-hub.png "Monitor hub")
 
-2. Select **SQL requests** in the left-hand menu **(1)**, then select **SQLPool01** under the Pool filter **(2)**. Look at the list of recent queries executed by your lab username as the Submitter. Hover over one of these queries to see the **Request content** button next to the `SQL request ID` value **(3)** to view the executed query.
+2. Select **SQL requests** in the left-hand menu **(1)**, then select **SQLPool01** under the Pool filter **(2)**. Look at the list of recent queries executed by your lab username as the Submitter. Hover over one of these queries to see the **Request content** ,click on **more** next to the Request content **(3)** to view the executed query.
 
-   ![The list of SQL requests is displayed.](media/ex03-sql-requests.png "SQL requests")
+   ![The list of SQL requests is displayed.](media/ex03-sqlrequestsid.png "SQL requests")
 
 3. View the queries' request content until you find one that contains the SQL SELECT statement executed by your filter in the Power BI report. Here you can see the `Profit` and `TotalExcludingTax` fields have the SUM aggregate, and the `wwi.FactSale` table is grouped by `SalespersonKey`. A WHERE clause filters the rows by `Profit` (aliased as `a0`) where the value is greater than or equal to `50000000` ($50 million). Power BI generated the SQL script, then used the dedicated SQL pool to execute the query and send back the results.
 
