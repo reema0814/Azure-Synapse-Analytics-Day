@@ -164,7 +164,7 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
    ![Monitor hub.](media/monitor-hub.png "Monitor hub")
 
-2. Select **SQL requests** in the left-hand menu **(1)**, then select **SQLPool01** under the Pool filter **(2)**. Look at the list of recent queries executed by your lab username as the Submitter. Hover over one of these queries to see the **Request content** ,click on **more** next to the Request content **(3)** to view the executed query.
+2. Select **SQL requests** in the left-hand menu **(1)**, then select **SQLPool01** under the Pool filter **(2)**. Look at the list of recent queries executed by your lab username as the Submitter. Hover over one of these queries to see the **Request content** ,click on **More** next to the Request content **(3)** to view the executed query.
 
    ![The list of SQL requests is displayed.](media/ex03-sqlrequestsid.png "SQL requests")
 
