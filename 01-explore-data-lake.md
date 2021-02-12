@@ -73,7 +73,7 @@ In this task, you will browse your data lake using SQL On-demand.
     https://<yourdatalake storage account name>.dfs.core.windows.net/wwi/factsale-parquet/2012/Q1/*/*
     ```
 
-    > Note: Replace 'yourdatalakestorageaccountname' with the **Storage Account Name** provided in the environment details section on Lab Environment tab on the right.
+    > Note: Replace 'yourdatalakestorageaccountname' with the **Storage Account Name** provided in the environment details section on the right.
 
 12. Select `Run` to re-run the script. You should see a result of `2991716`, which is the number of records contained in all the Parquet files within the `factsale-parquet/2012/Q1` directory.
 
@@ -127,7 +127,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![View charts on data in Spark notebook](./media/ex01-spark-notebook-05.png "Review charted data")
     
-8. Collapse the output as illustrated below using the collapse button.
+8. Collapse the output as illustrated below using the collapse button as illustrated below.
 
     ![Collapse Output](./media/collapseoutput.png "Collapse Output")
 
@@ -135,14 +135,14 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![The add code button is highlighted.](media/addcode.png "Add code")
 
-10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook above.
+10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details tab within your guide. You can also copy it from the first cell of the notebook above.
 
     ```python
     data_path = spark.read.load(
-        'abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net/factsale-csv/2012/Q1/*/*',
-        format='csv',
-        sep="|",
-        header=True)
+       'abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net/factsale-csv/2012/Q1/*/*',
+       format='csv',
+       sep="|",
+       header=True)
 
     display(data_path.limit(100))
     ```
@@ -153,7 +153,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
 
-12. **Important**: Close the notebook by selecting the X in the top right of the tab and then select Close + discard changes. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+12. **Important**: Close the notebook by selecting the X in the top right of the tab and then select Close + discard changes. Closing the notebook will ensure you free up the allocated resources on the Spark Pool. Also close the SQLscripts along with any open notebooks.
 
      ![The new cell is displayed and the run cell button is highlighted.](media/close-notebook.png "Close Notebook")
      
