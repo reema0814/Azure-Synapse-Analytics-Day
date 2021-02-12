@@ -20,7 +20,7 @@ Please locate this value and note it for the further steps.
 
 **Please perform this steps to set Microsoft Edge as default browser**
 
-1. From the LabVM, in the search bar serach for and select **Default apps**.
+1. From the LabVM, in the search bar search for and select **Default apps**.
 
    ![Default-Browser.](media/Default-Browser.png "Default-Browser")
 
