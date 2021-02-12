@@ -41,9 +41,9 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
    ![The add code button is highlighted.](media/add-cell.png "Add code")
 
-4. Paste the following into the new cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab on the right. You can also copy it from the first cell of the notebook if you are using the same one from Exercise 1.
+4. Paste the following into the new cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details section on Lab Environment tab in your guide.
 
-    ```
+    ```python
 
     // Set the path to read the WWI Sales files
     import org.apache.spark.sql.SparkSession
@@ -159,9 +159,7 @@ Now, take some time to review the **Exercise 2 - Bonus Notebook with CSharp** no
 
     You can run each cell in this notebook and observe the output. Be aware, however, that writing data into a staging table in Azure Synapse Analytics with this notebook takes several minutes, so you don't need to wait on the notebook to finish before attempting to query the `wwi_staging.Sale_CSharp` table to observe the data being written or to move on to the next task.
 
-3. Enter the UniqueID value in cell 1 line 5 of the **Exercise 2 - Bonus Notebook with CSharp** notebook and then select **Run** the notebook cells one by one.
-
-   ![Update Unique ID](./media/bonusexcell1.png)
+3. Run the notebook
 
 To observe the data being written into the table:
 
@@ -171,19 +169,19 @@ To observe the data being written into the table:
 
    > If you do not see the table, select the Actions ellipsis next to Tables, and then select **Refresh** from the fly-out menu.
 
-3. Replace the `SELECT` query in the editor with the query below. Make sure to replace the UniqueId with the UniqueId value provided in the environment details section on Lab Environment tab on the right.
+3. Replace the existing query in the editor with the query below.
 
    ```sql
-   SELECT COUNT(*) FROM [wwi_staging].[Sale_CSharp_UniqueId]
+   SELECT COUNT(*) FROM [wwi_staging].[Sale_CSharp]
    ```
- 
+
 4. Select **Run** on the toolbar.
-   
+
    ![CSharp for Spark](./media/ex02-csharp-for-spark-extra.png)
    
    > Re-run the query every 5-10 seconds to watch the count of records in the table, and how it changes as new records are being added by the notebook. The script in the notebook limits the number of rows to 1500, so if you see a count of 1500, the notebook has completed processing.
 
-5. **Important**: Close the notebook by selecting the **X** in the top right of the tab and then select **Discard Changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
+5. **Important**: Close the notebook by selecting the **X** in the top right of the tab and then select **Discard Changes**. Closing the notebook will ensure you free up the allocated resources for the script.
 
 ## Task 2 - Explore, modify, and run a Pipeline containing a Data Flow
 
@@ -411,6 +409,8 @@ After you finish building and debugging your data flow and its associated pipeli
 
     ![A screenshot of the activity runs for the Exercise 2 - Enrich Data pipeline is displayed with all activities showing a status of Succeeded.](media/ex02-monitor-ex2-enrich-data-activity-runs-succeeded.png "Pipeline run monitoring")
 
+  >It takes around 5 minutes for the pipeline to have a status of Succeeded.
+
 12. When the **Enrich Customer Data** activity has a status of **Complete**, hover your mouse cursor over the **Enrich Customer Data** activity and select the **Details** icon that appears.
 
     > **Note**: It can take 5-7 minutes for the **Enrich Customer Data** activity to complete. You may need to select **Refresh** on the Monitoring toolbar to see the status update if your pipeline run takes longer than five minutes.
@@ -437,7 +437,7 @@ After you finish building and debugging your data flow and its associated pipeli
 
     ![The X (close) button is highlighted on the data flow Details dialog toolbar.](media/ex02-monitor-data-flow-close.png "Data flow details")
 
-17. Back on Exercise 2 - Enrich Data pipeline run screen, switch to the Gantt view. This view provides a graphical representation of the run times of the various activities within the pipeline.
+17. Back on Exercise 2 - Enrich Data pipeline run screen, switch to the **Gantt** view. This view provides a graphical representation of the run times of the various activities within the pipeline.
 
     ![The Gantt view option is selected and highlighted on the pipeline run dialog.](media/ex02-monitoring-ex2-enrich-data-activity-runs-gantt.png "Pipeline run Gantt view")
 
@@ -459,7 +459,7 @@ In this task, you examine the Apache Spark application monitoring capabilities b
 
 4. From the list of Spark applications, select the first job, which should have a status of `In progress` or `Succeeded`.
 
-   > **Note**: You may see a status of `Cancelled`, and this does not prevent you from completing the following steps. Azure Synapse Analytics is still in preview, and the status gets set to `Cancelled` when the Spark pool used to run the Spark application times out.
+   > **Note**: You may see a status of `Cancelled` or `Stopped`, and this does not prevent you from completing the following steps. Azure Synapse Analytics is still in preview, and the status gets set to `Cancelled` or `Stopped` when the Spark pool used to run the Spark application times out.
 
    ![The current Spark application is highlighted in the applications list.](media/ex02-monitor-activities-spark-application-list.png "Synapse Analytics Monitor")
 
