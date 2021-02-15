@@ -73,7 +73,7 @@ You can see the notebook and SQL scripts that were used to train and register th
 
 4. Execute the notebook to get the trained Machine Learning model in ONNX format.
 
-5. One step that is not shown by the notebook is an offline step that converts the ONNX model to hexadecimal. The resulting hex-encoded model is also uploaded to Azure Storage. This conversion is currently performed with [this PowerShell script](./artifacts/00/ml/convert-to-hex.ps1), but could be automated using any scripting platform.
+5. One step that is not shown by the notebook is an offline step that converts the ONNX model to hexadecimal. The resulting hex-encoded model is also uploaded to Azure Storage. This conversion is currently performed with [this PowerShell script](https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/v2/artifacts/00/ml/convert-to-hex.ps1), but could be automated using any scripting platform.
 
 6. Once you have read through the notebook, return to the `Develop` hub, expand **SQL scripts** and select `Exercise 5 - Register model`. View, but **do not run this script**.
 
