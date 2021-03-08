@@ -138,7 +138,7 @@ In this task, you will create a calculated column to enable a new way of analyzi
 
    *Tip: To enter a carriage return, press Shift+Enter. To enter a tab, press Shift +Tab.*
 	```
-        State-Province Type =
+	State-Province Type =
 	SWITCH(
 		TRUE(),
 		Geography[State-Province] = "Puerto Rico (US Territory)", "Territory",
