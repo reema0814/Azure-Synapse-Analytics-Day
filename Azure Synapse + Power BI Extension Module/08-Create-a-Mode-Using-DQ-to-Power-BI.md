@@ -138,7 +138,6 @@ In this task, you will create a calculated column to enable a new way of analyzi
 
    *Tip: To enter a carriage return, press Shift+Enter. To enter a tab, press Shift +Tab.*
 	```
-	DAX
 	State-Province Type =
 	SWITCH(
 		TRUE(),
