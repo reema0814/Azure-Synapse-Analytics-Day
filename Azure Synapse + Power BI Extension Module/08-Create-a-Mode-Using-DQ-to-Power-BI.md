@@ -324,7 +324,6 @@ In this task, you will create a measure to calculate sale per capita.
 3. In the formula bar, enter the following measure definition.
 
 	```
-	DAX
 	Sale per Capita =
 	DIVIDE(
 		SUM('Sale'[Sale Amount]),
