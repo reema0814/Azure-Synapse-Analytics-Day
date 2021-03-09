@@ -284,12 +284,11 @@ The completed report page will look like the following:
 16. In the formula bar, enter the following measure definition:
 
     ```
-      DAX
-        Profit Margin =
-        DIVIDE(
-		SUM(Sale[Profit Amount]),
-	   	SUM(Sale[Sale Amount])
-       )
+    Profit Margin =
+    DIVIDE(
+	   SUM(Sale[Profit Amount]),
+	   SUM(Sale[Sale Amount])
+    )
        ```
     *The measure is named **Profit Margin**. The formula divides the sum of the **Profit Amount** column by the sum of the **Sale Amount** column.*
  
