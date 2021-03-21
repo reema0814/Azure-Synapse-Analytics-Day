@@ -1,0 +1,29 @@
+[
+  {
+    "Name": "Analytics in a Day: Build an end-to-end analytics solution with Azure Synapse",
+    "Language": "English",
+    "BaseURL": "https://github.com/SpektraSystems/azure-synapse-analytics-day",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/uk-variant/README.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/uk-variant/01-explore-data-lake.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/uk-variant/02-build-modern-dw-pipelines.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/uk-variant/03-high-performance-analysis.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/uk-variant/04-power-bi-integration.md",
+        "Order": 5
+      }
+    ]
+  }
+]
