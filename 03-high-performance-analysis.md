@@ -70,7 +70,7 @@ First, let us set the stage by performing the following steps:
 
    Re-run the query 3 to 5 times until the execution time stabilizes (usually, the first "cold" execution takes longer than subsequent ones who benefit from the initialization of various internal data and communications buffers). Make a note on the amount of time needed to run the query (typically 3 to 5 seconds).
 
-## Bonus Challenge
+## Optional Challenge
 
 Can you explain the significant difference in performance between the two seemingly identical tables? Furthermore, can you explain why the first set of queries (the simple counts) were not that further apart in execution times?
 

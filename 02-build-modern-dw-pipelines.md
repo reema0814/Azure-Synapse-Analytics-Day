@@ -56,7 +56,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     ![The new cell is displayed.](media/ex02-notebook-cell11.png "Run cell")
 
-    > This cell imports required libraries and sets the `adlsPath` variable, which defines the path used to connect to an Azure Data Lake Storage (ADLS) Gen2 account. Connecting to ADLS Gen2 from a notebook in Azure Synapse Analytics uses the power of Azure Active Directory (AAD) pass-through between compute and storage. The `%%spark` "magic" sets the cell language to Scala, which is required to use the `SparkSession` library.
+    > This cell imports required libraries and sets the `adlsPath` variable, which defines the path used to connect to an Azure Data Lake Storage (ADLS) Gen2 account. Connecting to ADLS Gen2 from a notebook in Azure Synapse Analytics uses the power of Azure Active Directory (AAD) pass-through between compute and storage.
 
 5. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
 
@@ -64,7 +64,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 6. Paste the following and run the new cell:
 
-    ```
+    ```python
     // Read the sales into a dataframe
     val sales = spark.read.format("csv").option("header", "true").option("inferSchema", "true").option("sep", "|").load(s"$adlsPath/factsale-csv/2012/Q4")
     sales.show(5)
@@ -88,7 +88,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 10. Paste the following and run the new cell:
 
-    ```
+    ```python
     // Import libraries for the SQL Analytics connector
     import com.microsoft.spark.sqlanalytics.utils.Constants
     import org.apache.spark.sql.SqlAnalyticsConnector._
@@ -110,7 +110,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
     ![The Spark job status pane is displayed below the cell, with the progress of each Spark job visible.](media/ex02-notebook-ingest-cell-3-spark-job1.png "Spark Job status")
 
 12. Close the notebook by selecting the **X** in the top right of the tab and then select **Close + discard changes**. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
-     
+
     ![The Close + discard changes button is highlighted.](media/closenotebook.png "closenotebook")
 
     ![The Close + discard changes button is highlighted.](media/notebook-close-discard-changes.png "Discard changes?")
@@ -178,7 +178,7 @@ To observe the data being written into the table:
 4. Select **Run** on the toolbar.
 
    ![CSharp for Spark](./media/ex02-csharp-for-spark-extra.png)
-   
+
    > Re-run the query every 5-10 seconds to watch the count of records in the table, and how it changes as new records are being added by the notebook. The script in the notebook limits the number of rows to 1500, so if you see a count of 1500, the notebook has completed processing.
 
 5. **Important**: Close the notebook by selecting the **X** in the top right of the tab and then select **Discard Changes**. Closing the notebook will ensure you free up the allocated resources for the script.

@@ -1,4 +1,4 @@
-# Exercise 5 - Data Science with Azure Synapse Spark
+# Exercise 5 - Data Science with Azure Synapse Spark (Read-Only/optional)
 
 > **Note**: The following Exercise 5 is for future functionality only outside of the AIAD program and therefore provided as educational reading only. This repo documentation will be updated once exercise 5 is available for use.
 
@@ -75,7 +75,7 @@ You can see the notebook and SQL scripts that were used to train and register th
 
 4. Feel free to read through the notebook, but **do not execute it**. The results of executing each cell in the notebook have been saved with the notebook so that you can see results without running it.
 
-5. One step that is not shown by the notebook is an offline step that converts the ONNX model to hexadecimal. The resulting hex-encoded model is also uploaded to Azure Storage. This conversion is currently performed with [this PowerShell script](./artifacts/00/ml/convert-to-hex.ps1), but could be automated using any scripting platform.
+5. One step that is not shown by the notebook is an offline step that converts the ONNX model to hexadecimal. The resulting hex-encoded model is also uploaded to Azure Storage. This conversion is currently performed with [this PowerShell script](https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/v2/artifacts/00/ml/convert-to-hex.ps1), but could be automated using any scripting platform.
 
 6. Once you have read through the notebook, return to the `Develop` hub, expand **SQL scripts** and select `Exercise 5 - Register model`. View, but **do not run this script**.
 
