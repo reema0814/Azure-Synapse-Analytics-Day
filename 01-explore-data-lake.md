@@ -12,6 +12,22 @@ The tasks you will perform in this exercise are:
   - Task 1 - Explore the Data Lake with Synapse SQL On-demand
   - Task 2 - Explore the Data Lake with Synapse Spark
 
+## Lab Environment setup
+
+In this task, you will setup the Lab environment respective to your region
+
+1. Default Browser - Make sure Edge is the default browser by navigating to Start>Settings>Default Apps as shown below
+
+   ![Find Default Apps](media/DefaultApps.png "Find Default Apps")
+
+   ![Edge as default browser](media/Edge-DefaultBrowser.png "Set Edge as Default Browser")
+
+1. Within settings, set the Region and Language to the required setting as shown below
+
+   ![Change Region](media/RegionChange.png "set Region")
+
+   ![Change Language](media/LanguageChange.png "Set Language")
+
 ## Task 1 - Explore the data lake with Azure Synapse SQL On-demand
 
 In this task, you will browse your data lake using SQL On-demand.
@@ -85,7 +101,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Develop hub.](media/develop-hub.png "Develop hub")
 
-15. Select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script..
+15. Select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script.
 
     ![Run SQL on-demand script loading multiple CSV data lake files](./media/ex01-sql-on-demand-04.png)
 

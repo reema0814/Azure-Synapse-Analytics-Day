@@ -14,11 +14,9 @@ The tasks you will perform in this exercise are:
 
 **Important**:
 
-In the tasks below, you will be asked to enter a unique identifier in several places. You can find your unique identifier by looking at the username you were provided for logging into the Azure portal. Your username is in the format `odl_user_UNIQUEID@msazurelabs.onmicrosoft.com`, where the _UNIQUEID_ component looks like `206184`, `206137`, or `205349`, as examples.
+In the tasks below, you will be asked to enter a unique identifier in several places. You can find your unique identifier by looking at the username you were provided for logging into the Azure portal. Your username is in the format `odl_user_UNIQUEID@msazurelabs.onmicrosoft.com`, where the _UNIQUEID_ component looks like `206184`, `206137`, or `205349`, as examples. Please locate this value and note it for the further steps.
 
-Please locate this value and note it for the further steps.
-
-**Please perform this steps to set Microsoft Edge as default browser**
+>**Please perform these steps to set Microsoft Edge as default browser**
 
 1. From the LabVM, in the search bar search for and select **Default apps**.
 
@@ -88,8 +86,8 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
     ![The publishing succeeded.](media/ex03-publishing-succeeded.png "Publishing to Power BI")
 
 ---
-**Important**:
-The next few steps are important to correct the authentication type which is required for Power BI to connect properly to Synapse SQL.
+>**Important**:
+The next few steps are important to fix the authentication type which is required for Power BI to connect properly to the Synapse SQL endpoint.
 
 14. Navigate to [www.powerbi.com](www.powerbi.com) on a new browser tab. Select **Sign In** and use the credential provided to you.
 
@@ -122,7 +120,6 @@ The above few steps fix the authentication method i.e. OAUTH2 required for Power
 ## Task 2 - Open a Power BI report in Synapse
 
 In this task, you will see how to collaboratively design Power BI reports within Synapse Analytics Studio. To do this, you will  open the Power BI report that was saved earlier.
-
 
 1. After the last step in the previous task, you should see your new Power BI dataset appear in the listing on the Power BI datasets panel. If not, select **Refresh**.
 
@@ -178,9 +175,9 @@ In this task, you will see how to collaboratively design Power BI reports within
 
    ![Monitor hub.](media/monitor-hub.png "Monitor hub")
 
-2. Select **SQL requests** in the left-hand menu **(1)**, then select **SQLPool01** under the Pool filter **(2)**. Look at the list of recent queries executed by your lab username as the Submitter. Hover over one of these queries to see the **Request content** button next to the `SQL request ID` value **(3)** to view the executed query.
+2. Select **SQL requests** in the left-hand menu **(1)**, then select **SQLPool01** under the Pool filter **(2)**. Look at the list of recent queries executed by your lab username as the Submitter. Hover over one of these queries to see the **Request content** ,click on **More** next to the Request content **(3)** to view the executed query.
 
-   ![The list of SQL requests is displayed.](media/ex03-sql-requests.png "SQL requests")
+   ![The list of SQL requests is displayed.](media/ex03-sqlrequestsid.png "SQL requests")
 
 3. View the request content of the queries until you find one that contains the SQL SELECT statement executed by your filter in the Power BI report. Here you can see the `Profit` and `TotalExcludingTax` fields contain the SUM aggregate, and the `wwi.FactSale` table is grouped by `SalespersonKey`. There is a WHERE clause that filters the rows by `Profit` (aliased as `a0`) where the value is greater than or equal to `50000000` ($50 million). Power BI generated the SQL script, then used the dedicated SQL pool to execute the query and send back the results.
 
