@@ -103,7 +103,7 @@ In this task, you will browse your data lake using SQL On-demand.
    
 3. Disable the **Preview Features** option at the top right corner.
    
-   ![Collapse Output](./media/preview.png "Preview features")
+   ![Preview](./media/preview.png "Preview features")
 
 4. Attach the notebook to a Spark pool.
 
