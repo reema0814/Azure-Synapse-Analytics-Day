@@ -120,38 +120,42 @@ In this task, you will browse your data lake using SQL On-demand.
 2. This will generate a notebook with PySpark code to load the data in a dataframe and display 10 rows with the header.
 
    ![New Spark notebook from data lake file](./media/ex01-spark-notebook-002.png "Review the notebook")
+   
+3. Disable the **Preview Features** option at the top right corner.
+   
+   ![Collapse Output](./media/preview.png "Preview features")
 
-3. Attach the notebook to a Spark pool.
+4. Attach the notebook to a Spark pool.
 
    ![Run Spark notebook on data lake file](./media/ex01-attachsparkpool01.png "Attach notebook to Spark pool")
 
-4. Select **Run all** on the notebook toolbar to execute the notebook.
+5. Select **Run all** on the notebook toolbar to execute the notebook.
 
    > **Note**: The first time you run a notebook in a Spark pool, Synapse creates a new session. This can take approximately 3 minutes.
 
-5. As you can see, the output of the dataframe is displayed with 10 rows. To  display 100 rows with the header replace the last line of code with the following:
+6. As you can see, the output of the dataframe is displayed with 10 rows. To  display 100 rows with the header replace the last line of code with the following:
 
    ```python
    display(df.limit(100))
    ```
 
-6. Rerun the notebook again to see the result.
+7. Rerun the notebook again to see the result.
 
    ![Improve dataset formatting in Spark notebook](./media/ex01-spark-notebookrun-04.png "Execute notebook")
 
-7. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on Apply button.
+8. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on Apply button.
 
     ![View charts on data in Spark notebook](./media/ex01-spark-notebook-05.png "Review charted data")
     
-8. Collapse the output as illustrated below using the collapse button as illustrated below.
+9. Collapse the output as illustrated below using the collapse button as illustrated below.
 
     ![Collapse Output](./media/collapseoutput.png "Collapse Output")
 
-9. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell. **{} Add code** won't be visible untill you Hover the area in front of arrow.
+10. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell. **{} Add code** won't be visible untill you Hover the area in front of arrow.
 
    ![The add code button is highlighted.](media/addcode.png "Add code")
 
-10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details tab within your guide. You can also copy it from the first cell of the notebook above.
+11. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details tab within your guide. You can also copy it from the first cell of the notebook above.
 
     ```python
     data_path = spark.read.load(
@@ -163,13 +167,13 @@ In this task, you will browse your data lake using SQL On-demand.
     display(data_path.limit(100))
     ```
 
-11. Select the **Run cell** button to execute the new cell and then select the **Table** view in output section.
+12. Select the **Run cell** button to execute the new cell and then select the **Table** view in output section.
 
     ![The new cell is displayed and the run cell button is highlighted.](media/notebook-new-csv-cell1.png "New cell to explore CSV files")
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
 
-12. **Important**: Close the notebook by selecting the X in the top right of the tab and then select Close + discard changes. Closing the notebook will ensure you free up the allocated resources on the Spark Pool. Also close the SQLscripts along with any open notebooks.
+13. **Important**: Close the notebook by selecting the X in the top right of the tab and then select Close + discard changes. Closing the notebook will ensure you free up the allocated resources on the Spark Pool. Also close the SQLscripts along with any open notebooks.
 
      ![The new cell is displayed and the run cell button is highlighted.](media/close-notebook.png "Close Notebook")
      
