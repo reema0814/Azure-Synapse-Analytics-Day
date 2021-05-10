@@ -248,7 +248,6 @@ The completed report page will look like the following:
     -	**Sale** table **Sale per capita** field
     -	**Sale** table **Sale Amount** field
     -	**Sale** table **Profit Amount** field
-    -	**Product** table **Profit % All Geography** field
 
 11. Apply the following formats:
 
