@@ -247,10 +247,9 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
     > This sets the UniqueId parameter required by the `EnrichCustomerData` data flow to a unique substring extracted from the pipeline run ID.
 
-    > NOTE! If the **Parameters** value is absent, please update the value with **```@substring(pipeline().RunId,0,8)```** by selecting **Pipeline expression** and paste the value under **Add dynamic content** then **finish**.
+    > **NOTE!** If the **Parameters** value is absent, please update the value with **```@substring(pipeline().RunId,0,8)```** by selecting **Pipeline expression** and paste the value under **Add dynamic content** then **finish**.
     
     ![Two images showing how to add the parameter value](media/parameter-value-add.png "Adding parameter value")
-
 
 10. Take a minute to look at the options available on the various tabs in the configuration panel. You will notice the properties here define how the data flow operates within the pipeline.
 
