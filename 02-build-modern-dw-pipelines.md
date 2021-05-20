@@ -247,6 +247,10 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
     > This sets the UniqueId parameter required by the `EnrichCustomerData` data flow to a unique substring extracted from the pipeline run ID.
 
+    > **NOTE!** If the **Parameters** value is absent, please update the value with **```@substring(pipeline().RunId,0,8)```** by selecting **Pipeline expression** and paste the value under **Add dynamic content** then **finish**.
+    
+    ![Two images showing how to add the parameter value](media/parameter-value-add.png "Adding parameter value")
+
 10. Take a minute to look at the options available on the various tabs in the configuration panel. You will notice the properties here define how the data flow operates within the pipeline.
 
 11. Now, let us take a look at the definition of the data flow the Data Flow activity references. Double-click the `Enrich Customer Data` Data Flow activity on the pipeline canvas to open the underlying Data Flow in a new tab.
@@ -274,6 +278,8 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
     ![The Projections tab for the PostalCodes data source is selected, and the Zip column of the imported schema is highlighted.](media/ex02-orchestrate-data-flow-sources-postal-codes-projection.png "Data flow canvas")
 
 15. The **Data preview** tab allows you to ingest a small subset of data and view it on the canvas. This functionality requires an active debug session, so for this workshop, a screenshot that displays the execution results for that tab is provided below.
+
+    > **NOTE! This step cannot be performed in the lab environment.**
 
     > The `Zip` column is highlighted on the Data preview tab to show a sample of the values contained within that field. Below, you will filter the list of zip codes down to those that appear in the customer dataset.
 
