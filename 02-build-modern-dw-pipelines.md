@@ -223,7 +223,7 @@ In this task, you use a Pipeline containing a Data Flow to explore, transform, a
 
     ![The Mappings tab for the Copy data activity is highlighted and displayed.](media/ex02-orchestrate-copy-data-mapping.png "Pipeline canvas property tabs")
 
-7. Finally, select the **Settings** tab. Check **Enable staging** and expand `Staging settings`. Select **asadatalake01** under `Staging account linked service`, then type **staging** into `Storage Path`. Finally, check **Enable Compression**.
+7. Finally, select the **Settings** tab. Check **Enable staging** and expand `Staging settings`. Search and select **asadatalake01** under `Staging account linked service`, then type **staging** into `Storage Path`. Finally, check **Enable Compression**.
 
     ![The staging settings are configured as described.](media/copy-data-settings.png "Settings")
 
