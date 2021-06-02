@@ -1,4 +1,4 @@
-# Exercise 5 - Data Science with Azure Synapse Spark (Read-Only/optional)
+# Exercise 5 - Data Science with Azure Synapse Spark (Optional)
 
 Azure Synapse Analytics provides support for using trained models (in ONNX format) directly from dedicated SQL pools. What this means in practice, is that your data engineers can write T-SQL queries that use those models to make predictions against tabular data stored in a SQL Pool database table.
 
