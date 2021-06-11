@@ -42,15 +42,15 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
 4. In the panel that appears, if a prompt appears to Install Power BI Desktop, select **Start**.
 
-   ![Select Start in the first screen of wizard](media/ex03-pbids-install-pbidesktop.png "Select Start")
+   ![Select Start in the first screen of wizard](media/BI_3.1.png "Select Start")
 
 5. In the step by step dialog that appears, select `SQLPool01` and then select **Continue**.
 
-   ![The SQLPool01 data source is selected.](media/ex03-pbid-select-data-source.png "Select a data source")
+   ![The SQLPool01 data source is selected.](media/BI_3.2.1.png "Select a data source")
 
 6. Select **Download** to download and save the suggested `pbids` file.
 
-   ![Selecting Download](media/ex03-download-pbid.png "Download file")
+   ![Selecting Download](media/BI_3.3.png "Download file")
 
 7. Open the downloaded .pbids file. This will launch Power BI desktop.
 
