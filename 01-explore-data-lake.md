@@ -91,6 +91,64 @@ In this task, you will browse your data lake using SQL On-demand.
     >
     > Here we use WITH to define the columns in the files. You must use WITH when using a bulk rowset (OPENROWSET) in the FROM clause. Also, defining the columns enables you to select and filter the values within.
 
+15. Replace the contents of the SQL script with this query, and **replace** `YOUR_DATALAKE_NAME` with your **Storage Account Name** provided in the environment details section on the Lab Environment tab on the right. Select **Run** to execute the script. This query reads from Delta Lake format to calculate the 2012 quarterly sales quantity.
+
+    ```sql
+    SELECT 
+     InvoiceYear,
+     InvoiceQuarter,
+     Sum(cast([Quantity] as int)) as SalesQuantity
+    FROM
+        OPENROWSET(
+            BULK 'https://YOUR_DATALAKE_NAME.dfs.core.windows.net/wwi/factsale-deltalake',
+     		FORMAT = 'DELTA'
+        ) AS [result]
+    WHERE InvoiceYear=2012
+    GROUP BY
+         InvoiceYear,
+         InvoiceQuarter
+    ```
+    
+    > Delta Lake is a popular format when using Apache Spark for analytics. The schema and partitions are automatically inferred when you reference a folder containing the Delta Lake structure. The ability to read this data from your serverless SQL pool means you do not need to switch to Spark to query data that was loaded and saved to Delta Lake by Apache Spark jobs.
+
+16. Update the cell with the following statements to create an external table for the quarterly results. **Replace** `YOUR_DATALAKE_NAME` with your **Storage Account Name** provided in the environment details section on the Lab Environment tab on the right. Select **Run** to execute the script.
+
+    ```sql
+    CREATE EXTERNAL DATA SOURCE WwiDataADLS
+    WITH (LOCATION = 'abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net') ;
+    GO
+    
+    CREATE EXTERNAL FILE FORMAT CsvFormat
+    WITH ( 
+        FORMAT_TYPE = DELIMITEDTEXT, 
+        FORMAT_OPTIONS ( FIELD_TERMINATOR = ',', STRING_DELIMITER = '"')
+    );
+    GO
+    
+    CREATE EXTERNAL TABLE QuarterlySales
+    WITH (
+        LOCATION = 'quarterly-sales',
+        DATA_SOURCE = WwiDataADLS,
+        FILE_FORMAT = CsvFormat
+    )
+    AS
+    SELECT 
+         InvoiceYear,
+         InvoiceQuarter,
+         Sum(cast([Quantity] as int)) as SalesQuantity
+    FROM
+        OPENROWSET(
+            BULK 'https://YOUR_DATALAKE_NAME.dfs.core.windows.net/wwi/factsale-deltalake',
+            FORMAT = 'DELTA'
+        ) AS [result]
+    WHERE InvoiceYear=2012
+    GROUP BY
+         InvoiceYear,
+         InvoiceQuarter
+    ```
+
+    > This exports the results to CSV files in your data lake and defines a table schema that can be referenced directly in serverless SQL. You can test this by running `SELECT * FROM QuarterlySales`. The results are now easy to query from an analytics tools such as Power BI or you can download the files from the Data Lake..
+
 ## Task 2 - Explore the data lake with Azure Synapse Spark
 
 1. Navigate to the `Data` hub, browse to the data lake storage account folder `wwi/factsale-parquet/2012/Q1/InvoiceDateKey=2012-01-01`, then right-click the Parquet file and select `New notebook->Load Data frame`
@@ -112,6 +170,8 @@ In this task, you will browse your data lake using SQL On-demand.
 5. Select **Run all** on the notebook toolbar to execute the notebook.
 
    > **Note**: The first time you run a notebook in a Spark pool, Synapse creates a new session. This can take approximately 3 minutes.
+   
+   ![Waiting for the Spark pool to start.](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex01-attachsparkpool01waiting.png?raw=true "Waiting for the Spark pool to start.")
 
 6. As you can see, the output of the dataframe is displayed with 10 rows. To  display 100 rows with the header replace the last line of code with the following:
 
@@ -158,3 +218,45 @@ In this task, you will browse your data lake using SQL On-demand.
      ![The new cell is displayed and the run cell button is highlighted.](media/close-notebook.png "Close Notebook")
      
      ![The Close + discard changes button is highlighted.](media/notebook-close-discard-changes.png "Discard changes?")
+14. Add another cell and paste the following into the cell. Select the **Run cell** button to execute.This statement is setting configurations used by Apache Spark 3.0.
+
+    ```python
+    spark.conf.set("spark.sql.adaptive.enabled", "true")
+    spark.conf.set("spark.sql.adaptive.coalescePartitions.enabled", "true")
+    spark.conf.set("spark.sql.adaptive.coalescePartitions.minPartitionNum", 4)
+    spark.conf.set("spark.sql.ansi.enabled", "true")
+    ```
+
+    > The Apache Spark pool for the lab is using Spark 3.0, which provides performance benefits over previous versions. These configurations enable Adaptive Query Execution and set how Spark should optimize partitioning during job execution. ANSI SQL is also enabled to check for data type errors and overflow errors.
+
+15. Add another cell and paste in the SQL statement to read from a Delta Lake path. Replace `YOUR_DATALAKE_NAME` with your **Storage Account Name**. Select the **Run cell** button to execute. This uses the magic command `%%sql` to change language of the cell to Spark SQL. The SQL statement returns the top 10 cities based on total quantity.
+
+    ```sql
+    %%sql
+    SELECT 
+        CityKey,
+        SUM(Quantity) FILTER (WHERE CustomerKey != 0) as TotalQuantity,
+        COUNT(DISTINCT StockItemKey) as UniqueItems
+    FROM delta.`abfss://wwi@YOUR_DATALAKE_NAME.dfs.core.windows.net/factsale-deltalake`
+    WHERE InvoiceYear=2012
+        and InvoiceQuarter=1
+    GROUP BY CityKey
+    ORDER BY TotalQuantity desc
+    LIMIT 10
+    ```
+
+    > Delta Lake is a popular format for storing data in a data lake since it supports upserts, deletes, and data versioning. You can access it using Spark SQL as shown here or by reading in as a DataFrame using `format(delta)`.
+
+16. Expand the job execution summary by selecting the arrow next to **Job execution**.
+
+    ![The output is displayed and the job execution arrow is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/notebook-expand-spark-job-execution.png?raw=true "Expand job execution")
+
+    > The job execution shows the jobs, stages, and tasks that Spark ran when the cell was executed. This view shows duration and other performance characteristics that are important to consider if the notebook will be used repeatedly.
+
+17. Notice the **Tasks** column shows the first job with 50 tasks as it reads in from files, then adjusts to 8 and then 5 tasks per job which is suitable for this small cluster and dataset. When running the same code with a larger dataset, Spark 3.0 can modify the query plan to be more efficient. In addition, you can enable autoscaling on your Apache Spark pool so it can automatically grow when the workload on the Spark pool increases.
+
+    ![The job execution is displayed and the Tasks column is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/notebook-spark-job-execution-expanded.png?raw=true "Job execution tasks")
+
+    > Without Adaptive Query Execution enabled, the group by and order by in this cell would result in over 400 tasks. Spark 3.0 has improved on these tuning options and introduced additional performance benefits which may be noticed when joining datasets and working with skewed data.
+
+18. **Important**: If you are continuing to Exercise 2 now, _leave this notebook open for the first task_ of the next exercise. This way, you can continue to use this notebook and the running Spark session, saving you time.
