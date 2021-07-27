@@ -484,6 +484,8 @@ Remember the sentiment analysis task we had in our Exercise 2 - Enrich Data pipe
 
 1. Go to the **Develop** Hub and navigate to the `dev > bronze > sentiment` **(2)** folder in the primary data lake account **(1)**. Select all the files and right click to select **New SQL script > Select TOP 100 rows**.
 
+   >NOTE: Select all the files except the text file.
+
    ![dev > bronze > sentiment folder in the Workspace data lake account is shown. All files are selected. Right click context menu is open. New SQL script > Select TOP 100 rows command is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/query-sentiment-json-files.png "Sentiment Folder")
 
 2. Replace the top part of the query **(1)** with the code below. Select **Run (2)** to execute the final query.
