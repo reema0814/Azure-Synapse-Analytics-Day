@@ -275,7 +275,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
    > **NOTE!** If the **Parameters** value is absent, please update the value with **```@substring(pipeline().RunId,0,8)```** by selecting **Pipeline expression** and paste the value under **Add dynamic content** then **finish**.
     
-    ![Two images showing how to add the parameter value](https://github.com/SpektraSystems/azure-synapse-analytics-day/blob/master/media/parameter-value-add.png?raw=true "Adding parameter value")
+   ![Two images showing how to add the parameter value](https://github.com/SpektraSystems/azure-synapse-analytics-day/blob/master/media/parameter-value-add.png?raw=true "Adding parameter value")
 
 
 1. Take a minute to look at the options available on the various tabs in the configuration panel. You will notice the properties here define how the data flow operates within the pipeline.
