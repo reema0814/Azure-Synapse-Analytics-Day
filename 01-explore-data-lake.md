@@ -19,6 +19,11 @@ In this task, you will browse your data lake using SQL On-demand.
 1. In a Microsoft Edge web browser, navigate to the Azure portal (`https://portal.azure.com`) and login with your credentials. Then select **Resource groups**.
 
    ![Open Azure resource group](./media/00-open-resource-groups.png "Azure resource groups")
+   
+   > **Note**: If you are presented with **Help us protect your account** dialog box, then select **Skip for now** option.
+
+     ![Open Azure resource group](./media/MFA.png "MFA")
+
 
 2. Select the **Synapse Analytics** resource group.
 

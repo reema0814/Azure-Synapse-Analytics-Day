@@ -1,7 +1,9 @@
 # Release Notes
+
 ### 17 August 2021
 - Minor update in the Lab Guide.
 - A note has been added to the 01-explore-data-lake.md file to assist users in skipping MFA when logging into the Azure Portal.
+
 ### 10 August 2021
 * Major changes in the Lab Guide.
 * Exercise 1:
