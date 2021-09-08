@@ -46,6 +46,10 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
 5. In the step by step dialog that appears, select `SQLPool01` and then select **Continue**.
 
+   > **Note**: If you are not able to find the data source please reduce the virtual machine resolution to 80% and proceed further.
+   
+     ![Resolution](media/resolution.png "Select Start")   
+
    ![The SQLPool01 data source is selected.](media/ex03-pbid-select-data-source.png "Select a data source")
 
 6. Select **Download** to download and save the suggested `pbids` file.
