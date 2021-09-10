@@ -385,7 +385,7 @@ After you finish building and debugging your data flow and its associated pipeli
 
    ![Pipeline runs is selected and highlighted under the Orchestration section of the monitor resource list.](media/ex02-monitor-pipeline-runs1.png "Synapse Analytics Monitor")
 
-3. Select the `Exercise 2 - Enrich Data_A03` pipeline the list. This will have a status of `In progress`.
+3. Select the `Exercise 2 - Enrich Data` pipeline the list. This will have a status of `In progress`.
 
    ![The first "Exercise 2 - Enrich Data" item in the list of pipeline runs is highlighted.](media/ex02-monitoring-pipeline-runs.png "Pipeline run list")
 
