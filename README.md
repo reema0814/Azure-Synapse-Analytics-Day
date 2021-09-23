@@ -24,11 +24,11 @@ If you are using a hosted lab environment, please follow the steps below to get 
 
 1. Select the **Environment details** tab above the lab guide to copy the Azure credentials used for the lab. Click on expand button next to resource group and make note of the `UniqueId` value. This value may be referenced at different points during the lab.
 
-    ![The lab environment details are displayed.](https://github.com/anushabc/Azure-Synapse-Analytics-Day/blob/v2/media/env1.png?raw=true "Lab Environment")
+    ![The lab environment details are displayed.](media/env1.png "Lab Environment")
 
 2. Select **Virtual Machine** under the **Resources** tab to start the Virtual Machine (VM) provided for this lab. However, you do not need to use the VM to complete the lab. It is there for your convenience to make it easier to sign into Azure if you have an existing account and do not want to log out of it.
     
-    ![The Virtual Machines are displayed and the Play button is highlighted.](https://github.com/anushabc/Azure-Synapse-Analytics-Day/blob/v2/media/env2.png?raw=true "Start Virtual Machine")
+    ![The Virtual Machines are displayed and the Play button is highlighted.](media/env2.png "Start Virtual Machine")
 
 ## Solution architecture
 
