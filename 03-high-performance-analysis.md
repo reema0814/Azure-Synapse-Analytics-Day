@@ -8,14 +8,15 @@ The dedicated SQL pool in Azure Synapse is the new incarnation of the former Azu
 
 The tasks you will perform in this exercise are:
 
-- Exercise 3 - High Performance Analysis with SQL Analytics pool
+- Exercise 4 - High-Performance Analysis with Azure Synapse Dedicated SQL Pools
   - Task 1 - Use a dedicated SQL pool query to understand a dataset
   - Task 2 - Investigate query performance and table design
     - Bonus Challenge
 
-> **Note**: The tasks in this exercise must be run against the dedicated SQL pool (as opposed to the ones from exercise 1, which were run against the serverless SQL pool named "built-in" pool). Make sure you have `SQLPool01` selected before running each query:
+> **Note**: The tasks in this exercise must be run against the dedicated SQL pool (as opposed to the ones from exercise 1, which were run against the serverless SQL pool
+named "built-in" pool). Make sure you have `SQLPool01` selected before running each query:
 
-![Run queries against a SQL pool](./media/ex04-run-on-sql-pool.png)
+![Run queries against a dedicated SQL pool](./media/ex04-run-on-sql-pool.png)
 
 ## Task 1 - Use a SQL Synapse Pool query to understand a dataset
 
@@ -70,7 +71,7 @@ First, let us set the stage by performing the following steps:
 
    Re-run the query 3 to 5 times until the execution time stabilizes (usually, the first "cold" execution takes longer than subsequent ones who benefit from the initialization of various internal data and communications buffers). Make a note on the amount of time needed to run the query (typically 3 to 5 seconds).
 
-## Optional Challenge
+## Bonus Challenge
 
 Can you explain the significant difference in performance between the two seemingly identical tables? Furthermore, can you explain why the first set of queries (the simple counts) were not that further apart in execution times?
 
@@ -84,12 +85,12 @@ Can you explain the significant difference in performance between the two seemin
 
 4. In the CREATE script, note the `DISTRIBUTION = ROUND_ROBIN` option used to distribute the table.
 
-![View Round-Robin Distribution](./media/ex04-view-round-robin.png "Round-Robin Distribution")
+   ![View Round-Robin Distribution](./media/ex04-view-round-robin.png "Round-Robin Distribution")
 
 5. Repeat the same actions for the `wwi_perf.FactSale_Fast` table and note the `DISTRIBUTION = HASH ( [CustomerKey] )` option used to distribute the table.
 
-  ![View Hash Distribution](./media/ex04-view-hash-distribution.png "Hash Distribution")
-
+   ![View Hash Distribution](./media/ex04-view-hash-distribution.png "Hash Distribution")
+ 
 This is the critical difference that has such a significant impact on the last two queries' performance. Because `wwi_perf.FactSale_Slow` is distributed in a round-robin fashion, each customer's data will end up living in multiple (if not all) distributions. When our query needs to consolidate each customer's data, a lot of data movement will occur between the distributions. This is what slows down the query significantly.
 
 On the other hand, `wwi_perf.FactSale_Fast` is distributed using the hash of the customer identifier. This means that each customer's data will end up living in a single distribution. When the query needs to consolidate each customer's data, virtually no data movement occurs between distributions, which makes the query very fast.
