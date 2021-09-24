@@ -216,6 +216,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![The add code button is highlighted.](media/addcode.png "Add code")
 
+
 11. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details tab on the right. You can also copy it from the first cell of the notebook above.
 
     ```python
@@ -233,6 +234,7 @@ In this task, you will browse your data lake using SQL On-demand.
     ![The new cell is displayed and the run cell button is highlighted.](media/notebook-new-csv-cell1.png "New cell to explore CSV files")
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
+
 
 13. Add another cell and paste the following into the cell. Select the **Run cell** button to execute.This statement is setting configurations used by Apache Spark 3.0.
 
