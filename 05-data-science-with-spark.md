@@ -115,11 +115,11 @@ In this task, you will be implementing sentiment analysis in Synapse without wri
 
 6. Select **Text Analytics - Sentiment Analysis (1)** from the list of enrichments based on Azure Cognitive Services. Select **Continue (2)** to proceed.
 
-   ![Predict with a model window is open. Text Analytics - Sentiment Analysis option is selected. Continue button is highlighted.](media/ex53 "Text Analytics Sentiment Analysis")
+   ![Predict with a model window is open. Text Analytics - Sentiment Analysis option is selected. Continue button is highlighted.](media/ex53.png "Text Analytics Sentiment Analysis")
 
 7. Select your lab Cognitive Service account **(1)** and the Key Vault named `KeyVault` **(2)**. The access key for the Cognitive Service account is stored in the key vault. The name for the secret is `CognitiveKey`. Set **Secret name (3)** to **CognitiveKey**. Select **Continue (4)** to proceed.
 
-   ![Predict with a model window is open. Cognitive Service account and Key Vault account are set to the accounts available in the same resource group. The secret name is set to CognitiveKey. Continue button is highlighted.](media/ex54 "Select Key Vault and Secret for Cognitive Services")
+   ![Predict with a model window is open. Cognitive Service account and Key Vault account are set to the accounts available in the same resource group. The secret name is set to CognitiveKey. Continue button is highlighted.](media/ex54.png "Select Key Vault and Secret for Cognitive Services")
 
 8. Our comments to be analyzed for sentiments are in English. So, we will set the language setting to **English (1)**. Next, pick the text column that has the source data. In our case, it is the **comment (2)** field. Select **Open notebook (3)** to continue.
 
