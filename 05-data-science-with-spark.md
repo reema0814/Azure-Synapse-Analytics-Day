@@ -121,6 +121,6 @@ In this task, you will be implementing sentiment analysis in Synapse without wri
 
    ![Predict with a model window is open. Cognitive Service account and Key Vault account are set to the accounts available in the same resource group. The secret name is set to CognitiveKey. Continue button is highlighted.](media/ex54.png "Select Key Vault and Secret for Cognitive Services")
 
-9. Attach your notebook to a Spark pool **(1)** and run all cells by selecting the **Run all (2)** button. Observe the code in the cells where the secret key is pulled from KeyVault and used to access Azure Cognitive Services to run sentiment analysis. You can see the resulting sentiment scores in the sentiment column (3) in the output.
+8. Attach your notebook to a Spark pool **(1)** and run all cells by selecting the **Run all (2)** button. Observe the code in the cells where the secret key is pulled from KeyVault and used to access Azure Cognitive Services to run sentiment analysis. You can see the resulting sentiment scores in the sentiment column (3) in the output.
 
    ![A notebook is open. Run all button is selected. The sentiment column from the result set is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/enrich-sentiment-analysis-result.png "Sentiment Analysis Result")
