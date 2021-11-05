@@ -105,7 +105,7 @@ In this task, you will be implementing sentiment analysis in Synapse without wri
 
    `saveAsTable` stores a persistent table copy of the dataframe into Hive metastore. In this case, the Spark database name is `default`, and the table name is `wwi_comments` **(4)**.
 
-4. In order to see the newly created Spark database refresh the **Databases (2)** list. Select **default (3)** and find the **wwi_comments (4)** table in the tables collection.
+4. In order to see the newly created Spark database refresh the **Synapse Workspace(1)**. Select **Lake database (2)**, **default (3)** and find the **wwi_comments (4)** table in the tables collection.
 
    ![The refresh button for databases is presented. Default spark database is selected. wwi_comments Spark table is highlighted.](media/ex51.png "Spark Table")
 
@@ -113,17 +113,13 @@ In this task, you will be implementing sentiment analysis in Synapse without wri
 
    ![wwi_comments Spark table is shown with its context menu. Machine Learning > Predict with a model command is highlighted.](media/ex52.png "Predict with a model")
 
-6. Select **Text Analytics - Sentiment Analysis (1)** from the list of enrichments based on Azure Cognitive Services. Select **Continue (2)** to proceed.
+6. Select **Sentiment Analysis (1)** from the list of enrichments based on Azure Cognitive Services. Select **Continue (2)** to proceed.
 
    ![Predict with a model window is open. Text Analytics - Sentiment Analysis option is selected. Continue button is highlighted.](media/ex53.png "Text Analytics Sentiment Analysis")
 
-7. Select your lab Cognitive Service account **(1)** and the Key Vault named `KeyVault` **(2)**. The access key for the Cognitive Service account is stored in the key vault. The name for the secret is `CognitiveKey`. Set **Secret name (3)** to **CognitiveKey**. Select **Continue (4)** to proceed.
+7. Select your lab  **Azure Cognitive Service linked service account (1)** named `CognitiveService`. Our comments to be analyzed for sentiments are in English. So, we will set the language setting to **English (2)**. Next, pick the text column that has the source data. In our case, it is the **comment (3)** field. Select **Open notebook (4)** to continue.
 
    ![Predict with a model window is open. Cognitive Service account and Key Vault account are set to the accounts available in the same resource group. The secret name is set to CognitiveKey. Continue button is highlighted.](media/ex54.png "Select Key Vault and Secret for Cognitive Services")
-
-8. Our comments to be analyzed for sentiments are in English. So, we will set the language setting to **English (1)**. Next, pick the text column that has the source data. In our case, it is the **comment (2)** field. Select **Open notebook (3)** to continue.
-
-   ![Predict with a model window is open. Language is set to English. The text column is set to the comment field. Open notebook button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/enrich-sentiment-analysis-settings.png "Sentiment Analysis Settings")
 
 9. Attach your notebook to a Spark pool **(1)** and run all cells by selecting the **Run all (2)** button. Observe the code in the cells where the secret key is pulled from KeyVault and used to access Azure Cognitive Services to run sentiment analysis. You can see the resulting sentiment scores in the sentiment column (3) in the output.
 
