@@ -104,7 +104,7 @@ In this task, you will be implementing sentiment analysis in Synapse without wri
 
    ![Data hub is open. Default data lake's dev/bronze folder is shown. wwi-comments.csv file's right-click context menu is open. New Notebook > New Spark table command is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/wwi-comments-new-spark-table.png "New Spark Table")
 
-3. Once you are in the auto-generated notebook, make sure `, header=True` is uncommented **(2)**. Attach a spark pool **(1)** to your notebook and the table name is `wwi_comments` **(3)** run the current cell by selecting the play button **(4)** on the left.
+3. Once you are in the auto-generated notebook, make sure `, header=True` is uncommented **(2)**. Attach a spark pool **(1)** to your notebook and the table name is `wwi_comments` **(3)**. Run the current cell by selecting the play button **(4)** on the left.
 
    ![The add code button is highlighted.](media/aiu4.png "Add code")
    
