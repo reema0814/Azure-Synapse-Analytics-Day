@@ -83,7 +83,7 @@ You can see the notebook and SQL scripts used to train and register this model i
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/databricks-run-notebook-ex5.png "Running Exercise 5 Notebook")
 
-   > **Note**: If you face issue in cmd 27, update the code to include target_opset=13 and rerun the cell.
+   > **Note**: If you face issue in cmd 23, update the code to include target_opset=13 and rerun the cell.
 
     ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/ex55.png "Running Exercise 5 Notebook")
      
@@ -104,12 +104,10 @@ In this task, you will be implementing sentiment analysis in Synapse without wri
 
    ![Data hub is open. Default data lake's dev/bronze folder is shown. wwi-comments.csv file's right-click context menu is open. New Notebook > New Spark table command is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/wwi-comments-new-spark-table.png "New Spark Table")
 
-3. Once you are in the auto-generated notebook, make sure `, header=True` is uncommented **(2)**. Attach a spark pool **(1)** to your notebook and run the current cell by selecting the play button **(3)** on the left.
+3. Once you are in the auto-generated notebook, make sure `, header=True` is uncommented **(2)**. Attach a spark pool **(1)** to your notebook and the table name is `wwi_comments` **(3)**. Run the current cell by selecting the play button **(4)** on the left.
 
-   ![A new notebook is open. The code in the notebook is loading a dataframe from the wwi-comments.csv file from the data lake and creating a spark table named wwi_comments.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/run-spark-table-creation.png "Create Spark Table")
-
-   `saveAsTable` stores a persistent table copy of the dataframe into Hive metastore. In this case, the Spark database name is `default`, and the table name is `wwi_comments` **(4)**.
-
+   ![The add code button is highlighted.](media/aiu4.png "Add code")
+   
 4. In order to see the newly created Spark database refresh the **Synapse Workspace(1)**. Select **Lake database (2)**, **default (3)** and find the **wwi_comments (4)** table in the tables collection.
 
    ![The refresh button for databases is presented. Default spark database is selected. wwi_comments Spark table is highlighted.](media/ex51.png "Spark Table")
