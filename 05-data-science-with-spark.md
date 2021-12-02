@@ -83,7 +83,7 @@ You can see the notebook and SQL scripts used to train and register this model i
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/databricks-run-notebook-ex5.png "Running Exercise 5 Notebook")
 
-   > **Note**: If you face issue in cmd 27, update the code to include target_opset=13 and rerun the cell.
+   > **Note**: If you face issue in cmd 23, update the code to include target_opset=13 and rerun the cell.
 
     ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/ex55.png "Running Exercise 5 Notebook")
      
