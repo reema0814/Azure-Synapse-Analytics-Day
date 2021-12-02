@@ -122,9 +122,9 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     ![Data is selected and highlighted in the Synapse Analytics menu.](media/data-hub.png "Data hub")
 
-13. Under **Workspace** tab expand **Databases** and then expand the **SQLPool01** database.
+13. Under **Workspace** tab expand **SQL databases** and then expand the **SQLPool01** database.
 
-    ![The Databases folder is expanded, showing a list of databases within the Azure Synapse Analytics workspace. SQLPool01 is expanded and highlighted.](media/ex02-databasesqlpool.png "Synapse Analytics Databases")
+    ![The Databases folder is expanded, showing a list of databases within the Azure Synapse Analytics workspace. SQLPool01 is expanded and highlighted.](media/ex02-aiu2.png "Synapse Analytics Databases")
 
 14. Expand **Tables** and locate the table named `wwi_staging.Sale`.
 
@@ -321,9 +321,9 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     ![The PostalCodeFilter transformation is highlighted on the data flow canvas graph.](media/ex02-orchestrate-data-flow-transformations-filter.png "Data flow canvas")
 
-22. In the **Filter settings** tab of the configuration panel, click anywhere inside the **Filter on** box.
+22. In the **Filter settings** tab of the configuration panel, click anywhere inside the **Filter on** box then click on **Open expression builder**.
 
-    ![The Filter on box is highlighted in the configuration panel for the PostalCodeFilter transformation.](media/ex02-orchestrate-data-flow-transformations-filter-on.png "Data flow canvas")
+    ![The Filter on box is highlighted in the configuration panel for the PostalCodeFilter transformation.](media/aiu3.png "Data flow canvas")
 
 23. This will open the Visual expression builder.
 
