@@ -73,7 +73,7 @@ You can see the notebook and SQL scripts used to train and register this model i
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog2.png "Running Exercise 5 Notebook")
 
-3. Navigate ack to resource group and select the storage account **asadatastore**.
+3. Navigate back to resource group and select the storage account **asadatastore**.
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog4.png "Running Exercise 5 Notebook")
 
