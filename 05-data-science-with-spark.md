@@ -116,32 +116,48 @@ You can see the notebook and SQL scripts used to train and register this model i
 
 In this task, you will be implementing sentiment analysis in Synapse without writing any code. The fully integrated data enrichment capabilities powered by Azure Cognitive Services allow Synapse users to enrich data and gain insights by leveraging state-of-the-art pre-trained AI models. Today, two models available through the Synapse workspace are Text Analytics (Sentiment Analysis) and Anomaly detector. Your lab environment already has an Azure Cognitive Services account provisioned for your use. The following steps will take you through the quick implementation in Synapse.
 
+1. Open Synapse Analytics Studio, and then navigate to the **Manage (1)** hub. Select **Linked Services (2)** left pane and click on **CognitiveService (3)**.
+
+    ![](media/pp3.png)
+   
+1. On the **Edit linked service (Azure Cognitive Services)** tab, Select the options mentioned below.
+    
+    - Select your **subscription (1)** from the drop down.
+    - Azure Cognitive Services name: Select `cogs-<UniqueId>` (2) from the drop down.
+    - Click on **Save (3)**.
+  
+    ![](media/pp4.png)
+  
+1. On Manage page, Click on **Publish all (1)** to create the CognitiveService (Linked service).
+  
+    ![](media/pp5.png)
+
 1. Open Synapse Analytics Studio, and then navigate to the **Data (1)** hub.
 
-2. Switch to the Linked data connections and select your primary data lake. Navigate to **dev > Bronze (4)** folder. Right-click **wwi-comments.csv (5)** file and select **New notebook (6) > New Spark table (7)** to continue.
+1. Switch to the Linked data connections and select your primary data lake. Navigate to **dev > Bronze (4)** folder. Right-click **wwi-comments.csv (5)** file and select **New notebook (6) > New Spark table (7)** to continue.
 
    ![Data hub is open. Default data lake's dev/bronze folder is shown. wwi-comments.csv file's right-click context menu is open. New Notebook > New Spark table command is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/wwi-comments-new-spark-table.png "New Spark Table")
 
-3. Once you are in the auto-generated notebook, make sure `, header=True` is uncommented **(2)**. Attach a spark pool **(1)** to your notebook and the table name is `wwi_comments` **(3)**. Run the current cell by selecting the play button **(4)** on the left.
+1. Once you are in the auto-generated notebook, make sure `, header=True` is uncommented **(2)**. Attach a spark pool **(1)** to your notebook and the table name is `wwi_comments` **(3)**. Run the current cell by selecting the play button **(4)** on the left.
 
    ![The add code button is highlighted.](media/aiu4.png "Add code")
    
-4. In order to see the newly created Spark database refresh the **Synapse Workspace(1)**. Select **Lake database (2)**, **default (3)** and find the **wwi_comments (4)** table in the tables collection.
+1. In order to see the newly created Spark database refresh the **Synapse Workspace(1)**. Select **Lake database (2)**, **default (3)** and find the **wwi_comments (4)** table in the tables collection.
 
    ![The refresh button for databases is presented. Default spark database is selected. wwi_comments Spark table is highlighted.](media/ex51.png "Spark Table")
 
-5. Right click the **wwi_comments** spark table and select **Machine Learning > Predict with a model (2)** command.
+1. Right click the **wwi_comments** spark table and select **Machine Learning > Predict with a model (2)** command.
 
    ![wwi_comments Spark table is shown with its context menu. Machine Learning > Predict with a model command is highlighted.](media/ex52.png "Predict with a model")
 
-6. Select **Sentiment Analysis (1)** from the list of enrichments based on Azure Cognitive Services. Select **Continue (2)** to proceed.
+1. Select **Sentiment Analysis (1)** from the list of enrichments based on Azure Cognitive Services. Select **Continue (2)** to proceed.
 
    ![Predict with a model window is open. Text Analytics - Sentiment Analysis option is selected. Continue button is highlighted.](media/ex53.png "Text Analytics Sentiment Analysis")
 
-7. Select your lab  **Azure Cognitive Service linked service account (1)** named `CognitiveService`. Our comments to be analyzed for sentiments are in English. So, we will set the language setting to **English (2)**. Next, pick the text column that has the source data. In our case, it is the **comment (3)** field. Select **Open notebook (4)** to continue.
+1. Select your lab  **Azure Cognitive Service linked service account (1)** named `CognitiveService`. Our comments to be analyzed for sentiments are in English. So, we will set the language setting to **English (2)**. Next, pick the text column that has the source data. In our case, it is the **comment (3)** field. Select **Open notebook (4)** to continue.
 
    ![Predict with a model window is open. Cognitive Service account and Key Vault account are set to the accounts available in the same resource group. The secret name is set to CognitiveKey. Continue button is highlighted.](media/ex54.png "Select Key Vault and Secret for Cognitive Services")
 
-8. Attach your notebook to a Spark pool **(1)** and run all cells by selecting the **Run all (2)** button. Observe the code in the cells where the secret key is pulled from KeyVault and used to access Azure Cognitive Services to run sentiment analysis. You can see the resulting sentiment scores in the sentiment column (3) in the output.
+1. Attach your notebook to a Spark pool **(1)** and run all cells by selecting the **Run all (2)** button. Observe the code in the cells where the secret key is pulled from KeyVault and used to access Azure Cognitive Services to run sentiment analysis. You can see the resulting sentiment scores in the sentiment column (3) in the output.
 
    ![A notebook is open. Run all button is selected. The sentiment column from the result set is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/enrich-sentiment-analysis-result.png "Sentiment Analysis Result")
