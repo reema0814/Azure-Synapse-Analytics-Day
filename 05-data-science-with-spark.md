@@ -69,15 +69,15 @@ You can see the notebook and SQL scripts used to train and register this model i
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog1.png "Running Exercise 5 Notebook")
 
-2. In the storage account navigate to **Access keys**, click on **show keys** and copy the storage account name and key. Store this vaules in a notepad, this will be used in next part of the task.
+2. In the storage account navigate to **Access keys**, click on **show keys** and copy the storage account name and key. Store these values in a notepad, this will be used in the next part of the task.
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog2.png "Running Exercise 5 Notebook")
 
-3. Navigate back to resource group and select the storage account **asadatastore**.
+3. Navigate back to the resource group and select the storage account **asadatastore**.
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog4.png "Running Exercise 5 Notebook")
 
-4. In the storage account navigate to **Access keys**, click on **show keys** and copy the storage account name and key. Store this vaules in a notepad, this will be used in next part of the task.
+4. In the storage account navigate to **Access keys**, click on **show keys** and copy the storage account name and key. Store this values in a notepad, this will be used in the next part of the task.
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog3.png "Running Exercise 5 Notebook")
 
