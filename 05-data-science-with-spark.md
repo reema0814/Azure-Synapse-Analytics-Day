@@ -77,9 +77,10 @@ You can see the notebook and SQL scripts used to train and register this model i
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog4.png "Running Exercise 5 Notebook")
 
-4. In the storage account navigate to **Access keys**, click on **show keys** and copy the storage account name and key. Store this values in a notepad, this will be used in the next part of the task.
+4. In the storage account navigate to **Access keys**, click on **show keys** and copy the storage account name and key. Store these values in a notepad, this will be used in the next part of the task.
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog3.png "Running Exercise 5 Notebook")
+
 
 
 5. Go back to your resource group and select the Azure Databricks service.
