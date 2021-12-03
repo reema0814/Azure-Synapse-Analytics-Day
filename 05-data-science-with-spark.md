@@ -65,21 +65,38 @@ In this task, you will author a T-SQL query that uses a pre-trained model to mak
 
 You can see the notebook and SQL scripts used to train and register this model if you are curious. To do so, follow these steps:
 
-1. Go back to your resource group and select the Azure Databricks service.
+1. Go back to your resource group and select the storage account **asadatalake**.
+
+   ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog1.png "Running Exercise 5 Notebook")
+
+2. In the storage account navigate to **Access keys**, click on **show keys** and copy the storage account name and key. Store this vaules in a notepad, this will be used in next part of the task.
+
+   ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog2.png "Running Exercise 5 Notebook")
+
+3. Navigate ack to resource group and select the storage account **asadatastore**.
+
+   ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog4.png "Running Exercise 5 Notebook")
+
+4. In the storage account navigate to **Access keys**, click on **show keys** and copy the storage account name and key. Store this vaules in a notepad, this will be used in next part of the task.
+
+   ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/stog3.png "Running Exercise 5 Notebook")
+
+
+5. Go back to your resource group and select the Azure Databricks service.
 
    ![Resource group is shown. The Databricks service is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/databricks-service-select.png "Select Databricks Service")
 
-2. Once in the Databricks Service's Overview section, select **Launch Workspace** to navigate to your  Databricks workspace.
+6. Once in the Databricks Service's Overview section, select **Launch Workspace** to navigate to your  Databricks workspace.
 
    ![Databricks service is shown on the Azure Portal. Launch workspace button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/databricks-launch-workspace.png "Databricks Workspace Navigation")
 
-3. Open the **Workspace (1)** section from the left menu. Under **Shared (2)**, select the notebook called `Exercise 5 - Model Training` **(3)**.
+7. Open the **Workspace (1)** section from the left menu. Under **Shared (2)**, select the notebook called `Exercise 5 - Model Training` **(3)**.
 
    ![Shared workspace is open, and Exercise 5 notebook is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/databricks-notebook-selection.png "Databricks Notebook Selection")
 
    This notebook handles training the model, converting the model to ONNX, and uploading the ONNX model to Azure Storage.
 
-4. To execute the notebook, follow the instruction in the notebook **(1)** to mount your Azure Storage accounts to Azure Databricks. Finally, pick a cluster **(2)** and select **Run all (3)**. This will train a Machine Learning model in ONNX format.  
+8. To execute the notebook, follow the instruction in the notebook **(1)** to mount your Azure Storage accounts to Azure Databricks. Finally, pick a cluster **(2)** and select **Run all (3)**. This will train a Machine Learning model in ONNX format.  
 
    ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/databricks-run-notebook-ex5.png "Running Exercise 5 Notebook")
 
@@ -88,11 +105,11 @@ You can see the notebook and SQL scripts used to train and register this model i
     ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/ex55.png "Running Exercise 5 Notebook")
      
   
-5. One step that is not shown by the notebook is an offline step that converts the ONNX model to hexadecimal. The resulting hex-encoded model is also uploaded to Azure Storage. This conversion is currently performed with [this PowerShell script](https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/v2/artifacts/00/ml/convert-to-hex.ps1), but could be automated using any scripting platform.
+9. One step that is not shown by the notebook is an offline step that converts the ONNX model to hexadecimal. The resulting hex-encoded model is also uploaded to Azure Storage. This conversion is currently performed with [this PowerShell script](https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/v2/artifacts/00/ml/convert-to-hex.ps1), but could be automated using any scripting platform.
 
-6. Once you have read through the notebook, return to the `Develop` hub, expand **SQL scripts** and select `Exercise 5 - Register model`. View, but **do not run this script**.
+10. Once you have read through the notebook, return to the `Develop` hub, expand **SQL scripts** and select `Exercise 5 - Register model`. View, but **do not run this script**.
 
-7. This script uses PolyBase to load the hex-encoded model from Azure Storage into a table within the SQL Pool database. Once the model is inserted into the table in this way, it is available for use by the Predict statement as was shown in Task 1.
+11. This script uses PolyBase to load the hex-encoded model from Azure Storage into a table within the SQL Pool database. Once the model is inserted into the table in this way, it is available for use by the Predict statement as was shown in Task 1.
 
 ## Task 3 - Code free artificial intelligence
 
