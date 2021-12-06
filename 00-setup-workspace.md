@@ -4,9 +4,9 @@
 
 1. Create a new resource group
 
-2. In the resource group, create a regular blob storage account. Create in it two private containers named `staging` and `models`.
+2. In the resource group, create a regular blob storage account. In the storage account, create two private containers named `staging` and `models`.
 
-3. In the resource group, create an empty ASA workspace.
+3. In the resource group, create an empty Azure Synapse Analytics workspace.
 
 4. Create the following file systems in the primary storage account of the workspace: `dev`, `staging`, and `wwi`.
 
@@ -18,7 +18,7 @@
 
 8. Create an Apache Spark pool. Ensure Apache Spark version is set to 3.0.
 
-   ![Create Apache Spark pool page is open. Apache Spark version set to 3.0 is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/spark-version-selection.png?raw=true "Spark Version Selection")
+    ![Create Apache Spark pool page is open. Apache Spark version set to 3.0 is highlighted.](media/spark-version-selection.png "Spark Version Selection")
 
 9. For the remainder of this guide, the following terms will be used for various ASA-related resources (make sure you replace them with actual names and values):
 
@@ -42,10 +42,9 @@
 
 1. Create a folder named `bronze` in the `dev` file system of `PrimaryStorage`.
 
-1. Create a folder named `sentiment` in the `bronze` folder in the `dev` file system of `PrimaryStorage`.
+2. Create a folder named `sentiment` in the `bronze` folder in the `dev` file system of `PrimaryStorage`.
 
-2. Upload the following data files to the `bronze` folder created above:
-
+3. Upload the following data files to the `bronze` folder created above:
 
     | File name                    | Size      | Download from                                                                         |
     |------------------------------|-----------|---------------------------------------------------------------------------------------|
@@ -74,37 +73,37 @@
 
 1. Navigate to [Create Cognitive Services](https://portal.azure.com/#create/Microsoft.CognitiveServicesAllInOne) page and fill in the appropriate values exemplified below to create an All-In-One Cognitive Services account.
 
-   ![Cognitive Service creation page is open. Name and Pricing fields are highlighted. Pricing is set to Standard S0. Review+Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/create-cognitive-service.png "Create Cognitive Services")
+    ![Cognitive Service creation page is open. Name and Pricing fields are highlighted. Pricing is set to Standard S0. Review+Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/create-cognitive-service.png)
 
 2. Go to **Cognitive Service > Keys and Endpoint (1)**. Copy **Key 1 (2)** and **Endpoint (3)** to a text editor of your choice to be used in the following steps.
 
-   ![Cognitive Services is open. The keys and Endpoints panel is shown. Key 1 Copy button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/get-cognitive-services-key.png "Cognitive Service Key")
+    ![Cognitive Services is open. The keys and Endpoints panel is shown. Key 1 Copy button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/get-cognitive-services-key.png)
 
 3. Navigate to [Create Key Vault](https://portal.azure.com/#create/Microsoft.KeyVault) page and fill in the appropriate values exemplified below to create a Key Vault account.
 
-    ![Key Vault creation page is open. The pricing field is highlighted. Pricing is set to Standard. Review+Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/create-key-vault.png "Create Key Vault")
+    ![Key Vault creation page is open. The pricing field is highlighted. Pricing is set to Standard. Review+Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/create-key-vault.png)
 
 4. Go to **Key Vault > Access policies (1)**, and grant **(2)** the Azure Synapse workspace Managed Service Identity permissions **(3)** to read secrets from Azure Key Vault.
 
-    ![Key Vault creation page is open. The pricing field is highlighted. Pricing is set to Standard. Review+Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/key-vault-access-policies.png "Create Key Vault")
+    ![Key Vault creation page is open. The pricing field is highlighted. Pricing is set to Standard. Review+Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/key-vault-access-policies.png)
 
 5. Go to **Key Vault > Secret** to create a new secret. Select **+Generate/Import** to continue.
 
-    ![Key Vault is open. Secrets collection is shown. +Generate/Import button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/key-vault-add-secret.png "Key Vault Secrets")
+    ![Key Vault is open. Secrets collection is shown. +Generate/Import button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/key-vault-add-secret.png)
 
 6. Set the secret's name to **CognitiveKey**, and then paste the key from the previous step into the Value field. Finally, select Create.
 
-    ![Create a secret dialog is open. The name is set to CognitiveKey. Value is set to the Cognitive Service Key. Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/key-vault-create-secret.png "Key Vault Secrets")
+    ![Create a secret dialog is open. The name is set to CognitiveKey. Value is set to the Cognitive Service Key. Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/key-vault-create-secret.png)
 
 7. In the Synapse Workspace, create an **Azure Key Vault** linked service by pointing to the key vault you just created. It is recommended to name the linked service `KeyVault`.  Verify the connection by selecting the **Test connection** button. If the connection is green, select **Create** and then select **Publish all** to save your change.
 
 8. In the Synapse Workspace, create an **Azure Cognitive Service** linked service by pointing to the cognitive service and key vault you just created. Make sure **Secret name** is set to **CognitiveKey**. It is recommended to name the linked service `CognitiveService`. Select **Create (2)** and then select **Publish all** to save your change.
 
-    ![New Linked Service window is open. Secret Name is highlighted and set to CognitiveKey. Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/linked-service-cognitive-service.png "Cognitive Service Linked Service")
+    ![New Linked Service window is open. Secret Name is highlighted and set to CognitiveKey. Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/linked-service-cognitive-service.png)
 
 9. In the Synapse Workspace, create a **REST** linked service. Set **Base URL** to the previously copied Cognitive Service Endpoint value. Set Authentication Type to **Anonymous (3)**. It is recommended to name the linked service `CognitiveRESTEndpoint`. Select **Create (2)** and then select **Publish all** to save your change.
 
-    ![New Linked Service window is open. Secret Name is highlighted and set to CognitiveKey. Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/cognitive-rest-endpoint-linked-service.png "Cognitive Service Linked Service")
+    ![New Linked Service window is open. Secret Name is highlighted and set to CognitiveKey. Create button is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/cognitive-rest-endpoint-linked-service.png)
 
 10. Create a new, empty dataset with the `cognitive_rest_dataset` name.
 
@@ -116,8 +115,8 @@
 
 14. Open the [Exercise 2 - Enrich Data.json](./artifacts/00/pipelines/Exercise%202%20-%20Enrich%20Data.json) file in a text editor.  Find the `REPLACE-WITH-YOUR-COGNITIVE-KEY` text and replace it with the previously copied Cognitive Service **Key 1**. Save the file for future use. This is the new pipeline definition file you will when creating pipeline during the following steps.
 
-    ![Exercise 2 - Enrich Data.json file is open. REPLACE-WITH-YOUR-COGNITIVE-KEY key value is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/replace-cognitive-key.png "Cognitive Key Replace")
-    
+    ![Exercise 2 - Enrich Data.json file is open. REPLACE-WITH-YOUR-COGNITIVE-KEY key value is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/replace-cognitive-key.png)
+
 ## Task 4 - Import datasets, data flows, and pipelines
 
 ### Import datasets pointing to `PrimaryStorage`
@@ -130,7 +129,7 @@ Perform the following steps for each dataset to be imported:
 
 3. If the name used for the linked service to `PrimaryStorage` is not `asadatalake01`, replace the `properties.linkedServiceName.referenceName` value in JSON with the actual name of the linked service.
 
-4. Save and publish the dataset. Optionally, you can publish all datasets at once, at the end of the import procedure.
+4. Save and publish the dataset. Optionally, you can publish all datasets at once at the end of the import procedure.
 
 The following datasets pointing to `PrimaryStorage` must be imported:
 
@@ -169,7 +168,7 @@ Perform the following steps for each dataset to be imported:
 
 3. If the name used for the linked service to `SQLPool01` is not `sqlpool01`, replace the `properties.linkedServiceName.referenceName` value in JSON with the actual name of the linked service.
 
-4. Save and publish the dataset. Optionally, you can publish all datasets at once, at the end of the import procedure.
+4. Save and publish the dataset. Optionally, you can publish all datasets at once at the end of the import procedure.
 
 The following datasets pointing to `SQLPool01` must be imported:
 
@@ -202,13 +201,13 @@ Perform the following steps for each data flow to be imported:
 
 2. Switch to code view and replace the code with the content of the associated JSON file.
 
-3. Save and publish the data flow. Optionally, you can publish all data flows at once, at the end of the import procedure.
+3. Save and publish the data flow. Optionally, you can publish all data flows at once at the end of the import procedure.
 
-The following data flows must be imported:
+The following data-flows must be imported:
 
-Data flow | Source code
---- | ---
-`EnrichCustomerData` | [EnrichCustomerData.json](./artifacts/00/dataflows/EnrichCustomerData.json)
+| Data flow            | Source code                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| `EnrichCustomerData` | [EnrichCustomerData.json](./artifacts/00/dataflows/EnrichCustomerData.json) |
 
 ### Import pipelines
 
@@ -218,7 +217,7 @@ Perform the following steps for each pipeline to be imported:
 
 2. Switch to code view and replace the code with the content of the associated JSON file.
 
-3. Save and publish the pipeline. Optionally, you can publish all pipelines at once, at the end of the import procedure.
+3. Save and publish the pipeline. Optionally, you can publish all pipelines at once at the end of the import procedure.
 
 The following pipelines must be imported:
 
@@ -236,7 +235,7 @@ The following pipelines must be imported:
 
 1. Import the [Setup - Export Sales to Data Lake](./artifacts/00/notebooks/Setup%20-%20Export%20Sales%20to%20Data%20Lake.ipynb) notebook.
 
-2. Replace `<primary_storage>` with the actual data lake account name of `PrimaryStorage` in cells 1, 4, and 6.
+2. Replace `<primary_storage>` with the actual data lake account name of `PrimaryStorage` in cells 1, 3, 4 and 5.
 
 3. Run the notebook to populate `PrimaryStorage` with data.
 
@@ -267,7 +266,7 @@ The following pipelines must be imported:
 
     ```sql
     CREATE LOGIN [asa.sql.staging]
-	WITH PASSWORD = '<password>'
+    WITH PASSWORD = '<password>'
     GO
     ```
 
@@ -325,22 +324,22 @@ The following pipelines must be imported:
 
 Import the following SQL scripts into `Workspace`:
 
-SQL script name | Source code | Replacements
---- | --- | ---
-`Exercise 1 - Read with SQL on-demand` | [Exercise 1 - Read with SQL on-demand.sql](./artifacts/01/Exercise%201%20-%20Read%20with%20SQL%20on-demand.sql) | `<primary_storage>` with the actual name of `PrimaryStorage`
-`Exercise 4 - Analyze Transactions` | [Exercise 4 - Analyze Transactions.sql](./artifacts/04/Exercise%204%20-%20Analyze%20Transactions.sql) | None
-`Exercise 4 - Investigate query performance` | [Exercise 4 - Investigate query performance.sql](./artifacts/04/Exercise%204%20-%20Investigate%20query%20performance.sql) | None
-`Exercise 5 - Create Sample Data for Predict` | [Exercise 5 - Create Sample Data for Predict.sql](./artifacts/05/Exercise%205%20-%20Create%20Sample%20Data%20for%20Predict.sql) | None
-`Exercise 5 - Predict with model` | [Exercise 5 - Predict with model.sql](./artifacts/05/Exercise%205%20-%20Predict%20with%20model.sql) | None
-`Exercise 5 - Register model` | [Exercise 5 - Register model.sql](./artifacts/05/Exercise%205%20-%20Register%20model.sql) | `<blob_storage_account_key>` with the storage account key of `BlobStorage`; `<blob_storage>` with the storage account name of `BlobStorage`
+| SQL script name                               | Source code                                                                                                                     | Replacements                                                                                                                                |
+|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| `Exercise 1 - Read with serverless SQL Pool`  | [Exercise 1 - Read with serverless SQL Pool.sql](./artifacts/01/Exercise%201%20-%20Read%20with%20serverless%20SQL%20Pool.sql)   | `<primary_storage>` with the actual name of `PrimaryStorage`                                                                                |
+| `Exercise 4 - Analyze Transactions`           | [Exercise 4 - Analyze Transactions.sql](./artifacts/04/Exercise%204%20-%20Analyze%20Transactions.sql)                           | None                                                                                                                                        |
+| `Exercise 4 - Investigate query performance`  | [Exercise 4 - Investigate query performance.sql](./artifacts/04/Exercise%204%20-%20Investigate%20query%20performance.sql)       | None                                                                                                                                        |
+| `Exercise 5 - Create Sample Data for Predict` | [Exercise 5 - Create Sample Data for Predict.sql](./artifacts/05/Exercise%205%20-%20Create%20Sample%20Data%20for%20Predict.sql) | None                                                                                                                                        |
+| `Exercise 5 - Predict with model`             | [Exercise 5 - Predict with model.sql](./artifacts/05/Exercise%205%20-%20Predict%20with%20model.sql)                             | None                                                                                                                                        |
+| `Exercise 5 - Register model`                 | [Exercise 5 - Register model.sql](./artifacts/05/Exercise%205%20-%20Register%20model.sql)                                       | `<blob_storage_account_key>` with the storage account key of `BlobStorage`; `<blob_storage>` with the storage account name of `BlobStorage` |
 
 Import the following Spark notebooks into `Workspace`:
 
-Spark notebook name | Source code | Replacements
---- | --- | ---
-`Exercise 1 - Read with Spark` | [Exercise 1 - Read with Spark.ipynb](./artifacts/01/Exercise%201%20-%20Read%20with%20Spark.ipynb) | `<primary_storage>` with the actual name of `PrimaryStorage`
-`Exercise 2 - Ingest Sales Data` | [Exercise 2 - Ingest Sales Data.ipynb](./artifacts/02/Exercise%202%20-%20Ingest%20Sales%20Data.ipynb) | In cell 1 - `<primary_storage>` with the actual name of `PrimaryStorage`
-`Exercise 2 - Bonus Notebook with CSharp` | [Exercise 2 - Bonus Notebook with CSharp.ipynb](./artifacts/02/Exercise%202%20-%20Bonus%20Notebook%20with%20CSharp.ipynb) | In cell 1 - `<primary_storage>` with the actual name of `PrimaryStorage`; In cell 3 - `<sql_staging_password>` with the password of `asa.sql.staging` created above in Task 4, step 3; In cell 3 - `<workspace>` with the name of the `Workspace`; In cell 3 - `<sql_pool>` with the name of `SQLPool1`
+| Spark notebook name                       | Source code                                                                                                               | Replacements                                                                                                                                                                                                                                                                                            |
+|-------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Exercise 1 - Read with Spark`            | [Exercise 1 - Read with Spark.ipynb](./artifacts/01/Exercise%201%20-%20Read%20with%20Spark.ipynb)                         | `<primary_storage>` with the actual name of `PrimaryStorage`                                                                                                                                                                                                                                            |
+| `Exercise 2 - Ingest Sales Data`          | [Exercise 2 - Ingest Sales Data.ipynb](./artifacts/02/Exercise%202%20-%20Ingest%20Sales%20Data.ipynb)                     | In cell 1 - `<primary_storage>` with the actual name of `PrimaryStorage`                                                                                                                                                                                                                                |
+| `Exercise 2 - Bonus Notebook with CSharp` | [Exercise 2 - Bonus Notebook with CSharp.ipynb](./artifacts/02/Exercise%202%20-%20Bonus%20Notebook%20with%20CSharp.ipynb) | In cell 1 - `<primary_storage>` with the actual name of `PrimaryStorage`; In cell 3 - `<sql_staging_password>` with the password of `asa.sql.staging` created above in Task 4, step 3; In cell 3 - `<workspace>` with the name of the `Workspace`; In cell 3 - `<sql_pool>` with the name of `SQLPool1` |
 
 ## Task 10 - Prepare a machine learning model
 
@@ -348,8 +347,8 @@ Prepare the `models` container in `BlobStorage` by creating two folders: `onnx` 
 
 To prepare the machine learning model for Exercise 5, you have two options:
 
-- Use the already trained and converted machine learning model (available as a starter artifact)
-- Train and convert a new machine learning model
+* Use the already trained and converted machine learning model (available as a starter artifact)
+* Train and convert a new machine learning model
 
 ### Import the already trained and converted machine learning model
 
@@ -394,24 +393,24 @@ For each additional user that needs to have access to `Workspace` and run exerci
 
 2. In the Azure Databricks workspace, create a new cluster with the following configuration:
 
-![Create new Databricks cluster](./media/00-create-databricks-cluster.png)
+    ![Create new Databricks cluster](./media/00-create-databricks-cluster.png)
 
 3. On the newly created cluster, install the `onnxmltools` PyPi library:
 
-![Install Databricks cluster libraries](./media/00-install-databricks-cluster-libraries.png)
+    ![Install Databricks cluster libraries](./media/00-install-databricks-cluster-libraries.png)
 
 4. Import the following Databricks notebooks into the `Shared` section of the Databricks workspace:
 
-Spark notebook name | Source code | Replacements
---- | --- | ---
-`Exercise 5 - Model Training` | [Exercise 5 - Model Training.dbc](./artefacts/../artifacts/05/Exercise%205%20-%20Model%20Training.dbc) |
+    | Spark notebook name           | Source code                                                                                            | Replacements |
+    |-------------------------------|--------------------------------------------------------------------------------------------------------|--------------|
+    | `Exercise 5 - Model Training` | [Exercise 5 - Model Training.dbc](./artefacts/../artifacts/05/Exercise%205%20-%20Model%20Training.dbc) |
 
 ## Task 13 - Setting Cognitive Services Access Key for Pipelines
 
 1. In Synapse Workspace, open **Exercise 2 - Enrich Data (2)** pipeline. Select the **Edit (3)** button for Activities in the **ForEachComment** ForEach activity.
 
-    ![Exercise 2 - Enrich Data pipeline is open. The Edit button for the ForEachComment ForEach activity is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/data-enrichment-pipeline-sentiment-key.png "ForEach Activity Edit")
+    ![Exercise 2 - Enrich Data pipeline is open. The Edit button for the ForEachComment ForEach activity is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/data-enrichment-pipeline-sentiment-key.png)
 
 2. Select **Sentiment Analysis (1)** copy data activity. Switch to the **Source (2)** tab. Paste the Cognitive Service access key previously copied into a text editor.
 
-    ![Sentiment Analysis activity is selected. Source Tab is open. Second headers value is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/data-enrichment-pipeline-sentiment-key-update.png "Cognitive Service Key Update")
+    ![Sentiment Analysis activity is selected. Source Tab is open. Second headers value is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/data-enrichment-pipeline-sentiment-key-update.png)
