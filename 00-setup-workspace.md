@@ -18,7 +18,7 @@
 
 8. Create an Apache Spark pool. Ensure Apache Spark version is set to 3.0.
 
-    ![Create Apache Spark pool page is open. Apache Spark version set to 3.0 is highlighted.](media/spark-version-selection.png "Spark Version Selection")
+    ![Create Apache Spark pool page is open. Apache Spark version set to 3.0 is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/spark-version-selection.png)
 
 9. For the remainder of this guide, the following terms will be used for various ASA-related resources (make sure you replace them with actual names and values):
 
