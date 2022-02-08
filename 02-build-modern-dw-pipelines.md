@@ -38,9 +38,9 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
    ![The Spark pool is selected in the Attach to drop-down.](media/new-notebook-add-code1.png "Add code")
 
-   **Note:** If you are using your notebook from the end of Exercise 1, hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
+   **Note:** If you are using your notebook from the end of Exercise 1, select language **Spark(Scala)** from the drop-down and hover over the area just below the cell in the notebook select **+ Code** to add a new cell.
 
-   ![The add code button is highlighted.](media/add-cell.png "Add code")
+   ![The add code button is highlighted.](media/sw-lang-code.png "Add code")
 
 4. Paste the following into the new cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details tab on the right. You can also copy it from the first cell of the notebook if you are using the same one from Exercise 1.
 
@@ -60,9 +60,9 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     > This cell imports required libraries and sets the `adlsPath` variable, which defines the path used to connect to an Azure Data Lake Storage (ADLS) Gen2 account. Connecting to ADLS Gen2 from a notebook in Azure Synapse Analytics uses the power of Azure Active Directory (AAD) pass-through between compute and storage. The `%%spark` "magic" sets the cell language to Scala, which is required to use the `SparkSession` library.
 
-5. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
+5. Hover over the area just below the cell in the notebook, then select **+ Code** to add a new cell.
 
-    ![The add code button is highlighted.](media/add-cell.png "Add code")
+    ![The add code button is highlighted.](media/synapse-workspace-add-code.png "Add code")
 
 6. Paste the following and run the new cell:
 
@@ -83,9 +83,9 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     ![The output from the execution the cell is displayed, with the result of the show(5) command shown first, followed by the output from the printSchema() command.](media/ex02-notebook-ingest-cell-2-output.png "Cell output")
 
-8. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell.
+8. Hover over the area just below the cell in the notebook, then select **+ Code** to add a new cell.
 
-    ![The add code button is highlighted.](media/add-cell.png "Add code")
+    ![The add code button is highlighted.](media/synapse-workspace-add-code.png "Add code")
 
 9. Paste the following and run the new cell:
 
@@ -124,7 +124,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 13. Under **Workspace** tab expand **SQL databases** and then expand the **SQLPool01** database.
 
-    ![The Databases folder is expanded, showing a list of databases within the Azure Synapse Analytics workspace. SQLPool01 is expanded and highlighted.](media/ex02-aiu2.png "Synapse Analytics Databases")
+    ![The Databases folder is expanded, showing a list of databases within the Azure Synapse Analytics workspace. SQLPool01 is expanded and highlighted.](media/databasesqlpool-01.png "Synapse Analytics Databases")
 
 14. Expand **Tables** and locate the table named `wwi_staging.Sale`.
 
@@ -241,7 +241,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 9. Next, select the **Sink** tab. The sink specifies where the copied data will be written. Like the Source, the sink uses a dataset to define a pointer to the target data store. Select **PolyBase** for the `Copy method`. This improves the data loading speed as compared to the default setting of bulk insert.
 
-   ![The Sink tab for the Copy data activity is selected and highlighted.](media/ex02-orchestrate-copy-data-sink.png "Pipeline canvas property tabs")
+   ![The Sink tab for the Copy data activity is selected and highlighted.](media/sw-sink-polybase.png "Pipeline canvas property tabs")
 
    > Reviewing the fields on this tab, you will notice that it is possible to define the copy method, table options, and to provide pre-copy scripts to execute. Also, take special note of the sink dataset, `wwi_staging_dimcustomer_asa`. The dataset requires a parameter named `UniqueId`, which is populated using a substring of the Pipeline Run Id. This dataset points to the `wwi_staging.DimCustomer_UniqueId` table in Synapse Analytics, which is one of the data sources for the Data Flow. We will need to ensure that the copy activity successfully populates this table before running the data flow.
 
@@ -280,6 +280,8 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 14. Take a minute to look at the options available on the various tabs in the configuration panel. You will notice the properties here define how the data flow operates within the pipeline.
 
 15. Now, let us take a look at the definition of the data flow the Data Flow activity references. Double-click the `Enrich Customer Data` Data Flow activity on the pipeline canvas to open the underlying Data Flow in a new tab.
+
+    ![The EnrichCustomerData Data Flow canvas is displayed.](media/sw-double-click-enrich.png "Enrich Customer Data")
 
     > **Important**: Typically, when working with Data Flows, you would want to enable **Data flow debug**. [Debug mode](https://docs.microsoft.com/azure/data-factory/concepts-data-flow-debug-mode) creates a Spark cluster to use for interactively testing each step of the data flow and allows you to validate the output prior to saving and running the data flow. Enabling a debugging session can take up to 10 minutes, so you will not enable this for the purposes of this workshop. Screenshots will be used to provide details that would otherwise require a debug session to view.
 
@@ -487,7 +489,7 @@ Remember the sentiment analysis task we had in our Exercise 2 - Enrich Data pipe
 
    ![dev > bronze > sentiment folder in the Workspace data lake account is shown. All files are selected. Right click context menu is open. New SQL script > Select TOP 100 rows command is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/query-sentiment-json-files.png "Sentiment Folder")
 
-2. Replace the top part of the query **(1)** with the code below. Select **Run (2)** to execute the final query.
+2. Replace the top part of the query **(1)** with the code below. Select **Run (2)** to execute the final query and review the **Results (3)**.
 
     ```sql
     SELECT 
@@ -497,7 +499,7 @@ Remember the sentiment analysis task we had in our Exercise 2 - Enrich Data pipe
     FROM
     ```
 
-    ![A JSON SQL Query is shown. Sentiment Analysis results are listed.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/sentiment-json-query-result.png "JSON Query for Sentiments")
+    ![A JSON SQL Query is shown. Sentiment Analysis results are listed.](media/sw-sentiment-run.png "JSON Query for Sentiments")
 
     Your query targets the JSON files created as the result of the Sentiment analysis run through Azure Cognitive Services. Here you see a simple query that shows the list of Customer IDs and how their feedback is interpreted in the context of sentiment reflection.
     

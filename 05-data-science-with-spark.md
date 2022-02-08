@@ -99,7 +99,7 @@ You can see the notebook and SQL scripts used to train and register this model i
 
 8. To execute the notebook, follow the instruction in the notebook **(1)** to mount your Azure Storage accounts to Azure Databricks. Finally, pick a cluster **(2)** and select **Run all (3)**. This will train a Machine Learning model in ONNX format.  
 
-   ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/databricks-run-notebook-ex5.png "Running Exercise 5 Notebook")
+   ![Databricks notebook is presented. Cluster selection and Run all commands are highlighted.](media/databricks-run-notebook.png "Running Exercise 5 Notebook")
 
    > **Note**: If you face issue in cmd 23, update the code to include target_opset=13 and rerun the cell.
 
@@ -160,4 +160,4 @@ In this task, you will be implementing sentiment analysis in Synapse without wri
 
 1. Attach your notebook to a Spark pool **(1)** and run all cells by selecting the **Run all (2)** button. Observe the code in the cells where the secret key is pulled from KeyVault and used to access Azure Cognitive Services to run sentiment analysis. You can see the resulting sentiment scores in the sentiment column (3) in the output.
 
-   ![A notebook is open. Run all button is selected. The sentiment column from the result set is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/enrich-sentiment-analysis-result.png "Sentiment Analysis Result")
+   ![A notebook is open. Run all button is selected. The sentiment column from the result set is highlighted.](media/sw-wws-comments-result.png "Sentiment Analysis Result")
