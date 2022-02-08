@@ -193,9 +193,9 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Collapse Output](./media/aiu1.png "Collapse Output")
 
-9. Hover over the area just below the cell in the notebook, then select **{} Add code** to add a new cell. **{} Add code** won't be visible untill you Hover the area in front of arrow.
+9. Hover over the area just below the cell in the notebook, then select **+ Code** to add a new cell. **+ Code** won't be visible untill you Hover the area in front of arrow.
 
-   ![The add code button is highlighted.](media/addcode.png "Add code")
+   ![The add code button is highlighted.](media/synapse-workspace-code.png "Add code")
 
 10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details tab on the right. You can also copy it from the first cell of the notebook above.
 
