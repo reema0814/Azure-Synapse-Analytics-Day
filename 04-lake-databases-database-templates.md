@@ -18,7 +18,7 @@ In this task you will create a new lake database.
 
 1. In Synapse Studio, navigate to the `Data` hub, select the `Workspace` section and then select `+` followed by `Lake database (preview)` to trigger the creation of a new lake database.
 
-   ![Initiate the creation of a lake database](./media/ex04-create-lake-database-1.png)
+   ![Initiate the creation of a lake database](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-create-lake-database-1.png)
 
 2. Configure the properties of the lake database as follows:
 
@@ -28,7 +28,7 @@ In this task you will create a new lake database.
 
     Select `Publish` to publish the new lake database.
 
-    ![Configure lake database storage](./media/ex04-create-lake-database-2.png)
+    ![Configure lake database storage](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-create-lake-database-2.png)
 
 ## Task 2 - Create a lake database table from data lake storage
 
@@ -36,13 +36,13 @@ In this task you will create a new lake database table using files from the data
 
 1. In Synapse Studio, navigate to the `Data` hub and select the data lake account under `Linked`, `Azure Data Lake Storage Gen2`. Select the `database1` file system, and then select the `fact-sale` folder, followed by the `Day=20191201` folder. In this folder, locate the `sale-small-20191201-snappy.parquet` file.
 
-   ![Explore data lake source data](./media/ex04-explore-data-lake-source-data.png)
+   ![Explore data lake source data](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-explore-data-lake-source-data.png)
 
 2. In Synapse Studio, navigate to the `Data` hub, and select the `Workspace` section followed by `Lake database`. In the context menu associated with the `Database1` database, select `Open` to edit the lake database.
 
     In the database editor, select `+ Table` followed by `From data lake`.
 
-   ![Create table from data lake storage](./media/ex04-create-table-from-data-lake.png)
+   ![Create table from data lake storage](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-create-table-from-data-lake.png)
 
 3. Configure the properties of the new table as follows, then select `Continue`:
 
@@ -50,23 +50,23 @@ In this task you will create a new lake database table using files from the data
     - Linked service: `asadatalake01`
     - Input file or folder: `database1/fact-sale`
 
-   ![Configure table from data lake storage](./media/ex04-configure-table-from-data-lake.png)
+   ![Configure table from data lake storage](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-configure-table-from-data-lake.png)
 
 3. Select `Preview Data`.
 
-   ![Trigger data preview for table from data lake storage](./media/ex04-preview-table-from-data-lake-1.png)
+   ![Trigger data preview for table from data lake storage](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-preview-table-from-data-lake-1.png)
 
 4. Observe the data preview, then select `Create` to finalize the process.
 
-   ![Preview data for table from data lake storage](./media/ex04-preview-table-from-data-lake-2.png)
+   ![Preview data for table from data lake storage](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-preview-table-from-data-lake-2.png)
 
 5. In the table designer, select `Columns`, followed by `+ Column` and `Partition column`.
 
-   ![Add partition column to table](./media/ex04-add-partition-column.png)
+   ![Add partition column to table](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-add-partition-column.png)
 
 6. Use `Day` as the name of the partition column and `integer` as data type. Select `Publish` to publish the new table.
 
-   ![Configure partition column](./media/ex04-configure-partition-column.png)
+   ![Configure partition column](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-configure-partition-column.png)
 
 7. In Synapse Studio, navigate to the `Develop` hub and create a new SQL script. Make sure the `Built-in` serverless SQL pool is selected as well as the `Database1` database.
 
@@ -76,7 +76,7 @@ In this task you will create a new lake database table using files from the data
     SELECT COUNT(*) FROM FactSale
     ```
 
-   ![Query table from data lake](./media/ex04-query-table-from-data-lake.png)
+   ![Query table from data lake](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-query-table-from-data-lake.png)
 
 ## Task 3 - Create a manual lake database table and map data into it
 
@@ -84,11 +84,11 @@ In this task you will create manually a new lake database table and map data int
 
 1. In Synapse Studio, navigate to the `Data` hub, and select the `Workspace` section followed by `Lake database`. In the context menu associated with the `Database1` database, select `Open` to edit the lake database.
 
-   ![Open the lake database editor](./media/ex04-edit-lake-database.png)
+   ![Open the lake database editor](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-edit-lake-database.png)
 
 2. In the database editor, select `+ Table` followed by `Custom`. Set the name of the table to `Customer`.
 
-   ![Create a custom table](./media/ex04-custom-table-name.png)
+   ![Create a custom table](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-custom-table-name.png)
 
 3. In the table editor, select the `Columns` tab, add the following standard columns and then select `Publish`:
 
@@ -96,7 +96,7 @@ In this task you will create manually a new lake database table and map data int
     - `FirstName` (type string)
     - `LastName` (type string)
 
-   ![Create columns for the custom table](./media/ex04-custom-table-columns.png)
+   ![Create columns for the custom table](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-custom-table-columns.png)
 
     >IMPORTANT
     >
@@ -104,9 +104,9 @@ In this task you will create manually a new lake database table and map data int
 
 4. In the table editor, select `Map data (Preview)` to stard the Map Data tool. If this is the first time you are doing this, you might pe prompted to turn on data flow debug. If this happens, leave the default selections and select `OK` to start the data flow debug session.
 
-   ![Start the Map Data tool](./media/ex04-start-map-data-tool.png)
+   ![Start the Map Data tool](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-start-map-data-tool.png)
 
-   ![Start data flow debug session](./media/ex04-start-data-flow-debug-session.png)
+   ![Start data flow debug session](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-start-data-flow-debug-session.png)
 
 5. In the `New data mapping` dialog, configure the following properties:
 
@@ -116,11 +116,11 @@ In this task you will create manually a new lake database table and map data int
     - Folder path: `database1-staging1
     - Sources: select the `customer.csv` file
 
-   ![Configure data mapping settings](./media/ex04-configure-data-mapping-1.png)
+   ![Configure data mapping settings](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-configure-data-mapping-1.png)
 
    Select `Continue` to proceed.
 
-   ![Select source file for data mapping](./media/ex04-configure-data-mapping-2.png)
+   ![Select source file for data mapping](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-configure-data-mapping-2.png)
 
 6. Configure the data mapping properties as follows:
 
@@ -129,7 +129,7 @@ In this task you will create manually a new lake database table and map data int
 
     Select `OK` to finalize the process.
 
-   ![Configure data mapping target](./media/ex04-configure-data-mapping-3.png)
+   ![Configure data mapping target](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-configure-data-mapping-3.png)
 
 ## Task 4 - Create a complex lake database using database templates
 
@@ -137,20 +137,20 @@ In this task you will use a lake database template from the Synapse Knowledge Ce
 
 1. In Synapse Studio, navigate to the `Home` hub and then select `Knowledge center`.
   
-   ![Open Synapse knowledge center](./media/ex04-open-knowledge-center.png)
+   ![Open Synapse knowledge center](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-open-knowledge-center.png)
 
 2. In the Knowledge center, select `Browse gallery`.
 
-   ![Browse gallery](./media/ex04-browse-gallery.png)
+   ![Browse gallery](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-browse-gallery.png)
 
 3. In the Gallery, select the `Database templates` tab and then select the `Banking` category.
 
-   ![Create banking database](./media/ex04-create-banking-database.png)
+   ![Create banking database](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-create-banking-database.png)
 
 4. Observe the set of tables and then select `Create database` to create a new lake database from the template.
 
-   ![Preview the banking database](./media/ex04-create-banking-database-preview.png)
+   ![Preview the banking database](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-create-banking-database-preview.png)
 
 5. In Synapse Studio, open the newly created lake database in the editor and explore its content.
 
-   ![Configure banking database](./media/ex04-configure-banking-database.png)
+   ![Configure banking database](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex04-configure-banking-database.png)
