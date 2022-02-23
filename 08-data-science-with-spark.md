@@ -52,11 +52,11 @@ In this exercise you will use the model registered in Exercise 2 to perform pred
 
 2. Select the context menu of the table and then select `Machine Learning` -> `Predict with a model`.
 
-    ![Start prediction with AML model](./media/ex08-predict-with-a-model.png)
+    ![Start prediction with AML model](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex08-predict-with-a-model.png)
 
 3. In the `Choose a pre-trained model` dialog, select the highest version of the model named `aml-synapse-classifier` and then select `Continue`.
 
-    ![Select latest version of registered model](./media/ex08-select-latest-model.png)
+    ![Select latest version of registered model](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex08-select-latest-model.png)
 
 4. Leave the column mappings unchanged and select `Continue`.
 
@@ -64,7 +64,7 @@ In this exercise you will use the model registered in Exercise 2 to perform pred
     >
     >The model schema generated with MLFlow and used to register the model enables Synapse Studio to suggest the mappings.
 
-    ![Model column mappings](./media/ex08-model-inputs-mapping.png)
+    ![Model column mappings](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex08-model-inputs-mapping.png)
 
 5. In the `Store objects in the database` dialog, select the following:
 
@@ -75,12 +75,12 @@ In this exercise you will use the model registered in Exercise 2 to perform pred
 
     Select `Deploy model + open script` to continue. Synapse Studio will deploy the model into the `AMLModel` table and create SQL scoring script for you.
 
-    ![Deploy ML model to database](./media/ex08-deploy-model-to-database.png)
+    ![Deploy ML model to database](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex08-deploy-model-to-database.png)
 
 6. Run the generated SQL script.
 
-    ![Run the PREDICT T-SQL statement](./media/ex08-run-predict-sql-statement.png)
+    ![Run the PREDICT T-SQL statement](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex08-run-predict-sql-statement.png)
 
 7. Observe the results of the prediction.
 
-    ![View prediction results](./media/ex08-prediction-results.png)
+    ![View prediction results](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex08-prediction-results.png)
