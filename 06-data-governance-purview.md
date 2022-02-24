@@ -68,7 +68,11 @@ In this task, you will explore the connection between a Synapse Analytics and a 
 
 11. Select `Save and run` to start the scan. 
 
-12. Click on **View details** and wait until the scna completes successfully.
+12. Click on **View details** and wait until the scan completes successfully.
+ 
+    ![Configure scan in Azure Purview](./media/ex6img8.png)
+    
+    ![Configure scan in Azure Purview](./media/ex6img9).png)
 
     
 
