@@ -91,6 +91,10 @@ In this task, you will load data from a Data Explorer table into a Spark datafra
     ```kql
     SalesTelemetry | where Url startswith '/product/search'
     ```
+    
+    ```kql
+    kustoDf.count()
+    ```
 
     Run the new cell and observe the result (the total number of product searches logged into the telemetry data).
 
