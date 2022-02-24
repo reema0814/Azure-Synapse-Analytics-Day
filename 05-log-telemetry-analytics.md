@@ -7,12 +7,12 @@ Azure Synapse data explorer provides you with a dedicated query engine optimized
 The tasks you will perform in this exercise are:
 
 - Exercise 5 - Log and telemetry analytics
-  - Task 1 - Create a Data Explorer database and a table for data ingestion
+  - Task 1 - Create a table for data ingestion in Data Explorer database 
   - Task 2 - Perform manual data ingestion using a Synapse Pipeline
   - Task 3 - Run KQL queries from Synapse Studio
   - Task 4 - Load Data Explorer data into a Spark dataframe
 
-## Task 1 - Create a Data Explorer database and a table for data ingestion
+## Task 1 - Create a table for data ingestion in Data Explorer database 
 
 In this task, you will verify Data Explorer database is present and create a table to ingest sales telemetry data.
 
