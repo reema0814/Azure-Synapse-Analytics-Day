@@ -25,7 +25,7 @@ In this task, you will explore the connection between a Synapse Analytics and a 
 
    ![Azure Purview connection in Azure Synapse Analytics workspace](./media/ex6img1.png)
    
-3. On `Connect to Purview account` dialog select your Purview acount and click on **Apply**.\
+3. On `Connect to Purview account` dialog select your `asapurview` acount and click on **Apply**.
 
    ![Azure Purview connection in Azure Synapse Analytics workspace](./media/ex6img2.png)
 
