@@ -72,7 +72,7 @@ In this task, you will explore the connection between a Synapse Analytics and a 
  
     ![Configure scan in Azure Purview](./media/ex6img8.png)
     
-    ![Configure scan in Azure Purview](./media/ex6img9).png)
+    ![Configure scan in Azure Purview](./media/ex6img9.png)
 
     
 
