@@ -107,9 +107,13 @@ In this task you will create manually a new lake database table and map data int
    ![Start the Map Data tool](./media/ex04-start-map-data-tool.png)
 
    ![Start data flow debug session](./media/ex04-start-data-flow-debug-session.png)
+   
+   > **Note**: You will have to wait until data debug session is started before proceeding to next steps 
 
 5. In the `New data mapping` dialog, configure the following properties:
 
+   > **Note**: If you can't find the  `New data mapping` dialog, you can find it by clicking on `Map data (Preview)` 
+   
     - Source type: `Azure Data Lake Storage Gen2`
     - Source linked service: `asadatalake01`
     - Dataset type: `DelimitedText`
