@@ -32,11 +32,14 @@ In this exercise, the tasks you will perform are:
 
 ## Task 1 - Training and registering models with AutoML
 
-Open the `Exercise 8 - AutoML with Spark` notebook (located in the `Develop` hub, under `Notebooks` in Synapse Studio) and run it step by step to complete this exercise. Some of the most important tasks you will perform are:
+1. Open the `Exercise 8 - AutoML with Spark` notebook (located in the `Develop` hub, under `Notebooks` in Synapse Studio). Ensure to select **SparkPool02** and run it step by step to complete this exercise. Some of the most important tasks you will perform are:
 
 - Use Azure Machine Learning AutoML with Synapse Spark compute to train a classification model (the local Spark session of the notebook is used as a compute resource by AutoML)
 - Register the ONNX version of the model in the AML model registry using MLFlow
 - Persist test data to the dedicated Synapse SQL pool
+
+  ![Start prediction with AML model](./media/ex8img1.png)
+  
 
 Please note that each of these tasks will be addressed through several cells in the notebook.
 
