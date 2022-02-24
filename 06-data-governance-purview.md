@@ -29,7 +29,7 @@ In this task, you will explore the connection between a Synapse Analytics and a 
 
    ![Azure Purview connection in Azure Synapse Analytics workspace](./media/ex6img2.png)
 
-4. Now click on `Purview account` to view the details of the connected Azure Purview workspace.
+4. Click on `Purview account` to view the details of the connected Azure Purview workspace.
 
     ![Azure Purview connection in Azure Synapse Analytics workspace](./media/ex6img3.png)
 
@@ -37,6 +37,30 @@ In this task, you will explore the connection between a Synapse Analytics and a 
 
    - Data Catalog integration which allows the discovery of assets using Purview powered search
    - Data Lineage integration which allows automatic data lineage collection for Synapse Pipelines
+
+5. Open Azure Purview studio by clicking on the purview account name
+
+6. In Purview Studio, navigate to the `Data map` hub and select the root collection. Add the Synapse workspace managed identity to the `Data curators` role.
+
+    ![Azure Purview Data curators](./media/00-purview-data-curator-role.png)
+
+7. In Purview Studio, register your Synapse workspace as a source into the root collection.
+
+    ![Azure Purview data source](./media/00-purview-register-synapse-source.png)
+
+8. Initiate a new scan using the newly registered source. Make sure the scan completes successfully.
+
+    ![Initiate new scan in Azure Purview](./media/00/../00-purview-initiate-new-scan.png)
+
+9. Configure the scan to target the `SQLPool01` dedicated SQL pool and make sure you test the connection before selecting `Continue`.
+
+    ![Configure scan in Azure Purview](./media/00/../00-purview-configure-scan.png)
+
+10. Select the `AzureSynapseSQL` scan rule set and `Continue`.
+
+11. Select `Once` in the scan trigger section and `Continue`.
+
+12. Select `Save and run` to start the scan. Wait until the scna completes successfully.
 
 ## Task 2 - Trigger automatic data lineage tracking when executing a Synapse Pipeline
 
