@@ -20,11 +20,18 @@ The tasks you will perform in this exercise are:
 In this task, you will explore the connection between a Synapse Analytics and a Purview workspace.
 
 1. Open Synapse Analytics Studio, and then navigate to the `Manage` hub.
-2. Select `Azure Purview` to view the details of the connected Azure Purview workspace
 
-    ![Azure Purview connection in Azure Synapse Analytics workspace](./media/ex06-synapse-purview-connection.png)
+2. Select `Azure Purview` and click on `Connect to Purview account`.
 
-3. Notice the Azure Purview workspace that is already connected to the the Azure Synapse Analytics workspace.
+   ![Azure Purview connection in Azure Synapse Analytics workspace](./media/ex6img1.png)
+   
+3. On `Connect to Purview account` dialog select your Purview acount and click on **Apply**.\
+
+   ![Azure Purview connection in Azure Synapse Analytics workspace](./media/ex6img2.png)
+
+4. Now click on `Purview account` to view the details of the connected Azure Purview workspace.
+
+    ![Azure Purview connection in Azure Synapse Analytics workspace](./media/ex6img3.png)
 
     This connection enables two categories for functionalities:
 
