@@ -45,9 +45,7 @@ Please note that each of these tasks will be addressed through several cells in 
 
 ## Task 2 - Using registered models in Synapse Analytics
 
->**NOTE**:
->
->Successfully completing Task 1 is a prerequisite for this exercise.
+>**NOTE**: Successfully completing Task 1 is a prerequisite for this exercise.
 
 In this exercise you will use the model registered in Exercise 2 to perform predictions using the AML integration features of Synapse Studio.
 
