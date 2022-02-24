@@ -34,7 +34,7 @@ If you are using a hosted lab environment, please follow the steps below to get 
 
 The diagram below provides a unified view of the exercises in the lab and their estimated times for completion.
 
-![Azure Synapse Analytics Lab Exercises](./media/exercises.png "Solution architecture")
+![Azure Synapse Analytics Lab Exercises](./media/exercises1.png "Solution architecture")
 
 ## Exercise 1 - Explore the data lake with Azure Synapse Serverless SQL Pool and Azure Synapse Spark
 
