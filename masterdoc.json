@@ -20,7 +20,7 @@
 
       {
 
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2/01-explore-data-lake.md",
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/01-explore-data-lake.md",
 
         "Order": 2
 
@@ -28,7 +28,7 @@
 
       {
 
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2/02-build-modern-dw-pipelines.md",
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/02-build-modern-dw-pipelines.md",
 
         "Order": 3
 
