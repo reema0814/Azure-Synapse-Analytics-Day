@@ -105,7 +105,7 @@ In this task, you will browse your data lake using SQL On-demand.
     >
     > Here we use WITH to define the columns in the files. You must use WITH when using a bulk rowset (OPENROWSET) in the FROM clause. Also, defining the columns enables you to select and filter the values within.
 
-15. Replace the contents of the SQL script with this query, and **replace** `YOUR_DATALAKE_NAME` with your **Storage Account Name** provided in the environment details section on the Lab Environment tab on the right. Select **Run** to execute the script. This query reads from Delta Lake format to calculate the 2012 quarterly sales quantity.
+15. Replace the contents of the SQL script with this query, and **replace** `YOUR_DATALAKE_NAME` with your storage account name <inject key="Storage Account Name"></inject>. Select **Run** to execute the script. This query reads from Delta Lake format to calculate the 2012 quarterly sales quantity.
 
     ```sql
     SELECT 
@@ -125,7 +125,7 @@ In this task, you will browse your data lake using SQL On-demand.
     
     > Delta Lake is a popular format when using Apache Spark for analytics. The schema and partitions are automatically inferred when you reference a folder containing the Delta Lake structure. The ability to read this data from your serverless SQL pool means you do not need to switch to Spark to query data that was loaded and saved to Delta Lake by Apache Spark jobs.
 
-16. Update the cell with the following statements to create an external table for the quarterly results. **Replace** `YOUR_DATALAKE_NAME` with your **Storage Account Name** provided in the environment details section on the Lab Environment tab on the right. Select **Run** to execute the script.
+16. Update the cell with the following statements to create an external table for the quarterly results. **Replace** `YOUR_DATALAKE_NAME` with your storage account name <inject key="Storage Account Name"></inject>. Select **Run** to execute the script.
 
     ```sql
     CREATE EXTERNAL DATA SOURCE WwiDataADLS
