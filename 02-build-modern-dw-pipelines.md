@@ -42,7 +42,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
    ![The add code button is highlighted.](media/sw-lang-code.png "Add code")
 
-4. Paste the following into the new cell and **replace** `YOUR_DATALAKE_NAME` with your storage account name <inject key="Storage Account Name"></inject>.
+4. Paste the following into the new cell and **replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**.
 
     ```scala
     %%spark
