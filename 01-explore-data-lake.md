@@ -16,13 +16,22 @@ The tasks you will perform in this exercise are:
 
 In this task, you will browse your data lake using SQL On-demand.
 
-1. In a Microsoft Edge web browser, navigate to the Azure portal (`https://portal.azure.com`) and login with your credentials. Then select **Resource groups**.
+1. In the **JumpVM** provided to you on the left side, double click on the **Azure Portal** browser shortcut on the desktop and login with the following credentials.
 
-   ![Open Azure resource group](./media/00-open-resource-groups.png "Azure resource groups")
+   * Azure Usename/Email: <inject key="AzureAdUserEmail"></inject> 
+ 
+   * Azure Password: <inject key="AzureAdUserPassword"></inject>
+
+   ![Open Azure resource group](./media/gs.png "Azure resource groups")
    
    > **Note**: If you are presented with **Help us protect your account** dialog box, then select **Skip for now** option.
 
      ![Open Azure resource group](./media/MFA.png "MFA")
+   
+ 
+1. In the Azure Portal, select **Resource groups**.
+
+   ![Open Azure resource group](./media/00-open-resource-groups.png "Azure resource groups")
 
 
 2. Select the **Synapse Analytics** resource group.
