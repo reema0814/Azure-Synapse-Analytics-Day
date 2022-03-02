@@ -60,7 +60,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![Open Data hub in Synapse Analytics Studio](./media/data-hub.png)
 
-7. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the `asaworkspace<UniqueId>` primary data lake storage account **(3)**, and then select the `wwi` file system **(4)**.
+7. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the **asaworkspace<inject key="uniqueId"></inject>** primary data lake storage account **(3)**, and then select the `wwi` file system **(4)**.
 
    ![The ADLS Gen2 storage account is selected.](media/storage-factsale-parquet-1.png "ADLS Gen2 storage account")
 
@@ -87,7 +87,7 @@ In this task, you will browse your data lake using SQL On-demand.
     https://<yourdatalake storage account name>.dfs.core.windows.net/wwi/factsale-parquet/2012/Q1/*/*
     ```
 
-    > Note: Replace 'yourdatalakestorageaccountname' with the **Storage Account Name** provided in the environment details section on the right.
+    > Note: Replace 'yourdatalakestorageaccountname' with the <inject key="Storage Account Name"></inject>
 
 12. Select `Run` to re-run the script. You should see a result of `2991716`, which is the number of records contained in all the Parquet files within the `factsale-parquet/2012/Q1` directory.
 
