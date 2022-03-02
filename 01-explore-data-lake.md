@@ -105,7 +105,7 @@ In this task, you will browse your data lake using SQL On-demand.
     >
     > Here we use WITH to define the columns in the files. You must use WITH when using a bulk rowset (OPENROWSET) in the FROM clause. Also, defining the columns enables you to select and filter the values within.
 
-15. Replace the contents of the SQL script with this query, and **replace** `YOUR_DATALAKE_NAME` with your storage account name <inject key="Storage Account Name"></inject>. Select **Run** to execute the script. This query reads from Delta Lake format to calculate the 2012 quarterly sales quantity.
+15. Replace the contents of the SQL script with this query, and **replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. Select **Run** to execute the script. This query reads from Delta Lake format to calculate the 2012 quarterly sales quantity.
 
     ```sql
     SELECT 
@@ -125,7 +125,7 @@ In this task, you will browse your data lake using SQL On-demand.
     
     > Delta Lake is a popular format when using Apache Spark for analytics. The schema and partitions are automatically inferred when you reference a folder containing the Delta Lake structure. The ability to read this data from your serverless SQL pool means you do not need to switch to Spark to query data that was loaded and saved to Delta Lake by Apache Spark jobs.
 
-16. Update the cell with the following statements to create an external table for the quarterly results. **Replace** `YOUR_DATALAKE_NAME` with your storage account name <inject key="Storage Account Name"></inject>. Select **Run** to execute the script.
+16. Update the cell with the following statements to create an external table for the quarterly results. **Replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. Select **Run** to execute the script.
 
     ```sql
     CREATE EXTERNAL DATA SOURCE WwiDataADLS
@@ -206,7 +206,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![The add code button is highlighted.](media/synapse-workspace-code.png "Add code")
 
-10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with your storage account name <inject key="Storage Account Name"></inject>. You can also copy it from the first cell of the notebook above.
+10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. You can also copy it from the first cell of the notebook above.
 
     ```python
     data_path = spark.read.load(
@@ -235,7 +235,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     > The Apache Spark pool for the lab is using Spark 3.0, which provides performance benefits over previous versions. These configurations enable Adaptive Query Execution and set how Spark should optimize partitioning during job execution. ANSI SQL is also enabled to check for data type errors and overflow errors.
 
-13. Add another cell and paste in the SQL statement to read from a Delta Lake path. Replace `YOUR_DATALAKE_NAME` with your storage account name <inject key="Storage Account Name"></inject>. Select the **Run cell** button to execute. This uses the magic command `%%sql` to change language of the cell to Spark SQL. The SQL statement returns the top 10 cities based on total quantity.
+13. Add another cell and paste in the SQL statement to read from a Delta Lake path. Replace `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. Select the **Run cell** button to execute. This uses the magic command `%%sql` to change language of the cell to Spark SQL. The SQL statement returns the top 10 cities based on total quantity.
 
     ```sql
     %%sql
