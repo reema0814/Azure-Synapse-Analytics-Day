@@ -34,7 +34,7 @@ In this task, you will verify Data Explorer database is present and create a tab
 
    ![KQL script to create new table](./media/ex05-create-data-explorer-table-2.png)
 
-3. In Synapse Studio, navigate to the `Data` hub and check that you have the `SalesTelemetry` table showing up under the `Sales` database in the Data Explorer pool (`asadataexplorerpoolNNNNNN`).
+3. In Synapse Studio, navigate to the `Data` hub and check that you have the `SalesTelemetry` table showing up under the `Sales` database in the Data Explorer pool **<inject key="dataexplorer pool Name"></inject>**.
 
    ![Validate table created with KQL script](./medis/../media/ex05-create-data-explorer-table-3.png)
 
