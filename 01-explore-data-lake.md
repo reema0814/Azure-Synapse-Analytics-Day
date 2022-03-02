@@ -206,7 +206,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![The add code button is highlighted.](media/synapse-workspace-code.png "Add code")
 
-10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with the name of your **Storage Account Name** provided in the environment details tab on the right. You can also copy it from the first cell of the notebook above.
+10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with your storage account name <inject key="Storage Account Name"></inject>. You can also copy it from the first cell of the notebook above.
 
     ```python
     data_path = spark.read.load(
@@ -235,7 +235,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     > The Apache Spark pool for the lab is using Spark 3.0, which provides performance benefits over previous versions. These configurations enable Adaptive Query Execution and set how Spark should optimize partitioning during job execution. ANSI SQL is also enabled to check for data type errors and overflow errors.
 
-13. Add another cell and paste in the SQL statement to read from a Delta Lake path. Replace `YOUR_DATALAKE_NAME` with your **Storage Account Name**. Select the **Run cell** button to execute. This uses the magic command `%%sql` to change language of the cell to Spark SQL. The SQL statement returns the top 10 cities based on total quantity.
+13. Add another cell and paste in the SQL statement to read from a Delta Lake path. Replace `YOUR_DATALAKE_NAME` with your storage account name <inject key="Storage Account Name"></inject>. Select the **Run cell** button to execute. This uses the magic command `%%sql` to change language of the cell to Spark SQL. The SQL statement returns the top 10 cities based on total quantity.
 
     ```sql
     %%sql
