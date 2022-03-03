@@ -261,7 +261,9 @@ In this task, you will complete some post-publication tasks.
    
  
 7.	Expand the **Data Source Credentials** section.
+   
    You’ll see an error, and it’s expected. You will address the error in the next step.
+   
    ![ws name.](media/7.27.png)
  
  
