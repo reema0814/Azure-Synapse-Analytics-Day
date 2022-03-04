@@ -357,7 +357,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 29. The last two items in the data flow are the defined sinks. These provide the connection settings necessary to write the transformed data into the desired data sink. Select the `EnrichCustomerData` sink and inspect the settings on the **Sink** tab.
 
-    ![The Sink tab is displayed for the EnrichCustomerData sink, which is highlighted in the graph.](media/ex02-orchestrate-data-flow-sink-sink.png "Data flow canvas")
+    ![The Sink tab is displayed for the EnrichCustomerData sink, which is highlighted in the graph.](https://github.com/SpektraSystems/Azure-Synapse-Analytics-Day/blob/v2/media/ex02-orchestrate-data-flow-sink-sink.png?raw=true "Data flow canvas")
 
 30. Next, select the **Settings** tab and observe the properties set there.
 
