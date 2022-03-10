@@ -124,7 +124,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
 13. Under **Workspace** tab expand **SQL databases** and then expand the **SQLPool01** database.
 
-    ![The Databases folder is expanded, showing a list of databases within the Azure Synapse Analytics workspace. SQLPool01 is expanded and highlighted.](media/databasesqlpool-01.png "Synapse Analytics Databases")
+    ![The Databases folder is expanded, showing a list of databases within the Azure Synapse Analytics workspace. SQLPool01 is expanded and highlighted.](media/ex2tsk2stp13.png "Synapse Analytics Databases")
 
 14. Expand **Tables** and locate the table named `wwi_staging.Sale`.
 
@@ -200,7 +200,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 2. In the Integrate menu, expand **Pipelines**, then select **Exercise 2 - Enrich Data**.
 
-   ![The Enrich Data pipeline is selected.](media/enrich-data-pipeline.png "Pipelines")
+   ![The Enrich Data pipeline is selected.](media/ex2tsk2stp2.png "Pipelines")
 
    > Selecting a pipeline opens the pipeline canvas, where you can review and edit the pipeline using a code-free, graphical interface. This view shows the various activities within the pipeline and the links and relationships between those activities. The `Exercise 2 - Enrich Data` pipeline contains four activities;
 
@@ -221,7 +221,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 5. Select **Copy data** activity named `Sentiment Analysis` and switch to the **Source** tab. The Copy Data activity's Source dataset is set to a REST resource **(3)** backed by Azure Cognitive Services. A POST **(4)** HTTP request will be made to the Azure Cognitive Services endpoint carrying a request body (5) that includes the text from the current iteration that will be analyzed for sentiments.
 
-   ![Copy data activity named Sentiment Analysis is selected. Source tab is open. Source dataset is set to a REST Data Source. Request body and method are highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/data-enrichment-pipeline-sentiment-analysis-activity.png "Copy Data REST Source")
+   ![Copy data activity named Sentiment Analysis is selected. Source tab is open. Source dataset is set to a REST Data Source. Request body and method are highlighted.](media/ex2tsk2stp5.png "Copy Data REST Source")
 
 6. Switch to the **Sink (1)** tab. Here, the sink dataset is set to a JSON file location in the data lake. Once the Copy data activity gets the result of the sentiment analysis from the remote REST resource endpoint, the result will be saved as separate JSON files into the Sink dataset **(2)**. The files will include a complete sentiment analysis for the customer comment that can be queried and analyzed further. Select **Exercise 2 - Enrich Data (3)** link to go back to the main pipeline canvas.
 
