@@ -34,7 +34,7 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
    ![Selecting Power BI datasets in the Develop panel](media/ex03-pbi-menu.png "Select Power BI datasets")
 
-   > The second node, named `PowerBIWorkspace<UniqueId>`, is the Power BI workspace added to your Synapse workspace as a linked service.
+   > The second node, named **PowerBIWorkspace<inject key="DeploymentID" enableCopy="false" />**, is the Power BI workspace added to your Synapse workspace as a linked service.
 
 3. Select **New Power BI dataset** within the panel that appears.
 
