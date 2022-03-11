@@ -86,9 +86,9 @@ In this task you will discover Synapse Analytics assets using Purview search.
 
 In this task, you will explore the results of scanning the Synapse Analytics workspace from the Purview workspace.
 
-1. In the Azure Portal, navigate to the resource group that contains your Synapse Analytics workspace. Select the Purview workspace object (which should be named `purviewworkspaceNNNNNN`) and then select `Open Purview Studio`.
+1. In the Azure Portal, navigate to the resource group that contains your Synapse Analytics workspace. Select the Purview workspace object (which should be named **asapurview<inject key="DeploymentID" enableCopy="false" />**) and then select `Open Purview Studio`.
 
-    ![Open Purview Studio](./media/ex06-open-purview-studio.png)
+    ![Open Purview Studio](./media/purview.png)
 
     This will open Purivew Studio where you will perform the rest of the steps in this task.
 
