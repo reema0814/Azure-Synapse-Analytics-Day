@@ -43,6 +43,15 @@ In this task, you will browse your data lake using SQL On-demand.
    ![SQLPool01 is highlighted.](media/select-sql-pool.png "SQLPool01")
 
    ![Resume sqlpool](./media/00-resume-sqlpool.png "Resume")
+   
+   
+4. Return to the resource group, then select the **asadataexplorerpool** and **start** it. 
+
+   > **Note**: Please note starting of data explorer pool might take few minutes, you don't have to wait for it to be strted you can proceed to next steps.
+
+   ![SQLPool01 is highlighted.](media/ex1dex1.png "SQLPool01")
+   
+   ![SQLPool01 is highlighted.](media/ex1dex2.png "SQLPool01")
 
 4. Return to the resource group, then select the **Synapse Analytics** workspace.
 
