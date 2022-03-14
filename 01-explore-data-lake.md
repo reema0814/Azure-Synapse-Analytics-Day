@@ -205,7 +205,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
 7. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on Apply button.
 
-    ![View charts on data in Spark notebook](./media/ex01-spark-notebook-05.png "Review charted data")
+    ![View charts on data in Spark notebook](./media/ex1tsk2stp7.png "Review charted data")
     
 8. Hide the output as illustrated below.
 
