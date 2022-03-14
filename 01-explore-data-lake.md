@@ -47,7 +47,7 @@ In this task, you will browse your data lake using SQL On-demand.
    
 4. Return to the resource group, then select the **asadataexplorerpool** and **start** it. 
 
-   > **Note**: Please note starting of data explorer pool might take few minutes, you don't have to wait for it to be strted you can proceed to next steps.
+   > **Note**: Please note starting of data explorer pool might take few minutes, you don't have to wait for it to be started you can proceed to next steps.
 
    ![SQLPool01 is highlighted.](media/ex1dex1.png "SQLPool01")
    
