@@ -1,4 +1,4 @@
-# Exercise 7: Optimize a Power BI Model
+# Exercise 10: Optimize a Power BI Model
 
 In this Exercise, you are continuing to work in the role of a **Data architect** or **BI developer**.
 
