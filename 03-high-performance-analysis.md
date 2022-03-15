@@ -8,7 +8,7 @@ The dedicated SQL pool in Azure Synapse is the new incarnation of the former Azu
 
 The tasks you will perform in this exercise are:
 
-- Exercise 4 - High-Performance Analysis with Azure Synapse Dedicated SQL Pools
+- Exercise 3 - High-Performance Analysis with Azure Synapse Dedicated SQL Pools
   - Task 1 - Use a dedicated SQL pool query to understand a dataset
   - Task 2 - Investigate query performance and table design
     - Bonus Challenge
