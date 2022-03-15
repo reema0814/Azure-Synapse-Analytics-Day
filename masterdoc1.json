@@ -71,28 +71,29 @@
         "Order": 8
 
       },
-            {
-
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/08-data-science-with-spark.md",
-
-        "Order": 9
-
-      },
+          
        {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/Azure%20Synapse%20%2B%20Power%20BI%20Extension%20Module/06-Develop-a-Power-BI-Model.md",
+        "RawFilePath": "https://raw.githubusercontent.com/solliancenet/azure-synapse-analytics-day/master/power-bi-extension-module/07-01-Develop-a-Power-BI-Model.md",
+        "Order": 9
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/solliancenet/azure-synapse-analytics-day/master/power-bi-extension-module/07-02-Optimize-a-Power-BI-Model.md",
         "Order": 10
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/master/Azure%20Synapse%20%2B%20Power%20BI%20Extension%20Module/07-Optimize-a-Power-BI-Model.md",
+        "RawFilePath": "https://raw.githubusercontent.com/solliancenet/azure-synapse-analytics-day/master/power-bi-extension-module/07-03-Create-a-Mode-Using-DQ-to-Power-BI.md",
         "Order": 11
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/master/Azure%20Synapse%20%2B%20Power%20BI%20Extension%20Module/08-Create-a-Mode-Using-DQ-to-Power-BI.md",
+        "RawFilePath": "https://raw.githubusercontent.com/solliancenet/azure-synapse-analytics-day/master/power-bi-extension-module/07-04-Author-a-Power-BI-Report.md",
         "Order": 12
       },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/azure-synapse-analytics-day/master/Azure%20Synapse%20%2B%20Power%20BI%20Extension%20Module/09-Author-a-Power-BI-Report.md",
+       {
+
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/08-data-science-with-spark.md",
+
         "Order": 13
+
       }
      
 
