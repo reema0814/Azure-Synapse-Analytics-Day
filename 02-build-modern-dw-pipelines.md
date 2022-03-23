@@ -117,6 +117,8 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
     ![The Close + discard changes button is highlighted.](media/closenotebook.png "closenotebook")
 
     ![The Close + discard changes button is highlighted.](media/notebook-close-discard-changes.png "Discard changes?")
+    
+    > **Note**: If you get error while performing this step, you can change the sparkpool to sparkpool02 and try re-running the steps.
 
 12. Now, select **Data** from the left-hand menu.
 
