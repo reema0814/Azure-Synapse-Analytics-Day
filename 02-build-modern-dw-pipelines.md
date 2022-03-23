@@ -34,7 +34,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
    ![The new notebook menu item is highlighted.](media/new-notebook.png "New notebook")
 
-3. If not already attached, attach your Spark Compute **SparkPool01** by selecting it from the **Attach to** drop-down list and attach **Spark (Scala)** by selecting it from **Language** drop down list, then select **{} Add code** to create a new cell.
+3. If not already attached, attach your Spark Compute **SparkPool02** by selecting it from the **Attach to** drop-down list and attach **Spark (Scala)** by selecting it from **Language** drop down list, then select **{} Add code** to create a new cell.
 
    ![The Spark pool is selected in the Attach to drop-down.](media/new-notebook-add-code1.png "Add code")
 
