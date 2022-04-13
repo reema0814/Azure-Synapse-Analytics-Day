@@ -32,7 +32,7 @@
      - Task 4 - Explore the results of scaning an Azure Synapse Analytics workspace from Azure Purview
      - Task 5 - Explore the results of data lineage tracking for Synapse Pipelines
 
-  * **Exercise 7: Power BI integration **
+  * **Exercise 7: Power BI integration**
     - This exercise was Exercise 3
   
 
