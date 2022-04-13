@@ -2,7 +2,7 @@
 
 ### 11 March 2022
 
-* Major updates in Lab Guide.
+* Major updates in Lab.
   * **Exercise 1: Explore the data lake with Azure Synapse Serverless SQL Pool and Azure Synapse Spark**  No changes
   * **Exercise 2: Working with Azure Synapse Pipelines**   No changes
   * **Exercise 3: High Performance Analysis with Azure Synapse Dedicated SQL Pools** 
@@ -37,8 +37,8 @@
   
 
   * **Exercise 8: Data Science with Spark (optional)**
-    - This exercise was Exercise 5, the content has beeen completly replace.  This  execise helps you to train a machine learning models using AutoML with Spark compute. You will use the model registered in Azure Machine Learning to make predictions using the T-SQL Predict statement.
-    - It includes following tasks
+      This exercise was Exercise 5, the content has beeen completly replace.  This  execise helps you to train a machine learning models using AutoML with Spark compute. You will use the model registered in Azure Machine Learning to make predictions using the T-SQL Predict statement.
+     It includes following tasks
       - Task 1 - Training and registering models with AutoML
       - Task 2 - Using registered models in Synapse Analytics
 
