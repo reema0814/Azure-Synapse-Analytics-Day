@@ -56,7 +56,7 @@ In this task you will create a new lake database table using files from the data
 
    ![Trigger data preview for table from data lake storage](./media/ex04-preview-table-from-data-lake-1.png)
 
-4. Observe the data preview, then select `Create` to finalize the process.
+4. Observe the data preview, then select **OK** followed by `Create` to finalize the process.
 
    ![Preview data for table from data lake storage](./media/ex04-preview-table-from-data-lake-2.png)
 
