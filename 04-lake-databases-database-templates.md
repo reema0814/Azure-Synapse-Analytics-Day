@@ -16,9 +16,9 @@ The tasks you will perform in this exercise are:
 
 In this task you will create a new lake database.
 
-1. In Synapse Studio, navigate to the `Data` hub, select the `Workspace` section and then select `+` followed by `Lake database (preview)` to trigger the creation of a new lake database.
+1. In Synapse Studio, navigate to the `Data` hub, select the `Workspace` section and then select `+` followed by `Lake database` to trigger the creation of a new lake database.
 
-   ![Initiate the creation of a lake database](./media/ex04-create-lake-database-1.png)
+   ![Initiate the creation of a lake database](./media/ex4tsk1stp1.png)
 
 2. Configure the properties of the lake database as follows:
 
