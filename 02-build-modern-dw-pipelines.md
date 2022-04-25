@@ -515,7 +515,7 @@ In this task, you examine the Apache Spark application monitoring capabilities b
 
 2. Next, select **Apache Spark applications** under Activities.
 
-   ![Apache Spark applications is selected and highlighted under the Activities section of the monitor resource list.](media/ex02-monitor-activities-spark.png "Synapse Analytics Monitor")
+   ![Apache Spark applications is selected and highlighted under the Activities section of the monitor resource list.](media/ex2tsk4stp2.png "Synapse Analytics Monitor")
 
 3. On the Apache Spark applications page, select the **Local time** value and observe the available options for limiting the time range for Spark applications that are displayed in the list. In this case, you are looking at the current run, so ensure **Last 24 hours** is selected and then select **OK**.
 
