@@ -72,7 +72,7 @@ In this exercise you will use the model registered in Exercise 2 to perform pred
     - Script type: View
     - View name: enter `wwi_ml.CustomerPrediction`
     - Database table: Create new
-    - Existing target table: select the `wwi_ml.AMLModel` table
+    - New table: enter `wwi_ml.AMLModel` 
 
     Select `Deploy model + open script` to continue. Synapse Studio will deploy the model into the `AMLModel` table and create SQL scoring script for you.
 
