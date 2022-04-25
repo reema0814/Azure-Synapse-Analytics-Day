@@ -119,7 +119,7 @@ In this task you will create manually a new lake database table and map data int
     - Source type: `Azure Data Lake Storage Gen2`
     - Source linked service: `asadatalake01`
     - Dataset type: `DelimitedText`
-    - Folder path: `database1-staging1
+    - Folder path: `database1-staging1`
     - Sources: select the `customer.csv` file
 
    ![Configure data mapping settings](./media/ex04-configure-data-mapping-1.png)
