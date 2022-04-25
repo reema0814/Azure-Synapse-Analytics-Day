@@ -84,6 +84,8 @@ In this task you will create manually a new lake database table and map data int
 
 1. In Synapse Studio, navigate to the `Data` hub, and select the `Workspace` section followed by `Lake database`. In the context menu associated with the `Database1` database, select `Open` to edit the lake database.
 
+   > **Note**: If you are not able to see `Database1`, refresh the page and try again.
+
    ![Open the lake database editor](./media/ex04-edit-lake-database.png)
 
 2. In the database editor, select `+ Table` followed by `Custom`. Set the name of the table to `Customer`.
