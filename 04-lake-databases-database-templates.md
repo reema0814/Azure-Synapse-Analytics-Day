@@ -130,7 +130,7 @@ In this task you will create manually a new lake database table and map data int
 
 6. Configure the data mapping properties as follows:
 
-    - Data mapping name: `Customer Mapping`
+    - Data mapping name: `CustomerMapping`
     - Target database: `Database1`
 
     Select `OK` to finalize the process.
