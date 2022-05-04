@@ -221,7 +221,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
    ![ForEachComments ForEach activity is selected. Settings tab is shown. Items property is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/enrich-data-pipeline-foreach.png "ForEach Loop")
 
-5. Select **Copy data** activity named `Sentiment Analysis` and switch to the **Source** tab. The Copy Data activity's Source dataset is set to a REST resource **(3)** backed by Azure Cognitive Services. A POST **(4)** HTTP request will be made to the Azure Cognitive Services endpoint carrying a request body (5) that includes the text from the current iteration that will be analyzed for sentiments.
+5. Select **Copy data** activity named `Sentiment Analysis` **(1)** and switch to the **Source (2)** tab. The Copy Data activity's Source dataset is set to a REST resource **(3)** backed by Azure Cognitive Services. A POST **(4)** HTTP request will be made to the Azure Cognitive Services endpoint carrying a request body (5) that includes the text from the current iteration that will be analyzed for sentiments.
 
    ![Copy data activity named Sentiment Analysis is selected. Source tab is open. Source dataset is set to a REST Data Source. Request body and method are highlighted.](media/ex2tsk2stp5.png "Copy Data REST Source")
 
