@@ -217,7 +217,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
    ![The Settings tab of the ReadCOmments Lookup Activity is selected. Source dataset is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/enrich-data-pipeline-readcomments.png "Read Comments")
    
-4. From the canvas graph, select the **ForEach (1)** activity named `ForEachComment` and switch to the **Settings (2)** tab. The **Items** property is set to receive the output of the previous `ReadComments` activity. You might have noticed the green connection line between the two activities that define a dependency between the two activities. The line makes sure comments are read before the ForEach loop can iterate it. Select the edit button **(4)** in the ForEach activity's Activities box to navigate into the loop.
+4. From the canvas graph, select the **ForEach (1)** activity named `ForEachComment` and switch to the **Settings (2)** tab. The **Items** property is set to receive the output of the previous `ReadComments` **(3)** activity. You might have noticed the green connection line between the two activities that define a dependency between the two activities. The line makes sure comments are read before the ForEach loop can iterate it. Select the edit button **(4)** in the ForEach activity's Activities box to navigate into the loop.
 
    ![ForEachComments ForEach activity is selected. Settings tab is shown. Items property is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/raw/master/media/enrich-data-pipeline-foreach.png "ForEach Loop")
 
