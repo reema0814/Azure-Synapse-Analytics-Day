@@ -325,7 +325,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     ![The PostalCodeFilter transformation is highlighted on the data flow canvas graph.](media/ex02-orchestrate-data-flow-transformations-filter.png "Data flow canvas")
 
-22. In the **Filter settings** tab of the configuration panel, click anywhere inside the **Filter on** box then click on **Open expression builder**.
+22. In the **Filter settings** tab of the configuration panel, click anywhere inside the **Filter on (1)** box then click on **Open expression builder (2)**.
 
     ![The Filter on box is highlighted in the configuration panel for the PostalCodeFilter transformation.](media/aiu3.png "Data flow canvas")
 
