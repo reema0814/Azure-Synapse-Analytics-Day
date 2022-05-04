@@ -345,7 +345,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     ![The DimCustomer data source is highlighted on the data flow canvas graph.](media/ex02-orchestrate-data-flow-sources-dim-customer.png "Data flow canvas")
 
-27. Next, select the `JoinOnPostalCode` transformation and ensure the **Join settings** tab is selected to see how you can join datasets using a simple and intuitive graphical interface.
+27. Next, select the `JoinOnPostalCode` **(1)** transformation and ensure the **Join settings (2)** tab is selected to see how you can join datasets using a simple and intuitive graphical interface.
 
     > The **Join settings** tab allows you to specify the data sources being joined and the join types and conditions. Notice the **Right stream** points to the `PostalCodeFilter` and not the `PostalCodes` data source directly. By referencing the filtered dataset, the join works with a smaller set of postal codes. For extensive datasets, this can provide performance benefits.
 
@@ -357,7 +357,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     ![The SelectDesiredColumns transformation is highlighted in the data flow graph.](media/ex02-orchestrate-data-flow-transformations-select.png "Data flow canvas")
 
-29. The last two items in the data flow are the defined sinks. These provide the connection settings necessary to write the transformed data into the desired data sink. Select the `EnrichCustomerData` sink and inspect the settings on the **Sink** tab.
+29. The last two items in the data flow are the defined sinks. These provide the connection settings necessary to write the transformed data into the desired data sink. Select the `EnrichCustomerData` **(1)** sink and inspect the settings on the **Sink (1)** tab.
 
     ![The Sink tab is displayed for the EnrichCustomerData sink, which is highlighted in the graph.](https://github.com/SpektraSystems/Azure-Synapse-Analytics-Day/blob/v2/media/ex02-orchestrate-data-flow-sink-sink.png?raw=true "Data flow canvas")
 
