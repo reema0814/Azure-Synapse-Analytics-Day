@@ -28,66 +28,65 @@ In this task, you will browse your data lake using SQL On-demand.
 
      ![Open Azure resource group](./media/MFA.png "MFA")
    
- 
-1. In the Azure Portal, select **Resource groups**.
+2. In the Azure Portal, select **Resource groups**.
 
    ![Open Azure resource group](./media/00-open-resource-groups.png "Azure resource groups")
 
-
-2. Select the **Synapse Analytics** resource group.
+3. Select the **Synapse Analytics** resource group.
 
    ![Open Synapse Analytics resource group](./media/00-open-synapse-resource-group.png "Resources list")
 
-3. Select **SQLPool01** and **resume** it before starting the exercise.
+4. Select **SQLPool01** and **resume** it before starting the exercise.
 
    ![SQLPool01 is highlighted.](media/select-sql-pool.png "SQLPool01")
 
    ![Resume sqlpool](./media/00-resume-sqlpool.png "Resume")
-   
-   
-4. Return to the resource group, then select the **asadataexplorerpool** and **start** it. 
+     
+5. Return to the resource group, then select the **asadataexplorerpool** and **start** it. 
 
    > **Note**: Please note starting of data explorer pool might take few minutes, you don't have to wait for it to be started you can proceed to next steps.
 
    ![SQLPool01 is highlighted.](media/ex1dex1.png "SQLPool01")
    
    ![SQLPool01 is highlighted.](media/ex1dex2.png "SQLPool01")
+   
+   >**Note**: In case the data explorer is in stopping state. Please continue with the lab as we need it in exercise 4.You can visit this page after few minutes and start it.
 
-4. Return to the resource group, then select the **Synapse Analytics** workspace.
+6. Return to the resource group, then select the **Synapse Analytics** workspace.
 
    ![Open Azure Synapse Analytics workspace](./media/00-open-workspace.png "Azure Synapse workspace")
 
-5. On the Synapse workspace blade, open Synapse Analytics Studio by navigating to the **Workspace web URL** from the overview page.
+7. On the Synapse workspace blade, open Synapse Analytics Studio by navigating to the **Workspace web URL** from the overview page.
 
    > You can also Open synapse studio by clicking on **Open** under **Getting started->Open synapse studio**
 
    ![The Launch Synapse Studio button is highlighted on the Synapse workspace toolbar.](media/ex01-open-synapse-studio.png "Launch Synapse Studio")
 
-6. In Synapse Analytics Studio, from the left panel click on the expand icon and navigate to the `Data` hub.
+8. In Synapse Analytics Studio, from the left panel click on the expand icon and navigate to the `Data` hub.
 
    ![Open Data hub in Synapse Analytics Studio](./media/data-hub-1.png)
 
    ![Open Data hub in Synapse Analytics Studio](./media/data-hub.png)
 
-7. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the **asaworkspace<inject key="uniqueId" enableCopy="false"/>** primary data lake storage account **(3)**, and then select the `wwi` file system **(4)**.
+9. Switch to the `Linked` tab **(1)**. Under `Azure Data Lake Storage Gen2` **(2)**, expand the **asaworkspace<inject key="uniqueId" enableCopy="false"/>** primary data lake storage account **(3)**, and then select the `wwi` file system **(4)**.
 
    ![The ADLS Gen2 storage account is selected.](media/storage-factsale-parquet-1.png "ADLS Gen2 storage account")
 
-8. Inside the selected file system, double-click to navigate to `factsale-parquet` -> `2012` -> `Q1` -> `InvoiceDateKey=2012-01-01` **(5)**.
+10. Inside the selected file system, double-click to navigate to `factsale-parquet` -> `2012` -> `Q1` -> `InvoiceDateKey=2012-01-01` **(5)**.
 
-9. Once you are in `InvoiceDateKey=2012-01-01` right-click the Parquet file and select `New SQL script - Select TOP 100 rows`.
+11. Once you are in `InvoiceDateKey=2012-01-01` right-click the Parquet file and select `New SQL script - Select TOP 100 rows`.
 
    > A script is automatically generated. Run this script to see how SQL on demand queries the file and returns the first 100 rows of that file with the header, allowing you to easily explore data in the file
 
    ![Start new SQL script from data lake file](./media/ex01-sql-on-demand-01.png "Create a new SQL script")
 
-10. Ensure the newly created script is connected to the `Built-in` pool and select `Run`. Data is loaded by the built-in SQL pool and processed as if it was coming from any regular relational database.
+12. Ensure the newly created script is connected to the `Built-in` pool and select `Run`. Data is loaded by the built-in SQL pool and processed as if it was coming from any regular relational database.
 
     ![Run SQL script on data lake file](./media/ex01-sql-on-demand-02.png "Execute SQL script")
 
     > Note: SQL on demand is now named as **Built-in**
 
-11. Let us change the initial script to load multiple Parquet files at once.
+13. Let us change the initial script to load multiple Parquet files at once.
 
     - In line 2, replace `TOP 100 *` with `COUNT(*)`.
     - In line 5, replace the path to the individual file with
@@ -98,15 +97,15 @@ In this task, you will browse your data lake using SQL On-demand.
 
     > Note: Replace 'yourdatalakestorageaccountname' with the <inject key="Storage Account Name"></inject>
 
-12. Select `Run` to re-run the script. You should see a result of `2991716`, which is the number of records contained in all the Parquet files within the `factsale-parquet/2012/Q1` directory.
+14. Select `Run` to re-run the script. You should see a result of `2991716`, which is the number of records contained in all the Parquet files within the `factsale-parquet/2012/Q1` directory.
 
     ![Run SQL on-demand script loading multiple Parquet data lake files](./media/ex01-sql-on-demand-03.png)
 
-13. In Azure Synapse Analytics Studio, navigate to the `Develop` hub.
+15. In Azure Synapse Analytics Studio, navigate to the `Develop` hub.
 
     ![Develop hub.](media/develop-hub.png "Develop hub")
 
-14. Select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script..
+16. Select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script..
 
     ![Run SQL on-demand script loading multiple CSV data lake files](./media/ex1tsk1stp13.png)
 
@@ -114,7 +113,7 @@ In this task, you will browse your data lake using SQL On-demand.
     >
     > Here we use WITH to define the columns in the files. You must use WITH when using a bulk rowset (OPENROWSET) in the FROM clause. Also, defining the columns enables you to select and filter the values within.
 
-15. Replace the contents of the SQL script with this query, and **replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. Select **Run** to execute the script. This query reads from Delta Lake format to calculate the 2012 quarterly sales quantity.
+17. Replace the contents of the SQL script with this query, and **replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. Select **Run** to execute the script. This query reads from Delta Lake format to calculate the 2012 quarterly sales quantity.
 
     ```sql
     SELECT 
@@ -134,7 +133,7 @@ In this task, you will browse your data lake using SQL On-demand.
     
     > Delta Lake is a popular format when using Apache Spark for analytics. The schema and partitions are automatically inferred when you reference a folder containing the Delta Lake structure. The ability to read this data from your serverless SQL pool means you do not need to switch to Spark to query data that was loaded and saved to Delta Lake by Apache Spark jobs.
 
-16. Update the cell with the following statements to create an external table for the quarterly results. **Replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. Select **Run** to execute the script.
+18. Update the cell with the following statements to create an external table for the quarterly results. **Replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. Select **Run** to execute the script.
 
     ```sql
     CREATE EXTERNAL DATA SOURCE WwiDataADLS

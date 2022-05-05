@@ -39,6 +39,8 @@ In this task, you will try to understand who your best customers are.
 
 ![Example Chart](media/ex05-chart.png "Example chart")
 
+>**Note**: If you are not able to see the expected data in the bar chart. Please save the bar chart as image and open it. You'll be able to see the data as expected.
+
 ## Task 2 - Investigate query performance and table design
 
 In this task, you will try to understand the implications of the table design at a general level. You will run the same set of queries against two fact tables (`FactSale_Fast` and `FactSale_Slow`). The two fact tables have (with one notable exception) the same structure and contain identical data.
