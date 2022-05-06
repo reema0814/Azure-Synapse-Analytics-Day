@@ -76,7 +76,7 @@ In this task you will create a new lake database table using files from the data
     SELECT COUNT(*) FROM FactSale
     ```
 
-   ![Query table from data lake](./media/ex04-query-table-from-data-lake.png)
+   ![Query table from data lake](./media/pp9.png)
 
 ## Task 3 - Create a manual lake database table and map data into it
 
