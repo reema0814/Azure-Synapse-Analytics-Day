@@ -24,9 +24,9 @@ In this task, you will explore the connection between a Synapse Analytics and a 
 
 1. Open Synapse Analytics Studio, and then navigate to the `Manage` hub.
 
-2. Select `Azure Purview` to view the details of the connected Azure Purview workspace
+2. Select `Microsoft Purview` to view the details of the connected Azure Purview workspace
 
-    ![Azure Purview connection in Azure Synapse Analytics workspace](./media/ex06-synapse-purview-connection.png)
+    ![Azure Purview connection in Azure Synapse Analytics workspace](./media/preview-updated.png)
 
 3. Notice the Azure Purview workspace that is already connected to the the Azure Synapse Analytics workspace.
 
