@@ -57,7 +57,13 @@
         "Order": 6
 
       },
-        
+       {
+
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/06-data-governance-purview.md",
+
+        "Order": 7
+
+      },
       
             {
 
