@@ -1,5 +1,10 @@
 # Release Notes
 
+### 28 June 2022
+
+* Minor updates in the Lab Guide.
+* **Exercise 4:** In Exercise 4, Task 3 we have included additional steps to provide more details on creating new data mapping , previewing the data and querying the database.
+
 ### 25 march 2022
 
 * Minor updates in the Lab Guide.
