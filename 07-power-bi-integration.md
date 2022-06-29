@@ -137,9 +137,9 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
    ![The visualization is highlighted.](media/ex03-pbi-line-clustered-column-chart-vis.png "Line and clustered column chart")
 
-8. Drag the **SalespersonKey** field into **Shared axis** for the visualization. Then drag the **TotalExcludingTax** field into **Column values**. Finally, drag the **Profit** field into **Line values**.
+8. Drag the **SalespersonKey** field into **X-axis** for the visualization. Then drag the **TotalExcludingTax** field into **ColumnY-axis**. Finally, drag the **Profit** field into **Line Y-axis**.
 
-   ![The field values are displayed as described above.](media/ex03-visualization-fields.png "Visualization fields")
+   ![The field values are displayed as described above.](media/ex003-visualization-fields.png "Visualization fields")
 
 9. Resize the line and clustered column chart visualization to fit the report area. Your visualization should look like the following:
 
