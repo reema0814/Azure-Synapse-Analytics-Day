@@ -68,6 +68,9 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
     ![Selecting the wwi.FactSale table and viewing the preview](media/ex03-pbi-directquery.png "Set query type")
 
+
+    >**Note**: If you have trouble connecting to the data source, open file explorer and right-click on the downloaded .pbids file, then select **Open with Power BI Desktop**.
+
 11. From the **File** menu, select **Publish** and then select **Publish to Power BI**. If prompted to save your changes, select Save and provide `wwifactsales` as the name. This will also be the name used for the dataset. 
 
    ![Selecting Publish to Power BI from the File menu](media/ex03-publish-menu.png "Publish to Power BI")
@@ -134,9 +137,9 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
    ![The visualization is highlighted.](media/ex03-pbi-line-clustered-column-chart-vis.png "Line and clustered column chart")
 
-8. Drag the **SalespersonKey** field into **Shared axis** for the visualization. Then drag the **TotalExcludingTax** field into **Column values**. Finally, drag the **Profit** field into **Line values**.
+8. Drag the **SalespersonKey** field into **X-axis** for the visualization. Then drag the **TotalExcludingTax** field into **ColumnY-axis**. Finally, drag the **Profit** field into **Line Y-axis**.
 
-   ![The field values are displayed as described above.](media/ex03-visualization-fields.png "Visualization fields")
+   ![The field values are displayed as described above.](media/ex003-visualization-fields.png "Visualization fields")
 
 9. Resize the line and clustered column chart visualization to fit the report area. Your visualization should look like the following:
 

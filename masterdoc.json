@@ -44,7 +44,7 @@
 
       {
 
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/04-lake-databases-database-templates.md",
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/04.1-lake-databases-database-templates.md",
 
         "Order": 5
 
@@ -57,13 +57,14 @@
         "Order": 6
 
       },
-            {
+       {
 
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/06-data-governance-purview.md",
 
         "Order": 7
 
       },
+      
             {
 
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/07-power-bi-integration.md",

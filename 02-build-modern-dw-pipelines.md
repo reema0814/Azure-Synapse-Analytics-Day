@@ -299,7 +299,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     > On the **Source settings** tab, we see properties similar to what we saw on the pipeline activities property tabs. The name of the component can be defined, along with the source dataset and a few other properties. The `PostalCodes` dataset points to a CSV file stored in an Azure Data Lake Storage Gen2 account.
 
-    ![The PostalCodes data source component is highlighted on the data flow canvas surface.](media/ex02-orchestrate-data-flow-sources-postal-codes.png "Data flow canvas")
+    ![The PostalCodes data source component is highlighted on the data flow canvas surface.](media/ex2-t2-step17.png "Data flow canvas")
 
 18. Select the **Projection** tab.
 
@@ -359,7 +359,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 29. The last two items in the data flow are the defined sinks. These provide the connection settings necessary to write the transformed data into the desired data sink. Select the `EnrichCustomerData` **(1)** sink and inspect the settings on the **Sink (1)** tab.
 
-    ![The Sink tab is displayed for the EnrichCustomerData sink, which is highlighted in the graph.](https://github.com/SpektraSystems/Azure-Synapse-Analytics-Day/blob/v2/media/ex02-orchestrate-data-flow-sink-sink.png?raw=true "Data flow canvas")
+    ![The Sink tab is displayed for the EnrichCustomerData sink, which is highlighted in the graph.](media/ex2-t2-step29.png "Data flow canvas")
 
 30. Next, select the **Settings** tab and observe the properties set there.
 
@@ -461,17 +461,17 @@ After you finish building and debugging your data flow and its associated pipeli
 
     > The initial view provides a details panel containing statistics for the sinks defined within the data flow. The information for these includes the number of rows written and the processing times for writing to each sink.
 
-    ![The data flow Details dialog is displayed.](media/ex02-monitoring-data-flow-details.png "Data Flow activity details")
+    ![The data flow Details dialog is displayed.](media/ex2-t3-step-13.png "Data Flow activity details")
 
 14. Select the **SelectDesiredColumns** transformation step of the data flow.
 
     > Selecting any component of the data flow opens a new panel with details related to the processing that occurred for that component.
 
-    ![The SelectDesiredColumns transformation step is highlighted in the graph on the details dialog.](media/ex02-monitoring-data-flow-select.png "Data Flow activity details")
+    ![The SelectDesiredColumns transformation step is highlighted in the graph on the details dialog.](media/ex2-t3-step14.png "Data Flow activity details")
 
 15. Try selecting another component, such as the **EnrichCustomerData** sink, and view the information available.
 
-    ![The EnrichCustomerData sink component is highlighted in the graph, and the associated details panel is displayed on the right-hand side of the screen.](media/ex02-monitoring-data-flow-sink.png "Data Flow activity details")
+    ![The EnrichCustomerData sink component is highlighted in the graph, and the associated details panel is displayed on the right-hand side of the screen.](media/ex2-t3-step15.png "Data Flow activity details")
 
 16. Close the data flow activity Details dialog by selecting the **X** on the right-hand side of the toolbar.
 
