@@ -105,7 +105,15 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Develop hub.](media/develop-hub.png "Develop hub")
 
-16. Select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script..
+16. Select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script.
+
+    >**Note**: In case **SQLOnDemand01** database is not present. Please run the below mentioned commands. Replace 'yourdatalakestorageaccountname' with the <inject key="Storage Account Name"></inject>
+
+    ```sql
+    CREATE DATABASE SQLOnDemand01
+    CREATE CREDENTIAL [https://<primary_storage>.dfs.core.windows.net]
+WITH IDENTITY='User Identity';
+    ```
 
     ![Run SQL on-demand script loading multiple CSV data lake files](./media/ex1tsk1stp13.png)
 
