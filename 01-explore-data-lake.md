@@ -105,7 +105,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Develop hub.](media/develop-hub.png "Develop hub")
 
-16. Select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script.
+16. Expand **SQLScripts** and select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script.
 
     >**Note**: In case **SQLOnDemand01** database is not present. Please run the below mentioned commands. Replace 'yourdatalakestorageaccountname' with the <inject key="Storage Account Name"></inject>
 
@@ -177,7 +177,7 @@ WITH IDENTITY='User Identity';
          InvoiceQuarter
     ```
 
-    > This exports the results to CSV files in your data lake and defines a table schema that can be referenced directly in serverless SQL. You can test this by running `SELECT * FROM QuarterlySales`. The results are now easy to query from an analytics tools such as Power BI or you can download the files from the Data Lake..
+    > This exports the results to CSV files in your data lake and defines a table schema that can be referenced directly in serverless SQL. You can test this by opening a **New Query** and running `SELECT * FROM QuarterlySales`. The results are now easy to query from an analytics tools such as Power BI or you can download the files from the Data Lake..
 
 ## Task 2 - Explore the data lake with Azure Synapse Spark
 
