@@ -70,7 +70,7 @@ In this task you will discover Synapse Analytics assets using Purview search.
 
 3. Explore the results of the search. Select the `FactSale` asset.
 
-    ![Explore Purview-powered search results](./media/ex06-purview-search-results-1.png)
+    ![Explore Purview-powered search results](./media/EX6-T3-S3.png)
 
 4. Explore the properties of the `FactSale` asset.
 
@@ -111,7 +111,7 @@ In this task, you will explore the results of scanning the Synapse Analytics wor
 
     Make sure you select `Cancel` next to avoid updating the source connection properties.
 
-5. In Purview Studio, navigate to the `Data map` hub, select `Collections` and then select the root collection (which should be named `purviewworkspaceNNNNNN` just like the Purview workspace). Select `Assets` to explore the list of assets available in the collection.
+5. In Purview Studio, navigate to the `Data map` hub, select `Collections` and then select the root collection (which should be named `asapurviewNNNNNN` just like the Purview workspace). Select `Assets` to explore the list of assets available in the collection.
 
     ![Purview collection](./media/ex06-purview-collection.png)
 
