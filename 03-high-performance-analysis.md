@@ -83,7 +83,7 @@ Can you explain the significant difference in performance between the two seemin
 2. Under SQL databases, expand the `SQLPool01` node, expand `Tables`, and locate the `wwi_perf.FactSale_Slow` table.
 3. Right-click the table **(1)** and then select `New SQL script` **(2)**, `CREATE` **(3)**.
 
-   ![View table structure](./media/ex04-view-table-definition.png "Table structure")
+   ![View table structure](./media/EX3-bonus-S3.png "Table structure")
 
 4. In the CREATE script, note the `DISTRIBUTION = ROUND_ROBIN` option used to distribute the table.
 
