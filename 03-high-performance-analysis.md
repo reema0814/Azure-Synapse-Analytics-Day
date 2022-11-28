@@ -79,8 +79,8 @@ Can you explain the significant difference in performance between the two seemin
 
 **Solution:**
 
-1. In Synapse Analytics Studio, navigate to the `Data` hub.
-2. Under Databases, expand the `SQLPool01` node, expand `Tables`, and locate the `wwi_perf.FactSale_Slow` table.
+1. In Synapse Analytics Studio, navigate to the `Data` hub, select the `Workspace` section.
+2. Under SQL databases, expand the `SQLPool01` node, expand `Tables`, and locate the `wwi_perf.FactSale_Slow` table.
 3. Right-click the table **(1)** and then select `New SQL script` **(2)**, `CREATE` **(3)**.
 
    ![View table structure](./media/ex04-view-table-definition.png "Table structure")
