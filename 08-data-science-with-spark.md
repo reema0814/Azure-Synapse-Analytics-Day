@@ -49,7 +49,7 @@ Please note that each of these tasks will be addressed through several cells in 
 
 In this exercise you will use the model registered in Exercise 2 to perform predictions using the AML integration features of Synapse Studio.
 
-1. In Synapse Studio, select the `Data` hub, `Workspace` section, `SQLPool01` SQL database, and locate the `wwi_ml.CustomerTest` table (the one created at the end of Exercise 2).
+1. In Synapse Studio, select the `Data` hub, `Workspace` section, `SQLPool01` SQL database, and locate the `wwi_ml.CustomerTest` table.
 
 2. Select the context menu of the table and then select `Machine Learning` -> `Predict with a model`.
 
