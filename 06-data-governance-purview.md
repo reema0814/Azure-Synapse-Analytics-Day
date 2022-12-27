@@ -132,7 +132,7 @@ In this task, you will explore the results of scanning the Synapse Analytics wor
     Note the following properties:
 
     - Fully qualified name
-    - Updated on (notice how the update was performed by `Synapse`; the time of the update should approximately match the finish time of the Synapse pipeline you trigerred in Task 2)
+    - Updated on (notice how the update was performed by `Synapse`; the time of the update should approximately match the finish time of the Synapse pipeline you triggered in Task 2)
     - Hierarchy
 
     ![Synapse Pipeline asset details](./media/ex06-purview-collection-assets-synapse-pipeline-details.png)
