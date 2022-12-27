@@ -12,7 +12,7 @@ The tasks you will perform in this exercise are:
   - Task 1 - Explore the integration of Azure Purview into the Azure Synapse Analytics workspace
   - Task 2 - Trigger automatic data lineage tracking when executing a Synapse Pipeline
   - Task 3 - Discover data assets using Azure Purview powered search
-  - Task 4 - Explore the results of scaning an Azure Synapse Analytics workspace from Azure Purview
+  - Task 4 - Explore the results of scanning an Azure Synapse Analytics workspace from Azure Purview
   - Task 5 - Explore the results of data lineage tracking for Synapse Pipelines
 
 ## Task 1 - Explore the integration of Azure Purview into the Azure Synapse Analytics workspace
@@ -28,7 +28,7 @@ In this task, you will explore the connection between a Synapse Analytics and a 
 
     ![Azure Purview connection in Azure Synapse Analytics workspace](./media/preview-updated.png)
 
-3. Notice the Azure Purview workspace that is already connected to the the Azure Synapse Analytics workspace.
+3. Notice the Azure Purview workspace that is already connected to the Azure Synapse Analytics workspace.
 
     This connection enables two categories for functionalities:
 
@@ -82,7 +82,7 @@ In this task you will discover Synapse Analytics assets using Purview search.
     - The information about the asset was last updated by an automated scan run from the Purview workspace
     - The hierarchy the asset belongs to
 
-## Task 4 - Explore the results of scaning an Azure Synapse Analytics workspace from Azure Purview
+## Task 4 - Explore the results of scanning an Azure Synapse Analytics workspace from Azure Purview
 
 In this task, you will explore the results of scanning the Synapse Analytics workspace from the Purview workspace.
 
@@ -132,7 +132,7 @@ In this task, you will explore the results of scanning the Synapse Analytics wor
     Note the following properties:
 
     - Fully qualified name
-    - Updated on (notice how the update was performed by `Synapse`; the time of the update should approximately match the finish time of the Synapse pipeline you trigered in Task 2)
+    - Updated on (notice how the update was performed by `Synapse`; the time of the update should approximately match the finish time of the Synapse pipeline you trigerred in Task 2)
     - Hierarchy
 
     ![Synapse Pipeline asset details](./media/ex06-purview-collection-assets-synapse-pipeline-details.png)
