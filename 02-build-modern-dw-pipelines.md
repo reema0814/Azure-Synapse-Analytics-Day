@@ -166,6 +166,8 @@ Now, take some time to review the **Exercise 2 - Bonus Notebook with CSharp** no
 
 3. Select **Run all** and start the notebook.
 
+   > **Note**: If you get error while performing this step, you can change the sparkpool to sparkpool02 and try re-running the steps.
+
 To observe the data being written into the table:
 
 1. Select **Data** from the left-hand menu, select the Workspace tab, then expand Databases, SQLPool01, and Tables.
