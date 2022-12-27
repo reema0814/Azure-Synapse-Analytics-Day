@@ -70,15 +70,15 @@ In this task you will discover Synapse Analytics assets using Purview search.
 
 3. Explore the results of the search. Select the `FactSale` asset.
 
-    ![Explore Purview-powered search results](./media/EX6-T3-S3.png)
+    ![Explore Purview-powered search results](./media/upd-EX6-T3-S3.png)
 
 4. Explore the properties of the `FactSale` asset.
 
-    ![Explore Purivew-powered searchr result - continued](./media/ex06-purview-search-results-2.png)
+    ![Explore Purivew-powered searchr result - continued](./media/upd-ex06-purview-search-results-2.png)
 
     Note the following:
 
-    - The type of the asset is `Azure Synapse Dedicated SQL Table`
+    - The type of the asset is `Azure Dedicated SQL Pool Table`
     - The information about the asset was last updated by an automated scan run from the Purview workspace
     - The hierarchy the asset belongs to
 
