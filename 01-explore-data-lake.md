@@ -50,7 +50,7 @@ In this task, you will browse your data lake using SQL On-demand.
    
    ![SQLPool01 is highlighted.](media/ex1dex2.png "SQLPool01")
    
-   >**Note**: In case the data explorer is in stopping state. Please continue with the lab as we need it in exercise 4.You can visit this page after few minutes and start it.
+   >**Note**: In case the data explorer is in stopping state. Please continue with the lab as we need it in exercise 4. You can visit this page after few minutes and start it.
 
 6. Return to the resource group, then select the **Synapse Analytics** workspace.
 
@@ -177,7 +177,7 @@ WITH IDENTITY='User Identity';
          InvoiceQuarter
     ```
 
-    > This exports the results to CSV files in your data lake and defines a table schema that can be referenced directly in serverless SQL. You can test this by opening a **New Query** and running `SELECT * FROM QuarterlySales`. The results are now easy to query from an analytics tools such as Power BI or you can download the files from the Data Lake..
+    > This exports the results to CSV files in your data lake and defines a table schema that can be referenced directly in serverless SQL. You can test this by opening a **New Query** and running `SELECT * FROM QuarterlySales`. The results are now easy to query from an analytics tools such as Power BI or you can download the files from the Data Lake.
 
 ## Task 2 - Explore the data lake with Azure Synapse Spark
 
@@ -218,7 +218,7 @@ WITH IDENTITY='User Identity';
 
     ![Collapse Output](./media/aiu1.png "Collapse Output")
 
-9. Hover over the area just below the cell in the notebook, then select **+ Code** to add a new cell. **+ Code** won't be visible untill you Hover the area in front of arrow.
+9. Hover over the area just below the cell in the notebook, then select **+ Code** to add a new cell. **+ Code** won't be visible until you Hover the area in front of arrow.
 
    ![The add code button is highlighted.](media/synapse-workspace-code.png "Add code")
 
