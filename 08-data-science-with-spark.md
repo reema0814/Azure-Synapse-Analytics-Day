@@ -2,7 +2,7 @@
 
 Azure Synapse Analytics provides support for using trained models (in ONNX format) directly from dedicated SQL pools. What this means in practice, is that your data engineers can write T-SQL queries that use those models to make predictions against tabular data stored in a SQL Pool database table.
 
-In this exercise, you will train a machine learning models using AutoML with Spark compute. You will use the model registered in Azure Machine Learning to make predictions using the T-SQL `Predict` statement.
+In this exercise, you will train a machine learning model using AutoML with Spark compute. You will use the model registered in Azure Machine Learning to make predictions using the T-SQL `Predict` statement.
 
 For context, the following are the high-level steps taken to create a Spark ML based model and deploy it, so it is ready for use from T-SQL.
 
@@ -49,7 +49,7 @@ Please note that each of these tasks will be addressed through several cells in 
 
 In this exercise you will use the model registered in Exercise 2 to perform predictions using the AML integration features of Synapse Studio.
 
-1. In Synapse Studio, select the `Data` hub, `Workspace` section, `SQLPool01` SQL database, and locate the `wwi_ml.CustomerTest` table (the one created at the end of Exercise 2).
+1. In Synapse Studio, select the `Data` hub, `Workspace` section, `SQLPool01` SQL database, and locate the `wwi_ml.CustomerTest` table.
 
 2. Select the context menu of the table and then select `Machine Learning` -> `Predict with a model`.
 

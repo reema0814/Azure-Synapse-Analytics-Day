@@ -92,7 +92,7 @@ In this task you will create manually a new lake database table and map data int
 
    ![Create a custom table](./media/ex04-custom-table-name.png)
 
-3. In the table editor, select the `Columns` tab, add the following standard columns and then select `Publish`:
+3. In the table editor, select the `Columns` tab, add the following standard/new columns and then select `Publish`:
 
     - `CustomerId` (`PK`, type `integer`)
     - `FirstName` (type string)

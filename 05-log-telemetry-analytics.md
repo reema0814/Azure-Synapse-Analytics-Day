@@ -1,6 +1,6 @@
 # Exercise 5 - Log and telemetry analytics
 
-In this exercise you will explore the capabilities of the newly integrared Data Explorer runtime in Synapse Analytics.
+In this exercise you will explore the capabilities of the newly integrated Data Explorer runtime in Synapse Analytics.
 
 Azure Synapse data explorer provides you with a dedicated query engine optimized and built for log and time series data workloads. With this new capability now part of Azure Synapse's unified analytics platform, you can easily access your machine and user data to surface insights that can directly improve business decisions. To complement the existing SQL and Apache Spark analytical runtimes, Azure Synapse data explorer is optimized for efficient log analytics, using powerful indexing technology to automatically index structured, semi-structured, and free-text data commonly found in telemetry data.
 
@@ -40,7 +40,7 @@ In this task, you will verify Data Explorer database is present and create a tab
 
 ## Task 2 - Perform manual data ingestion using a Synapse Pipeline
 
-In this task, you will trigger a Synapse Pipeline to peform manual data ingestion into the table created in Task 1.
+In this task, you will trigger a Synapse Pipeline to perform manual data ingestion into the table created in Task 1.
 
 1. In Synapse Studio, navigate to the `Integrate` hub, select the `Exercise 5 - Import sales telemetry data` pipeline and then select `Debug` to trigger the pipeline.
 
@@ -52,7 +52,7 @@ In this task, you will trigger a Synapse Pipeline to peform manual data ingestio
 
 In this task, you will query the sales telemetry data using a KQL script run from Synapse Studio.
 
-1. In Synapse Studion, navigate to the `Develop` hub and create a new KQL query with the following content:
+1. In Synapse Studio, navigate to the `Develop` hub and create a new KQL query with the following content:
 
     ```kql
     SalesTelemetry
