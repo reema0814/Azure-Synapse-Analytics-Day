@@ -236,7 +236,7 @@ WITH IDENTITY='User Identity';
 
 11. Select the **Run cell** button to execute the new cell and then select the **Table** view in output section.
 
-    ![The new cell is displayed and the run cell button is highlighted.](media/notebook-new-csv-cell1.png "New cell to explore CSV files")
+    ![The new cell is displayed and the run cell button is highlighted.](media/Ex1-T2-S11.png "New cell to explore CSV files")
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
 
@@ -251,8 +251,7 @@ WITH IDENTITY='User Identity';
 
     > The Apache Spark pool for the lab is using Spark 3.0, which provides performance benefits over previous versions. These configurations enable Adaptive Query Execution and set how Spark should optimize partitioning during job execution. ANSI SQL is also enabled to check for data type errors and overflow errors.
 
-13. Add another cell and paste in the SQL statement to read from a Delta Lake path. Replace `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. Select the **Run cell** button to execute. This uses the magic command `%%sql` to change language of the cell to Spark SQL. The SQL statement returns the top 10 cities based on total quantity.
-
+13. Add another cell and paste in the SQL statement to read from a Delta Lake path. Replace `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. 
     ```sql
     %%sql
     SELECT 
@@ -269,15 +268,13 @@ WITH IDENTITY='User Identity';
 
     > Delta Lake is a popular format for storing data in a data lake since it supports upserts, deletes, and data versioning. You can access it using Spark SQL as shown here or by reading in as a DataFrame using `format(delta)`.
 
-14. Expand the job execution summary by selecting the arrow next to **Job execution**.
+14. Select the **Run cell** button to execute. This uses the magic command `%%sql` to change language of the cell to Spark SQL. The SQL statement returns the top 10 cities based on total quantity.
 
-    ![The output is displayed and the job execution arrow is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/notebook-expand-spark-job-execution.png?raw=true "Expand job execution")
+    ![The output is displayed and the job execution arrow is highlighted.](media/Ex1-T2-S14.png "Expand job execution")
 
-    > The job execution shows the jobs, stages, and tasks that Spark ran when the cell was executed. This view shows duration and other performance characteristics that are important to consider if the notebook will be used repeatedly.
+15. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. When running the same code with a larger dataset, Spark 3.0 can modify the query plan to be more efficient. In addition, you can enable autoscaling on your Apache Spark pool so it can automatically grow when the workload on the Spark pool increases.
 
-15. Notice the **Tasks** column shows the first job with 50 tasks as it reads in from files, then adjusts to 8 and then 5 tasks per job which is suitable for this small cluster and dataset. When running the same code with a larger dataset, Spark 3.0 can modify the query plan to be more efficient. In addition, you can enable autoscaling on your Apache Spark pool so it can automatically grow when the workload on the Spark pool increases.
-
-    ![The job execution is displayed and the Tasks column is highlighted.](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/notebook-spark-job-execution-expanded.png?raw=true "Job execution tasks")
+    ![The job execution is displayed and the Tasks column is highlighted.](media/Ex1-T2-S15.png "Job execution tasks")
 
     > Without Adaptive Query Execution enabled, the group by and order by in this cell would result in over 400 tasks. Spark 3.0 has improved on these tuning options and introduced additional performance benefits which may be noticed when joining datasets and working with skewed data.
 
