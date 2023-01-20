@@ -60,7 +60,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
    > You can also Open synapse studio by clicking on **Open** under **Getting started->Open synapse studio**
 
-   ![The Launch Synapse Studio button is highlighted on the Synapse workspace toolbar.](media/ex01-open-synapse-studio.png "Launch Synapse Studio")
+   ![The Launch Synapse Studio button is highlighted on the Synapse workspace toolbar.](media/ex01-open-synapse-studio.1.png "Launch Synapse Studio")
 
 8. In Synapse Analytics Studio, from the left panel click on the expand icon and navigate to the `Data` hub.
 
@@ -112,7 +112,7 @@ In this task, you will browse your data lake using SQL On-demand.
     ```sql
     CREATE DATABASE SQLOnDemand01
     CREATE CREDENTIAL [https://<primary_storage>.dfs.core.windows.net]
-WITH IDENTITY='User Identity';
+    WITH IDENTITY='User Identity';
     ```
 
     ![Run SQL on-demand script loading multiple CSV data lake files](./media/ex1tsk1stp13.png)
@@ -198,7 +198,7 @@ WITH IDENTITY='User Identity';
 
    > **Note**: The first time you run a notebook in a Spark pool, Synapse creates a new session. This can take approximately 3 minutes.
    
-   ![Waiting for the Spark pool to start.](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex01-attachsparkpool01waiting.png?raw=true "Waiting for the Spark pool to start.")
+   ![Waiting for the Spark pool to start.](./media/ex01-attachsparkpool01waiting.1.png "Waiting for the Spark pool to start.")
 
 5. As you can see, the output of the dataframe is displayed with 10 rows. To  display 100 rows with the header replace the last line of code with the following:
 
