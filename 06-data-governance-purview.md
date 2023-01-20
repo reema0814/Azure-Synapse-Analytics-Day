@@ -94,6 +94,7 @@ In this task, you will explore the results of scanning the Synapse Analytics wor
 
 2. In Purview Studio, navigate to the `Data map` hub, select `Sources` and then locate the Synapse Analytics source which is your Synapse Analytics workspace. Select `View details` to explore the configuration of the source.
     ![](media/anly01.1.png)
+    
     ![Locate Synpse Analytics source in Purview Studio](media/anly022.1.png)
     
 
