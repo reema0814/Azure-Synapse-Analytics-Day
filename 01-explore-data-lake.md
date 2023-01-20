@@ -34,13 +34,13 @@ In this task, you will browse your data lake using SQL On-demand.
 
 3. Select the **Synapse Analytics** resource group.
 
-   ![Open Synapse Analytics resource group](./media/00-open-synapse-resource-group.png "Resources list")
+   ![Open Synapse Analytics resource group](./media/00-open-synapse-resource-group.1.png "Resources list")
 
 4. Select **SQLPool01** and **resume** it before starting the exercise.
 
-   ![SQLPool01 is highlighted.](media/select-sql-pool.png "SQLPool01")
+   ![SQLPool01 is highlighted.](media/select-sql-pool.1.png "SQLPool01")
 
-   ![Resume sqlpool](./media/00-resume-sqlpool.png "Resume")
+   ![Resume sqlpool](./media/00-resume-sqlpool.1.png "Resume")
      
 5. Return to the resource group, then select the **asadataexplorer<inject key="uniqueId" enableCopy="false"/>** and **start** it. 
 
@@ -54,7 +54,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
 6. Return to the resource group, then select the **Synapse Analytics** workspace.
 
-   ![Open Azure Synapse Analytics workspace](./media/00-open-workspace.png "Azure Synapse workspace")
+   ![Open Azure Synapse Analytics workspace](./media/00-open-workspace.1.png "Azure Synapse workspace")
 
 7. On the Synapse workspace blade, open Synapse Analytics Studio by navigating to the **Workspace web URL** from the overview page.
 
