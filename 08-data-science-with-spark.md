@@ -78,9 +78,9 @@ In this exercise you will use the model registered in Exercise 2 to perform pred
 
     ![Deploy ML model to database](./media/ex08-deploy-model-to-database.png)
 
-6. Run the generated SQL script.
+6. **Run** the generated SQL script.
 
-    ![Run the PREDICT T-SQL statement](media/ex08-run-predict-sql-statement.1.png)
+    ![Run the PREDICT T-SQL statement](media/ex08-run-predict-sql-statement-1.png)
 
 7. Observe the results of the prediction.
 
