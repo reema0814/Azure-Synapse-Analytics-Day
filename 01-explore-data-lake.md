@@ -34,7 +34,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
 3. Select the **Synapse Analytics** resource group.
 
-   ![Open Synapse Analytics resource group](./media/00-open-synapse-resource-group.1.png "Resources list")
+   ![Open Synapse Analytics resource group](media/resourcegroup.png "Resources list")
 
 4. Select **SQLPool01** and **resume** it before starting the exercise.
 
