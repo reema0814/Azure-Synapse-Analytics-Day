@@ -22,7 +22,7 @@ In this task, you will verify Data Explorer database is present and create a tab
 
 1. Now in the Synapse Studio, navigate to the `Develop` hub and then select from the `+` dropdown the `KQL script` option.
 
-   ![New KQL script](./media/ex05-create-data-explorer-table-1.png)
+   ![New KQL script](media/ex05-create-data-explorer-table-1.1.png)
 
 2. In the `Connect to` dropdown, select the Data Explorer pool **<inject key="dataexplorer pool Name" enableCopy="false" />**, and then select the `Sales` database.
 
@@ -32,11 +32,11 @@ In this task, you will verify Data Explorer database is present and create a tab
     .create table SalesTelemetry ( CustomerId:int32, ProductId:int32, Timestamp:datetime, Url:string)
       ```
 
-   ![KQL script to create new table](./media/ex05-create-data-explorer-table-2.png)
+   ![KQL script to create new table](media/ex05-create-data-explorer-table-2.1.png)
 
 3. In Synapse Studio, navigate to the `Data` hub and check that you have the `SalesTelemetry` table showing up under the `Sales` database in the Data Explorer pool **<inject key="dataexplorer pool Name" enableCopy="false" />**.
 
-   ![Validate table created with KQL script](./medis/../media/ex05-create-data-explorer-table-3.png)
+   ![Validate table created with KQL script](media/ex05-create-data-explorer-table-3.1.png)
 
 ## Task 2 - Perform manual data ingestion using a Synapse Pipeline
 
@@ -44,7 +44,7 @@ In this task, you will trigger a Synapse Pipeline to perform manual data ingesti
 
 1. In Synapse Studio, navigate to the `Integrate` hub, select the `Exercise 5 - Import sales telemetry data` pipeline and then select `Debug` to trigger the pipeline.
 
-   ![Import telemetry data with Synapse pipeline](./media/ex05-import-data-with-synapse-pipeline.png)
+   ![Import telemetry data with Synapse pipeline](media/ex05-import-data-with-synapse-pipeline.1.png)
 
 2. With the pipeline debug window open, wait until the pipeline completes (should take around 3 to 4 minutes).
 
@@ -62,7 +62,7 @@ In this task, you will query the sales telemetry data using a KQL script run fro
 
     Run the query and observe the results (the first 1000 product searches).
 
-    ![Run KQL query in Synapse Studio](./media/ex05-run-kql-query.png)
+    ![Run KQL query in Synapse Studio](media/ex05-run-kql-query.1.png)
 
 >**BONUS EXERCISE**
 >
@@ -74,17 +74,15 @@ In this task, you will load data from a Data Explorer table into a Spark datafra
 
 1. In Synapse Studio, navigate to the `Data` hub, locate the `SalesTelemetry` table, select the `...` context menu activator, and then select `New notebook > Load to DataFrame`.
 
-   ![Load Data Explorer table into Spark dataframe](./media/ex05-load-data-explorer-query-into-spark.png)
+   ![Load Data Explorer table into Spark dataframe](media/ex05-load-data-explorer-query-into-spark.1.png)
 
     This will open a Spark notebook with some PySpark code that loads data from the `SalesTelemetry` table into a Spark dataframe.
 
 2. In the `Attach to` dropdown, select the `SparkPool01` Spark bool and then select the run button to run the notebook.
 
-    ![Load KQL query results into Spark dataframe](./media/ex05-load-data-explorer-query-into-spark-results.png)
+    ![Load KQL query results into Spark dataframe](media/ex05-load-data-explorer-query-into-spark-results.1.png)
 
-    >**NOTE**
-    >
-    >It may take up to a few minutes for the Spark pool and the associated Spark session to be created.
+    >**NOTE**: It may take up to a few minutes for the Spark pool and the associated Spark session to be created.
 
 3. Add a new cell to the notebook and change the `kustoQuery` option with the following snippet:
 

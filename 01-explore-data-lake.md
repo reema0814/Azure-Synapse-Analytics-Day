@@ -34,13 +34,13 @@ In this task, you will browse your data lake using SQL On-demand.
 
 3. Select the **Synapse Analytics** resource group.
 
-   ![Open Synapse Analytics resource group](./media/00-open-synapse-resource-group.png "Resources list")
+   ![Open Synapse Analytics resource group](media/resourcegroup.png "Resources list")
 
 4. Select **SQLPool01** and **resume** it before starting the exercise.
 
-   ![SQLPool01 is highlighted.](media/select-sql-pool.png "SQLPool01")
+   ![SQLPool01 is highlighted.](media/select-sql-pool.1.png "SQLPool01")
 
-   ![Resume sqlpool](./media/00-resume-sqlpool.png "Resume")
+   ![Resume sqlpool](./media/00-resume-sqlpool.1.png "Resume")
      
 5. Return to the resource group, then select the **asadataexplorer<inject key="uniqueId" enableCopy="false"/>** and **start** it. 
 
@@ -54,13 +54,13 @@ In this task, you will browse your data lake using SQL On-demand.
 
 6. Return to the resource group, then select the **Synapse Analytics** workspace.
 
-   ![Open Azure Synapse Analytics workspace](./media/00-open-workspace.png "Azure Synapse workspace")
+   ![Open Azure Synapse Analytics workspace](./media/00-open-workspace.1.png "Azure Synapse workspace")
 
 7. On the Synapse workspace blade, open Synapse Analytics Studio by navigating to the **Workspace web URL** from the overview page.
 
    > You can also Open synapse studio by clicking on **Open** under **Getting started->Open synapse studio**
 
-   ![The Launch Synapse Studio button is highlighted on the Synapse workspace toolbar.](media/ex01-open-synapse-studio.png "Launch Synapse Studio")
+   ![The Launch Synapse Studio button is highlighted on the Synapse workspace toolbar.](media/ex01-open-synapse-studio.1.png "Launch Synapse Studio")
 
 8. In Synapse Analytics Studio, from the left panel click on the expand icon and navigate to the `Data` hub.
 
@@ -112,7 +112,7 @@ In this task, you will browse your data lake using SQL On-demand.
     ```sql
     CREATE DATABASE SQLOnDemand01
     CREATE CREDENTIAL [https://<primary_storage>.dfs.core.windows.net]
-WITH IDENTITY='User Identity';
+    WITH IDENTITY='User Identity';
     ```
 
     ![Run SQL on-demand script loading multiple CSV data lake files](./media/ex1tsk1stp13.png)
@@ -198,7 +198,7 @@ WITH IDENTITY='User Identity';
 
    > **Note**: The first time you run a notebook in a Spark pool, Synapse creates a new session. This can take approximately 3 minutes.
    
-   ![Waiting for the Spark pool to start.](https://github.com/solliancenet/azure-synapse-analytics-day/blob/master/media/ex01-attachsparkpool01waiting.png?raw=true "Waiting for the Spark pool to start.")
+   ![Waiting for the Spark pool to start.](./media/ex01-attachsparkpool01waiting.1.png "Waiting for the Spark pool to start.")
 
 5. As you can see, the output of the dataframe is displayed with 10 rows. To  display 100 rows with the header replace the last line of code with the following:
 
@@ -212,7 +212,7 @@ WITH IDENTITY='User Identity';
 
 7. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on Apply button.
 
-    ![View charts on data in Spark notebook](./media/ex1tsk2stp7.png "Review charted data")
+    ![View charts on data in Spark notebook](./media/ex1tsk2stp7.1.png "Review charted data")
     
 8. Hide the output as illustrated below.
 
