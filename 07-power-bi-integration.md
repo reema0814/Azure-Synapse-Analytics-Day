@@ -52,11 +52,11 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
    ![Selecting Download](media/BI_3.3.1.png "Download file")
 
-7. Open the downloaded .pbids file. This will launch Power BI desktop.
+7. Open the downloaded .pbids file. This will launch the Power BI desktop.
 
    >PowerBI desktop will already be installed on the labvm provided.
 
-8. When Power BI Desktop loads, select **Microsoft account**, then select **Sign in**. Follow the login prompts to login with the credential provided to you. When you return to the SQL Server database dialog, select **Connect**.
+8. When Power BI Desktop loads, select **Microsoft account**, then select **Sign in**. Follow the login prompts to log in with the credential provided to you. When you return to the SQL Server database dialog, select **Connect**.
 
    ![Signing in with a Microsoft account](media/ex03-login-pbi.1.png "Sign in")
 
@@ -74,7 +74,7 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
     ![Selecting Publish to Power BI from the File menu](media/ex03-publish-menu.1.png "Publish to Power BI")
    
-    >**Note:** You may be prompted to login a second time. Follow the login prompts to login with the credentials provided to you.
+    >**Note:** You may be prompted to log in a second time. Follow the login prompts to log in with the credentials provided to you.
 
 12. In the dialog that appears, select the provided Power BI workspace (the first one that appears under the `Power BI` section in the `Develop` hub). Do not select the item labeled My workspace. Choose **Select**.
 
@@ -112,7 +112,7 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
 1. Navigate to [www.powerbi.com](https://www.powerbi.com) on a new browser tab. Select **Sign In** and use the credential provided to you.
 
-2. Select `Workspaces` from the left menu and select the `PowerBIWorkspace` as shown in the screenshot.
+2. Select `Workspaces` from the left menu and select `PowerBIWorkspace` as shown in the screenshot.
 
    ![Selecting the right workspace to work on](media/ex03-selecting-workspace.1.png "Selecting the right workspace to work on")
 
@@ -132,35 +132,41 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
    ![The refresh button above the fields list is highlighted.](media/ex03-pbi-refresh.1.png "Refresh")
 
-7. Within the Power BI Designer, select **Line and clustered column chart** under Visualizations.
+7. Within the Power BI Designer, select **Table** under Visualizations.
 
-   ![The visualization is highlighted.](media/ex03-pbi-line-clustered-column-chart-vis.png "Line and clustered column chart")
+   ![The visualization is highlighted.](media/pbi-01.png "Table")
 
-8. Drag the **SalespersonKey** field into **X-axis** for the visualization. Then drag the **TotalExcludingTax** field into **ColumnY-axis**. Finally, drag the **Profit** field into **Line Y-axis**.
+8. Drag the **Profit**, **SalespersonKey** and **TotalExcludingTax**,  field into **Cloumns** field for the visualization. 
 
-   ![The field values are displayed as described above.](media/ex003-visualization-fields.1.png "Visualization fields")
+   ![The field values are displayed as described above.](media/pbi-02.png "Visualization fields")
+   
+9. Click on the downward arrow button next to each field in **Columns** section and select **Don't summarize**.
 
-9. Resize the line and clustered column chart visualization to fit the report area. Your visualization should look like the following:
+   ![The field values are displayed as described above.](media/pbi-03.png "Visualization fields")
+   
+     >**Note**: Make sure to select **Don't summarize** aggregation for all the three fields.
 
-   ![The visualization is highlighted on the report canvas.](media/ex03-pbi-visualization-no-filter.png "Completed visualization")
+10. Resize the line and clustered column chart visualization to fit the report area. Your visualization should look like the following:
 
-10. Under the **Filters** pane, expand the **Profit** filter **(1)**. Select **is greater than** under `Show items when the value:` **(2)**, then enter **50000000** for the value. Select **Apply filter (3)**.
+     ![The visualization is highlighted on the report canvas.](media/pbi-04.png "Completed visualization")
 
-    ![The filter is configured as described above.](media/ex03-pbi-apply-filter.1.png "Profit filter")
+11. Under the **Filters** pane, expand the **Profit** filter **(1)**. Select **is greater than** under `Show items when the value:` **(2)**, then enter **5000** for the value. Select **Apply filter (3)**.
 
-11. After a few seconds, you should see the visualization change based on the filter. In this case, we narrow down the results to only those where the total profit amount is greater than $50 million. Since we are using Direct Query, Power BI pushed down the filter to the dedicated SQL pool (SQLPool01) to execute a new query based on the filter parameters. The pool sent back the results to Power BI to re-render the chart. Since we are dealing with a vast number of records (over 12 million), harnessing the dedicated SQL pool's power to aggregate and filter the data rather than importing them and using the Power BI engine to do the work is much more efficient.
+    ![The filter is configured as described above.](media/pbi-05.png "Profit filter")
 
-    ![The filtered visualization is displayed.](media/ex03-pbi-filtered-visualization.png "Filtered visualization")
+12. After a few seconds, you should see the visualization change based on the filter. In this case, we narrow down the results to only those where the total profit amount is greater than 5000. Since we are using Direct Query, Power BI pushed down the filter to the dedicated SQL pool (SQLPool01) to execute a new query based on the filter parameters. The pool sent back the results to Power BI to re-render the chart. Since we are dealing with a vast number of records (over 12 million), harnessing the dedicated SQL pool's power to aggregate and filter the data rather than importing them and using the Power BI engine to do the work is much more efficient.
 
-12. From the file menu within the designer, select **Save As**.
+    ![The filtered visualization is displayed.](media/pbi-06.png "Filtered visualization")
+
+13. From the file menu within the designer, select **Save As**.
 
     ![Selecting Save As from the File menu](media/ex03-file-save-as.1.png "Save As")
 
-13. In the dialog that appears, enter **Key Sales by Person** for the name, then select **Save**.
+14. In the dialog that appears, enter **Key Sales by Person** for the name, then select **Save**.
 
     ![The save dialog is displayed.](media/ex03-pbi-save-report.png "Save your report")
 
-14. This report is now available to all authorized users within Synapse Analytics Studio and the Power BI workspace.
+15. This report is now available to all authorized users within Synapse Analytics Studio and the Power BI workspace.
 
 ## Task 3 - View the SQL query
 
@@ -168,10 +174,10 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
    ![Monitor hub.](media/monitor-hub.png "Monitor hub")
 
-2. Select **SQL requests** in the left-hand menu **(1)**, then select **SQLPool01** under the Pool filter **(2)**. Look at the list of recent queries executed by your lab username as the Submitter. Hover over one of these queries to see the **Request content** ,click on **More** next to the Request content **(3)** to view the executed query.
+2. Select **SQL requests** in the left-hand menu **(1)**, then select **SQLPool01** under the Pool filter **(2)**. Look at the list of recent queries executed by your lab username as the Submitter. Hover over one of these queries to see the **Request content**, and click on **More** next to the Request content **(3)** to view the executed query.
 
    ![The list of SQL requests is displayed.](media/ex03-sqlrequestsid.1.png "SQL requests")
 
-3. View the queries' request content until you find one that contains the SQL SELECT statement executed by your filter in the Power BI report. Here you can see the `Profit` and `TotalExcludingTax` fields have the SUM aggregate, and the `wwi.FactSale` table is grouped by `SalespersonKey`. A WHERE clause filters the rows by `Profit` (aliased as `a0`) where the value is greater than or equal to `50000000` ($50 million). Power BI generated the SQL script, then used the dedicated SQL pool to execute the query and send back the results.
+3. View the queries' request content until you find one that contains the SQL SELECT statement executed by your filter in the Power BI report. Here you can see the `Profit`, `SalespersonKey`, and `TotalExcludingTax` fields have been selected from the `wwi.FactSale`. A WHERE clause filters the rows where the value is greater than or equal to `5000`. Power BI generated the SQL script, then used the dedicated SQL pool to execute the query and send back the results.
 
-   ![The SQL query is displayed as described above.](media/ex03-pbi-sql-statement.png "Request content")
+   ![The SQL query is displayed as described above.](media/pbi-07.png "Request content")
