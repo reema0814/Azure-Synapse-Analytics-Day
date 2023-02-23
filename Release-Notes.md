@@ -1,5 +1,11 @@
 # Release Notes
 
+### 23 February 2023
+
+* Major updates in Lab Guide.
+* In **Exercise 7, Task 2** we have changed the visualization from "Line and clustered cloumn chart" to **Table** in PowerBI. We have updated the lab guide to remove the aggregations to the table fields and apply the filters accordingly to view the query in synapse workspace.
+
+
 ### 28 June 2022
 
 * Minor updates in the Lab Guide.
