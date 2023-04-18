@@ -38,7 +38,7 @@ The diagram below provides a unified view of the exercises in the lab and their 
 
 ## Exercise 1 - Explore the data lake with Azure Synapse Serverless SQL Pool and Azure Synapse Spark
 
-In [this exercise](01-explore-data-lake.md), you will explore data using the engine of your choice (SQL or Spark).
+In this exercise, you will explore data using the engine of your choice (SQL or Spark).
 
 Understanding data through data exploration is one of the core challenges faced today by data engineers and data scientists as well. Depending on the data's underlying structure and the specific requirements of the exploration process, different data processing engines will offer varying degrees of performance, complexity, and flexibility.
 
@@ -46,7 +46,7 @@ In Azure Synapse Analytics, you have the possibility of using either the SQL Ser
 
 ## Exercise 2 - Working with Azure Synapse Pipelines
 
-In [this exercise](02-build-modern-dw-pipelines.md), you will use a pipeline with parallel activities to bring data into the Data Lake, transform it, and load it into the Azure Synapse SQL Pool. You will also monitor the progress of the associated tasks.
+In this exercise, you will use a pipeline with parallel activities to bring data into the Data Lake, transform it, and load it into the Azure Synapse SQL Pool. You will also monitor the progress of the associated tasks.
 
 Once data is properly understood and interpreted, moving it to the various destinations where processing steps occur is the next big task. Any modern data platform must provide a seamless experience for all the typical data wrangling actions like extractions, parsing, joining, standardizing, augmenting, cleansing, consolidating, and filtering.
 
@@ -54,7 +54,7 @@ Azure Synapse Analytics provides two significant categories of features - data f
 
 ## Exercise 3 - High Performance Analysis with Azure Synapse Dedicated SQL Pools
 
-In [this exercise](03-high-performance-analysis.md), you will try to understand customer details using a query and chart visualizations. You will also explore the performance of various queries.
+In this exercise, you will try to understand customer details using a query and chart visualizations. You will also explore the performance of various queries.
 
 SQL data warehouses have been for a long time the center of gravity in data platforms. Current data warehouses are capable of providing high performance, distributed, and governed workloads, regardless of the data volumes at hand.
 
@@ -62,19 +62,19 @@ The Azure Synapse SQL Pools in Azure Synapse Analytics is the new incarnation of
 
 ## Exercise 4 - Lake Databases and Database templates
 
-In [this exercise](04-lake-databases-database-templates.md), you will explore the concept of a lake database and you will learn how to use readily available database templates for lake databases.
+In this exercise, you will explore the concept of a lake database and you will learn how to use readily available database templates for lake databases.
 
 The lake database in Azure Synapse Analytics enables you to bring together database design, meta information about the data that is stored and a possibility to describe how and where the data should be stored. Lake database addresses the challenge of today's data lakes where it is hard to understand how data is structured.
 
 ## Exercise 5 - Log and telemetry analytics
 
-In [this exercise](05-log-telemetry-analytics.md), you will explore the capabilities of the newly integrared Data Explorer runtime in Synapse Analytics.
+In this exercise, you will explore the capabilities of the newly integrared Data Explorer runtime in Synapse Analytics.
 
 Azure Synapse data explorer provides you with a dedicated query engine optimized and built for log and time series data workloads. With this new capability now part of Azure Synapse's unified analytics platform, you can easily access your machine and user data to surface insights that can directly improve business decisions. To complement the existing SQL and Apache Spark analytical runtimes, Azure Synapse data explorer is optimized for efficient log analytics, using powerful indexing technology to automatically index structured, semi-structured, and free-text data commonly found in telemetry data.
 
 ## Exercise 6 - Data governance with Azure Purview
 
-In [this exercise](06-data-governance-purview.md), you will use several of the capabilities provided by the integration between Azure Synapse Analytics and Azure Purview workspaces.
+In this exercise, you will use several of the capabilities provided by the integration between Azure Synapse Analytics and Azure Purview workspaces.
 
 Azure Purview is a unified data governance solution that helps you manage and govern your on-premises, multicloud, and software-as-a-service (SaaS) data. Purview enables you to easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. It also enables data consumers to find valuable, trustworthy data.
 
@@ -82,7 +82,7 @@ Azure Synapse Analytics and Azure Purview workspaces are tightly integrated, ena
 
 ## Exercise 7 - Power BI integration
 
-In [this exercise](07-power-bi-integration.md), you will build a Power BI report in Azure Synapse Analytics.
+In this exercise, you will build a Power BI report in Azure Synapse Analytics.
 
 The visual approach in data exploration, analysis, and interpretation is one of the essential tools for both technical users (data engineers, data scientists) and business users. Having a highly flexible and performant data presentation layer is a must for any modern data platform.
 
@@ -94,7 +94,7 @@ Azure Synapse Analytics integrates natively with Power BI, a proven and highly s
 
 ## Exercise 8 - Data Science with Spark (optional)
 
-In [this exercise](08-data-science-with-spark.md), you will leverage a model trained with Azure Machine Learning AutoML using Spark compute to make predictions using the T-SQL PREDICT statement in an Azure Synapse Analytics dedicated SQL pool.
+In this exercise, you will leverage a model trained with Azure Machine Learning AutoML using Spark compute to make predictions using the T-SQL PREDICT statement in an Azure Synapse Analytics dedicated SQL pool.
 
 Azure Synapse Analytics provides support for using trained models (in ONNX format) directly from dedicated SQL pools. What this means in practice, is that your data engineers can write T-SQL queries that use those models to make predictions against tabular data stored in a SQL Pool database table.
 
