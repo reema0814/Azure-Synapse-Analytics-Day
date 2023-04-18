@@ -90,7 +90,7 @@ Azure Synapse Analytics integrates natively with Power BI, a proven and highly s
 
 >**Extension module**
 >
->The exercise is accompanied by a [Power BI extension module](./power-bi-extension-module/README.md) with four additional (optional) exercises.
+>The exercise is accompanied by a Power BI extension module with four additional (optional) exercises.
 
 ## Exercise 8 - Data Science with Spark (optional)
 
