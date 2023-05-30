@@ -114,11 +114,11 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
 2. Select `Workspaces` from the left menu and select `PowerBIWorkspace` as shown in the screenshot.
 
-   ![Selecting the right workspace to work on](media/ex03-selecting-workspace.1.png "Selecting the right workspace to work on")
+   ![Selecting the right workspace to work on](media/a1.4.png "Selecting the right workspace to work on")
 
-3. Navigate to the **Settings** by selecting the ellipse symbol at the top right, then select **Settings** from the menu.
+3. Navigate to the **Settings** by selecting the ellipse symbol at the top right, then select **Power BI Settings** from the menu.
 
-   ![The Settings menu is displayed.](media/pbiws1-settings.png "Settings")
+   ![The Settings menu is displayed.](media/a1.5.png "Settings")
 
 4. Select the **Datasets** tab. From the list of datasets select `wwifactsales`, then select **Edit credentials** underneath the **Data Source credentials** section.
 
