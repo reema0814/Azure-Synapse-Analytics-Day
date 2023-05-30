@@ -104,9 +104,9 @@ In this task you will create manually a new lake database table and map data int
     >
     >The table must be published before advancing to the next step, otherwise the data flow debug session will not be able to start properly.
 
-4. In the table editor, select `Map data (Preview)` to start the Map Data tool. If this is the first time you are doing this, you might pe prompted to turn on data flow debug. If this happens, leave the default selections and select `OK` to start the data flow debug session.
+4. In the table editor, select `Map data` to start the Map Data tool. If this is the first time you are doing this, you might pe prompted to turn on data flow debug. If this happens, leave the default selections and select `OK` to start the data flow debug session.
 
-   ![Start the Map Data tool](./media/ex04-start-map-data-tool.png)
+   ![Start the Map Data tool](./media/a1.2.png)
 
    ![Start data flow debug session](./media/ex04-start-data-flow-debug-session.png)
    

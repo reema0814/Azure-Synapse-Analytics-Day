@@ -542,7 +542,7 @@ In this task, you examine the Apache Spark application monitoring capabilities b
 
 6. Select the **Logs** tab to view the log output. You may switch between log sources and types, using the dropdown lists below.
 
-   ![The Spark application logs are displayed.](media/ex02-monitor-activities-spark-application-logs.1.png "Logs")
+   ![The Spark application logs are displayed.](media/a1.1.png "Logs")
    
 7. To look closer at any individual job, you can use the **Job IDs** drop-down to select the job number.
 
