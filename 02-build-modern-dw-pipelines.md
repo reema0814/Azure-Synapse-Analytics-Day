@@ -258,7 +258,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 11. Finally, select the **Settings** tab. Check **Enable staging** and expand `Staging settings`. Search and select **asadatalake01** under `Staging account linked service`, then type **staging** into `Storage Path`. Finally, check **Enable Compression**.
 
-    ![The staging settings are configured as described.](media/copy-data-settings.png "Settings")
+    ![The staging settings are configured as described.](media/pic2.png "Settings")
 
     > Since we are using PolyBase with dynamic file properties, owing to the UniqueId values, we need to [enable staging](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-data-warehouse#staged-copy-by-using-polybase). In cases of large file movement activities, configuring a staging path for the copy activity can improve performance.
 
@@ -332,7 +332,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 22. In the **Filter settings** tab of the configuration panel, click anywhere inside the **Filter on (1)** box then click on **Open expression builder (2)**.
 
-    ![The Filter on box is highlighted in the configuration panel for the PostalCodeFilter transformation.](media/aiu3.png "Data flow canvas")
+    ![The Filter on box is highlighted in the configuration panel for the PostalCodeFilter transformation.](media/pic1.png "Data flow canvas")
 
 23. This will open the Visual expression builder.
 
