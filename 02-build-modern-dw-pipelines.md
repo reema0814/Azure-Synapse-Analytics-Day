@@ -334,11 +334,11 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     ![The Filter on box is highlighted in the configuration panel for the PostalCodeFilter transformation.](media/pic1.png "Data flow canvas")
 
-23. This will open the Visual expression builder.
+23. This will open the Dataflow expression builder.
 
     > In data flows, many transformation properties are entered as expressions. These expressions are composed of column values, parameters, functions, operators, and literals that evaluate to a Spark data type at run time. To learn more, visit the [Build expressions in data flow](https://docs.microsoft.com/azure/data-factory/concepts-data-flow-expression-builder) page in the documentation.
 
-    ![The Visual expression builder is displayed.](media/ex02-orchestrate-data-flow-expression-builder.png "Visual expression builder")
+    ![The Visual expression builder is displayed.](media/E2-T2-S23.png "Dataflow expression builder")
 
 24. The filter currently applied ensures all zip codes are between 90000 and 98000. Observe the different expression elements and values in the area below the expression box that help you create and modify filters and other expressions.
 
