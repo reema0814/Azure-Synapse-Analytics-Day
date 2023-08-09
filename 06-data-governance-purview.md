@@ -95,7 +95,7 @@ In this task, you will explore the results of scanning the Synapse Analytics wor
 2. In Purview Studio, navigate to the `Data map` hub, select `Sources` and then locate the Synapse Analytics source which is your Synapse Analytics workspace. Select `View details` to explore the configuration of the source.
     ![](media/E6-T4-S2.png)
     
-    ![Locate Synpse Analytics source in Purview Studio](media/anly022.1.png)
+    ![Locate Synpse Analytics source in Purview Studio](E6-T4-S2.png)
     
 
 3. Note the details of the source:
@@ -136,7 +136,7 @@ In this task, you will explore the results of scanning the Synapse Analytics wor
     - Updated on (notice how the update was performed by `Synapse`; the time of the update should approximately match the finish time of the Synapse pipeline you triggered in Task 2)
     - Hierarchy
 
-    ![Synapse Pipeline asset details](./media/ex06-purview-collection-assets-synapse-pipeline-details.png)
+    ![Synapse Pipeline asset details](media/E6-T5-S2.png)
 
 3. Select the `Lineage` tab to view the detailed lineage data.
 
