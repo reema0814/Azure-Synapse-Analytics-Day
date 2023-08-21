@@ -1,4 +1,4 @@
-# Hands-On-Lab: Power BI integration
+# Hands-On-Lab: Create and publish PowerBI Dashboards & Reports
 
 In this exercise, you will realize another benefit of the fully integrated environment provided by Azure Synapse Analytics. Here, you will create a Power BI Report and build a visualization within Synapse Analytics Studio. Once you have published a dataset, you will not have to leave this environment to log into a separate Power BI website to view and edit reports.
 
