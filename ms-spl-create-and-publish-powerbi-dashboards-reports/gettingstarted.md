@@ -1,5 +1,4 @@
-# Hands-On-Lab: Create and publish PowerBI Dashboards & Reports
-
+# Hands-On-Lab: SQL Datawarehouse with Syanpse
 
 ### How to get started with a provided lab environment
 
