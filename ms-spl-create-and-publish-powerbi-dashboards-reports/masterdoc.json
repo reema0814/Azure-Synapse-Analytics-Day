@@ -12,9 +12,16 @@
 
       {
 
-        "RawFilePath": "",
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/ms-spl-create-and-publish-powerbi-dashboards-reports/gettingstarted.md",
 
         "Order": 1
+
+      },
+      {
+
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Azure-Synapse-Analytics-Day/v2-2022/ms-spl-create-and-publish-powerbi-dashboards-reports/hol1.md",
+
+        "Order": 2
 
       }
     ]
