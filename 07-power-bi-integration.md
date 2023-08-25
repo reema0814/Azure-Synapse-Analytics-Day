@@ -181,3 +181,5 @@ If you do not see a list of data fields under Fields, follow the steps below for
 3. View the queries' request content until you find one that contains the SQL SELECT statement executed by your filter in the Power BI report. Here you can see the `Profit`, `SalespersonKey`, and `TotalExcludingTax` fields have been selected from the `wwi.FactSale`. A WHERE clause filters the rows where the value is greater than or equal to `5000`. Power BI generated the SQL script, then used the dedicated SQL pool to execute the query and send back the results.
 
    ![The SQL query is displayed as described above.](media/pbi-07.png "Request content")
+
+   ## Proceed to execise 8
