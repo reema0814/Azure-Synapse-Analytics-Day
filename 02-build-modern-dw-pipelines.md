@@ -573,3 +573,5 @@ In this task, you examine the Apache Spark application monitoring capabilities b
 13. You can also change the view to see which jobs involved read and write activities. Select **All job IDs** in the job dropdown, and in the **View** drop-down, select **Read**. You can see which jobs performed reads, with each color-coded by how much data was read.
 
     ![Read is selected and highlighted in the Display drop-down list.](media/ex02-monitor-activities-spark-applications-display-drop-down-read-graph.1.png "Synapse Analytics Monitor")
+
+## Proceed to Exercise 3
