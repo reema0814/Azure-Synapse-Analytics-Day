@@ -26,6 +26,8 @@ In this task, you will verify Data Explorer database is present and create a tab
 
 2. In the `Connect to` dropdown, select the Data Explorer pool **<inject key="dataexplorer pool Name" enableCopy="false" />**, and then select the `Sales` database.
 
+>**Note**: If the database is not seen try clicking on refresh Button
+
    Use the following KQL query and select `Run`:
 
       ```kql
@@ -53,8 +55,10 @@ In this task, you will trigger a Synapse Pipeline to perform manual data ingesti
 In this task, you will query the sales telemetry data using a KQL script run from Synapse Studio.
 
 1. In Synapse Studio, navigate to the `Develop` hub and create a new KQL query with the following content:
+ 
+2. Connect to dataexplorer and use the sales database
 
-    ```kql
+   ```kql
     SalesTelemetry
     | where Url startswith "/product/search"
     | take 1000
@@ -97,3 +101,5 @@ In this task, you will load data from a Data Explorer table into a Spark datafra
     Run the new cell and observe the result (the total number of product searches logged into the telemetry data).
 
    ![Count number of product searches](./media/ex05-load-data-explorer-query-into-spark-results-2.png)
+
+   ## Proceed to Excercise 6
