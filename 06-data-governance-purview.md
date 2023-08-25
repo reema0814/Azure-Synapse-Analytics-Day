@@ -148,3 +148,5 @@ This exercise demonstrated the integration between Azure Synapse Analytics and A
 
 - [Connect to and manage Azure Synapse Analytics workspaces in Azure Purview](https://docs.microsoft.com/en-us/azure/purview/register-scan-synapse-workspace)
 - [Connect a Synapse workspace to an Azure Purview account](https://docs.microsoft.com/en-us/azure/synapse-analytics/catalog-and-governance/quickstart-connect-azure-purview)
+
+## Proceed to excercise 7
