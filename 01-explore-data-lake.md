@@ -34,37 +34,37 @@ In this task, you will browse your data lake using SQL On-demand.
 
 3. Select the **Synapse Analytics** resource group.
 
-   ![Open Synapse Analytics resource group](media/resourcegroup.png "Resources list")
+   ![Open Synapse Analytics resource group](media/resourcegroup11.png "Resources list")
 
 4. Select **SQLPool01** and **resume** it before starting the exercise.
 
-   ![SQLPool01 is highlighted.](media/select-sql-pool.1.png "SQLPool01")
+   ![SQLPool01 is highlighted.](media/select-sql-pool11.png "SQLPool01")
 
-   ![Resume sqlpool](./media/00-resume-sqlpool.1.png "Resume")
+   ![Resume sqlpool](./media/00-resume-sqlpool11.png "Resume")
      
 5. Return to the resource group, then select the **asadataexplorer<inject key="uniqueId" enableCopy="false"/>** and **start** it. 
 
    > **Note**: Please note starting of data explorer pool might take few minutes, you don't have to wait for it to be started you can proceed to next steps.
 
-   ![SQLPool01 is highlighted.](media/ex1dex1.png "SQLPool01")
+   ![SQLPool01 is highlighted.](media/ex1dex11.png "SQLPool01")
    
-   ![SQLPool01 is highlighted.](media/ex1dex2.png "SQLPool01")
+   ![SQLPool01 is highlighted.](media/ex1dex21.png "SQLPool01")
    
    >**Note**: In case the data explorer is in stopping state. Please continue with the lab as we need it in exercise 4. You can visit this page after few minutes and start it.
 
 6. Return to the resource group, then select the **Synapse Analytics** workspace.
 
-   ![Open Azure Synapse Analytics workspace](./media/00-open-workspace.1.png "Azure Synapse workspace")
+   ![Open Azure Synapse Analytics workspace](./media/00-open-workspace11.png "Azure Synapse workspace")
 
 7. On the Synapse workspace blade, open Synapse Analytics Studio by navigating to the **Workspace web URL** from the overview page.
 
    > You can also Open synapse studio by clicking on **Open** under **Getting started->Open synapse studio**
 
-   ![The Launch Synapse Studio button is highlighted on the Synapse workspace toolbar.](media/ex01-open-synapse-studio.1.png "Launch Synapse Studio")
+   ![The Launch Synapse Studio button is highlighted on the Synapse workspace toolbar.](media/ex01-open-synapse-studio11.png "Launch Synapse Studio")
 
 8. In Synapse Analytics Studio, from the left panel click on the expand icon and navigate to the `Data` hub.
 
-   ![Open Data hub in Synapse Analytics Studio](./media/data-hub-1.png)
+   ![Open Data hub in Synapse Analytics Studio](./media/data-hub11.png)
 
    ![Open Data hub in Synapse Analytics Studio](./media/data-hub.png)
 

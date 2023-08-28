@@ -34,17 +34,21 @@ In this task you will create a new lake database.
 
 In this task you will create a new lake database table using files from the data lake storage account.
 
-1. In Synapse Studio, navigate to the `Data` hub and select the data lake account under `Linked`, `Azure Data Lake Storage Gen2`. Select the `database1` file system, and then select the `fact-sale` folder, followed by the `Day=20191201` folder. In this folder, locate the `sale-small-20191201-snappy.parquet` file.
+1. In Synapse Studio, navigate to the `Data` hub and select the data lake account under `Linked`, `Azure Data Lake Storage Gen2`.
+
+2. Select the `database1` file system, and then select the `fact-sale` folder, followed by the `Day=20191201` folder. In this folder, locate the `sale-small-20191201-snappy.parquet` file.
 
    ![Explore data lake source data](./media/ex04-explore-data-lake-source-data.png)
 
-2. In Synapse Studio, navigate to the `Data` hub, and select the `Workspace` section followed by `Lake database`. In the context menu associated with the `Database1` database, select `Open` to edit the lake database.
+3. In Synapse Studio, navigate to the `Data` hub, and select the `Workspace` section followed by `Lake database`.
+
+4. In the context menu associated with the `Database1` database, hover to database 1 click on three elipses and select `Open` to edit the lake database.
 
     In the database editor, select `+ Table` followed by `From data lake`.
 
    ![Create table from data lake storage](./media/ex04-create-table-from-data-lake.png)
 
-3. Configure the properties of the new table as follows, then select `Continue`:
+5. Configure the properties of the new table as follows, then select `Continue`:
 
     - External table name: `FactSale`
     - Linked service: `asadatalake01`
@@ -68,7 +72,9 @@ In this task you will create a new lake database table using files from the data
 
    ![Configure partition column](./media/ex04-configure-partition-column.png)
 
-7. In Synapse Studio, navigate to the `Develop` hub and create a new SQL script. Make sure the `Built-in` serverless SQL pool is selected as well as the `Database1` database.
+7. In Synapse Studio, navigate to the `Develop` hub.
+
+8. create a new SQL script. Make sure the `Built-in` serverless SQL pool is selected as well as the `Database1` database.
 
     Set the content of the script to the statement below and run the script.
 
@@ -102,9 +108,9 @@ In this task you will create manually a new lake database table and map data int
 
     >IMPORTANT
     >
-    >The table must be published before advancing to the next step, otherwise the data flow debug session will not be able to start properly.
+    >The table must be **published** before advancing to the next step, otherwise the data flow debug session will not be able to start properly.
 
-4. In the table editor, select `Map data` to start the Map Data tool. If this is the first time you are doing this, you might pe prompted to turn on data flow debug. If this happens, leave the default selections and select `OK` to start the data flow debug session.
+4. In the table editor, select `Map data` to start the Map Data tool.If this is the first time you are doing this, you might pe prompted to turn on data flow debug. If this happens, leave the default selections and select `OK` to start the data flow debug session.
 
    ![Start the Map Data tool](./media/a1.2.png)
 
@@ -112,7 +118,7 @@ In this task you will create manually a new lake database table and map data int
    
    > **Note**: You will have to wait until data debug session is started before proceeding to next steps 
 
-5. In the `New data mapping` dialog, configure the following properties:
+6. In the `New data mapping` dialog, configure the following properties:
 
    > **Note**: If you can't find the  `New data mapping` dialog, you can find it by clicking on `Map data (Preview)` 
    
@@ -128,7 +134,7 @@ In this task you will create manually a new lake database table and map data int
 
    ![Select source file for data mapping](./media/ex3tsk3img2.png)
 
-6. Configure the data mapping properties as follows:
+7. Configure the data mapping properties as follows:
 
     - Data mapping name: `CustomerMapping`
     - Target database: `Database1`
@@ -160,3 +166,5 @@ In this task you will use a lake database template from the Synapse Knowledge Ce
 5. In Synapse Studio, open the newly created lake database in the editor and explore its content.
 
    ![Configure banking database](./media/ex04-configure-banking-database.png)
+
+   ## Proceed to exercise 5
