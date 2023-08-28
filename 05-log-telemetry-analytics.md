@@ -30,9 +30,9 @@ In this task, you will verify Data Explorer database is present and create a tab
 
    Use the following KQL query and select `Run`:
 
-      ```kql
-    .create table SalesTelemetry ( CustomerId:int32, ProductId:int32, Timestamp:datetime, Url:string)
-      ```
+   ```kql
+   .create table SalesTelemetry ( CustomerId:int32, ProductId:int32, Timestamp:datetime, Url:string)
+   ```
 
    ![KQL script to create new table](media/ex05-create-data-explorer-table-2.1.png)
 
