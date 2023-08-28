@@ -26,7 +26,7 @@ In this task, you will verify Data Explorer database is present and create a tab
 
 2. In the `Connect to` dropdown, select the Data Explorer pool **<inject key="dataexplorer pool Name" enableCopy="false" />**, and then select the `Sales` database.
 
->**Note**: If the database is not seen try clicking on refresh Button
+   >**Note**: If the database is not seen try clicking on refresh Button
 
    Use the following KQL query and select `Run`:
 
@@ -38,7 +38,7 @@ In this task, you will verify Data Explorer database is present and create a tab
 
 3. In Synapse Studio, navigate to the `Data` hub and check that you have the `SalesTelemetry` table showing up under the `Sales` database in the Data Explorer pool **<inject key="dataexplorer pool Name" enableCopy="false" />**.
 
-   ![Validate table created with KQL script](media/E5-T1-S3.png)
+   ![Validate table created with KQL script](media/analytics-ex5-salestele.png)
 
 ## Task 2 - Perform manual data ingestion using a Synapse Pipeline
 
