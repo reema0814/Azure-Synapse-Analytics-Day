@@ -1,8 +1,8 @@
 ## Overview
 
-In this lab various features of Azure Synapse Analytics will be explored. Azure Synapse Analytics Studio is a single tool that every team member can use collaboratively. Synapse Studio will be the only tool used throughout this lab through data ingestion, cleaning, and transforming raw files to using Notebooks to train, register, and consume a Machine learning model. The lab will also provide hands-on-experience monitoring and prioritizing data related workloads.
+In this lab, various features of Azure Synapse Analytics will be explored. Azure Synapse Analytics Studio is a single tool that every team member can use collaboratively. Synapse Studio will be the only tool used throughout this lab through data ingestion, cleaning, and transforming raw files to using Notebooks to train, register, and consume a Machine learning model. The lab will also provide hands-on experience monitoring and prioritizing data-related workloads.
 
-## Solution architecture
+## Solution Architecture
 
 ![Architecture diagram explained in the next paragraph.](media/archdiagram.png "Architecture Diagram")
 
@@ -24,11 +24,11 @@ Data Lake Storage: Azure Data Lake Storage Gen2 serves as the central repository
 Data Integration: Azure Data Factory is integrated for data movement, transformation, and orchestration.
 
 
-##3. Synapse Workspace:
+## 3. Synapse Workspace:
 The Synapse Workspace is a centralized environment for managing all Synapse resources, including data, analytics, and security policies.
 Synapse Workspace Overview
 
-##4. Data Ingestion:
+## 4. Data Ingestion:
 Synapse supports various data ingestion methods such as bulk loading, real-time streaming, and hybrid data integration.
 It can ingest data from diverse sources, including on-premises databases and external platforms.
 Data Ingestion Overview
