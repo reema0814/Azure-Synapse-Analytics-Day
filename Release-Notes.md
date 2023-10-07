@@ -1,5 +1,10 @@
 # Release Notes
 
+### 09 September 2023
+
+* Minor updates in the Lab Guide.   
+* Enhanced lab guide instructions and updated screenshots with latest UI from Microsoft Azure for better user experience.
+
 ### 23 February 2023
 
 * Major updates in Lab Guide.
