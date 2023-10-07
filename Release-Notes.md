@@ -16,12 +16,12 @@
 * Minor updates in the Lab Guide.
 * **Exercise 4:** In Exercise 4, Task 3 we have included additional steps to provide more details on creating new data mapping , previewing the data and querying the database.
 
-### 25 march 2022
+### 25 March 2022
 
 * Minor updates in the Lab Guide.
 * Updated the screenshots and instructions in Exercise 2 for better user experience.
 
-### 11 march 2022
+### 11 March 2022
 
 * Major updates in Lab Guide.
 * **Exercise 1:**  No changes
