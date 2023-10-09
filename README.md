@@ -2,11 +2,11 @@
 
 ## Wide World Importers
 
-Wide World Importers (WWI) is a wholesale novelty goods importer and distributor operating from the San Francisco bay area.
+Wide World Importers (WWI) is a wholesale novelty goods importer and distributor operating from the San Francisco Bay Area.
 
-As a wholesaler, WWI's customers are mostly companies who resell to individuals. WWI sells to retail customers across the United States, including specialty stores, supermarkets, computing stores, tourist attraction shops, and some individuals. WWI sells to other wholesalers via a network of agents who promote the products on WWI's behalf. While all of WWI's customers are currently based in the United States, the company intends to expand into other countries.
+As a wholesaler, WWI's customers are mostly companies who resell to individuals. WWI sells to retail customers across the United States, including speciality stores, supermarkets, computing stores, tourist attraction shops, and some individuals. WWI sells to other wholesalers via a network of agents who promote the products on WWI's behalf. While all of WWI's customers are currently based in the United States, the company intends to expand into other countries.
 
-WWI buys goods from suppliers, including novelty and toy manufacturers, and other novelty wholesalers. They stock the goods in their WWI warehouse and reorder from suppliers as needed to fulfill customer orders. They also purchase large volumes of packaging materials and sell these in smaller quantities as a convenience for the customers.
+WWI buys goods from suppliers, including novelty and toy manufacturers, and other novelty wholesalers. They stock the goods in their WWI warehouse and reorder from suppliers as needed to fulfil customer orders. They also purchase large volumes of packaging materials and sell these in smaller quantities as a convenience for the customers.
 
 Recently WWI started to sell a variety of edible novelties such as chili chocolates. The company previously did not have to handle chilled items. To meet food handling requirements, they must monitor the temperature in their chiller room and any of their trucks that have chiller sections.
 
@@ -14,7 +14,7 @@ Recently WWI started to sell a variety of edible novelties such as chili chocola
 
 Wide World Importers is designing and implementing a Proof of Concept (PoC) for a unified data analytics platform. Their soft goal is to bring siloed teams to work together on a single platform.
 
-In this lab, you will play the role of various persona: a data engineer, a business analyst, and a data scientist. The workspace is already set up to focus on some of the core development capabilities of Azure Synapse Analytics.
+In this lab, you will play the role of various persons: a data engineer, a business analyst, and a data scientist. The workspace is already set up to focus on some of the core development capabilities of Azure Synapse Analytics.
 
 By the end of this lab, you will have performed a non-exhaustive list of operations that combine the strength of Big Data and SQL analytics into a single platform.
 
@@ -26,11 +26,11 @@ If you are using a hosted lab environment, please follow the steps below to get 
 
     ![The lab environment details are displayed.](media/ed1.png "Lab Environment")
 
-2. Select **Resources** tab to start the Virtual Machine (VM) provided for this lab. However, you do not need to use the VM to complete the lab. It is there for your convenience to make it easier to sign into Azure if you have an existing account and do not want to log out of it.
+2. Select the **Resources** tab to start the Virtual Machine (VM) provided for this lab. However, you do not need to use the VM to complete the lab. It is there for your convenience to make it easier to sign into Azure if you have an existing account and do not want to log out of it.
 
     ![The Virtual Machines are displayed and the Play button is highlighted.](media/prg1.png "Lab Resources")
 
-## Solution architecture
+## Solution Architecture
 
 The diagram below provides a unified view of the exercises in the lab and their estimated times for completion.
 
@@ -48,15 +48,15 @@ In Azure Synapse Analytics, you have the possibility of using either the SQL Ser
 
 In this exercise, you will use a pipeline with parallel activities to bring data into the Data Lake, transform it, and load it into the Azure Synapse SQL Pool. You will also monitor the progress of the associated tasks.
 
-Once data is properly understood and interpreted, moving it to the various destinations where processing steps occur is the next big task. Any modern data platform must provide a seamless experience for all the typical data wrangling actions like extractions, parsing, joining, standardizing, augmenting, cleansing, consolidating, and filtering.
+Once data is properly understood and interpreted, moving it to the various destinations where processing steps occur is the next big task. Any modern data platform must provide a seamless experience for all the typical data-wrangling actions like extractions, parsing, joining, standardizing, augmenting, cleansing, consolidating, and filtering.
 
 Azure Synapse Analytics provides two significant categories of features - data flows and data orchestrations (implemented as pipelines). They cover the whole range of needs, from design and development to triggering, execution, and monitoring.
 
-## Exercise 3 - High Performance Analysis with Azure Synapse Dedicated SQL Pools
+## Exercise 3 - High-Performance Analysis with Azure Synapse Dedicated SQL Pools
 
 In this exercise, you will try to understand customer details using a query and chart visualizations. You will also explore the performance of various queries.
 
-SQL data warehouses have been for a long time the center of gravity in data platforms. Current data warehouses are capable of providing high performance, distributed, and governed workloads, regardless of the data volumes at hand.
+SQL data warehouses have been for a long time the center of gravity in data platforms. Current data warehouses are capable of providing high-performance, distributed, and governed workloads, regardless of the data volumes at hand.
 
 The Azure Synapse SQL Pools in Azure Synapse Analytics is the new incarnation of the former Azure SQL Data Warehouse. It provides all the state-of-the-art SQL data warehousing features while benefiting from the advanced integration with all the other Synapse services.
 
@@ -64,11 +64,11 @@ The Azure Synapse SQL Pools in Azure Synapse Analytics is the new incarnation of
 
 In this exercise, you will explore the concept of a lake database and you will learn how to use readily available database templates for lake databases.
 
-The lake database in Azure Synapse Analytics enables you to bring together database design, meta information about the data that is stored and a possibility to describe how and where the data should be stored. Lake database addresses the challenge of today's data lakes where it is hard to understand how data is structured.
+The lake database in Azure Synapse Analytics enables you to bring together database design, meta-information about the data that is stored and the possibility to describe how and where the data should be stored. Lake database addresses the challenge of today's data lakes where it is hard to understand how data is structured.
 
 ## Exercise 5 - Log and telemetry analytics
 
-In this exercise, you will explore the capabilities of the newly integrared Data Explorer runtime in Synapse Analytics.
+In this exercise, you will explore the capabilities of the newly integrated Data Explorer runtime in Synapse Analytics.
 
 Azure Synapse data explorer provides you with a dedicated query engine optimized and built for log and time series data workloads. With this new capability now part of Azure Synapse's unified analytics platform, you can easily access your machine and user data to surface insights that can directly improve business decisions. To complement the existing SQL and Apache Spark analytical runtimes, Azure Synapse data explorer is optimized for efficient log analytics, using powerful indexing technology to automatically index structured, semi-structured, and free-text data commonly found in telemetry data.
 
@@ -76,7 +76,7 @@ Azure Synapse data explorer provides you with a dedicated query engine optimized
 
 In this exercise, you will use several of the capabilities provided by the integration between Azure Synapse Analytics and Azure Purview workspaces.
 
-Azure Purview is a unified data governance solution that helps you manage and govern your on-premises, multicloud, and software-as-a-service (SaaS) data. Purview enables you to easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. It also enables data consumers to find valuable, trustworthy data.
+Azure Purview is a unified data governance solution that helps you manage and govern your on-premises, multi-cloud, and software-as-a-service (SaaS) data. Purview enables you to easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. It also enables data consumers to find valuable, trustworthy data.
 
 Azure Synapse Analytics and Azure Purview workspaces are tightly integrated, enabling seamless data discovery and lineage.
 

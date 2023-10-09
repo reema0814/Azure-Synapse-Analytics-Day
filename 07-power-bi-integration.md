@@ -38,13 +38,13 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
 3. Select **New Power BI dataset** within the panel that appears.
 
-   ![New Power BI dataset](media/ex03-new-pbi-dataset.1.png "Select New Power BI dataset")
+   ![New Power BI dataset](media/y9.png "Select New Power BI dataset")
 
 4. In the panel that appears, if a prompt appears to Install Power BI Desktop, select **Start**.
 
    ![Select Start in the first screen of wizard](media/BI_3.1.1.png "Select Start")
 
-5. In the step by step dialog that appears, select `SQLPool01` and then select **Continue**.
+5. In the step-by-step dialog that appears, select `SQLPool01` and then select **Continue**.
 
    ![The SQLPool01 data source is selected.](media/BI_new_3.2.1.png "Select a data source")
 
@@ -56,7 +56,7 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
    >PowerBI desktop will already be installed on the labvm provided.
 
-8. When Power BI Desktop loads, select **Microsoft account**, then select **Sign in**. Follow the login prompts to log in with the credential provided to you. When you return to the SQL Server database dialog, select **Connect**.
+8. When Power BI Desktop loads, select **Microsoft account**, then select **Sign in**. Follow the login prompts to log in with the credentials provided to you. When you return to the SQL Server database dialog, select **Connect**.
 
    ![Signing in with a Microsoft account](media/ex03-login-pbi.1.png "Sign in")
 
@@ -72,17 +72,17 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
 11. From the **File** menu, select **Publish** and then select **Publish to Power BI**. If prompted to save your changes, select Save and provide `wwifactsales` as the name. This will also be the name used for the dataset. 
 
-    ![Selecting Publish to Power BI from the File menu](media/ex03-publish-menu.1.png "Publish to Power BI")
+    ![Selecting Publish to Power BI from the File menu](media/y10.png "Publish to Power BI")
    
     >**Note:** You may be prompted to log in a second time. Follow the login prompts to log in with the credentials provided to you.
 
-12. In the dialog that appears, select the provided Power BI workspace (the first one that appears under the `Power BI` section in the `Develop` hub). Do not select the item labeled My workspace. Choose **Select**.
+12. In the dialog that appears, select the provided Power BI workspace (the first one that appears under the `Power BI` section in the `Develop` hub). Do not select the item labelled My Workspace. Choose **Select**.
 
     ![Selecting the correct Power BI workspace](media/ex03-select-workspace.1.png "Select workspace")
 
 13. Wait until the publishing dialog shows a status of **Success**, then click **Got it** to close the dialog.
 
-    ![The publishing succeeded.](media/ex03-publishing-succeeded.png "Publishing to Power BI")
+    ![The publishing succeeded.](media/y11.png "Publishing to Power BI")
 
 14. Return to your browser where you have Azure Synapse Studio open. Select **Close and refresh** in the New Power BI dataset dialog that should still be open.
 
@@ -122,7 +122,7 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
 4. Select the **Datasets** tab. From the list of datasets select `wwifactsales`, then select **Edit credentials** underneath the **Data Source credentials** section.
 
-   ![Changing settings for the wwifactsales dataset](media/ex03-setting-dataset-credentials.1.png "Changing settings for the wwifactsales dataset")
+   ![Changing settings for the wwifactsales dataset](media/y12.png "Changing settings for the wwifactsales dataset")
 
 5. Under **Authentication Method** select `OAuth2` and select **Sign In**.
 
@@ -140,7 +140,7 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
    ![The field values are displayed as described above.](media/pbi-02.png "Visualization fields")
    
-9. Click on the downward arrow button next to each field in **Columns** section and select **Don't summarize**.
+9. Click on the downward arrow button next to each field in the **Columns** section and select **Don't summarize**.
 
    ![The field values are displayed as described above.](media/pbi-03.png "Visualization fields")
    
@@ -178,8 +178,8 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
    ![The list of SQL requests is displayed.](media/ex03-sqlrequestsid.1.png "SQL requests")
 
-3. View the queries' request content until you find one that contains the SQL SELECT statement executed by your filter in the Power BI report. Here you can see the `Profit`, `SalespersonKey`, and `TotalExcludingTax` fields have been selected from the `wwi.FactSale`. A WHERE clause filters the rows where the value is greater than or equal to `5000`. Power BI generated the SQL script, then used the dedicated SQL pool to execute the query and send back the results.
+3. View the queries' request content until you find one that contains the SQL SELECT statement executed by your filter in the Power BI report. Here you can see the `Profit`, `SalespersonKey`, and `TotalExcludingTax` fields have been selected from the `wwi.FactSale`. A WHERE clause filters the rows where the value is greater than or equal to `5000`. Power BI generated the SQL script, and then used the dedicated SQL pool to execute the query and send back the results.
 
    ![The SQL query is displayed as described above.](media/pbi-07.png "Request content")
 
-   ## Proceed to execise 8
+   ## Proceed to exercise 8

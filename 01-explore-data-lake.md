@@ -11,12 +11,14 @@ The tasks you will perform in this exercise are:
 - Explore the Data Lake with SQL On-demand and Spark
   - Task 1 - Explore the Data Lake with Synapse SQL On-demand
   - Task 2 - Explore the Data Lake with Synapse Spark
+  
+--------------------------
 
 ## Task 1 - Explore the data lake with Azure Synapse SQL On-demand
 
 In this task, you will browse your data lake using SQL On-demand.
 
-1. In the **JumpVM** provided to you on the left side, double click on the **Azure Portal** browser shortcut on the desktop and login with the following credentials.
+1. In the **JumpVM** provided to you on the left side, double-click on the **Azure Portal** browser shortcut on the desktop and log in with the following credentials.
 
    * Azure Usename/Email: <inject key="AzureAdUserEmail"></inject> 
  
@@ -44,13 +46,13 @@ In this task, you will browse your data lake using SQL On-demand.
      
 5. Return to the resource group, then select the **asadataexplorer<inject key="uniqueId" enableCopy="false"/>** and **start** it. 
 
-   > **Note**: Please note starting of data explorer pool might take few minutes, you don't have to wait for it to be started you can proceed to next steps.
+   > **Note**: Please note starting of data explorer pool might take a few minutes, you don't have to wait for it to be started you can proceed to the next steps.
 
    ![SQLPool01 is highlighted.](media/ex1dex11.png "SQLPool01")
    
    ![SQLPool01 is highlighted.](media/ex1dex21.png "SQLPool01")
    
-   >**Note**: In case the data explorer is in stopping state. Please continue with the lab as we need it in exercise 4. You can visit this page after few minutes and start it.
+   >**Note**: In case the data explorer is in a stopping state. Please continue with the lab as we need it in exercise 4. You can visit this page after a few minutes and start it.
 
 6. Return to the resource group, then select the **Synapse Analytics** workspace.
 
@@ -76,30 +78,31 @@ In this task, you will browse your data lake using SQL On-demand.
 
 11. Once you are in `InvoiceDateKey=2012-01-01` right-click the Parquet file and select `New SQL script - Select TOP 100 rows`.
 
-   > A script is automatically generated. Run this script to see how SQL on demand queries the file and returns the first 100 rows of that file with the header, allowing you to easily explore data in the file
+   > A script is automatically generated. Run this script to see how SQL on-demand queries the file and returns the first 100 rows of that file with the header, allowing you to easily explore data in the file
 
    ![Start new SQL script from data lake file](./media/ex01-sql-on-demand-01.png "Create a new SQL script")
 
-12. Ensure the newly created script is connected to the `Built-in` pool and select `Run`. Data is loaded by the built-in SQL pool and processed as if it was coming from any regular relational database.
+12. Ensure the newly created script is connected to the `Built-in` pool and select `Run`. Data is loaded by the built-in SQL pool and processed as if it were coming from any regular relational database.
 
     ![Run SQL script on data lake file](./media/ex01-sql-on-demand-02.png "Execute SQL script")
 
-    > Note: SQL on demand is now named as **Built-in**
+    > Note: SQL on demand is now named **Built-in**
 
 13. Let us change the initial script to load multiple Parquet files at once.
 
-    - In line 2, replace `TOP 100 *` with `COUNT(*)`.
-    - In line 5, replace the path to the individual file with
+    - In line 3, replace `TOP 100 *` with `COUNT(*)`.
+    - In line 6, replace the path to the individual file with
 
     ```python
     https://<yourdatalake storage account name>.dfs.core.windows.net/wwi/factsale-parquet/2012/Q1/*/*
     ```
+    ![Run SQL on-demand script loading multiple CSV data lake files](./media/y1.png)
 
-    > Note: Replace 'yourdatalakestorageaccountname' with the <inject key="Storage Account Name"></inject>
+    > **Note:** Replace **yourdatalakestorageaccountname** with the <inject key="Storage Account Name"></inject>
 
 14. Select `Run` to re-run the script. You should see a result of `2991716`, which is the number of records contained in all the Parquet files within the `factsale-parquet/2012/Q1` directory.
 
-    ![Run SQL on-demand script loading multiple Parquet data lake files](./media/ex01-sql-on-demand-03.png)
+    ![Run SQL on-demand script loading multiple Parquet data lake files](./media/y2.png)
 
 15. In Azure Synapse Analytics Studio, navigate to the `Develop` hub.
 
@@ -107,7 +110,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
 16. Expand **SQLScripts** and select the `Exercise 1 - Read with SQL on-demand` SQL script. Connect to **Built-in** and select **SQLOnDemand01** as the database. Select **Run** to execute the script.
 
-    >**Note**: In case **SQLOnDemand01** database is not present. Please run the below mentioned commands. Replace 'yourdatalakestorageaccountname' with the <inject key="Storage Account Name"></inject>
+    >**Note**: In case **SQLOnDemand01** database is not present. Please run the below-mentioned commands. Replace 'yourdatalakestorageaccountname' with the <inject key="Storage Account Name"></inject>
 
     ```sql
     CREATE DATABASE SQLOnDemand01
@@ -117,7 +120,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Run SQL on-demand script loading multiple CSV data lake files](./media/ex1tsk1stp13.png)
 
-    > This query demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path). Parquet files are compressed and store data in columnar format for efficient querying, as compared to CSV files which are raw representations of data, but easily processed by a large number of systems. Oftentimes, you can encounter many file types stored in a data lake and must know how to access and explore those files. When you access CSV files, for instance, you need to specify the format, field terminator, and other properties to let the query engine understand how to parse the data. In this case, we specify a value of `2` for FIRSTROW. This indicates that the first row of the file must be skipped because it contains the column header, for instance.
+    > This query demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path). Parquet files are compressed and store data in columnar format for efficient querying, as compared to CSV files which are raw representations of data, but easily processed by a large number of systems. Oftentimes, you can encounter many file types stored in a data lake and must know how to access and explore those files. When you access CSV files, for instance, you need to specify the format, field terminator, and other properties to let the query engine understand how to parse the data. In this case, we specify a value of `2` for FIRST ROW. This indicates that the first row of the file must be skipped because it contains the column header, for instance.
     >
     > Here we use WITH to define the columns in the files. You must use WITH when using a bulk rowset (OPENROWSET) in the FROM clause. Also, defining the columns enables you to select and filter the values within.
 
@@ -177,7 +180,7 @@ In this task, you will browse your data lake using SQL On-demand.
          InvoiceQuarter
     ```
 
-    > This exports the results to CSV files in your data lake and defines a table schema that can be referenced directly in serverless SQL. You can test this by opening a **New Query** and running `SELECT * FROM QuarterlySales`. The results are now easy to query from an analytics tools such as Power BI or you can download the files from the Data Lake.
+    > This exports the results to CSV files in your data lake and defines a table schema that can be referenced directly in serverless SQL. You can test this by opening a **New Query** and running `SELECT * FROM QuarterlySales`. The results are now easy to query from analytics tools such as Power BI or you can download the files from the Data Lake.
 
 ## Task 2 - Explore the data lake with Azure Synapse Spark
 
@@ -210,7 +213,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![Improve dataset formatting in Spark notebook](./media/ex01-spark-notebookrun-04.png "Execute notebook")
 
-7. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on Apply button.
+7. Notice the included charting capabilities that enable visual exploration of your data. Switch to the **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on the Apply button.
 
     ![View charts on data in Spark notebook](./media/ex1tsk2stp7.1.png "Review charted data")
     
@@ -218,9 +221,9 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Collapse Output](./media/aiu1.png "Collapse Output")
 
-9. Hover over the area just below the cell in the notebook, then select **+ Code** to add a new cell. **+ Code** won't be visible until you Hover the area in front of arrow.
+9. Hover over the area just below the cell in the notebook, then select **+ Code** to add a new cell. **+ Code** won't be visible until you Hover the area in front of the arrow.
 
-   ![The add code button is highlighted.](media/synapse-workspace-code.png "Add code")
+   ![The add code button is highlighted.](media/y3.png "Add code")
 
 10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. You can also copy it from the first cell of the notebook above.
 
@@ -234,13 +237,13 @@ In this task, you will browse your data lake using SQL On-demand.
     display(data_path.limit(100))
     ```
 
-11. Select the **Run cell** button to execute the new cell and then select the **Table** view in output section.
+11. Select the **Run cell** button to execute the new cell and then select the **Table** view in the output section.
 
-    ![The new cell is displayed and the run cell button is highlighted.](media/Ex1-T2-S11.png "New cell to explore CSV files")
+    ![The new cell is displayed and the run cell button is highlighted.](media/y4.png "New cell to explore CSV files")
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
 
-12. Add another cell and paste the following into the cell. Select the **Run cell** button to execute.This statement is setting configurations used by Apache Spark 3.0.
+12. Add another cell and paste the following into the cell. Select the **Run cell** button to execute. This statement is setting configurations used by Apache Spark 3.0.
 
     ```python
     spark.conf.set("spark.sql.adaptive.enabled", "true")
@@ -268,11 +271,11 @@ In this task, you will browse your data lake using SQL On-demand.
 
     > Delta Lake is a popular format for storing data in a data lake since it supports upserts, deletes, and data versioning. You can access it using Spark SQL as shown here or by reading in as a DataFrame using `format(delta)`.
 
-14. Select the **Run cell** button to execute. This uses the magic command `%%sql` to change language of the cell to Spark SQL. The SQL statement returns the top 10 cities based on total quantity.
+14. Select the **Run cell** button to execute. This uses the magic command `%%sql` to change the language of the cell to Spark SQL. The SQL statement returns the top 10 cities based on total quantity.
 
     ![The output is displayed and the job execution arrow is highlighted.](media/Ex1-T2-S14.png "Expand job execution")
 
-15. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. When running the same code with a larger dataset, Spark 3.0 can modify the query plan to be more efficient. In addition, you can enable autoscaling on your Apache Spark pool so it can automatically grow when the workload on the Spark pool increases.
+15. Notice the included charting capabilities that enable visual exploration of your data. Switch to the **Chart** view. When running the same code with a larger dataset, Spark 3.0 can modify the query plan to be more efficient. In addition, you can enable autoscaling on your Apache Spark pool so it can automatically grow when the workload on the Spark pool increases.
 
     ![The job execution is displayed and the Tasks column is highlighted.](media/Ex1-T2-S15.png "Job execution tasks")
 

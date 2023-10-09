@@ -24,7 +24,7 @@ Please locate this value and note it for the steps below.
 
 ## Task 1 - Explore and modify a notebook
 
-In this task, you see how easy it is to write into a SQL Pool table with Spark thanks to the SQL Analytics Connector. Notebooks are used to write the code required to write to SQL Pool tables using Spark.
+In this task, you see how easy it is to write into an SQL Pool table with Spark thanks to the SQL Analytics Connector. Notebooks are used to write the code required to write to SQL Pool tables using Spark.
 
 1. **Note:** If you still have your notebook open from the end of Exercise 1, **skip ahead** to step 3 below. Otherwise, in Synapse Studio, select **Develop** from the left-hand menu.
 
@@ -34,11 +34,11 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
    ![The new notebook menu item is highlighted.](media/new-notebook.png "New notebook")
 
-3. If not already attached, attach your Spark Compute **SparkPool02** by selecting it from the **Attach to** drop-down list and attach **PySpark(Python)** by selecting it from **Language** drop down list, then select **+ code** to create a new cell.
+3. If not already attached, attach your Spark Compute **SparkPool02** by selecting it from the **Attach to** drop-down list and attach **PySpark(Python)** by selecting it from **Language** drop-down list, then select **+ code** to create a new cell.
 
    ![The Spark pool is selected in the Attach to drop-down.](media/ex2tsk2stp3.png "Add code")
 
-   **Note:** If you are using your notebook from the end of Exercise 1, select language **PySpark(Python)** from the drop-down and hover over the area just below the cell in the notebook select **+ Code** to add a new cell.
+   **Note:** If you are using your notebook from the end of Exercise 1, select language **PySpark(Python)** from the drop-down hover over the area just below the cell in the notebook select **+ Code** to add a new cell.
 
    ![The add code button is highlighted.](media/ex2tsk2stp3.1.png "Add code")
 
@@ -106,7 +106,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
     
     This code writes the data retrieved from Blob Storage into a staging table in Azure Synapse Analytics using the SQL Analytics connector. Using the connector simplifies connecting to Azure Synapse Analytics because it uses AAD pass-through. There is no need to create a password, identity, external table, or format sources, as it is all managed by the connector.
 
-10. As the cell runs, select the arrow icon below the cell to expand the details for the Spark job. After approximately 1-2 minutes, the execution of Cell 3 will complete. Once it completes move on the next step.
+10. As the cell runs, select the arrow icon below the cell to expand the details for the Spark job. After approximately 1-2 minutes, the execution of Cell 3 will be complete. Once it completes move on to the next step.
 
     > This pane allows you to monitor the underlying Spark jobs, and observe the status of each. As you can see, the cell is split into two Spark jobs, and the progress of each can be observed. We will take a more in-depth look at monitoring Spark applications in Task 4 below.
 
@@ -118,7 +118,7 @@ In this task, you see how easy it is to write into a SQL Pool table with Spark t
 
     ![The Close + discard changes button is highlighted.](media/notebook-close-discard-changes.png "Discard changes?")
     
-    > **Note**: If you get error while performing this step, you can change the sparkpool to sparkpool02 and try re-running the steps.
+    > **Note**: If you get an error while performing this step, you can change the sparkpool to sparkpool02 and try re-running the steps.
 
 12. Now, select **Data** from the left-hand menu.
 
@@ -162,16 +162,16 @@ Now, take some time to review the **Exercise 2 - Bonus Notebook with CSharp** no
 
     This notebook demonstrates how easy it is to create and run notebooks using C# for Spark. The notebook shows the code for retrieving data from Azure Blob Storage and writing that into a staging table in Azure Synapse Analytics using a JDBC connection.
 
-    You can run each cell in this notebook and observe the output. Be aware, however, that writing data into a staging table in Azure Synapse Analytics with this notebook takes several minutes, so you don't need to wait on the notebook to finish before attempting to query the `wwi_staging.Sale_CSharp` table to observe the data being written or to move on to the next task.
+    You can run each cell in this notebook and observe the output. Be aware, however, that writing data into a staging table in Azure Synapse Analytics with this notebook takes several minutes, so you don't need to wait for the notebook to finish before attempting to query the `wwi_staging.Sale_CSharp` table to observe the data being written or to move on to the next task.
 
 3. Select **Run all** and start the notebook.
 
-   > **Note**: If you get error while performing this step, you can change the sparkpool to sparkpool02 and try re-running the steps.
+   > **Note**: If you get an error while performing this step, you can change the sparkpool to sparkpool02 and try re-running the steps.
 
 
   **To observe the data being written into the table:**
 
-1. Select **Data** from the left-hand menu, select the Workspace tab, then expand Databases, SQLPool01, and Tables.
+1. Select **Data** from the left-hand menu, select the Workspace tab, and then expand Databases, SQLPool01, and Tables.
 
 2. Right-click the table named `wwi_staging.Sale_CSharp`, and choose **New SQL Script** then **SELECT TOP 100 rows**.
 
@@ -193,15 +193,15 @@ Now, take some time to review the **Exercise 2 - Bonus Notebook with CSharp** no
    
    > Re-run the query every 5-10 seconds to watch the count of records in the table, and how it changes as new records are being added by the notebook. The script in the notebook limits the number of rows to 1500, so if you see a count of 1500, the notebook has completed processing.
    
-   **Important**: Close the SQLscript by selecting the **X** in the top right of the tab and then select **Discard Changes**.
+   **Important**: Close the SQL script by selecting the **X** in the top right of the tab and then select **Discard Changes**.
 
 5. Closing the notebook will ensure you free up the allocated resources on the Spark Pool.
 
 ## Task 2 - Explore, modify, and run a Pipeline containing a Data Flow
 
-In this task, you use a Pipeline that implements Code-free AI to do sentiment analysis on customer feedback and contains a Data Flow to explore, transform, and load data into an Azure Synapse Analytics table. Using Cognitive Services and data flows in Pipelines allows you to handle code-free AI workloads, perform data ingestion and transformations, similar to what you did in Task 1, but without writing any code
+In this task, you use a Pipeline that implements Code-free AI to do sentiment analysis on customer feedback and contains a Data Flow to explore, transform, and load data into an Azure Synapse Analytics table. Using Cognitive Services and data flows in Pipelines allows you to handle code-free AI workloads, and perform data ingestion and transformations, similar to what you did in Task 1, but without writing any code
 
-1. In Synapse Studio and select **Integrate** from the left-hand menu.
+1. In Synapse Studio select **Integrate** from the left-hand menu.
 
    ![Integrate hub.](media/integrate-hub.png "Integrate hub")
 
@@ -211,20 +211,20 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
    > Selecting a pipeline opens the pipeline canvas, where you can review and edit the pipeline using a code-free, graphical interface. This view shows the various activities within the pipeline and the links and relationships between those activities. The `Exercise 2 - Enrich Data` pipeline contains four activities;
 
-   > - a Lookup activity named `ReadComments` reading customer comments
+   > - a lookup activity named `ReadComments` reading customer comments
    > - a ForEach loop named `ForEachComment` iterating through comments and running Sentiment Analysis with Azure Cognitive Services
    > - a copy data activity named `Import Customer dimension`
    > - a mapping data flow activity named `Enrich Customer Data`.
 
-3. Now, take a closer look at each of the activities within the pipeline. On the canvas graph, select the **Lookup** activity named `ReadComments` and switch to the **Settings** tab. The source dataset is set to a CSV files stored in the data lake.
+3. Now, take a closer look at each of the activities within the pipeline. On the canvas graph, select the **Lookup** activity named `ReadComments` and switch to the **Settings** tab. The source dataset is set to a CSV file stored in the data lake.
 
    > A lookup activity reads and returns the content of a file which can be consumed in a subsequent copy, transformation, or control flow activities like ForEach activity. The Lookup activity output supports up to 4 MB in size. In this case, the source is set to a single CSV file that is much smaller. For larger data sets multiple source files can be used.
 
    ![The Settings tab of the ReadCOmments Lookup Activity is selected. Source dataset is highlighted.](media/enrich-data-pipeline-readcomments.1.png "Read Comments")
    
-4. From the canvas graph, select the **ForEach (1)** activity named `ForEachComment` and switch to the **Settings (2)** tab. The **Items** property is set to receive the output of the previous `ReadComments` **(3)** activity. You might have noticed the green connection line between the two activities that define a dependency between the two activities. The line makes sure comments are read before the ForEach loop can iterate it. Select the edit button **(4)** in the ForEach activity's Activities box to navigate into the loop.
+4. From the canvas graph, select the **ForEach (1)** activity named `ForEachComment` and switch to the **Settings (2)** tab. The **Items** property is set to receive the output of the previous `ReadComments` **(3)** activity. You might have noticed the green connection line between the two activities that defines a dependency between the two activities. The line makes sure comments are read before the ForEach loop can iterate it. Select the edit button **(4)** in the ForEach activity's Activities box to navigate into the loop.
 
-   ![ForEachComments ForEach activity is selected. Settings tab is shown. Items property is highlighted.](media/enrich-data-pipeline-foreach.1.png "ForEach Loop")
+   ![ForEachComments ForEach activity is selected. Settings tab is shown. Items property is highlighted.](media/y8.png "ForEach Loop")
 
 5. Select **Copy data** activity named `Sentiment Analysis` **(1)** and switch to the **Source (2)** tab. The Copy Data activity's Source dataset is set to a REST resource **(3)** backed by Azure Cognitive Services. A POST **(4)** HTTP request will be made to the Azure Cognitive Services endpoint carrying a request body **(5)** that includes the text from the current iteration that will be analyzed for sentiments.
 
@@ -246,11 +246,11 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
    ![The Source tab for the Copy data activity is selected and highlighted.](media/ex02-orchestrate-copy-data-source.png "Pipeline canvas property tabs")
 
-9. Next, select the **Sink** tab. The sink specifies where the copied data will be written. Like the Source, the sink uses a dataset to define a pointer to the target data store. Select **PolyBase** for the `Copy method`. This improves the data loading speed as compared to the default setting of bulk insert.
+9. Next, select the **Sink** tab. The sink specifies where the copied data will be written. Like the Source, the sink uses a dataset to define a pointer to the target data store. Select **PolyBase** for the `Copy method`. This improves the data loading speed as compared to the default setting of the bulk insert.
 
    ![The Sink tab for the Copy data activity is selected and highlighted.](media/sw-sink-polybase.png "Pipeline canvas property tabs")
 
-   > Reviewing the fields on this tab, you will notice that it is possible to define the copy method, table options, and to provide pre-copy scripts to execute. Also, take special note of the sink dataset, `wwi_staging_dimcustomer_asa`. The dataset requires a parameter named `UniqueId`, which is populated using a substring of the Pipeline Run Id. This dataset points to the `wwi_staging.DimCustomer_UniqueId` table in Synapse Analytics, which is one of the data sources for the Data Flow. We will need to ensure that the copy activity successfully populates this table before running the data flow.
+   > Reviewing the fields on this tab, you will notice that it is possible to define the copy method, and table options, and to provide pre-copy scripts to execute. Also, take special note of the sink dataset, `wwi_staging_dimcustomer_asa`. The dataset requires a parameter named `UniqueId`, which is populated using a substring of the Pipeline Run Id. This dataset points to the `wwi_staging.DimCustomer_UniqueId` table in Synapse Analytics, which is one of the data sources for the Data Flow. We will need to ensure that the copy activity successfully populates this table before running the data flow.
 
 10. Select the **Mapping** tab. On this tab, you can review and set the column mappings. As you can see on this tab, the spaces are being removed from the column names in the sink.
 
@@ -296,7 +296,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 16. The [Data Flow canvas](https://docs.microsoft.com/azure/data-factory/concepts-data-flow-overview#data-flow-canvas) allows you to see the construction of the data flow, and each component contained within it in greater detail.
 
-    > From a high level, the `EnrichCustomerData` data flow is composed of two data sources, multiple transformations, and two sinks. The data source components, `PostalCodes` and `DimCustomer`, ingest data into the data flow. The `EnrichedCustomerData` and `EnrichedCustomerDataAdls` components on the right are sinks, used to write data to data stores. The remaining components between the sources and sinks are transformation steps, which can perform filtering, joins, select, and other transformational actions on the ingested data.
+    > From a high level, the `EnrichCustomerData` data flow is composed of two data sources, multiple transformations, and two sinks. The data source components, `PostalCodes` and `DimCustomer`, ingest data into the data flow. The `EnrichedCustomerData` and `EnrichedCustomerDataAdls` components on the right are sinks, used to write data to data stores. The remaining components between the sources and sinks are transformation steps, which can perform filtering, joins, selection, and other transformational actions on the ingested data.
 
     ![On the data flow canvas, the components are broken down into three sections. Section number 1 is labeled data sources and contains the PostalCodes and DimCustomer components. Section number 2 is labeled Transformations, and contains the PostCodeFilter, JoinOnPostalCode, and SelectDesiredColumns components. Section number 3 is labeled sinks, and contains the EnrichedCustomerData and EnrichedCustomerDataAdls components.](media/ex02-orchestrate-data-flow-components.1.png "Data flow canvas")
 
@@ -316,7 +316,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     > **NOTE! This step cannot be performed in the lab environment.**
 
-    > The `Zip` column is highlighted on the Data preview tab to show a sample of the values contained within that field. Below, you will filter the list of zip codes down to those that appear in the customer dataset.
+    > The `Zip` column is highlighted on the Data Preview tab to show a sample of the values contained within that field. Below, you will filter the list of zip codes down to those that appear in the customer dataset.
 
     ![The Data preview tab is highlighted and selected. The Zip column is highlighted on the Data preview tab.](media/ex02-orchestrate-data-flow-sources-postal-codes-data-preview.1.png "Data flow canvas")
 
@@ -336,7 +336,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 23. This will open the Dataflow expression builder.
 
-    > In data flows, many transformation properties are entered as expressions. These expressions are composed of column values, parameters, functions, operators, and literals that evaluate to a Spark data type at run time. To learn more, visit the [Build expressions in data flow](https://docs.microsoft.com/azure/data-factory/concepts-data-flow-expression-builder) page in the documentation.
+    > In data flows, many transformation properties are entered as expressions. These expressions are composed of column values, parameters, functions, operators, and literals that evaluate a Spark data type at run time. To learn more, visit the [Build expressions in data flow](https://docs.microsoft.com/azure/data-factory/concepts-data-flow-expression-builder) page in the documentation.
 
     ![The Visual expression builder is displayed.](media/E2-T2-S23.png "Dataflow expression builder")
 
@@ -348,7 +348,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     > Take a few minutes to review the various tabs in the configuration panel for this data source to get a better understanding of how it is configured, as you did above. Note that this data source relies on the `wwi_staging.DimCustomer_UniqueId` table from Azure Synapse Analytics for its data. `UniqueId` is supplied by a parameter to the data flow, which contains a substring of the Pipeline Run Id. Before running the pipeline, you will add a dependency to the Data Flow activity to ensure the Copy activity has populated the `wwi_staging.DimCustomer_UniqueId` in Azure Synapse Analytics before allowing the data flow to execute.
 
-    ![The DimCustomer data source is highlighted on the data flow canvas graph.](media/ex02-orchestrate-data-flow-sources-dim-customer.1.png "Data flow canvas")
+    ![The DimCustomer data source is highlighted on the data flow canvas graph.](media/y5.png "Data flow canvas")
 
 27. Next, select the `JoinOnPostalCode` **(1)** transformation and ensure the **Join settings (2)** tab is selected to see how you can join datasets using a simple and intuitive graphical interface.
 
@@ -384,7 +384,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 34. This creates a requirement that the **Copy data** activity completes successfully before the **Data Flow** can execute, and enforces our requirement of the Synapse Analytics table being populated before running the data flow.
 
-    ![The dependency arrow going from the Copy data activity to the Mapping Data Flow is displayed.](media/ex02-orchestrate-pipelines-create-dependency-complete.png "Data pipeline canvas")
+    ![The dependency arrow going from the Copy data activity to the Mapping Data Flow is displayed.](media/y6.png "Data pipeline canvas")
 
 35. The last step before running the pipeline is to publish the changes you have made. Select **Publish all** on the toolbar.
 
@@ -394,7 +394,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     > This Publish all dialog allows you to review the changes that will be saved.
 
-37. Within a few seconds, you _may_ receive a notification that the publish completed. If so, select **Dismiss** in the notification.
+37. Within a few seconds, you may receive a notification that the publication has been completed. If so, select **Dismiss** in the notification.
 
     ![The publishing completed notification is displayed.](media/ex02-publishing-completed.png "Publishing completed")
 
@@ -420,7 +420,7 @@ After you finish building and debugging your data flow and its associated pipeli
 
    ![Pipeline runs is selected and highlighted under the Orchestration section of the monitor resource list.](media/ex02-monitor-pipeline-runs1.png "Synapse Analytics Monitor")
 
-3. Select the `Exercise 2 - Enrich Data_A03` pipeline the list. This will have a status of `In progress`.
+3. Select the `Exercise 2 - Enrich Data_A03` pipeline in the list. This will have a status of `In progress`.
 
    ![The first "Exercise 2 - Enrich Data" item in the list of pipeline runs is highlighted.](media/ex02-monitoring-pipeline-runs.1.png "Pipeline run list")
 
@@ -434,7 +434,7 @@ After you finish building and debugging your data flow and its associated pipeli
 
    ![The output icon is highlighted on the Import Customer dimension activity row.](media/ex02-monitoring-copy-activity-output.png "Copy activity output")
 
-6. In the **Output** dialog, you will see details about the size of data read and written, the number of rows read and copied, the duration of the copy activity, and other information relating to the copy activity run. This information can be used for things like troubleshooting. For example, you could compare the copy run to data, such as the number of rows read and written, to expected numbers from the source and sink.
+6. In the **Output** dialog, you will see details about the size of data read and written, the number of rows reads and copied, the duration of the copy activity, and other information relating to the copy activity run. This information can be used for things like troubleshooting. For example, you could compare the copy run to data, such as the number of rows read and written, to expected numbers from the source and sink.
 
    ![The Output dialog for the Import Customer dimension activity is displayed.](media/ex02-monitoring-copy-activity-output-details.1.png "Copy activity output")
 
@@ -444,7 +444,7 @@ After you finish building and debugging your data flow and its associated pipeli
 
    ![The Details icon is highlighted on the Import Customer dimension activity row.](media/ex02-monitoring-copy-activity.png "Copy activity run")
 
-9. The **Details** dialog provides the data found on the Output dialog examine above, but expands on that to include graphics for the source, staging storage, and sink, and a more detailed look at the activity run.
+9. The **Details** dialog provides the data found on the Output dialog examined above but expands on that to include graphics for the source, staging storage, and sink, and a more detailed look at the activity run.
 
    ![The Details dialog for the copy activity is displayed.](media/ex02-monitoring-copy-activity-details.1.png "Copy activity details")
 
@@ -482,15 +482,15 @@ After you finish building and debugging your data flow and its associated pipeli
 
     ![The X (close) button is highlighted on the data flow Details dialog toolbar.](media/ex02-monitor-data-flow-close.png "Data flow details")
 
-17. Back on Exercise 2 - Enrich Data pipeline run screen, switch to the **Gantt** view. This view provides a graphical representation of the run times of the various activities within the pipeline.
+17. Back on Exercise 2 - Enrich the Data pipeline run screen, and switch to the **Gantt** view. This view provides a graphical representation of the run times of the various activities within the pipeline.
 
-    ![The Gantt view option is selected and highlighted on the pipeline run dialog.](media/ex02-monitoring-ex2-enrich-data-activity-runs-gantt.1.png "Pipeline run Gantt view")
+    ![The Gantt view option is selected and highlighted on the pipeline run dialog.](media/y7.png "Pipeline run Gantt view")
 
 ### Bonus discovery
 
-Remember the sentiment analysis task we had in our Exercise 2 - Enrich Data pipeline? Once your pipeline's execution is complete we have some sentiment data we can look into.
+Remember the sentiment analysis task we had in our Exercise 2 - Enrich Data Pipeline? Once your pipeline's execution is complete we have some sentiment data we can look into.
 
-1. Go to the **Data** Hub and navigate to the `dev > bronze > sentiment` **(2)** folder in the primary data lake account **(1)**. Select all the files and right click to select **New SQL script > Select TOP 100 rows**.
+1. Go to the **Data** Hub and navigate to the `dev > bronze > sentiment` **(2)** folder in the primary data lake account **(1)**. Select all the files and right-click to select **New SQL script > Select TOP 100 rows**.
 
    >NOTE: Select all the files except the text file.
 
@@ -512,7 +512,7 @@ Remember the sentiment analysis task we had in our Exercise 2 - Enrich Data pipe
     
 ## Task 4 - Monitor Spark applications
 
-In this task, you examine the Apache Spark application monitoring capabilities built into Azure Synapse Analytics. The Spark application monitoring screens provide a view into the logs for the Spark application, including a graphical view of those logs.
+In this task, you examine the Apache Spark application monitoring capabilities built into Azure Synapse Analytics. The Spark application monitoring screens provide a view of the logs for the Spark application, including a graphical view of those logs.
 
 1. As you did in the previous task, select **Monitor** from the left-hand menu.
 
@@ -528,7 +528,7 @@ In this task, you examine the Apache Spark application monitoring capabilities b
 
 4. From the list of Spark applications, select the first job, which should have a status of `In progress` or `Succeeded`.
 
-   > **Note**: You may see a status of `Cancelled` or `Stopped` , and this does not prevent you from completing the following steps. Azure Synapse Analytics is still in preview, and the status gets set to `Cancelled` or `Stopped` when the Spark pool used to run the Spark application times out.
+   > **Note**: You may see a status of `Cancelled` or `Stopped`, and this does not prevent you from completing the following steps. Azure Synapse Analytics is still in preview, and the status gets set to `Cancelled` or `Stopped` when the Spark pool used to run the Spark application times out.
 
    ![The current Spark application is highlighted in the applications list.](media/ex02-monitor-activities-spark-application-list.1.png "Synapse Analytics Monitor")
 
