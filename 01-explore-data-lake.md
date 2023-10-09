@@ -88,14 +88,14 @@ In this task, you will browse your data lake using SQL On-demand.
 
 13. Let us change the initial script to load multiple Parquet files at once.
 
-    - In line 2, replace `TOP 100 *` with `COUNT(*)`.
-    - In line 5, replace the path to the individual file with
+    - In line 3, replace `TOP 100 *` with `COUNT(*)`.
+    - In line 6, replace the path to the individual file with
 
     ```python
     https://<yourdatalake storage account name>.dfs.core.windows.net/wwi/factsale-parquet/2012/Q1/*/*
     ```
 
-    > Note: Replace 'yourdatalakestorageaccountname' with the <inject key="Storage Account Name"></inject>
+    > **Note:** Replace **yourdatalakestorageaccountname** with the <inject key="Storage Account Name"></inject>
 
 14. Select `Run` to re-run the script. You should see a result of `2991716`, which is the number of records contained in all the Parquet files within the `factsale-parquet/2012/Q1` directory.
 
@@ -210,7 +210,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![Improve dataset formatting in Spark notebook](./media/ex01-spark-notebookrun-04.png "Execute notebook")
 
-7. Notice the included charting capabilities that enable visual exploration of your data. Switch to **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on the Apply button.
+7. Notice the included charting capabilities that enable visual exploration of your data. Switch to the **Chart** view. Select **View Options** and change the **Key** to `CustomerKey` and **Values** to `CityKey` and then click on the Apply button.
 
     ![View charts on data in Spark notebook](./media/ex1tsk2stp7.1.png "Review charted data")
     
