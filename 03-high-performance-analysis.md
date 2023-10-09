@@ -2,7 +2,7 @@
 
 In this exercise, you will use several of the capabilities associated with dedicated SQL Pools to analyze the data.
 
-SQL data warehouses have been for a long time the centers of gravity in data platforms. Modern data warehouses can provide high performance, distributed, and governed workloads, regardless of the data volumes at hand.
+SQL data warehouses have been for a long time the centers of gravity in data platforms. Modern data warehouses can provide high-performance, distributed, and governed workloads, regardless of the data volumes at hand.
 
 The dedicated SQL pool in Azure Synapse is the new incarnation of the former Azure SQL Data Warehouse. It provides all the modern SQL data warehousing features while benefiting from the advanced integration with all the other Synapse services.
 
@@ -39,11 +39,11 @@ In this task, you will try to understand who your best customers are.
 
 ![Example Chart](media/ex05-chart.1.png "Example chart")
 
->**Note**: If you are not able to see the expected data in the bar chart. Please save the bar chart as image and open it. You'll be able to see the data as expected.
+>**Note**: If you are not able to see the expected data in the bar chart. Please save the bar chart as an image and open it. You'll be able to see the data as expected.
 
 ## Task 2 - Investigate query performance and table design
 
-In this task, you will try to understand the implications of the table design at a general level. You will run the same set of queries against two fact tables (`FactSale_Fast` and `FactSale_Slow`). The two fact tables have (with one notable exception) the same structure and contain identical data.
+In this task, you'll try to understand what the table design is at a general level. You will run the same set of queries against two fact tables (`FactSale_Fast` and `FactSale_Slow`). The two fact tables have (with one notable exception) the same structure and contain identical data.
 
 First, let us set the stage by performing the following steps:
 
@@ -53,33 +53,33 @@ First, let us set the stage by performing the following steps:
 
    ![Run a count on FactSale_Slow](media/ex04-query-selection-01.1.png "Run script")
 
-     Notice the quick response time (usually under 3 seconds) and the result - 83.4 million records. If SQLPool was configured with DW500c, then it would be under 1   second.
+     Notice the quick response time (usually under 3 seconds) and the result - 83.4 million records. If SQLPool were configured with DW500c, it would be under 1   second.
 
 4. Select line 3 and then select `Run`.
 
    ![Run a count on FactSale_Fast](media/ex04-query-selection-02.1.png "Run script")
 
-     Notice the quick response time (usually under 3 seconds) and the result - 83.4 million records. If SQLPool was configured with DW500c, then it would be under 1 second.
+     Notice the quick response time (usually under 3 seconds) and the result - 83.4 million records. If SQLPool were configured with DW500c, it would be under 1 second.
 
 5. Select lines 5 to 20 and then select `Run`.
 
    ![Run a complex query on FactSale_Slow](media/ex04-query-selection-03.1.png "Run script")
 
-     Re-run the query 3 to 5 times until the execution time stabilizes (usually, the first "cold" execution takes longer than subsequent ones who benefit from the initialization of various internal data and communications buffers). Make a note of the amount of time needed to run the query (typically 15 to 30 seconds).
+     Re-run the query 3 to 5 times until the execution time stabilizes (usually, the first "cold" execution takes longer than subsequent ones that benefit from the initialization of various internal data and communications buffers). Make a note of the amount of time needed to run the query (typically 15 to 30 seconds).
 
 6. Select lines 22 to 37 and then select `Run`.
 
    ![Run a complex query on FactSale_Fast](media/ex04-query-selection-04.1.png "Run script")
 
-     Re-run the query 3 to 5 times until the execution time stabilizes (usually, the first "cold" execution takes longer than subsequent ones who benefit from the initialization of various internal data and communications buffers). Make a note on the amount of time needed to run the query (typically 3 to 5 seconds).
+     Re-run the query 3 to 5 times until the execution time stabilizes (usually, the first "cold" execution takes longer than subsequent ones that benefit from the initialization of various internal data and communications buffers). Make a note of the amount of time needed to run the query (typically 3 to 5 seconds).
 
 ## Bonus Challenge
 
-Can you explain the significant difference in performance between the two seemingly identical tables? Furthermore, can you explain why the first set of queries (the simple counts) were not that further apart in execution times?
+Can you explain the significant difference in performance between the two seemingly identical tables? Furthermore, can you explain why the first set of queries (the simple counts) were not that far apart in execution times?
 
 **Solution:**
 
-1. In Synapse Analytics Studio, navigate to the `Data` hub, select the `Workspace` section.
+1. In Synapse Analytics Studio, navigate to the `Data` hub, and select the `Workspace` section.
 2. Under SQL databases, expand the `SQLPool01` node, expand `Tables`, and locate the `wwi_perf.FactSale_Slow` table.
 3. Right-click the table **(1)** and then select `New SQL script` **(2)**, `CREATE` **(3)**.
 
@@ -97,7 +97,7 @@ This is the critical difference that has such a significant impact on the last t
 
 On the other hand, `wwi_perf.FactSale_Fast` is distributed using the hash of the customer identifier. This means that each customer's data will end up living in a single distribution. When the query needs to consolidate each customer's data, virtually no data movement occurs between distributions, which makes the query very fast.
 
-> By default, tables are Round Robin-distributed, enabling users to create new tables without deciding on the distribution. In some workloads, Round Robin tables have acceptable performance. However, in many cases, selecting a distribution column will perform much better.
+> By default, tables are round-robin-distributed, enabling users to create new tables without deciding on the distribution. In some workloads, round-robin tables have acceptable performance. However, in many cases, selecting a distribution column will perform much better.
 >
 > A round-robin distributed table distributes table rows evenly across all distributions. The assignment of rows to distributions is random. Unlike hash-distributed tables, rows with equal values are not guaranteed to be assigned to the same distribution. As a result, the system sometimes needs to invoke a data movement operation to better organize your data before resolving a query. This extra step can slow down your queries. For example, joining a round-robin table usually requires reshuffling the rows, which is a performance hit.
 
