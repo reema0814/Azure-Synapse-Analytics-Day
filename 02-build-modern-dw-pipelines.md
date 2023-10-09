@@ -224,7 +224,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
    
 4. From the canvas graph, select the **ForEach (1)** activity named `ForEachComment` and switch to the **Settings (2)** tab. The **Items** property is set to receive the output of the previous `ReadComments` **(3)** activity. You might have noticed the green connection line between the two activities that defines a dependency between the two activities. The line makes sure comments are read before the ForEach loop can iterate it. Select the edit button **(4)** in the ForEach activity's Activities box to navigate into the loop.
 
-   ![ForEachComments ForEach activity is selected. Settings tab is shown. Items property is highlighted.](media/enrich-data-pipeline-foreach.1.png "ForEach Loop")
+   ![ForEachComments ForEach activity is selected. Settings tab is shown. Items property is highlighted.](media/y8.png "ForEach Loop")
 
 5. Select **Copy data** activity named `Sentiment Analysis` **(1)** and switch to the **Source (2)** tab. The Copy Data activity's Source dataset is set to a REST resource **(3)** backed by Azure Cognitive Services. A POST **(4)** HTTP request will be made to the Azure Cognitive Services endpoint carrying a request body **(5)** that includes the text from the current iteration that will be analyzed for sentiments.
 
@@ -348,7 +348,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
     > Take a few minutes to review the various tabs in the configuration panel for this data source to get a better understanding of how it is configured, as you did above. Note that this data source relies on the `wwi_staging.DimCustomer_UniqueId` table from Azure Synapse Analytics for its data. `UniqueId` is supplied by a parameter to the data flow, which contains a substring of the Pipeline Run Id. Before running the pipeline, you will add a dependency to the Data Flow activity to ensure the Copy activity has populated the `wwi_staging.DimCustomer_UniqueId` in Azure Synapse Analytics before allowing the data flow to execute.
 
-    ![The DimCustomer data source is highlighted on the data flow canvas graph.](media/ex02-orchestrate-data-flow-sources-dim-customer.1.png "Data flow canvas")
+    ![The DimCustomer data source is highlighted on the data flow canvas graph.](media/y5.png "Data flow canvas")
 
 27. Next, select the `JoinOnPostalCode` **(1)** transformation and ensure the **Join settings (2)** tab is selected to see how you can join datasets using a simple and intuitive graphical interface.
 
@@ -384,7 +384,7 @@ In this task, you use a Pipeline that implements Code-free AI to do sentiment an
 
 34. This creates a requirement that the **Copy data** activity completes successfully before the **Data Flow** can execute, and enforces our requirement of the Synapse Analytics table being populated before running the data flow.
 
-    ![The dependency arrow going from the Copy data activity to the Mapping Data Flow is displayed.](media/ex02-orchestrate-pipelines-create-dependency-complete.png "Data pipeline canvas")
+    ![The dependency arrow going from the Copy data activity to the Mapping Data Flow is displayed.](media/y6.png "Data pipeline canvas")
 
 35. The last step before running the pipeline is to publish the changes you have made. Select **Publish all** on the toolbar.
 
@@ -484,7 +484,7 @@ After you finish building and debugging your data flow and its associated pipeli
 
 17. Back on Exercise 2 - Enrich the Data pipeline run screen, and switch to the **Gantt** view. This view provides a graphical representation of the run times of the various activities within the pipeline.
 
-    ![The Gantt view option is selected and highlighted on the pipeline run dialog.](media/ex02-monitoring-ex2-enrich-data-activity-runs-gantt.1.png "Pipeline run Gantt view")
+    ![The Gantt view option is selected and highlighted on the pipeline run dialog.](media/y7.png "Pipeline run Gantt view")
 
 ### Bonus discovery
 
