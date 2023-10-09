@@ -18,6 +18,8 @@ named "built-in" pool). Make sure you have `SQLPool01` selected before running e
 
 ![Run queries against a dedicated SQL pool](/media/ex04-run-on-sql-pool.1.png)
 
+---------------------------------
+
 ## Task 1 - Use a SQL Synapse Pool query to understand a dataset
 
 In this task, you will try to understand who your best customers are.
