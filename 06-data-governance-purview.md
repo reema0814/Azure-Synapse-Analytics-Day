@@ -15,6 +15,8 @@ The tasks you will perform in this exercise are:
   - Task 4 - Explore the results of scanning an Azure Synapse Analytics workspace from Azure Purview
   - Task 5 - Explore the results of data lineage tracking for Synapse Pipelines
 
+--------------------------------
+
 ## Task 1 - Explore the integration of Azure Purview into the Azure Synapse Analytics workspace
 
 In this task, you will explore the connection between Synapse Analytics and a Purview workspace.
