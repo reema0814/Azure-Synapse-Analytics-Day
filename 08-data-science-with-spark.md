@@ -30,6 +30,8 @@ In this exercise, the tasks you will perform are:
   - Task 1 - Training and registering models with AutoML
   - Task 2 - Using registered models in Synapse Analytics
 
+-------------------------------
+
 ## Task 1 - Training and registering models with AutoML
 
 1. Open the `Exercise 8 - AutoML with Spark` notebook (located in the `Develop` hub, under `Notebooks` in Synapse Studio). Ensure to select **SparkPool02** and run it step by step to complete this exercise. Some of the most important tasks you will perform are:
