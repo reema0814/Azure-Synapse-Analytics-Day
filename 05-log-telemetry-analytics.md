@@ -1,18 +1,18 @@
 # Exercise 5 - Log and telemetry analytics
 
-In this exercise you will explore the capabilities of the newly integrated Data Explorer runtime in Synapse Analytics.
+In this exercise, you will explore the capabilities of the newly integrated Data Explorer runtime in Synapse Analytics.
 
 Azure Synapse data explorer provides you with a dedicated query engine optimized and built for log and time series data workloads. With this new capability now part of Azure Synapse's unified analytics platform, you can easily access your machine and user data to surface insights that can directly improve business decisions. To complement the existing SQL and Apache Spark analytical runtimes, Azure Synapse data explorer is optimized for efficient log analytics, using powerful indexing technology to automatically index structured, semi-structured, and free-text data commonly found in telemetry data.
 
 The tasks you will perform in this exercise are:
 
 - Exercise 5 - Log and telemetry analytics
-  - Task 1 - Create a table for data ingestion in Data Explorer database 
+  - Task 1 - Create a table for data ingestion in the Data Explorer database 
   - Task 2 - Perform manual data ingestion using a Synapse Pipeline
   - Task 3 - Run KQL queries from Synapse Studio
   - Task 4 - Load Data Explorer data into a Spark dataframe
 
-## Task 1 - Create a table for data ingestion in Data Explorer database 
+## Task 1 - Create a table for data ingestion in the Data Explorer database 
 
 In this task, you will verify Data Explorer database is present and create a table to ingest sales telemetry data.
 
@@ -26,7 +26,7 @@ In this task, you will verify Data Explorer database is present and create a tab
 
 2. In the `Connect to` dropdown, select the Data Explorer pool **<inject key="dataexplorer pool Name" enableCopy="false" />**, and then select the `Sales` database.
 
-   >**Note**: If the database is not seen try clicking on refresh Button
+   >**Note**: If the database is not seen try clicking on Refresh Button
 
    Use the following KQL query and select `Run`:
 
