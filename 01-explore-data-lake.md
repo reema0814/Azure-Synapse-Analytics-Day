@@ -80,7 +80,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
    ![Start new SQL script from data lake file](./media/ex01-sql-on-demand-01.png "Create a new SQL script")
 
-12. Ensure the newly created script is connected to the `Built-in` pool and select `Run`. Data is loaded by the built-in SQL pool and processed as if it was coming from any regular relational database.
+12. Ensure the newly created script is connected to the `Built-in` pool and select `Run`. Data is loaded by the built-in SQL pool and processed as if it were coming from any regular relational database.
 
     ![Run SQL script on data lake file](./media/ex01-sql-on-demand-02.png "Execute SQL script")
 
