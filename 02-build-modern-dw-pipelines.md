@@ -512,7 +512,7 @@ Remember the sentiment analysis task we had in our Exercise 2 - Enrich Data Pipe
     
 ## Task 4 - Monitor Spark applications
 
-In this task, you examine the Apache Spark application monitoring capabilities built into Azure Synapse Analytics. The Spark application monitoring screens provide a view into the logs for the Spark application, including a graphical view of those logs.
+In this task, you examine the Apache Spark application monitoring capabilities built into Azure Synapse Analytics. The Spark application monitoring screens provide a view of the logs for the Spark application, including a graphical view of those logs.
 
 1. As you did in the previous task, select **Monitor** from the left-hand menu.
 
