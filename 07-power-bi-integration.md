@@ -38,7 +38,7 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
 3. Select **New Power BI dataset** within the panel that appears.
 
-   ![New Power BI dataset](media/ex03-new-pbi-dataset.1.png "Select New Power BI dataset")
+   ![New Power BI dataset](media/y9.png "Select New Power BI dataset")
 
 4. In the panel that appears, if a prompt appears to Install Power BI Desktop, select **Start**.
 
@@ -72,7 +72,7 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
 11. From the **File** menu, select **Publish** and then select **Publish to Power BI**. If prompted to save your changes, select Save and provide `wwifactsales` as the name. This will also be the name used for the dataset. 
 
-    ![Selecting Publish to Power BI from the File menu](media/ex03-publish-menu.1.png "Publish to Power BI")
+    ![Selecting Publish to Power BI from the File menu](media/y10.png "Publish to Power BI")
    
     >**Note:** You may be prompted to log in a second time. Follow the login prompts to log in with the credentials provided to you.
 
@@ -82,7 +82,7 @@ In this task, you will use Power BI Desktop to create the dataset used by the re
 
 13. Wait until the publishing dialog shows a status of **Success**, then click **Got it** to close the dialog.
 
-    ![The publishing succeeded.](media/ex03-publishing-succeeded.png "Publishing to Power BI")
+    ![The publishing succeeded.](media/y11.png "Publishing to Power BI")
 
 14. Return to your browser where you have Azure Synapse Studio open. Select **Close and refresh** in the New Power BI dataset dialog that should still be open.
 
@@ -122,7 +122,7 @@ If you do not see a list of data fields under Fields, follow the steps below for
 
 4. Select the **Datasets** tab. From the list of datasets select `wwifactsales`, then select **Edit credentials** underneath the **Data Source credentials** section.
 
-   ![Changing settings for the wwifactsales dataset](media/ex03-setting-dataset-credentials.1.png "Changing settings for the wwifactsales dataset")
+   ![Changing settings for the wwifactsales dataset](media/y12.png "Changing settings for the wwifactsales dataset")
 
 5. Under **Authentication Method** select `OAuth2` and select **Sign In**.
 

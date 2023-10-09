@@ -71,7 +71,7 @@ In this task, you will discover Synapse Analytics assets using Purview search.
 
 4. Explore the properties of the `FactSale` asset.
 
-    ![Explore Purivew-powered searchr result - continued](./media/upd-ex06-purview-search-results-2.png)
+    ![Explore Purivew-powered searchr result - continued](./media/y13.png)
 
     Note the following:
 
@@ -88,11 +88,13 @@ In this task, you will explore the results of scanning the Synapse Analytics wor
     ![Open Purview Studio](./media/pp6.png)
 
     This will open Purivew Studio where you will perform the rest of the steps in this task.
+1. On the Microsoft preview page, click on **Open** to Access your classic portal.
+    ![](media/y14.png)
 
-2. In Purview Studio, navigate to the `Data map` hub, select `Sources` and then locate the Synapse Analytics source which is your Synapse Analytics workspace. Select `View details` to explore the configuration of the source.
+2. In Purview Studio, navigate to the `Data map` hub, select `Sources` and then locate the Synapse Analytics source which is your Synapse Analytics workspace. Select **View details** to explore the configuration of the source.
     ![](media/E6-T4-S2.png)
     
-    ![Locate Synpse Analytics source in Purview Studio](E6-T4-S2.png)
+    ![Locate Synpse Analytics source in Purview Studio](media/y15.png)
     
 
 3. Note the details of the source:
@@ -103,9 +105,9 @@ In this task, you will explore the results of scanning the Synapse Analytics wor
 
     ![Synapse Analytics source details in Purview Studio](./media/ex06-purview-synapse-analytics-source-details-1.png)
 
-4. Select `Edit source` to view the details of the connection to the Synapse Analytics workspace.
+4. Select `Edit data source` to view the details of the connection to the Synapse Analytics workspace.
 
-    ![Synapse Analytics source connection properties](./media/ex06-purview-synapse-analytics-source-details-2.png)
+    ![Synapse Analytics source connection properties](./media/y16.png)
 
     Make sure you select `Cancel` next to avoid updating the source connection properties.
 
