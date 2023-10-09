@@ -4,11 +4,11 @@ Azure Synapse Analytics provides support for using trained models (in ONNX forma
 
 In this exercise, you will train a machine learning model using AutoML with Spark compute. You will use the model registered in Azure Machine Learning to make predictions using the T-SQL `Predict` statement.
 
-For context, the following are the high-level steps taken to create a Spark ML based model and deploy it, so it is ready for use from T-SQL.
+For context, the following are the high-level steps taken to create a Spark ML-based model and deploy it, so it is ready for use from T-SQL.
 
 ![The process for registering and using a model](media/ex08-model-registration-process.png "Review model registration process")
 
-The steps are performed using a combination data science and data engineering work in Azure Synapse Analytics workspaces:
+The steps are performed using a combination of data science and data engineering work in Azure Synapse Analytics workspaces:
 
 - Within a Synapse Spark notebook, a data scientist will:
 
@@ -47,7 +47,7 @@ Please note that each of these tasks will be addressed through several cells in 
 
 >**NOTE**: Successfully completing Task 1 is a prerequisite for this exercise.
 
-In this exercise you will use the model registered in Exercise 2 to perform predictions using the AML integration features of Synapse Studio.
+In this exercise, you will use the model registered in Exercise 2 to perform predictions using the AML integration features of Synapse Studio.
 
 1. In Synapse Studio, select the `Data` hub, `Workspace` section, `SQLPool01` SQL database, and locate the `wwi_ml.CustomerTest` table.
 
@@ -74,7 +74,7 @@ In this exercise you will use the model registered in Exercise 2 to perform pred
     - Database table: Create new
     - New table: enter `wwi_ml.AMLModel` 
 
-    Select `Deploy model + open script` to continue. Synapse Studio will deploy the model into the `AMLModel` table and create SQL scoring script for you.
+    Select `Deploy model + open script` to continue. Synapse Studio will deploy the model into the `AMLModel` table and create an SQL scoring script for you.
 
     ![Deploy ML model to database](./media/ex08-deploy-model-to-database.png)
 
