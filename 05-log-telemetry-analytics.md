@@ -11,6 +11,8 @@ The tasks you will perform in this exercise are:
   - Task 2 - Perform manual data ingestion using a Synapse Pipeline
   - Task 3 - Run KQL queries from Synapse Studio
   - Task 4 - Load Data Explorer data into a Spark dataframe
+ 
+-------------------------
 
 ## Task 1 - Create a table for data ingestion in the Data Explorer database 
 
