@@ -94,12 +94,13 @@ In this task, you will browse your data lake using SQL On-demand.
     ```python
     https://<yourdatalake storage account name>.dfs.core.windows.net/wwi/factsale-parquet/2012/Q1/*/*
     ```
+    ![Run SQL on-demand script loading multiple CSV data lake files](./media/y1.png)
 
     > **Note:** Replace **yourdatalakestorageaccountname** with the <inject key="Storage Account Name"></inject>
 
 14. Select `Run` to re-run the script. You should see a result of `2991716`, which is the number of records contained in all the Parquet files within the `factsale-parquet/2012/Q1` directory.
 
-    ![Run SQL on-demand script loading multiple Parquet data lake files](./media/ex01-sql-on-demand-03.png)
+    ![Run SQL on-demand script loading multiple Parquet data lake files](./media/y2.png)
 
 15. In Azure Synapse Analytics Studio, navigate to the `Develop` hub.
 
@@ -220,7 +221,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
 9. Hover over the area just below the cell in the notebook, then select **+ Code** to add a new cell. **+ Code** won't be visible until you Hover the area in front of the arrow.
 
-   ![The add code button is highlighted.](media/synapse-workspace-code.png "Add code")
+   ![The add code button is highlighted.](media/y3.png "Add code")
 
 10. Paste the following into the cell and **replace** `YOUR_DATALAKE_NAME` with your storage account name **<inject key="Storage Account Name"></inject>**. You can also copy it from the first cell of the notebook above.
 
@@ -236,7 +237,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
 11. Select the **Run cell** button to execute the new cell and then select the **Table** view in the output section.
 
-    ![The new cell is displayed and the run cell button is highlighted.](media/Ex1-T2-S11.png "New cell to explore CSV files")
+    ![The new cell is displayed and the run cell button is highlighted.](media/y4.png "New cell to explore CSV files")
 
     > This notebook demonstrates the same functionality, except this time, it loads CSV files instead of Parquet ones (notice the `factsale-csv` folder in the path).
 
