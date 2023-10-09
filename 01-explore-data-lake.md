@@ -11,6 +11,8 @@ The tasks you will perform in this exercise are:
 - Explore the Data Lake with SQL On-demand and Spark
   - Task 1 - Explore the Data Lake with Synapse SQL On-demand
   - Task 2 - Explore the Data Lake with Synapse Spark
+  
+--------------------------
 
 ## Task 1 - Explore the data lake with Azure Synapse SQL On-demand
 
